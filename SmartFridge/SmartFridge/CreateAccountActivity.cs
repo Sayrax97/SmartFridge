@@ -19,7 +19,7 @@ namespace SmartFridge
         private EditText passwordEditText;
         private EditText emailEditText;
         private EditText nameEditText;
-        private EditText surenameEditText;
+        private EditText surnameEditText;
         private ImageButton pictureImageButton;
         private TextView choosePicTextView;
         private Button okButton;
@@ -33,7 +33,7 @@ namespace SmartFridge
             passwordEditText = FindViewById<EditText>(Resource.Id.editTxtPasswordCreateAcc);
             emailEditText = FindViewById<EditText>(Resource.Id.editTxtEmailCreateAcc);
             nameEditText = FindViewById<EditText>(Resource.Id.editTxtNameCreateAcc);
-            surenameEditText = FindViewById<EditText>(Resource.Id.editTxtSureNameCreateAcc);
+            surnameEditText = FindViewById<EditText>(Resource.Id.editTxtSurNameCreateAcc);
             pictureImageButton = FindViewById<ImageButton>(Resource.Id.imagebtnPictureCreateAcc);
             okButton = FindViewById<Button>(Resource.Id.btnOkCreateAcc);
             cancelButton = FindViewById<Button>(Resource.Id.btnCancelCreateAcc);

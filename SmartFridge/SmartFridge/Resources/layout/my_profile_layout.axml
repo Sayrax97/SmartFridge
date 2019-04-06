@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:minWidth="25px"
+	android:minHeight="25px">
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/linearLayout1" >
+		<TextView
+			android:text="Korisnicko ime"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:id="@+id/textViewUsername" />
+		<Button
+			android:text="Button"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:id="@+id/btnChangeUsername" />
+	</LinearLayout>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/linearLayout2" >
+		<TextView
+			android:text="**************"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:id="@+id/textViewPassword" />
+		<Button
+			android:text="Button"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:id="@+id/btnChangePassword" />
+	</LinearLayout>
+	<TextView
+		android:text="Ime"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/textViewName" />
+	<TextView
+		android:text="Prezime"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/textViewSurName" />
+	<TextView
+		android:text="Email"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/textViewEmail" />
+	<ImageButton
+		android:src="@android:drawable/ic_menu_gallery"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/imageBtnPictureMyProfile" />
+
+</LinearLayout>
