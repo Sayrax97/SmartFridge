@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace SmartFridge
 {
-    [Activity(Label = "CreateAccountActivity",MainLauncher = true)]
+    [Activity(Label = "CreateAccountActivity")]
     public class CreateAccountActivity : Activity
     {
         private EditText usernameEditText;

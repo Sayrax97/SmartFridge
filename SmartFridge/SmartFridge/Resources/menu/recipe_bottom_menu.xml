@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item
+    android:id="@+id/menu_feedback"
+    android:enabled="true"
+    android:title="Zatrazi Feedback"
+    app:showAsAction="ifRoom" />
+
+  <item
+    android:id="@+id/menu_make"
+    android:enabled="true"
+    android:title="Napravi"
+    app:showAsAction="ifRoom" />
+
+  <item
+    android:id="@+id/menu_addToCart"
+    android:enabled="true"
+    android:title="Dodaj u korpu"
+    app:showAsAction="ifRoom" />
+</menu>
