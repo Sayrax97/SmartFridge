@@ -3,12 +3,12 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-	<TextView
-		android:text="Moja grupa"
-		android:textAppearance="?android:attr/textAppearanceLarge"
+	<Toolbar
+		android:minHeight="?android:attr/actionBarSize"
+		android:background="?android:attr/colorPrimary"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/txtViewMygroup" />
+		android:id="@+id/toolbarMyGroup" />
 	<ListView
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"

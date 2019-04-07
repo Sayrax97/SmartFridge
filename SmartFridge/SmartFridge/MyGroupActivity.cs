@@ -7,21 +7,28 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 
 namespace SmartFridge
 {
-    [Activity(Label = "MyGroupActivity")]
-    public class MyGroupActivity : Activity
+    [Activity(Label = "Moja Grupa", MainLauncher = true)]
+    public class MyGroupActivity : AppCompatActivity
     {
         private ListView groupMembersListView;
+        private Toolbar myGroupToolbar;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.group_layout);
             groupMembersListView = FindViewById<ListView>(Resource.Id.listViewGroupMembers);
+            myGroupToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyGroup);
+            base.SetActionBar(myGroupToolbar);
+            base.ActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
+            base.ActionBar.SetDisplayHomeAsUpEnabled(true);
         }
+        
     }
 }

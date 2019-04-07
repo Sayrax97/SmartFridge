@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace SmartFridge
 {
-    [Activity(Label = "RecipeActivity", MainLauncher = true)]
+    [Activity(Label = "RecipeActivity")]
     public class RecipeActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
