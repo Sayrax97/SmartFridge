@@ -7,6 +7,7 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Graphics;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
@@ -14,7 +15,7 @@ using Android.Widget;
 namespace SmartFridge
 {
     [Activity(Label = "Moja Grupa", MainLauncher = true)]
-    public class MyGroupActivity : AppCompatActivity
+    public class MyGroupActivity : Activity
     {
         private ListView groupMembersListView;
         private Toolbar myGroupToolbar;
@@ -26,9 +27,9 @@ namespace SmartFridge
             groupMembersListView = FindViewById<ListView>(Resource.Id.listViewGroupMembers);
             myGroupToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyGroup);
             base.SetActionBar(myGroupToolbar);
-            base.ActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
-            base.ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
         }
-        
+       
     }
 }
