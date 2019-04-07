@@ -14,7 +14,7 @@ using Android.Widget;
 
 namespace SmartFridge
 {
-    [Activity(Label = "Moja Grupa", MainLauncher = true)]
+    [Activity(Label = "@string/my_group", MainLauncher = true)]
     public class MyGroupActivity : Activity
     {
         private ListView groupMembersListView;

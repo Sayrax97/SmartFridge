@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">SmartFridge</string>
     <string name="action_settings">Settings</string>
+    <string name="receipt">Recept</string>
+    <string name="my_group">Moja Grupa</string>
+    <string name="create_acc">Napravi Nalog</string>
+    <string name="login">Logovanje</string>
+    <string name="shopping_cart">Nabavna Korpa</string>
+
 </resources>

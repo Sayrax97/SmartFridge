@@ -16,13 +16,13 @@
 			android:layout_width="wrap_content"
 			
 			android:layout_height="match_parent"
-			android:id="@+id/imageViewGroceriesRecipe" />
+			android:id="@+id/imageViewRecipe" />
 		<TextView
 			android:text="Large Text"
 			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:layout_width="wrap_content"
 			android:layout_height="match_parent"
-			android:id="@+id/textView1" />
+			android:id="@+id/txtViewRecipeName" />
 	</LinearLayout>
 	<ListView
 		android:minWidth="25px"
