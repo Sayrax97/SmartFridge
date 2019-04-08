@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:checkableBehavior="single">
+  <item
+    android:id="@+id/menu_goceries"
+    android:enabled="true"
+    android:title="Frižider" />
+
+  <item
+    android:id="@+id/menu_recipes"
+    android:enabled="true"
+    android:title="Recepti" />
+</menu>

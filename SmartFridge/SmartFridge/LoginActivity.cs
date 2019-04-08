@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace SmartFridge
 {
-    [Activity(Label = "@string/login")]
+    [Activity(Label = "@string/login", MainLauncher = true)]
     public class LoginActivity : Activity
     {
         private EditText usernameEditText;
@@ -34,12 +34,13 @@ namespace SmartFridge
 
         private void CreateAccountButton_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            StartActivity(typeof(CreateAccountActivity));
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            StartActivity(typeof(MainActivity));
+            Finish();
         }
     }
 }

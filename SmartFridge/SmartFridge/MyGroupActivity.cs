@@ -11,11 +11,12 @@ using Android.Graphics;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace SmartFridge
 {
-    [Activity(Label = "@string/my_group", MainLauncher = true)]
-    public class MyGroupActivity : Activity
+    [Activity(Label = "@string/my_group",Theme = "@style/AppThemeNoActionBar")]
+    public class MyGroupActivity : AppCompatActivity
     {
         private ListView groupMembersListView;
         private Toolbar myGroupToolbar;
@@ -26,10 +27,23 @@ namespace SmartFridge
             SetContentView(Resource.Layout.group_layout);
             groupMembersListView = FindViewById<ListView>(Resource.Id.listViewGroupMembers);
             myGroupToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyGroup);
-            base.SetActionBar(myGroupToolbar);
-            ActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
-            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            myGroupToolbar.SetTitle(Resource.String.my_group);
+            base.SetSupportActionBar(myGroupToolbar);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
         }
-       
+        public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+
+                case Android.Resource.Id.Home:
+                    Finish();
+                    break;
+            }
+
+            return true;
+        }
+        
     }
 }

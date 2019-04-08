@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace SmartFridge
 {
-    [Activity(Label = "@string/create_acc")]
+    [Activity(Label = "@string/create_acc", NoHistory = true)]
     public class CreateAccountActivity : Activity
     {
         private EditText usernameEditText;
@@ -45,12 +45,12 @@ namespace SmartFridge
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+           Finish();
         }
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            StartActivity(typeof(MainActivity));
         }
     }
 }
