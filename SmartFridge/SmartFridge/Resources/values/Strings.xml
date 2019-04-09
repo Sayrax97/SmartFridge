@@ -6,6 +6,8 @@
     <string name="create_acc">Napravi Nalog</string>
     <string name="login">Logovanje</string>
     <string name="shopping_cart">Nabavna Korpa</string>
-  <string name="my_profile">Moj profil</string>
+    <string name="options">Opcije</string>
+    <string name="my_profile">Moj profil</string>
+    <string name="grocery_list">Lista namirnica</string>
 
 </resources>

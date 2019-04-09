@@ -1,5 +1,8 @@
 ﻿using Android.App;
+using Android.Content;
+using Android.Net;
 using Android.OS;
+using Android.Provider;
 using Android.Runtime;
 using Android.Support.Design.Widget;
 using Android.Support.V4.View;
@@ -36,7 +39,7 @@ namespace SmartFridge
         {
             switch (e.Item.ItemId)
             {
-                case Resource.Id.menu_goceries: StartActivity(typeof(MyGroupActivity)); break;
+                case Resource.Id.menu_goceries: StartActivity(typeof(GroceriesActivity)); break;
                 case Resource.Id.menu_recipes: StartActivity(typeof(MyGroupActivity)); break;
             }
         }
@@ -67,9 +70,15 @@ namespace SmartFridge
             {
                 case Resource.Id.myProfileMain: StartActivity(typeof(MyProfileActivity)); break;
                 case Resource.Id.myGroupMain: StartActivity(typeof(MyGroupActivity)); break;
-                case Resource.Id.settingsMain: StartActivity(typeof(MyGroupActivity)); break;
-                case Resource.Id.feedbackMain: StartActivity(typeof(MyGroupActivity)); break;
-                case Resource.Id.logoutMain: StartActivity(typeof(LoginActivity)); break;
+                case Resource.Id.settingsMain: StartActivity(typeof(OptionsActivity)); break;
+                case Resource.Id.feedbackMain:
+                    Intent emailIntent = new Intent(Intent.ActionSendto, Uri.FromParts("mailto", "4infinityteam@gmail.com", null));
+                    emailIntent.PutExtra(Intent.ExtraSubject, "Feedback");
+                    emailIntent.PutExtra(Intent.ExtraText, "Problem/Suggestion/etc.");
+                    StartActivity(Intent.CreateChooser(emailIntent, "Send email..."));
+                     break;
+                case Resource.Id.logoutMain: StartActivity(typeof(LoginActivity));Finish(); break;
+
             }
             
             mainDrawerLayout.CloseDrawer(GravityCompat.Start);
