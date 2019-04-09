@@ -27,12 +27,17 @@ namespace SmartFridge
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.recipe_layout);
+            init();
+
+        }
+
+        private void init()
+        {
             recipeImageView = FindViewById<ImageView>(Resource.Id.imageViewRecipe);
             recipeNameTextView = FindViewById<TextView>(Resource.Id.txtViewRecipeName);
             groceriesListView = FindViewById<ListView>(Resource.Id.listViewGroceriesRecipe);
             recipeDescriptionTextView = FindViewById<TextView>(Resource.Id.txtViewRecipeDescription);
             recipeBottomNavigationView = FindViewById<BottomNavigationView>(Resource.Id.bottomNavigationViewRecipe);
-
         }
     }
 }

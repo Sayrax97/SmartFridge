@@ -25,10 +25,15 @@ namespace SmartFridge
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.shopping_cart_layout);
+            
+
+        }
+
+        private void init()
+        {
             shoppingCartFloatingActionButton = FindViewById<FloatingActionButton>(Resource.Id.fABshoppingCart);
             addToGroceriesListButton = FindViewById<Button>(Resource.Id.btnAddtoGroceriesList);
             shoppingCartListView = FindViewById<ListView>(Resource.Id.listViewShoppingCart);
-
         }
     }
 }

@@ -29,6 +29,14 @@ namespace SmartFridge
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.create_account_layout);
+            init();
+            okButton.Click += OkButton_Click;
+            cancelButton.Click += CancelButton_Click;
+
+
+        }
+        private void init()
+        {
             usernameEditText = FindViewById<EditText>(Resource.Id.editTxtUserNameCreateAcc);
             passwordEditText = FindViewById<EditText>(Resource.Id.editTxtPasswordCreateAcc);
             emailEditText = FindViewById<EditText>(Resource.Id.editTxtEmailCreateAcc);
@@ -37,10 +45,6 @@ namespace SmartFridge
             pictureImageButton = FindViewById<ImageButton>(Resource.Id.imagebtnPictureCreateAcc);
             okButton = FindViewById<Button>(Resource.Id.btnOkCreateAcc);
             cancelButton = FindViewById<Button>(Resource.Id.btnCancelCreateAcc);
-            okButton.Click += OkButton_Click;
-            cancelButton.Click += CancelButton_Click;
-
-
         }
 
         private void CancelButton_Click(object sender, EventArgs e)

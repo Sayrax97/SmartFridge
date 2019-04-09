@@ -15,7 +15,7 @@ using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace SmartFridge
 {
-    [Activity(Label = "@string/my_group",Theme = "@style/AppThemeNoActionBar")]
+    [Activity(Label = "@string/my_group",Theme = "@style/AppThemeNoActionBar",NoHistory = true)]
     public class MyGroupActivity : AppCompatActivity
     {
         private ListView groupMembersListView;
@@ -23,10 +23,8 @@ namespace SmartFridge
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
             SetContentView(Resource.Layout.group_layout);
-            groupMembersListView = FindViewById<ListView>(Resource.Id.listViewGroupMembers);
-            myGroupToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyGroup);
+            init();
             myGroupToolbar.SetTitle(Resource.String.my_group);
             base.SetSupportActionBar(myGroupToolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
@@ -44,6 +42,12 @@ namespace SmartFridge
 
             return true;
         }
-        
+
+        private void init()
+        {
+            groupMembersListView = FindViewById<ListView>(Resource.Id.listViewGroupMembers);
+            myGroupToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyGroup);
+        }
+
     }
 }

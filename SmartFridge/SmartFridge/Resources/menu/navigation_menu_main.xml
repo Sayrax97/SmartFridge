@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+      android:id="@+id/myProfileMain"
+      android:icon="@drawable/baseline_account_circle_black_24dp"
+      android:title="Profil"/>
+    <item
+      android:id="@+id/myGroupMain"
+      android:icon="@drawable/baseline_group_black_24dp"
+      android:title="Grupa"/>
+    <item
+      android:id="@+id/settingsMain"
+      android:icon="@drawable/baseline_build_black_24dp"
+      android:title="Podešavanja"/>
+    <item
+      android:id="@+id/feedbackMain"
+      android:icon="@drawable/baseline_feedback_black_24dp"
+      android:title="Feedback"/>
+    <item
+      android:id="@+id/logoutMain"
+      android:icon="@drawable/baseline_exit_to_app_black_24dp"
+      android:title="Izloguj se"/>
+</menu>

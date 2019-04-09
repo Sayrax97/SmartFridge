@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace SmartFridge
 {
-    [Activity(Label = "@string/login", MainLauncher = true)]
+    [Activity(Label = "@string/application_name", MainLauncher = true)]
     public class LoginActivity : Activity
     {
         private EditText usernameEditText;
@@ -22,14 +22,18 @@ namespace SmartFridge
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
             SetContentView(Resource.Layout.login_layout);
+            init();
+            loginButton.Click += LoginButton_Click;
+            createAccountButton.Click += CreateAccountButton_Click;
+        }
+
+        private void init()
+        {
             usernameEditText = FindViewById<EditText>(Resource.Id.editTxtUsername);
             passwordEditText = FindViewById<EditText>(Resource.Id.editTxtPassword);
             loginButton = FindViewById<Button>(Resource.Id.btnLogin);
             createAccountButton = FindViewById<Button>(Resource.Id.btnCreateAcc);
-            loginButton.Click += LoginButton_Click;
-            createAccountButton.Click += CreateAccountButton_Click;
         }
 
         private void CreateAccountButton_Click(object sender, EventArgs e)
@@ -39,8 +43,15 @@ namespace SmartFridge
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            StartActivity(typeof(MainActivity));
-            Finish();
+            if (usernameEditText.Text == "admin" && passwordEditText.Text == "admin")
+            {
+                StartActivity(typeof(MainActivity));
+                Finish();
+            }
+            else
+            {
+                Toast.MakeText(this, "pogresno uneto kucaj admin u oba", ToastLength.Long).Show();
+            }
         }
     }
 }
