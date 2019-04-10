@@ -15,7 +15,7 @@ using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace SmartFridge
 {
-    [Activity(Label = "@string/gocery_list", Theme = "@style/AppThemeNoActionBar")]
+    [Activity(Label = "@string/grocery_list", Theme = "@style/AppThemeNoActionBar")]
     public class GroceriesActivity : AppCompatActivity
     {
         private Toolbar topToolbar;
@@ -27,10 +27,11 @@ namespace SmartFridge
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.gorceries_list_layout);
             init();
-            topToolbar.Title = Resources.GetString(Resource.String.gocery_list);
+            topToolbar.Title = Resources.GetString(Resource.String.grocery_list);
             SetSupportActionBar(topToolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
+            
         }
 
         private void init()
@@ -50,7 +51,24 @@ namespace SmartFridge
                     Finish();
                     break;
             }
-
+            
+            return true;
+            
+        }
+        public override bool OnTouchEvent(MotionEvent _event)
+        {
+            if (_event.Action == MotionEventActions.Down)
+                if (SupportActionBar != null)
+                {
+                    if (SupportActionBar.IsShowing)
+                    {
+                        SupportActionBar.Hide();
+                    }
+                    else
+                    {
+                        SupportActionBar.Show();
+                    }
+                }
             return true;
         }
     }

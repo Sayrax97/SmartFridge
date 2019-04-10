@@ -3,12 +3,34 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-	<android.support.v7.widget.Toolbar
-		android:minHeight="?android:attr/actionBarSize"
-		android:background="?android:attr/colorPrimary"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/toolbarTopGroceriesList" />
+    <android.support.v7.widget.Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:background="?android:attr/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_gravity="right"
+        android:id="@+id/toolbarTopGroceriesList">
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:gravity="right"
+			android:weightSum="100"
+			android:focusableInTouchMode="true"
+			android:layout_height="match_parent"
+			android:id="@+id/linearLayout3">
+			<EditText
+			android:layout_width="wrap_content"
+			android:layout_weight="60"
+			android:focusedByDefault="false"
+			android:drawableLeft="@drawable/baseline_search_white_18dp"
+			android:hint="trazi namirnice"
+			android:layout_height="wrap_content"
+			android:id="@+id/editText1" />
+		</LinearLayout>
+		
+		
+	  
+    </android.support.v7.widget.Toolbar>
 	<LinearLayout
 		android:orientation="vertical"
 		android:layout_width="match_parent"
