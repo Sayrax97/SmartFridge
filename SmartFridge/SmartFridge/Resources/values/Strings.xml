@@ -8,6 +8,7 @@
     <string name="shopping_cart">Nabavna Korpa</string>
     <string name="options">Opcije</string>
     <string name="my_profile">Moj profil</string>
-    <string name="grocery_list">Lista namirnica</string>
+    <string name="grocery_list">Namirnice</string>
+    <string name="recipe_list">Recepti</string>
 
 </resources>

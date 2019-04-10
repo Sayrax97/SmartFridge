@@ -40,7 +40,7 @@ namespace SmartFridge
             switch (e.Item.ItemId)
             {
                 case Resource.Id.menu_goceries: StartActivity(typeof(GroceriesActivity)); break;
-                case Resource.Id.menu_recipes: StartActivity(typeof(RecipeActivity)); break;
+                case Resource.Id.menu_recipes: StartActivity(typeof(RecipeListActivity)); break;
             }
         }
 

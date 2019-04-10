@@ -8,7 +8,7 @@
 		android:minWidth="25px"
 		android:minHeight="25px"
 		android:layout_width="match_parent"
-		android:layout_height="500dp"
+		android:layout_height="match_parent"
 		android:id="@+id/listViewShoppingCart" />
 	
 	<android.support.design.widget.FloatingActionButton
@@ -23,18 +23,16 @@
 		app:elevation="12dp"
 		app:fabSize="normal"
 		/>
-	<LinearLayout
-		android:orientation="vertical"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_below="@id/listViewShoppingCart"
-		android:id="@+id/linearLayout1">
 		<Button
 		android:text="Ubaci u frižider"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
+		android:layout_height="wrap_content"
 		android:layout_alignParentBottom="true"
 		android:id="@+id/btnAddtoGroceriesList" />
-		</LinearLayout>
-	
+	<android.support.v7.widget.Toolbar
+		android:minHeight="?android:attr/actionBarSize"
+		android:background="?android:attr/colorPrimary"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/topToolbarCart" />
 </RelativeLayout>
