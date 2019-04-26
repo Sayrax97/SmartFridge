@@ -27,7 +27,7 @@ namespace SmartFridge
 
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.shopping_cart_layout);
-            init();
+            Init();
             topToolbar.Title = Resources.GetString(Resource.String.grocery_list);
             SetSupportActionBar(topToolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
@@ -48,7 +48,7 @@ namespace SmartFridge
             return true;
         }
 
-        private void init()
+        private void Init()
         {
             shoppingCartFloatingActionButton = FindViewById<FloatingActionButton>(Resource.Id.fABshoppingCart);
             addToGroceriesListButton = FindViewById<Button>(Resource.Id.btnAddtoGroceriesList);
