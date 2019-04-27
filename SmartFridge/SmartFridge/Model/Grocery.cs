@@ -12,15 +12,24 @@ using Android.Widget;
 
 namespace SmartFridge.Model
 {
+    public enum Category
+    {
+        Komad,
+        Kilogram,
+        Gram,
+        Litar,
+        Mililitar,
+
+    }
     class Grocery
     {
         public string Name { get; set; }
-        public string MeasurementUnit { get; set; }
+        public Category MeasurementUnit { get; set; }
         public string Type { get; set; }
         public double Amount { get; set; }
         public string Image { get; set; }
 
-        public Grocery(string name, string measurementUnit, string type, double amount)
+        public Grocery(string name, Category measurementUnit, string type, double amount)
         {
             Name = name;
             MeasurementUnit = measurementUnit;

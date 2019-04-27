@@ -13,19 +13,16 @@
 		<LinearLayout
 			android:orientation="horizontal"
 			android:layout_width="match_parent"
-			android:gravity="right"
 			android:weightSum="100"
 			android:focusableInTouchMode="true"
 			android:layout_height="match_parent"
 			android:id="@+id/linearLayout3">
-			<EditText
+			<SearchView
 			android:layout_width="wrap_content"
-			android:layout_weight="60"
+			android:layout_weight="70"
 			android:focusedByDefault="false"
-			android:drawableLeft="@drawable/baseline_search_white_18dp"
-			android:hint="trazi namirnice"
-			android:layout_height="wrap_content"
-			android:id="@+id/editText1" />
+			android:layout_height="match_parent"
+			android:id="@+id/searchView1" />
 		</LinearLayout>
 		
 		
@@ -36,28 +33,28 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:weightSum="100"
-		android:id="@+id/linearLayout1" >
-		<android.support.v7.widget.RecyclerView
+		android:id="@+id/linearLayout1">
+		<ListView
 			android:layout_weight="95"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:id="@+id/groceryList" />
+			android:id="@+id/listGroceries" />
 		<LinearLayout
 			android:orientation="horizontal"
 			android:weightSum="100"
 			android:layout_width="match_parent"
 			android:layout_weight="5"
 			android:layout_height="wrap_content"
-			android:id="@+id/linearLayout2" >
+			android:id="@+id/linearLayout2">
 			<Button
 				android:text="Pretrazi recept"
-			android:layout_weight="70"
+				android:layout_weight="70"
 				android:layout_width="wrap_content"
 				android:layout_height="match_parent"
 				android:id="@+id/btnSearchRecipe" />
 			<Button
 				android:text="izbaci"
-			android:layout_weight="30"
+				android:layout_weight="30"
 				android:layout_width="wrap_content"
 				android:layout_height="match_parent"
 				android:id="@+id/btnEat" />

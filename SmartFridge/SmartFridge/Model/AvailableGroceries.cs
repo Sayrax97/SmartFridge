@@ -28,16 +28,14 @@ namespace SmartFridge.Model
 
         public void AddToList(Grocery grocery)
         {
-            if (Groceries.Exists(x => x.Name.Equals(grocery)))
+            if (Groceries.Exists(x => x.Name.Contains(grocery.Name)))
             {
-                Grocery g;
-                g=Groceries.Find(x => x.Equals(grocery));
-                g.Amount += grocery.Amount;
+               Groceries.Find(x => x.Equals(grocery)).Amount += grocery.Amount;
             }
             else
             {
                 Groceries.Add(grocery);
-                Groceries.Sort();
+                //Groceries.Sort();
 
             }
         }
