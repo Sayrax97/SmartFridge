@@ -59,6 +59,8 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\GroupMemberAdapter.cs" />
+    <Compile Include="Adapters\ShoppingCartItemAdapter.cs" />
     <Compile Include="CreateAccountActivity.cs" />
     <Compile Include="GroceriesActivity.cs" />
     <Compile Include="Adapters\GroceryListItemAdapter.cs" />
@@ -220,6 +222,22 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\groceies_list_item_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\group_member.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\baseline_clear_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\baseline_add_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\shopping_cart_item_layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

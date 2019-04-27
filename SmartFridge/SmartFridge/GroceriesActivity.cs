@@ -35,7 +35,8 @@ namespace SmartFridge
             SetSupportActionBar(topToolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
-            
+            GroceryListItemAdapter adapterGroceryListItem = new GroceryListItemAdapter(availableGroceries.Groceries, this);
+            groceryListView.Adapter = adapterGroceryListItem;
             searchView.QueryTextChange += SearchView_QueryTextChange;
 
         }

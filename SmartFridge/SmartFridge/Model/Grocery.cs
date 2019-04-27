@@ -21,7 +21,7 @@ namespace SmartFridge.Model
         Mililitar,
 
     }
-    class Grocery
+    public class Grocery
     {
         public string Name { get; set; }
         public Category MeasurementUnit { get; set; }

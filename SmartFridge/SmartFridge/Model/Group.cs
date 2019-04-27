@@ -12,21 +12,21 @@ using Android.Widget;
 
 namespace SmartFridge.Model
 {
-    class Group
+    public class Group
     {
         public int Id { get; set; }
         public AvailableGroceries AvailableGroceries { get; set; }
-        public List<string> MyGroupMembers { get; set; }
+        public List<User> MyGroupMembers { get; set; }
         public ShoppingCart ShoppingCart { get; set; }
         public List<Recipe> Recipes { get; set; }
 
         public Group()
         {
             Recipes= new List<Recipe>();
-            MyGroupMembers= new List<string>();
+            MyGroupMembers= new List<User>();
         }
 
-        public Group(int id, AvailableGroceries availableGroceries, List<string> myGroupMembers, ShoppingCart shoppingCart, List<Recipe> recipes)
+        public Group(int id, AvailableGroceries availableGroceries, List<User> myGroupMembers, ShoppingCart shoppingCart, List<Recipe> recipes)
         {
             Id = id;
             AvailableGroceries = availableGroceries;

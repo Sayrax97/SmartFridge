@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace SmartFridge.Model
 {
-    class Option
+    public class Option
     {
         public string Theme { get; set; }
         public string Font { get; set; }

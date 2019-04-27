@@ -10,6 +10,7 @@ using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using SmartFridge.Model;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace SmartFridge
@@ -26,7 +27,7 @@ namespace SmartFridge
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
-            init();
+            Init();
             mainTopToolbar.Title = Resources.GetString(Resource.String.application_name);
             SetSupportActionBar(mainTopToolbar);
             drawerMainNavigationView.NavigationItemSelected += OnMenuItemSelected;
@@ -84,7 +85,7 @@ namespace SmartFridge
             mainDrawerLayout.CloseDrawer(GravityCompat.Start);
         }
 
-        private void init()
+        private void Init()
         {
             mainTopToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMain);
             drawerMainNavigationView = FindViewById<NavigationView>(Resource.Id.navViewDrawerMain);

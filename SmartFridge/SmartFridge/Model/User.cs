@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace SmartFridge.Model
 {
-    class User
+    public class User
     {
         public User(string name, string surName, string password, string email, string image)
         {
@@ -39,6 +39,12 @@ namespace SmartFridge.Model
         void AddOptions(Option options)
         {
             MyOptions = options;
+        }
+
+        public override string ToString()
+        {
+
+            return Name +" "+ SurName;
         }
     }
 }

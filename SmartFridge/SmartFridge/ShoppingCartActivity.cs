@@ -11,6 +11,8 @@ using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using SmartFridge.Adapters;
+using SmartFridge.Model;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace SmartFridge
@@ -22,13 +24,14 @@ namespace SmartFridge
         private Button addToGroceriesListButton;
         private FloatingActionButton shoppingCartFloatingActionButton;
         private Toolbar topToolbar;
+        private ShoppingCart shoppingCart;
         protected override void OnCreate(Bundle savedInstanceState)
         {
 
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.shopping_cart_layout);
             Init();
-            topToolbar.Title = Resources.GetString(Resource.String.grocery_list);
+            topToolbar.Title = Resources.GetString(Resource.String.shopping_cart);
             SetSupportActionBar(topToolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
@@ -52,8 +55,22 @@ namespace SmartFridge
         {
             shoppingCartFloatingActionButton = FindViewById<FloatingActionButton>(Resource.Id.fABshoppingCart);
             addToGroceriesListButton = FindViewById<Button>(Resource.Id.btnAddtoGroceriesList);
+            addToGroceriesListButton.Click += AddToGroceriesListButton_Click;
             topToolbar = FindViewById<Toolbar>(Resource.Id.topToolbarCart);
+            shoppingCart= new ShoppingCart();
+            shoppingCart.AddToList(new Grocery("Mleko", Category.Litar, "Mlecni", 2));
+            shoppingCart.AddToList(new Grocery("Helb", Category.Komad, "", 3));
+            shoppingCart.AddToList(new Grocery("Mast", Category.Kilogram, "", 1));
+            shoppingCart.AddToList(new Grocery("Pasulj", Category.Kilogram, "", 5));
+            shoppingCart.AddToList(new Grocery("Mleko", Category.Litar, "Mlecni", 2));
             shoppingCartListView = FindViewById<ListView>(Resource.Id.listViewShoppingCart);
+            ShoppingCartItemAdapter adapter= new ShoppingCartItemAdapter(this,shoppingCart);
+            shoppingCartListView.Adapter = adapter;
+        }
+
+        private void AddToGroceriesListButton_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

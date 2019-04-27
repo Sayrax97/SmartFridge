@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace SmartFridge.Model
 {
-    class ShoppingCart
+    public class ShoppingCart
     {
         public List<Grocery> Groceries { get; set; }
 

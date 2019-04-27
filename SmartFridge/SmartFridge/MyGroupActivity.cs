@@ -11,6 +11,8 @@ using Android.Graphics;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using SmartFridge.Adapters;
+using SmartFridge.Model;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace SmartFridge
@@ -20,6 +22,7 @@ namespace SmartFridge
     {
         private ListView groupMembersListView;
         private Toolbar myGroupToolbar;
+        public Group MyGroup;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -47,6 +50,12 @@ namespace SmartFridge
         {
             groupMembersListView = FindViewById<ListView>(Resource.Id.listViewGroupMembers);
             myGroupToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyGroup);
+            MyGroup= new Group(33,new AvailableGroceries(new List<Grocery>()),new List<User>(),new ShoppingCart(),new List<Recipe>());
+            MyGroup.MyGroupMembers.Add(new User("Dusan","Janakovic","distingi97", "dusann.jankovic@elfak.rs",""));
+            MyGroup.MyGroupMembers.Add(new User("Matija", "Janic", "matko123", "matija.janic@elfak.rs", ""));
+            MyGroup.MyGroupMembers.Add(new User("Lazar", "Pavlovic", "perfeks38", "lazarp@elfak.rs", ""));
+            GroupMemberAdapter adapter = new GroupMemberAdapter(MyGroup,this);
+            groupMembersListView.Adapter = adapter;
         }
 
     }

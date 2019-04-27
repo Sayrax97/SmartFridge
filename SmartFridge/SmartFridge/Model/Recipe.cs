@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace SmartFridge.Model
 {
-    class Recipe
+    public class Recipe
     {
         public string Name { get; set; }
         public int Id { get;set; }
