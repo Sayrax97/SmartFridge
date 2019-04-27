@@ -27,6 +27,7 @@ namespace SmartFridge.Model
 
         public Recipe(string name, int id, string description, string image)
         {
+            Groceries = new List<Grocery>();
             Name = name;
             Id = id;
             Description = description;
@@ -37,7 +38,7 @@ namespace SmartFridge.Model
         public void AddToList(Grocery grocery)
         {
             Groceries.Add(grocery);
-            Groceries.Sort();
+            //Groceries.Sort();
         }
     }
 }

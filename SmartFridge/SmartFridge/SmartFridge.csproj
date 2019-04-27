@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapters\GroupMemberAdapter.cs" />
+    <Compile Include="Adapters\RecipesRecyclerAdapter.cs" />
     <Compile Include="Adapters\ShoppingCartItemAdapter.cs" />
     <Compile Include="CreateAccountActivity.cs" />
     <Compile Include="GroceriesActivity.cs" />
@@ -238,6 +239,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\shopping_cart_item_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\recipes_Item_layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

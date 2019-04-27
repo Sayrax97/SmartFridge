@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+		android:weightSum="100"
+    android:layout_height="100dp">
+	<ImageView
+		android:src="@drawable/iconsmartfridge"
+		android:layout_weight="70"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/imageRecipe" />
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_weight="30"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/linearLayout1" >
+		<TextView
+			android:text="Title"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/txtRecipeTitle" />
+		<TextView
+			android:text="Short Description"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/txtShortDesc" />
+	</LinearLayout>
+
+</LinearLayout>
