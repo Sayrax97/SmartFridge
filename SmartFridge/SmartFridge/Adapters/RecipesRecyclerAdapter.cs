@@ -11,17 +11,23 @@ using Android.Runtime;
 using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
 using SmartFridge.Model;
 
 namespace SmartFridge.Adapters
 {
     class RecipesRecyclerAdapter : RecyclerView.Adapter
     {
+        private Context context;
         private List<Recipe> recipes;
+        private RecyclerView recyclerView;
+        private Intent intent;
 
-        public RecipesRecyclerAdapter(List<Recipe> recipes)
+        public RecipesRecyclerAdapter(Context context, List<Recipe> recipes, RecyclerView recyclerView)
         {
+            this.context = context;
             this.recipes = recipes;
+            this.recyclerView = recyclerView;
         }
 
         public override int ItemCount => recipes.Count;
@@ -31,6 +37,20 @@ namespace SmartFridge.Adapters
             MyViewHolder vh = holder as MyViewHolder;
             vh.TitleTextView.Text = recipes[position].Name;
             vh.ShortDescTextView.Text = recipes[position].Description.Substring(0, 50) + "...";
+            vh.ItemView.Click += ItemView_Click;
+        }
+
+        private void ItemView_Click(object sender, EventArgs e)
+        {
+            int position = this.recyclerView.GetChildAdapterPosition((View) sender);
+            Recipe recipeClicked = recipes[position];
+            intent= new Intent(context,typeof(RecipeActivity));
+            intent.PutExtra("recept", JsonConvert.SerializeObject(recipeClicked));
+            //intent.PutExtra("name",recipeClicked.Name)
+            //    .PutExtra("id", recipeClicked.Id)
+            //    .PutExtra("desc", recipeClicked.Description);
+            context.StartActivity(intent);
+
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)

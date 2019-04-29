@@ -17,12 +17,14 @@ namespace SmartFridge
     {
         private List<Grocery> groceries;
         private Context context;
+        private bool flagReceipt;
         public override Grocery this[int position] => groceries[position];
 
-        public GroceryListItemAdapter(List<Grocery> groceries, Context context)
+        public GroceryListItemAdapter(List<Grocery> groceries, Context context,bool flagReceipt)
         {
             this.groceries = groceries;
             this.context = context;
+            this.flagReceipt = flagReceipt;
         }
 
         public override int Count => groceries.Count;
@@ -36,7 +38,12 @@ namespace SmartFridge
         {
             if (convertView == null)
             {
+                if(flagReceipt==false)
                 convertView = LayoutInflater.From(context).Inflate(Resource.Layout.groceies_list_item_layout,null);
+                else
+                {
+                    convertView = LayoutInflater.From(context).Inflate(Resource.Layout.groceries_recipe_item_layout, null);
+                }
             }
 
             TextView name = convertView.FindViewById<TextView>(Resource.Id.txtNameGrocery);

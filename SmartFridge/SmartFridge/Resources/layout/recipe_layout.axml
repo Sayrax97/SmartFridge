@@ -5,6 +5,12 @@
 	android:orientation="vertical"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
+	<android.support.v7.widget.Toolbar
+		android:minHeight="?android:attr/actionBarSize"
+		android:background="?android:attr/colorPrimary"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/toolbarRecipe" />
 	<LinearLayout
 		android:orientation="horizontal"
 		android:layout_width="match_parent"
@@ -24,11 +30,13 @@
 			android:layout_height="match_parent"
 			android:id="@+id/txtViewRecipeName" />
 	</LinearLayout>
+	
+	
 	<ListView
 		android:minWidth="25px"
 		android:minHeight="25px"
 		android:layout_width="match_parent"
-		android:layout_height="300dp"
+		android:layout_height="wrap_content"
 		android:id="@+id/listViewGroceriesRecipe" />
 	<TextView
 		android:text="Opis"

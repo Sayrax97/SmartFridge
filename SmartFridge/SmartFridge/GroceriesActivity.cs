@@ -35,7 +35,7 @@ namespace SmartFridge
             SetSupportActionBar(topToolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
-            GroceryListItemAdapter adapterGroceryListItem = new GroceryListItemAdapter(availableGroceries.Groceries, this);
+            GroceryListItemAdapter adapterGroceryListItem = new GroceryListItemAdapter(availableGroceries.Groceries, this,false);
             groceryListView.Adapter = adapterGroceryListItem;
             searchView.QueryTextChange += SearchView_QueryTextChange;
 
@@ -54,12 +54,12 @@ namespace SmartFridge
                     }
                 }
 
-                GroceryListItemAdapter adapterGroceryListItem = new GroceryListItemAdapter(pom.Groceries, this);
+                GroceryListItemAdapter adapterGroceryListItem = new GroceryListItemAdapter(pom.Groceries, this,false);
                 groceryListView.Adapter = adapterGroceryListItem;
             }
             else
             {
-                GroceryListItemAdapter adapterGroceryListItem = new GroceryListItemAdapter(availableGroceries.Groceries, this);
+                GroceryListItemAdapter adapterGroceryListItem = new GroceryListItemAdapter(availableGroceries.Groceries, this, false);
                 groceryListView.Adapter = adapterGroceryListItem;
             }
         }
