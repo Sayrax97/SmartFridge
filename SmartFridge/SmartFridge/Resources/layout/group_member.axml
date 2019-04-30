@@ -15,10 +15,13 @@
 		android:layout_width="wrap_content"
 		android:background="@android:color/white"
 		android:layout_height="wrap_content"
+		android:paddingLeft="50dp"
+		android:paddingRight="30dp"
 		android:id="@+id/imageBtnRemove" />
 	<ImageButton
 		android:src="@drawable/baseline_add_black_18dp"
 		android:layout_width="wrap_content"
+		android:paddingLeft="30dp"
 		android:background="@android:color/white"
 		android:layout_height="wrap_content"
 		android:id="@+id/imageBtnPlus" />

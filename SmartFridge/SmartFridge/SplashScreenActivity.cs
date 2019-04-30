@@ -7,7 +7,7 @@ using Gr.Net.MaroulisLib;
 
 namespace SmartFridge
 {
-    [Activity(Label = "SplashScreenActivity", MainLauncher = true,NoHistory = true,Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
+    [Activity(Label = "Smart Fridge", MainLauncher = true,NoHistory = true,Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
     public class SplashScreenActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

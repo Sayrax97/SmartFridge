@@ -10,6 +10,7 @@ using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
 using SmartFridge.Model;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 
@@ -23,6 +24,7 @@ namespace SmartFridge
         private FrameLayout contentMainFrameLayout;
         private DrawerLayout mainDrawerLayout;
         private NavigationView drawerMainNavigationView;
+        private User user;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -69,7 +71,10 @@ namespace SmartFridge
         {
             switch (e.MenuItem.ItemId)
             {
-                case Resource.Id.myProfileMain: StartActivity(typeof(MyProfileActivity)); break;
+                case Resource.Id.myProfileMain:
+                    Intent userIntent=new Intent(this, typeof(MyProfileActivity));
+                    userIntent.PutExtra("user", JsonConvert.SerializeObject(user));
+                    StartActivity(userIntent); break;
                 case Resource.Id.myGroupMain: StartActivity(typeof(MyGroupActivity)); break;
                 case Resource.Id.settingsMain: StartActivity(typeof(OptionsActivity)); break;
                 case Resource.Id.feedbackMain:
@@ -91,6 +96,8 @@ namespace SmartFridge
             drawerMainNavigationView = FindViewById<NavigationView>(Resource.Id.navViewDrawerMain);
             mainBottomNavigationView = FindViewById<BottomNavigationView>(Resource.Id.navigationViewMain);
             mainDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawerMain);
+            if(JsonConvert.DeserializeObject<User>("user")!=null)
+            user = JsonConvert.DeserializeObject<User>("user");
         }
     }
 }

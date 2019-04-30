@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
 	<EditText
 		android:layout_width="match_parent"
 		android:hint="Korisnicko Ime"
@@ -35,7 +36,34 @@
 		android:minHeight="25px"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/horizontalLayoutChoosePicCreateAcc" >
+		android:id="@+id/linearLayout1">
+		<TextView
+			android:text="Da li da se pridružite već postojećoj grupi?"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_width="wrap_content"
+			android:gravity=""
+			android:paddingRight="20dp"
+			android:layout_height="match_parent"
+			android:id="@+id/textView1" />
+		<CheckBox
+			android:text=""
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:id="@+id/checkBoxGroup" />
+	</LinearLayout>
+	<EditText
+		android:hint="ID grupe"
+		android:maxLength="7"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/editTxtGroupID" />
+	<LinearLayout
+		android:orientation="horizontal"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/horizontalLayoutChoosePicCreateAcc">
 		<ImageButton
 			android:src="@android:drawable/ic_menu_gallery"
 			android:layout_width="wrap_content"
@@ -54,7 +82,7 @@
 		android:minHeight="25px"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/horizontalLayoutButtonsCreateAcc" >
+		android:id="@+id/horizontalLayoutButtonsCreateAcc">
 		<Button
 			android:text="OK"
 			android:layout_width="wrap_content"
@@ -66,5 +94,6 @@
 			android:layout_height="match_parent"
 			android:id="@+id/btnCancelCreateAcc" />
 	</LinearLayout>
+	
 
 </LinearLayout>

@@ -7,13 +7,18 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V4.View;
+using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
+using SmartFridge.Model;
+using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace SmartFridge
 {
-    [Activity(Label = "@string/my_profile", NoHistory = true)]
-    public class MyProfileActivity : Activity
+    [Activity(Label = "@string/my_profile", Theme = "@style/AppThemeNoActionBar")]
+    public class MyProfileActivity : AppCompatActivity
     {
         private TextView userNameTextView;
         private TextView passwordTextView;
@@ -23,14 +28,30 @@ namespace SmartFridge
         private ImageButton profilePictureImageButton;
         private Button changeUsernameButton;
         private Button changePasswordButton;
+        private Toolbar topToolbar;
+        private User user;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.my_profile_layout);
             init();
-            
-        }
+            topToolbar.Title = Resources.GetString(Resource.String.my_profile);
+            SetSupportActionBar(topToolbar);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
 
+        }
+        public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+
+                case Android.Resource.Id.Home:
+                    Finish();
+                    break;
+            }
+            return true;
+        }
         private void init()
         {
             userNameTextView = FindViewById<TextView>(Resource.Id.textViewUsername);
@@ -41,7 +62,24 @@ namespace SmartFridge
             profilePictureImageButton = FindViewById<ImageButton>(Resource.Id.imageBtnPictureMyProfile);
             changeUsernameButton = FindViewById<Button>(Resource.Id.btnChangeUsername);
             changePasswordButton = FindViewById<Button>(Resource.Id.btnChangePassword);
+            topToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyProfile);
+            user = JsonConvert.DeserializeObject<User>("user");
+            userNameTextView.Text = user.UserName;
+            passwordTextView.Text = ToPassword(user.Password);
+            nameTextView.Text = user.Name;
+            surNameTextView.Text = user.SurName;
+            emailTextView.Text = user.Email;
 
+
+        }
+
+        private string ToPassword(string s)
+        {
+            int x = s.Length;
+            string p="";
+            for (int i = 0; i < x; i++)
+                p += "*";
+            return p;
         }
     }
 }

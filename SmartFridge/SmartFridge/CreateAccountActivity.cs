@@ -9,6 +9,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
+using SmartFridge.Model;
 
 namespace SmartFridge
 {
@@ -24,18 +26,33 @@ namespace SmartFridge
         private TextView choosePicTextView;
         private Button okButton;
         private Button cancelButton;
+        private CheckBox groupCheckBox;
+        private EditText groupIdEditText;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.create_account_layout);
-            init();
+            Init();
             okButton.Click += OkButton_Click;
             cancelButton.Click += CancelButton_Click;
-
+            groupCheckBox.CheckedChange += GroupCheckBox_CheckedChange;
 
         }
-        private void init()
+
+        private void GroupCheckBox_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
+        {
+            if (groupCheckBox.Checked == false)
+            {
+                groupIdEditText.Visibility = ViewStates.Gone;
+            }
+            else
+            {
+                groupIdEditText.Visibility = ViewStates.Visible;
+            }
+        }
+
+        private void Init()
         {
             usernameEditText = FindViewById<EditText>(Resource.Id.editTxtUserNameCreateAcc);
             passwordEditText = FindViewById<EditText>(Resource.Id.editTxtPasswordCreateAcc);
@@ -45,6 +62,13 @@ namespace SmartFridge
             pictureImageButton = FindViewById<ImageButton>(Resource.Id.imagebtnPictureCreateAcc);
             okButton = FindViewById<Button>(Resource.Id.btnOkCreateAcc);
             cancelButton = FindViewById<Button>(Resource.Id.btnCancelCreateAcc);
+            groupCheckBox = FindViewById<CheckBox>(Resource.Id.checkBoxGroup);
+            groupIdEditText = FindViewById<EditText>(Resource.Id.editTxtGroupID);
+            groupCheckBox.Checked = false;
+            if (groupCheckBox.Checked == false)
+            {
+                groupIdEditText.Visibility = ViewStates.Gone;
+            }
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -54,7 +78,37 @@ namespace SmartFridge
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-            StartActivity(typeof(MainActivity));
+            if (string.IsNullOrEmpty(usernameEditText.Text))
+                Toast.MakeText(this, "Polje za korisničko ime ne sme biti prazno", ToastLength.Short).Show();
+            else if(string.IsNullOrEmpty(passwordEditText.Text))
+            { 
+                Toast.MakeText(this, "Polje za šifru ne sme biti prazno", ToastLength.Short).Show();
+            }
+            else if (string.IsNullOrEmpty(emailEditText.Text))
+            {
+                Toast.MakeText(this, "Polje za email ne sme biti prazno", ToastLength.Short).Show();
+            }
+            else if (string.IsNullOrEmpty(nameEditText.Text))
+            {
+                Toast.MakeText(this, "Polje za ime ne sme biti prazno", ToastLength.Short).Show();
+            }
+            else if (string.IsNullOrEmpty(surnameEditText.Text))
+            {
+                Toast.MakeText(this, "Polje za prezime ne sme biti prazno", ToastLength.Short).Show();
+            }
+            else if(groupIdEditText.Length()!=7 && groupIdEditText.Visibility==ViewStates.Visible)
+            {
+                Toast.MakeText(this, "Polje za ID grupe mora da ima 7 karaktera", ToastLength.Short).Show();
+            }
+            else
+            {
+                User user=new User(nameEditText.Text,surnameEditText.Text,usernameEditText.Text,
+                passwordEditText.Text,emailEditText.Text,"");
+                user.AddToGroup(groupIdEditText.Text);
+                Intent intent=new Intent(this, typeof(MainActivity));
+                intent.PutExtra("user", JsonConvert.SerializeObject(user));
+                StartActivity(intent);
+            }
         }
     }
 }

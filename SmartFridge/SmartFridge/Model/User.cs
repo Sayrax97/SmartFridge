@@ -14,29 +14,31 @@ namespace SmartFridge.Model
 {
     public class User
     {
-        public User(string name, string surName, string password, string email, string image)
-        {
-            Name = name;
-            SurName = surName;
-            Password = password;
-            Email = email;
-            Image = image;
-        }
-
         public string Name { get; set; }
         public string SurName { get; set; }
+        public string UserName { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
         public string Image { get; set; }
         public string MyGroup { get; set; }
         public Option MyOptions { get; set; }
 
-        void AddToGroup(string group)
+        public User(string name, string surName, string userName, string password, string email, string image)
+        {
+            Name = name;
+            SurName = surName;
+            UserName = userName;
+            Password = password;
+            Email = email;
+            Image = image;
+        }
+
+        public void AddToGroup(string group)
         {
             MyGroup = group;
         }
 
-        void AddOptions(Option options)
+        public void AddOptions(Option options)
         {
             MyOptions = options;
         }

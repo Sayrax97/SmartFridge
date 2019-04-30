@@ -6,62 +6,87 @@
 	android:layout_height="match_parent"
 	android:minWidth="25px"
 	android:minHeight="25px">
+	<android.support.v7.widget.Toolbar
+		android:minHeight="?android:attr/actionBarSize"
+		android:background="?android:attr/colorPrimary"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/toolbarMyProfile" />
 	<LinearLayout
 		android:orientation="horizontal"
-		android:layout_width="wrap_content"
+		android:layout_width="match_parent"
+		android:weightSum="100"
 		android:layout_height="wrap_content"
-		android:id="@+id/linearLayout1" >
+		android:id="@+id/linearLayout1">
 		<TextView
 			android:text="Korisnicko ime"
+			android:layout_weight="50"
+			android:gravity=""
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="wrap_content"
 			android:layout_height="match_parent"
 			android:id="@+id/textViewUsername" />
 		<Button
 			android:text="Change username"
+			android:layout_weight="50"
 			android:layout_width="wrap_content"
 			android:layout_height="match_parent"
 			android:id="@+id/btnChangeUsername" />
 	</LinearLayout>
 	<LinearLayout
 		android:orientation="horizontal"
-		android:layout_width="wrap_content"
+		android:layout_width="match_parent"
+		android:weightSum="100"
 		android:layout_height="wrap_content"
-		android:id="@+id/linearLayout2" >
+		android:id="@+id/linearLayout2">
 		<TextView
 			android:text="**************"
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="wrap_content"
+			android:layout_weight="50"
+			android:gravity=""
 			android:layout_height="match_parent"
 			android:id="@+id/textViewPassword" />
 		<Button
 			android:text="Change password"
+			android:layout_weight="50"
 			android:layout_width="wrap_content"
 			android:layout_height="match_parent"
 			android:id="@+id/btnChangePassword" />
 	</LinearLayout>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:weightSum="99"
+		android:layout_height="wrap_content"
+		android:id="@+id/linearLayout2">
 	<TextView
 		android:text="Ime"
 		android:textAppearance="?android:attr/textAppearanceMedium"
-		android:layout_width="match_parent"
+		android:layout_width="wrap_content"
+		android:layout_weight="33"
 		android:layout_height="wrap_content"
 		android:id="@+id/textViewName" />
 	<TextView
 		android:text="Prezime"
 		android:textAppearance="?android:attr/textAppearanceMedium"
-		android:layout_width="match_parent"
+		android:layout_width="wrap_content"
+		android:layout_weight="33"
 		android:layout_height="wrap_content"
 		android:id="@+id/textViewSurName" />
 	<TextView
 		android:text="Email"
 		android:textAppearance="?android:attr/textAppearanceMedium"
-		android:layout_width="match_parent"
+		android:layout_width="wrap_content"
+		android:layout_weight="33"
 		android:layout_height="wrap_content"
 		android:id="@+id/textViewEmail" />
+	</LinearLayout>
 	<ImageButton
 		android:src="@android:drawable/ic_menu_gallery"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:id="@+id/imageBtnPictureMyProfile" />
+	
 
 </LinearLayout>

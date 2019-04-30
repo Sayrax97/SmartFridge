@@ -51,9 +51,9 @@ namespace SmartFridge
             groupMembersListView = FindViewById<ListView>(Resource.Id.listViewGroupMembers);
             myGroupToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyGroup);
             MyGroup= new Group(33,new AvailableGroceries(new List<Grocery>()),new List<User>(),new ShoppingCart(),new List<Recipe>());
-            MyGroup.MyGroupMembers.Add(new User("Dusan","Janakovic","distingi97", "dusann.jankovic@elfak.rs",""));
-            MyGroup.MyGroupMembers.Add(new User("Matija", "Janic", "matko123", "matija.janic@elfak.rs", ""));
-            MyGroup.MyGroupMembers.Add(new User("Lazar", "Pavlovic", "perfeks38", "lazarp@elfak.rs", ""));
+            MyGroup.MyGroupMembers.Add(new User("Dusan","Janakovic","Xamar","distingi97", "dusann.jankovic@elfak.rs",""));
+            MyGroup.MyGroupMembers.Add(new User("Matija", "Janic", "AnubisLP", "matko123", "matija.janic@elfak.rs", ""));
+            MyGroup.MyGroupMembers.Add(new User("Lazar", "Pavlovic","Brahman_n" ,"perfeks38", "lazarp@elfak.rs", ""));
             GroupMemberAdapter adapter = new GroupMemberAdapter(MyGroup,this);
             groupMembersListView.Adapter = adapter;
         }
