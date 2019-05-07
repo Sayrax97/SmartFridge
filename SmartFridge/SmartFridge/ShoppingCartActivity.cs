@@ -58,11 +58,11 @@ namespace SmartFridge
             addToGroceriesListButton.Click += AddToGroceriesListButton_Click;
             topToolbar = FindViewById<Toolbar>(Resource.Id.topToolbarCart);
             shoppingCart= new ShoppingCart();
-            shoppingCart.AddToList(new Grocery("Mleko", Category.Litar, "Mlecni", 2));
-            shoppingCart.AddToList(new Grocery("Helb", Category.Komad, "", 3));
-            shoppingCart.AddToList(new Grocery("Mast", Category.Kilogram, "", 1));
-            shoppingCart.AddToList(new Grocery("Pasulj", Category.Kilogram, "", 5));
-            shoppingCart.AddToList(new Grocery("Mleko", Category.Litar, "Mlecni", 2));
+            shoppingCart.AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky , 2));
+            shoppingCart.AddToList(new Grocery("Hleb", Unit.Komad, Category.Flour, 3));
+            shoppingCart.AddToList(new Grocery("Mast", Unit.Kilogram, Category.Cooking_oils, 1));
+            shoppingCart.AddToList(new Grocery("Pasulj", Unit.Kilogram, Category.Vegtables, 5));
+            shoppingCart.AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
             shoppingCartListView = FindViewById<ListView>(Resource.Id.listViewShoppingCart);
             ShoppingCartItemAdapter adapter= new ShoppingCartItemAdapter(this,shoppingCart);
             shoppingCartListView.Adapter = adapter;

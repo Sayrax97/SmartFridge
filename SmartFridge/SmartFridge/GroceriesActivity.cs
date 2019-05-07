@@ -7,10 +7,13 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Android.Views;
+using Com.Syncfusion.Autocomplete;
 using Android.Widget;
+using SmartFridge.Dialogs;
 using SmartFridge.Model;
 using SearchView = Android.Widget.SearchView;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
@@ -25,7 +28,8 @@ namespace SmartFridge
         private Button searchButton;
         private Button eatButton;
         private SearchView searchView;
-        private AvailableGroceries availableGroceries;
+        private FloatingActionButton groceriesFAB;
+        public static AvailableGroceries availableGroceries= new AvailableGroceries();
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -38,7 +42,6 @@ namespace SmartFridge
             GroceryListItemAdapter adapterGroceryListItem = new GroceryListItemAdapter(availableGroceries.Groceries, this,false);
             groceryListView.Adapter = adapterGroceryListItem;
             searchView.QueryTextChange += SearchView_QueryTextChange;
-
         }
 
         private void SearchView_QueryTextChange(object sender, SearchView.QueryTextChangeEventArgs e)
@@ -69,18 +72,44 @@ namespace SmartFridge
             topToolbar = FindViewById<Toolbar>(Resource.Id.toolbarTopGroceriesList);
             groceryListView = FindViewById<ListView>(Resource.Id.listGroceries);
             searchButton = FindViewById<Button>(Resource.Id.btnSearchRecipe);
+            searchButton.Click += SearchButton_Click;
             eatButton = FindViewById<Button>(Resource.Id.btnEat);
+            eatButton.Click += EatButton_Click;
             searchView = FindViewById<SearchView>(Resource.Id.searchView1);
-            availableGroceries=new AvailableGroceries();
-            availableGroceries.AddToList(new Grocery("Jaje", Category.Komad, "", 10));
-            availableGroceries.AddToList(new Grocery("Mleko", Category.Litar, "Mlecni", 2));
-            availableGroceries.AddToList(new Grocery("Helb", Category.Komad, "", 3));
-            availableGroceries.AddToList(new Grocery("Mast", Category.Kilogram, "", 1));
-            availableGroceries.AddToList(new Grocery("Pasulj", Category.Kilogram, "", 5));
-            availableGroceries.AddToList(new Grocery("Mleko", Category.Litar, "Mlecni", 2));
-            availableGroceries.AddToList(new Grocery("Helb", Category.Komad, "", 3));
-            availableGroceries.AddToList(new Grocery("Mast", Category.Kilogram, "", 1));
-            availableGroceries.AddToList(new Grocery("Pasulj", Category.Kilogram, "", 5));
+            groceriesFAB = FindViewById<FloatingActionButton>(Resource.Id.fABgroceries);
+            groceriesFAB.Click += GroceriesFAB_Click;
+            availableGroceries.AddToList(new Grocery("Jaje", Unit.Komad, Category.Animal_product, 10));
+            availableGroceries.AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
+            availableGroceries.AddToList(new Grocery("Hleb", Unit.Komad, Category.Flour, 3));
+            availableGroceries.AddToList(new Grocery("Mast", Unit.Kilogram, Category.Animal_product, 1));
+            availableGroceries.AddToList(new Grocery("Pasulj", Unit.Kilogram, Category.Vegtables, 5));
+        }
+
+        private void EatButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void GroceriesFAB_Click(object sender, EventArgs e)
+        {
+            FragmentTransaction ft = FragmentManager.BeginTransaction();
+            //Remove fragment else it will crash as it is already added to backstack
+            Fragment prev = FragmentManager.FindFragmentByTag("NovaNamirnica");
+            if (prev != null)
+            {
+                ft.Remove(prev);
+            }
+            ft.AddToBackStack(null);
+
+            // Create and show the dialog.
+            NewGroceryDialog newFragment = new NewGroceryDialog();
+            //Add fragment
+            newFragment.Show(ft, "NovaNamirnica");
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+           
         }
 
         public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)

@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace SmartFridge.Model
 {
-    public enum Category
+    public enum Unit
     {
         Komad,
         Kilogram,
@@ -21,15 +21,32 @@ namespace SmartFridge.Model
         Mililitar,
 
     }
+
+    public enum Category
+    {
+        Food_additives‎,
+        Cereals,
+        Condiments,
+        Cooking_oils,
+        Flour,
+        Herbs,
+        Fruits,
+        Sauces,
+        Milky,
+        Animal_product,
+        Drink,
+        Vegtables,
+    }
+
     public class Grocery
     {
         public string Name { get; set; }
-        public Category MeasurementUnit { get; set; }
-        public string Type { get; set; }
+        public Unit MeasurementUnit { get; set; }
+        public Category Type { get; set; }
         public double Amount { get; set; }
         public string Image { get; set; }
 
-        public Grocery(string name, Category measurementUnit, string type, double amount)
+        public Grocery(string name, Unit measurementUnit, Category type, double amount)
         {
             Name = name;
             MeasurementUnit = measurementUnit;
@@ -43,6 +60,11 @@ namespace SmartFridge.Model
             if (Name == grocery.Name && Type == grocery.Type && MeasurementUnit == grocery.MeasurementUnit)
                 return true;
             return false;
+        }
+
+        public static T ParseEnum<T>(string value)
+        {
+            return (T)Enum.Parse(typeof(T), value, true);
         }
     }
 }
