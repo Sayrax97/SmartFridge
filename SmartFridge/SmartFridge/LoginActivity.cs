@@ -43,15 +43,17 @@ namespace SmartFridge
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if (usernameEditText.Text == "admin" && passwordEditText.Text == "admin")
-            {
-                StartActivity(typeof(MainActivity));
-                Finish();
-            }
-            else
-            {
-                Toast.MakeText(this, "pogresno uneto kucaj admin u oba", ToastLength.Long).Show();
-            }
+            StartActivity(typeof(MainActivity));
+            Finish();
+            //if (usernameEditText.Text == "admin" && passwordEditText.Text == "admin")
+            //{
+            //    StartActivity(typeof(MainActivity));
+            //    Finish();
+            //}
+            //else
+            //{
+            //    Toast.MakeText(this, "pogresno uneto kucaj admin u oba", ToastLength.Long).Show();
+            //}
         }
     }
 }

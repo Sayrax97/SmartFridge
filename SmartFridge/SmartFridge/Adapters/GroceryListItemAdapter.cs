@@ -53,6 +53,11 @@ namespace SmartFridge
             name.Text = groceries[position].Name;
             amount.Text = groceries[position].Amount.ToString();
             unit.Text = groceries[position].MeasurementUnit.ToString();
+            if (flagReceipt == false)
+                checkBox.CheckedChange+= (sender, args) => {
+                groceries[position].Checked = !groceries[position].Checked;
+                GroceriesActivity.availableGroceries.Groceries[position].Checked = groceries[position].Checked;
+            };
             return convertView;
         }
     }

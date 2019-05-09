@@ -30,6 +30,7 @@ namespace SmartFridge
         private SearchView searchView;
         private FloatingActionButton groceriesFAB;
         public static AvailableGroceries availableGroceries= new AvailableGroceries();
+        private  static AvailableGroceries pom = new AvailableGroceries();
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -48,7 +49,7 @@ namespace SmartFridge
         {
             if (!string.IsNullOrEmpty(searchView.Query))
             {
-                AvailableGroceries pom = new AvailableGroceries();
+                pom.Groceries.Clear();
                 foreach (var grocery in availableGroceries.Groceries)
                 {
                     if (grocery.Name.ToLower().Contains(searchView.Query.ToLower()))
@@ -78,16 +79,41 @@ namespace SmartFridge
             searchView = FindViewById<SearchView>(Resource.Id.searchView1);
             groceriesFAB = FindViewById<FloatingActionButton>(Resource.Id.fABgroceries);
             groceriesFAB.Click += GroceriesFAB_Click;
-            availableGroceries.AddToList(new Grocery("Jaje", Unit.Komad, Category.Animal_product, 10));
-            availableGroceries.AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
-            availableGroceries.AddToList(new Grocery("Hleb", Unit.Komad, Category.Flour, 3));
-            availableGroceries.AddToList(new Grocery("Mast", Unit.Kilogram, Category.Animal_product, 1));
-            availableGroceries.AddToList(new Grocery("Pasulj", Unit.Kilogram, Category.Vegtables, 5));
         }
 
         private void EatButton_Click(object sender, EventArgs e)
         {
-            
+            if (!string.IsNullOrEmpty(searchView.Query))
+            {
+                foreach (var grocery in pom.Groceries.ToList())
+                {
+                    if (grocery.Checked)
+                    {
+                        pom.Groceries.Remove(grocery);
+                        availableGroceries.Groceries.Remove(grocery);
+                    }
+                }
+                GroceryListItemAdapter adapterGroceryListItem = new GroceryListItemAdapter(pom.Groceries, this, false);
+                groceryListView.Adapter = adapterGroceryListItem;
+            }
+            else
+            {
+                //ToList because:
+                //The issue is that availableGroceries.Groceries is being modified inside the foreach loop.
+                //Calling availableGroceries.Groceries.ToList() copies the values of groceries
+                //to a separate list at the start of the foreach.
+                //Nothing else has access to this list (it doesn't even have a variable name!), so nothing can modify it inside the loop.
+                foreach (var grocery in availableGroceries.Groceries.ToList())
+                {
+                    if (grocery.Checked)
+                    {
+                        availableGroceries.Groceries.Remove(grocery);
+                    }
+
+                }
+                GroceryListItemAdapter adapterGroceryListItem = new GroceryListItemAdapter(availableGroceries.Groceries, this, false);
+                groceryListView.Adapter = adapterGroceryListItem;
+            }
         }
 
         private void GroceriesFAB_Click(object sender, EventArgs e)

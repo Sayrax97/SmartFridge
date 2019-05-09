@@ -19,6 +19,7 @@ namespace SmartFridge.Model
         Gram,
         Litar,
         Mililitar,
+        Nema,
 
     }
 
@@ -44,7 +45,9 @@ namespace SmartFridge.Model
         public Unit MeasurementUnit { get; set; }
         public Category Type { get; set; }
         public double Amount { get; set; }
+        public double Bought { get; set; }
         public string Image { get; set; }
+        public bool Checked { get; set; }
 
         public Grocery(string name, Unit measurementUnit, Category type, double amount)
         {
@@ -52,12 +55,14 @@ namespace SmartFridge.Model
             MeasurementUnit = measurementUnit;
             Type = type;
             Amount = amount;
+            Bought = 0;
+            Checked = false;
         }
 
         public override bool Equals(object obj)
         {
             var grocery = obj as Grocery;
-            if (Name == grocery.Name && Type == grocery.Type && MeasurementUnit == grocery.MeasurementUnit)
+            if (Name == grocery.Name)
                 return true;
             return false;
         }

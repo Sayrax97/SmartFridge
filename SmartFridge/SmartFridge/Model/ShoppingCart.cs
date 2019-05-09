@@ -14,11 +14,16 @@ namespace SmartFridge.Model
 {
     public class ShoppingCart
     {
-        public List<Grocery> Groceries { get; set; }
+        public  List<Grocery> Groceries { get; set; }
 
         public ShoppingCart()
         {
             Groceries = new List<Grocery>();
+            AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
+            AddToList(new Grocery("Hleb", Unit.Komad, Category.Flour, 3));
+            AddToList(new Grocery("Mast", Unit.Kilogram, Category.Cooking_oils, 1));
+            AddToList(new Grocery("Pasulj", Unit.Kilogram, Category.Vegtables, 5));
+            AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
         }
 
         public ShoppingCart(List<Grocery> groceries)
@@ -28,11 +33,11 @@ namespace SmartFridge.Model
 
         public void AddToList(Grocery grocery)
         {
-            if (Groceries.Exists(x => x.Name.Equals(grocery)))
+            
+            if (Groceries.Exists(x => x.Equals(grocery)))
             {
-                Grocery g;
-                g = Groceries.Find(x => x.Equals(grocery));
-                g.Amount += grocery.Amount;
+
+                    Groceries.Find(x => x.Equals(grocery)).Amount += grocery.Amount;
             }
             else
             {
@@ -41,10 +46,23 @@ namespace SmartFridge.Model
             }
         }
 
-        public void Buy(double amount, Grocery grocery)
+        public void Buy(Grocery grocery)
         {
-            if ((Groceries.Find(x => x.Equals(grocery)).Amount -= amount) <= 0)
-                Groceries.Remove(grocery);
+            if (grocery.Checked && grocery.Bought!=0)
+            {
+                GroceriesActivity.availableGroceries.AddToList(grocery, grocery.Bought);
+            if ((Groceries.Find(x => x.Equals(grocery)).Amount -= grocery.Bought) <= 0)
+                {
+                    RemoveFromShoppingCart(grocery);
+                }
+            else
+            Groceries.Find(x => x.Equals(grocery)).Bought = 0;
+            }
+            else if(grocery.Checked && grocery.Bought == 0)
+            {
+                GroceriesActivity.availableGroceries.AddToList(grocery, grocery.Amount);
+                    RemoveFromShoppingCart(grocery);
+            }
         }
 
         public void RemoveFromShoppingCart(Grocery grocery)

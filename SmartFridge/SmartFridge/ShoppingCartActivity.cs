@@ -12,6 +12,7 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using SmartFridge.Adapters;
+using SmartFridge.Dialogs;
 using SmartFridge.Model;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 
@@ -24,7 +25,7 @@ namespace SmartFridge
         private Button addToGroceriesListButton;
         private FloatingActionButton shoppingCartFloatingActionButton;
         private Toolbar topToolbar;
-        private ShoppingCart shoppingCart;
+        public static ShoppingCart shoppingCart = new ShoppingCart();
         protected override void OnCreate(Bundle savedInstanceState)
         {
 
@@ -57,20 +58,48 @@ namespace SmartFridge
             addToGroceriesListButton = FindViewById<Button>(Resource.Id.btnAddtoGroceriesList);
             addToGroceriesListButton.Click += AddToGroceriesListButton_Click;
             topToolbar = FindViewById<Toolbar>(Resource.Id.topToolbarCart);
-            shoppingCart= new ShoppingCart();
-            shoppingCart.AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky , 2));
-            shoppingCart.AddToList(new Grocery("Hleb", Unit.Komad, Category.Flour, 3));
-            shoppingCart.AddToList(new Grocery("Mast", Unit.Kilogram, Category.Cooking_oils, 1));
-            shoppingCart.AddToList(new Grocery("Pasulj", Unit.Kilogram, Category.Vegtables, 5));
-            shoppingCart.AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
             shoppingCartListView = FindViewById<ListView>(Resource.Id.listViewShoppingCart);
             ShoppingCartItemAdapter adapter= new ShoppingCartItemAdapter(this,shoppingCart);
             shoppingCartListView.Adapter = adapter;
+            shoppingCartFloatingActionButton.Click += ShoppingCartFloatingActionButton_Click;
+
+        }
+
+        private void ShoppingCartFloatingActionButton_Click(object sender, EventArgs e)
+        {
+            FragmentTransaction ft = FragmentManager.BeginTransaction();
+            //Remove fragment else it will crash as it is already added to backstack
+            Fragment prev = FragmentManager.FindFragmentByTag("NovaNamirnica");
+            if (prev != null)
+            {
+                ft.Remove(prev);
+            }
+            ft.AddToBackStack(null);
+
+            // Create and show the dialog.
+            NewGroceryDialog newFragment = new NewGroceryDialog();
+            //Add fragment
+            newFragment.Show(ft, "NovaNamirnica");
         }
 
         private void AddToGroceriesListButton_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            foreach (var grocery in shoppingCart.Groceries.ToList())
+            {
+                if (grocery.Checked)
+                {
+                    shoppingCart.Buy(grocery);
+                    grocery.Bought = 0;
+                }
+
+            }
+            ShoppingCartItemAdapter adapter = new ShoppingCartItemAdapter(this, shoppingCart);
+            shoppingCartListView.Adapter = adapter;
+            foreach (var grocery in shoppingCart.Groceries.ToList())
+            {
+                grocery.Checked = false;
+
+            }
         }
     }
 }

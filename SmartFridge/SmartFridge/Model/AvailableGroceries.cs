@@ -19,6 +19,11 @@ namespace SmartFridge.Model
         public AvailableGroceries()
         {
             Groceries=new List<Grocery>();
+            AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
+            AddToList(new Grocery("Hleb", Unit.Komad, Category.Flour, 3));
+            AddToList(new Grocery("Mast", Unit.Kilogram, Category.Cooking_oils, 1));
+            AddToList(new Grocery("Pasulj", Unit.Kilogram, Category.Vegtables, 5));
+            AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
         }
 
         public AvailableGroceries(List<Grocery> groceries )
@@ -34,6 +39,20 @@ namespace SmartFridge.Model
             }
             else
             {
+                Groceries.Add(grocery);
+                //Groceries.Sort();
+
+            }
+        }
+        public void AddToList(Grocery grocery,double amount)
+        {
+            if (Groceries.Exists(x => x.Name.Contains(grocery.Name)))
+            {
+                Groceries.Find(x => x.Equals(grocery)).Amount += amount;
+            }
+            else
+            {
+                grocery.Amount = amount;
                 Groceries.Add(grocery);
                 //Groceries.Sort();
 

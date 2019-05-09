@@ -10,6 +10,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Speech.Tts;
 using Android.Views;
+using Android.Views.InputMethods;
 using Android.Widget;
 using Com.Syncfusion.Autocomplete;
 using SmartFridge.Model;
@@ -26,20 +27,40 @@ namespace SmartFridge.Dialogs
         private EditText amontEditText;
         private Button okButton;
         private Button cancelButton;
+        private View view;
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             InitLists();
-            View view = inflater.Inflate(Resource.Layout.dialog_new_grocery_layout, container, false);
+            view = inflater.Inflate(Resource.Layout.dialog_new_grocery_layout, container, false);
             groceiesAutoComplete = view.FindViewById<SfAutoComplete>(Resource.Id.autoCompleteGrocery);
             categoryAutoComplete = view.FindViewById<SfAutoComplete>(Resource.Id.autoCompletecategory);
             AutoCompleteInit(view);
             amontEditText = view.FindViewById<EditText>(Resource.Id.editTxtAmountGrocery);
             okButton = view.FindViewById<Button>(Resource.Id.btnOK);
             cancelButton = view.FindViewById<Button>(Resource.Id.btnCancel);
-           
             okButton.Click += OkButton_Click;
             cancelButton.Click += CancelButton_Click;
+            groceiesAutoComplete.Click+= CategoryAutoComplete_Click;
             return view;
+        }
+
+        private void CategoryAutoComplete_Click(object sender, EventArgs e)
+        {
+            groceiesAutoComplete.RequestFocus();
+            InputMethodManager imm = (InputMethodManager)Context.GetSystemService(Context.InputMethodService);
+            imm.ToggleSoftInput(InputMethodManager.ShowImplicit, 0);
+            if (!string.IsNullOrEmpty(categoryAutoComplete.Text))
+            {
+                groceryNamesList.Clear();
+                foreach (var grocery in groceries)
+                {
+                    if (grocery.Type == Grocery.ParseEnum<Category>(categoryAutoComplete.Text))
+                        groceryNamesList.Add(grocery.Name);
+                }
+                groceiesAutoComplete.AutoCompleteSource = new ArrayAdapter<string>(view.Context, Android.Resource.Layout.SimpleListItem1, groceryNamesList);
+                groceiesAutoComplete.DataSource = groceryNamesList;
+            }
+
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -50,8 +71,14 @@ namespace SmartFridge.Dialogs
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-            GroceriesActivity.availableGroceries.AddToList(
-                new Grocery(groceiesAutoComplete.Text,Unit.Komad,Grocery.ParseEnum<Category>(categoryAutoComplete.Text),Int32.Parse(amontEditText.Text)));
+            Grocery gr=new Grocery(groceiesAutoComplete.Text, Unit.Nema, Grocery.ParseEnum<Category>(categoryAutoComplete.Text), Int32.Parse(amontEditText.Text));
+            gr.MeasurementUnit = getUnit(gr.Name, gr.Type);
+            if (this.Activity.GetType() == typeof(GroceriesActivity))
+                GroceriesActivity.availableGroceries.AddToList(gr);
+            else if(this.Activity.GetType() == typeof(ShoppingCartActivity))
+            {
+                ShoppingCartActivity.shoppingCart.AddToList(gr);
+            }
             Dismiss();
             Toast.MakeText(Activity, "Dodata nova namirnica:"+groceiesAutoComplete.Text, ToastLength.Short).Show();
         }
@@ -110,6 +137,17 @@ namespace SmartFridge.Dialogs
             categoryAutoComplete.TextHighlightMode = OccurrenceMode.FirstOccurrence;
             categoryAutoComplete.HighlightedTextColor = Color.Red;
             categoryAutoComplete.NoResultsFoundText = "Nije pronadjen ni jedan rezultat";
+        }
+
+        private Unit getUnit(string name, Category type)
+        {
+            foreach (var grocery in groceries)
+            {
+                if (grocery.Name == name && grocery.Type == type)
+                    return grocery.MeasurementUnit;
+            }
+
+            return Unit.Nema;
         }
     }
 }

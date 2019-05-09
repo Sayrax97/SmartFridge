@@ -16,7 +16,7 @@ namespace SmartFridge.Adapters
     class ShoppingCartItemAdapter : BaseAdapter<Grocery>
     {
         private Context context;
-        private ShoppingCart shoppingCart;
+        private  ShoppingCart shoppingCart;
 
         public ShoppingCartItemAdapter(Context context, ShoppingCart shoppingCart)
         {
@@ -45,11 +45,31 @@ namespace SmartFridge.Adapters
             TextView unit = convertView.FindViewById<TextView>(Resource.Id.textViewUnit);
             EditText amountBought = convertView.FindViewById<EditText>(Resource.Id.editTxtBought);
             CheckBox checkBox = convertView.FindViewById<CheckBox>(Resource.Id.checkBoxBought);
+            amountBought.TextChanged += (sender, args) => 
+            {
+                if (!string.IsNullOrEmpty(amountBought.Text))
+                {
+                    shoppingCart.Groceries[position].Bought = int.Parse(amountBought.Text);
+                    ShoppingCartActivity.shoppingCart.Groceries[position].Bought = int.Parse(amountBought.Text);
+                }
+            };
+            
+            checkBox.CheckedChange += (sender, args) =>
+                {
+                    shoppingCart.Groceries[position].Checked = checkBox.Checked;
+                    ShoppingCartActivity.shoppingCart.Groceries[position].Checked =
+                        shoppingCart.Groceries[position].Checked;
+
+                };
             name.Text = shoppingCart.Groceries[position].Name;
             unit.Text = shoppingCart.Groceries[position].MeasurementUnit.ToString();
             amount.Text = shoppingCart.Groceries[position].Amount.ToString();
 
             return convertView;
+        }
+
+        void func()
+        {
         }
     }
 }
