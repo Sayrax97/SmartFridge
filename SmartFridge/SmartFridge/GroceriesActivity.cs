@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
@@ -15,7 +17,14 @@ using Com.Syncfusion.Autocomplete;
 using Android.Widget;
 using SmartFridge.Dialogs;
 using SmartFridge.Model;
+using Syncfusion.Android.ComboBox;
+using MultiSelectMode = Syncfusion.Android.ComboBox.MultiSelectMode;
+using OccurrenceMode = Syncfusion.Android.ComboBox.OccurrenceMode;
 using SearchView = Android.Widget.SearchView;
+using SuggestionBoxPlacement = Syncfusion.Android.ComboBox.SuggestionBoxPlacement;
+using SuggestionMode = Syncfusion.Android.ComboBox.SuggestionMode;
+using TokensWrapMode = Syncfusion.Android.ComboBox.TokensWrapMode;
+using TokenSettings = Syncfusion.Android.ComboBox.TokenSettings;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace SmartFridge
@@ -28,9 +37,12 @@ namespace SmartFridge
         private Button searchButton;
         private Button eatButton;
         private SearchView searchView;
+        private SfComboBox categoriesComboBox;
         private FloatingActionButton groceriesFAB;
         public static AvailableGroceries availableGroceries= new AvailableGroceries();
-        private  static AvailableGroceries pom = new AvailableGroceries();
+        private  static AvailableGroceries pom = availableGroceries;
+        private static ObservableCollection<object> selectedCategories=new ObservableCollection<object>();
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -49,21 +61,48 @@ namespace SmartFridge
         {
             if (!string.IsNullOrEmpty(searchView.Query))
             {
-                pom.Groceries.Clear();
-                foreach (var grocery in availableGroceries.Groceries)
-                {
-                    if (grocery.Name.ToLower().Contains(searchView.Query.ToLower()))
+                //if (categoriesComboBox.Text=="" || Grocery.ParseEnum<Category>(categoriesComboBox.Text) == Category.None)
+                
+                    pom.Groceries.Clear();
+                    foreach (var grocery in availableGroceries.Groceries)
                     {
-                        pom.AddToList(grocery);
+                        if (grocery.Name.ToLower().Contains(searchView.Query.ToLower()))
+                        {
+                            pom.AddToList(grocery);
+                        }
                     }
-                }
-
-                GroceryListItemAdapter adapterGroceryListItem = new GroceryListItemAdapter(pom.Groceries, this,false);
+                
+                //else
+                //{
+                //    pom.Groceries.Clear();
+                //    foreach (var grocery in availableGroceries.Groceries)
+                //    {
+                //        if (grocery.Name.ToLower().Contains(searchView.Query.ToLower()))
+                //        {
+                //            pom.AddToList(grocery);
+                //        }
+                //    }
+                //}
+                GroceryListItemAdapter adapterGroceryListItem =
+                    new GroceryListItemAdapter(pom.Groceries, this, false);
                 groceryListView.Adapter = adapterGroceryListItem;
+
             }
             else
             {
-                GroceryListItemAdapter adapterGroceryListItem = new GroceryListItemAdapter(availableGroceries.Groceries, this, false);
+                //if (categoriesComboBox.Text == "" || Grocery.ParseEnum<Category>(categoriesComboBox.Text) == Category.None)
+                //{
+                //    foreach (var grocery in availableGroceries.Groceries)
+                //    {
+                //            pom.AddToList(grocery);
+                //    }
+                //}
+                foreach (var grocery in availableGroceries.Groceries)
+                {
+                        pom.AddToList(grocery);
+                }
+                GroceryListItemAdapter adapterGroceryListItem =
+                    new GroceryListItemAdapter(pom.Groceries, this, false);
                 groceryListView.Adapter = adapterGroceryListItem;
             }
         }
@@ -72,13 +111,56 @@ namespace SmartFridge
         {
             topToolbar = FindViewById<Toolbar>(Resource.Id.toolbarTopGroceriesList);
             groceryListView = FindViewById<ListView>(Resource.Id.listGroceries);
+            categoriesComboBox = FindViewById<SfComboBox>(Resource.Id.cmboBoxCategories);
+            InitCategories();
             searchButton = FindViewById<Button>(Resource.Id.btnSearchRecipe);
             searchButton.Click += SearchButton_Click;
             eatButton = FindViewById<Button>(Resource.Id.btnEat);
             eatButton.Click += EatButton_Click;
-            searchView = FindViewById<SearchView>(Resource.Id.searchView1);
+            searchView = FindViewById<SearchView>(Resource.Id.searchGroceries);
             groceriesFAB = FindViewById<FloatingActionButton>(Resource.Id.fABgroceries);
             groceriesFAB.Click += GroceriesFAB_Click;
+        }
+
+        private void InitCategories()
+        {
+            categoriesComboBox.TextColor=Color.Aquamarine;
+            categoriesComboBox.DataSource = Model.Grocery.Categories;
+            categoriesComboBox.ComboBoxMode = ComboBoxMode.Suggest;
+            categoriesComboBox.SuggestionMode = SuggestionMode.StartsWith;
+            categoriesComboBox.IsEditableMode = false;
+            categoriesComboBox.SuggestionBoxPlacement = SuggestionBoxPlacement.Bottom;
+            //categoriesComboBox.MultiSelectMode = MultiSelectMode.Token;
+            //categoriesComboBox.Delimiter = ',';
+            //categoriesComboBox.TokensWrapMode = TokensWrapMode.Wrap;
+            //categoriesComboBox.IsSelectedItemsVisibleInDropDown = false;
+            categoriesComboBox.TextHighlightMode = OccurrenceMode.FirstOccurrence;
+            categoriesComboBox.HighlightedTextColor = Color.Red;
+            categoriesComboBox.HighlightedTextFontTypeFace = TypefaceStyle.Bold;
+            categoriesComboBox.SelectedItem =Grocery.Categories[0];
+            //categoriesComboBox.Text = Category.None.ToString();
+            //TokenSettings token = new TokenSettings();
+            //token.BackgroundColor=Color.Azure;
+            //token.CornerRadius = 15;
+            //token.TextColor=Color.Black;
+            //token.TextSize = 16;
+            //categoriesComboBox.TokenSettings = token;
+            categoriesComboBox.TextChanged+= CategoriesComboBox_TextChanged;
+        }
+
+        private void CategoriesComboBox_TextChanged(object sender, Syncfusion.Android.ComboBox.TextChangedEventArgs e)
+        {
+            //List<Grocery> x=new List<Grocery>();
+            //foreach (var grocery in pom.Groceries)
+            //{
+            //    if (grocery.Type == Grocery.ParseEnum<Category>(e.Value))
+            //    {
+            //        x.Add(grocery);
+            //    }
+            //}
+
+            //pom.Groceries= x;
+            //groceryListView.Adapter = new GroceryListItemAdapter(pom.Groceries, this, false);
         }
 
         private void EatButton_Click(object sender, EventArgs e)
@@ -93,8 +175,6 @@ namespace SmartFridge
                         availableGroceries.Groceries.Remove(grocery);
                     }
                 }
-                GroceryListItemAdapter adapterGroceryListItem = new GroceryListItemAdapter(pom.Groceries, this, false);
-                groceryListView.Adapter = adapterGroceryListItem;
             }
             else
             {
@@ -111,9 +191,8 @@ namespace SmartFridge
                     }
 
                 }
-                GroceryListItemAdapter adapterGroceryListItem = new GroceryListItemAdapter(availableGroceries.Groceries, this, false);
-                groceryListView.Adapter = adapterGroceryListItem;
             }
+            groceryListView.Adapter = new GroceryListItemAdapter(pom.Groceries, this, false);
         }
 
         private void GroceriesFAB_Click(object sender, EventArgs e)

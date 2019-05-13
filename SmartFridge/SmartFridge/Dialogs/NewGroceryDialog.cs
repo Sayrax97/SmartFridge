@@ -20,8 +20,6 @@ namespace SmartFridge.Dialogs
     class NewGroceryDialog:DialogFragment
     {
         private List<Grocery> groceries;
-        private List<string> groceryNamesList;
-        private List<string> groceryCategoriesList;
         private SfAutoComplete groceiesAutoComplete;
         private SfAutoComplete categoryAutoComplete;
         private EditText amontEditText;
@@ -40,25 +38,23 @@ namespace SmartFridge.Dialogs
             cancelButton = view.FindViewById<Button>(Resource.Id.btnCancel);
             okButton.Click += OkButton_Click;
             cancelButton.Click += CancelButton_Click;
-            groceiesAutoComplete.Click+= CategoryAutoComplete_Click;
+            groceiesAutoComplete.Click+= GroceiesAutoComplete_Click;
             return view;
         }
 
-        private void CategoryAutoComplete_Click(object sender, EventArgs e)
+        private void GroceiesAutoComplete_Click(object sender, EventArgs e)
         {
             groceiesAutoComplete.RequestFocus();
             InputMethodManager imm = (InputMethodManager)Context.GetSystemService(Context.InputMethodService);
             imm.ToggleSoftInput(InputMethodManager.ShowImplicit, 0);
             if (!string.IsNullOrEmpty(categoryAutoComplete.Text))
             {
-                groceryNamesList.Clear();
+                groceries.Clear();
                 foreach (var grocery in groceries)
                 {
                     if (grocery.Type == Grocery.ParseEnum<Category>(categoryAutoComplete.Text))
-                        groceryNamesList.Add(grocery.Name);
-                }
-                groceiesAutoComplete.AutoCompleteSource = new ArrayAdapter<string>(view.Context, Android.Resource.Layout.SimpleListItem1, groceryNamesList);
-                groceiesAutoComplete.DataSource = groceryNamesList;
+                        groceries.Add(grocery);
+                } groceiesAutoComplete.DataSource = groceries;
             }
 
         }
@@ -104,35 +100,28 @@ namespace SmartFridge.Dialogs
                 new Grocery("cashew nut",Unit.Gram,Category.Vegtables,0),
                 new Grocery("rice",Unit.Gram,Category.Cereals,0)
             };
-            groceryNamesList = new List<string>();
-            groceryCategoriesList = Enum.GetNames(typeof(Category)).ToList();
-            foreach (var grocery in groceries)
-            {
-                groceryNamesList.Add(grocery.Name);
-            }
         }
 
         private void AutoCompleteInit(View view)
         {
-            groceiesAutoComplete.AutoCompleteSource = new ArrayAdapter<string>(view.Context, Android.Resource.Layout.SimpleListItem1, groceryNamesList);
             groceiesAutoComplete.AutoCompleteMode = AutoCompleteMode.Suggest;
             groceiesAutoComplete.SuggestionMode = SuggestionMode.Contains;
             groceiesAutoComplete.MaximumDropDownHeight = 200;
             groceiesAutoComplete.Watermark = "Unesi ime namirnice";
             groceiesAutoComplete.PopUpDelay = 200;
-            groceiesAutoComplete.DataSource = groceryNamesList;
+            groceiesAutoComplete.DataSource = groceries;
+            groceiesAutoComplete.DisplayMemberPath = "Name";
             groceiesAutoComplete.MinimumPrefixCharacters = 0;
             groceiesAutoComplete.TextHighlightMode = OccurrenceMode.FirstOccurrence;
             groceiesAutoComplete.HighlightedTextColor = Color.Red;
             groceiesAutoComplete.NoResultsFoundText = "Nije pronadjen ni jedan rezultat";
 
-            categoryAutoComplete.AutoCompleteSource = new ArrayAdapter<string>(view.Context, Android.Resource.Layout.SimpleListItem1, groceryCategoriesList);
             categoryAutoComplete.AutoCompleteMode = AutoCompleteMode.Suggest;
             categoryAutoComplete.SuggestionMode = SuggestionMode.Contains;
             categoryAutoComplete.MaximumDropDownHeight = 200;
             categoryAutoComplete.Watermark = "Izaberi kategoriju namirnice";
             categoryAutoComplete.PopUpDelay = 200;
-            categoryAutoComplete.DataSource = groceryCategoriesList;
+            categoryAutoComplete.DataSource = Model.Grocery.Categories;
             categoryAutoComplete.MinimumPrefixCharacters = 0;
             categoryAutoComplete.TextHighlightMode = OccurrenceMode.FirstOccurrence;
             categoryAutoComplete.HighlightedTextColor = Color.Red;

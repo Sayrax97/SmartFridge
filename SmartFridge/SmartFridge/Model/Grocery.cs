@@ -25,6 +25,7 @@ namespace SmartFridge.Model
 
     public enum Category
     {
+        None,
         Food_additives‎,
         Cereals,
         Condiments,
@@ -48,6 +49,8 @@ namespace SmartFridge.Model
         public double Bought { get; set; }
         public string Image { get; set; }
         public bool Checked { get; set; }
+
+        public static List<string> Categories =Enum.GetNames(typeof(Category)).ToList();
 
         public Grocery(string name, Unit measurementUnit, Category type, double amount)
         {

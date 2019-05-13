@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using System.Collections.Generic;
+using Android.App;
 using Android.Content;
 using Android.Net;
 using Android.OS;
@@ -24,6 +25,7 @@ namespace SmartFridge
         private FrameLayout contentMainFrameLayout;
         private DrawerLayout mainDrawerLayout;
         private NavigationView drawerMainNavigationView;
+        public static List<Group> groups=new List<Group>();
         private User user;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -96,8 +98,8 @@ namespace SmartFridge
             drawerMainNavigationView = FindViewById<NavigationView>(Resource.Id.navViewDrawerMain);
             mainBottomNavigationView = FindViewById<BottomNavigationView>(Resource.Id.navigationViewMain);
             mainDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawerMain);
-            //if(JsonConvert.DeserializeObject<User>("user")!=null)
-            //user = JsonConvert.DeserializeObject<User>("user");
+            //if (JsonConvert.DeserializeObject<User>("user") != null)
+            //    user = JsonConvert.DeserializeObject<User>("user");
         }
     }
 }

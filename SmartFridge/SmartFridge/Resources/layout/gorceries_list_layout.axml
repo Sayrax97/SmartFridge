@@ -3,12 +3,12 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-	 
+	
    <android.support.v7.widget.Toolbar
         android:minHeight="?android:attr/actionBarSize"
         android:background="?android:attr/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?android:attr/actionBarSize"
 		android:layout_gravity="right"
         android:id="@+id/toolbarTopGroceriesList">
 		<LinearLayout
@@ -18,14 +18,28 @@
 			android:focusableInTouchMode="true"
 			android:layout_height="match_parent"
 			android:id="@+id/linearLayout3">
-			<SearchView
-			android:layout_width="wrap_content"
-			android:layout_weight="70"
-			android:focusedByDefault="false"
-			android:layout_height="match_parent"
-			android:id="@+id/searchView1" />
+			<Syncfusion.Android.ComboBox.SfComboBox
+				android:layout_width="match_parent"
+				android:layout_weight="70"
+				android:layout_height="match_parent"
+				android:id="@+id/cmboBoxCategories" />
 		</LinearLayout>
     </android.support.v7.widget.Toolbar>
+	
+	<android.support.v7.widget.Toolbar
+		android:minHeight="?android:attr/actionBarSize"
+        android:background="?android:attr/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_gravity="right"
+		android:layout_below="@+id/toolbarTopGroceriesList"
+        android:id="@+id/toolbar">
+		<SearchView
+			android:layout_width="match_parent"
+			android:focusedByDefault="false"
+			android:layout_height="match_parent"
+			android:id="@+id/searchGroceries" />
+	</android.support.v7.widget.Toolbar>
 		
 	
     <android.support.design.widget.FloatingActionButton
@@ -43,7 +57,7 @@
 	<ListView
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:layout_below="@id/toolbarTopGroceriesList"
+			android:layout_below="@id/toolbar"
 			android:id="@+id/listGroceries" />
 	<LinearLayout
 			android:orientation="horizontal"
