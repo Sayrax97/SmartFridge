@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Icu.Text;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -22,7 +23,9 @@ namespace SmartFridge
 
         public GroceryListItemAdapter(List<Grocery> groceries, Context context,bool flagReceipt)
         {
-            this.groceries = groceries;
+            this.groceries = (from grocery in groceries
+                where grocery.IsInList == true && grocery.IsCategorized==true
+                select grocery).ToList();
             this.context = context;
             this.flagReceipt = flagReceipt;
         }

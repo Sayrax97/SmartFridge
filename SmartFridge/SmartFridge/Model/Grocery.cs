@@ -49,6 +49,8 @@ namespace SmartFridge.Model
         public double Bought { get; set; }
         public string Image { get; set; }
         public bool Checked { get; set; }
+        public bool IsInList { get; set; }
+        public bool IsCategorized { get; set; }
 
         public static List<string> Categories =Enum.GetNames(typeof(Category)).ToList();
 
@@ -60,6 +62,8 @@ namespace SmartFridge.Model
             Amount = amount;
             Bought = 0;
             Checked = false;
+            IsInList = false;
+            IsCategorized = false;
         }
 
         public override bool Equals(object obj)

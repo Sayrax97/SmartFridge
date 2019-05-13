@@ -24,6 +24,15 @@ namespace SmartFridge.Model
             AddToList(new Grocery("Mast", Unit.Kilogram, Category.Cooking_oils, 1));
             AddToList(new Grocery("Pasulj", Unit.Kilogram, Category.Vegtables, 5));
             AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
+            AddToList(new Grocery("garlic", Unit.Kilogram, Category.Vegtables, 6));
+            AddToList(new Grocery("powder", Unit.Gram, Category.Condiments, 2));
+            AddToList(new Grocery("bourbon", Unit.Mililitar, Category.Drink, 6));
+            AddToList(new Grocery("huckleberries", Unit.Gram, Category.Fruits, 6));
+            AddToList(new Grocery("Havarti cheese", Unit.Gram, Category.Milky, 3));
+            AddToList(new Grocery("cauliflower", Unit.Gram, Category.Vegtables, 7));
+            AddToList(new Grocery("lima beans", Unit.Gram, Category.Vegtables, 33));
+            AddToList(new Grocery("ice cream", Unit.Gram, Category.Milky, 23));
+            AddToList(new Grocery("oregano", Unit.Gram, Category.Food_additives‎, 22));
         }
 
         public AvailableGroceries(List<Grocery> groceries )
@@ -39,8 +48,8 @@ namespace SmartFridge.Model
             }
             else
             {
+                grocery.IsInList = true;
                 Groceries.Add(grocery);
-                //Groceries.Sort();
 
             }
         }
@@ -52,37 +61,55 @@ namespace SmartFridge.Model
             }
             else
             {
+                grocery.IsInList = true;
                 grocery.Amount = amount;
                 Groceries.Add(grocery);
-                //Groceries.Sort();
 
             }
         }
 
-        public List<Grocery> FilterByName(string name)
+        public void FilterByName(string name)
         {
-            List<Grocery> pom = new List<Grocery>();
-            foreach (Grocery grocery in pom)
+            if(!string.IsNullOrEmpty(name))
+            foreach (Grocery grocery in Groceries)
             {
-                if(grocery.Name.Equals(name))
-                    pom.Add(grocery);
-                
+                if(!grocery.Name.ToLower().Contains(name.ToLower()))
+                    grocery.IsInList=false;
+                else
+                {
+                    grocery.IsInList = true;
+                }
             }
-            pom.Sort();
-            return pom;
+            else
+            {
+                foreach (Grocery grocery in Groceries)
+                {
+                        grocery.IsInList = true;
+
+                }
+            }
         }
 
-        public List<Grocery> FilterByType(string type)
+        public void FilterByType(Category type)
         {
-            List<Grocery> pom = new List<Grocery>();
-            foreach (Grocery grocery in pom)
+            if(type!=Category.None)
+            foreach (Grocery grocery in Groceries)
             {
-                if (grocery.Type.Equals(type))
-                    pom.Add(grocery);
+                    if (grocery.Type != type)
+                    grocery.IsCategorized = false;
+                    else
+                    {
+                        grocery.IsCategorized = true;
+                    }
 
             }
-            pom.Sort();
-            return pom;
+            else
+            {
+                foreach (Grocery grocery in Groceries)
+                {
+                    grocery.IsCategorized = true;
+                }
+            }
         }
 
     }

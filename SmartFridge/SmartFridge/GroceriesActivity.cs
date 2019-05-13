@@ -59,52 +59,13 @@ namespace SmartFridge
 
         private void SearchView_QueryTextChange(object sender, SearchView.QueryTextChangeEventArgs e)
         {
-            if (!string.IsNullOrEmpty(searchView.Query))
-            {
-                //if (categoriesComboBox.Text=="" || Grocery.ParseEnum<Category>(categoriesComboBox.Text) == Category.None)
-                
-                    pom.Groceries.Clear();
-                    foreach (var grocery in availableGroceries.Groceries)
-                    {
-                        if (grocery.Name.ToLower().Contains(searchView.Query.ToLower()))
-                        {
-                            pom.AddToList(grocery);
-                        }
-                    }
-                
-                //else
-                //{
-                //    pom.Groceries.Clear();
-                //    foreach (var grocery in availableGroceries.Groceries)
-                //    {
-                //        if (grocery.Name.ToLower().Contains(searchView.Query.ToLower()))
-                //        {
-                //            pom.AddToList(grocery);
-                //        }
-                //    }
-                //}
-                GroceryListItemAdapter adapterGroceryListItem =
-                    new GroceryListItemAdapter(pom.Groceries, this, false);
-                groceryListView.Adapter = adapterGroceryListItem;
-
-            }
-            else
-            {
-                //if (categoriesComboBox.Text == "" || Grocery.ParseEnum<Category>(categoriesComboBox.Text) == Category.None)
-                //{
-                //    foreach (var grocery in availableGroceries.Groceries)
-                //    {
-                //            pom.AddToList(grocery);
-                //    }
-                //}
-                foreach (var grocery in availableGroceries.Groceries)
-                {
-                        pom.AddToList(grocery);
-                }
-                GroceryListItemAdapter adapterGroceryListItem =
-                    new GroceryListItemAdapter(pom.Groceries, this, false);
-                groceryListView.Adapter = adapterGroceryListItem;
-            }
+            var watch=System.Diagnostics.Stopwatch.StartNew();
+            availableGroceries.FilterByName(searchView.Query);
+            GroceryListItemAdapter adapterGroceryListItem =
+                new GroceryListItemAdapter(availableGroceries.Groceries, this, false);
+            groceryListView.Adapter = adapterGroceryListItem;
+            watch.Stop();
+            Toast.MakeText(this,"Vreme:"+watch.ElapsedMilliseconds,ToastLength.Short).Show();
         }
 
         private void Init()
@@ -150,34 +111,17 @@ namespace SmartFridge
 
         private void CategoriesComboBox_TextChanged(object sender, Syncfusion.Android.ComboBox.TextChangedEventArgs e)
         {
-            //List<Grocery> x=new List<Grocery>();
-            //foreach (var grocery in pom.Groceries)
-            //{
-            //    if (grocery.Type == Grocery.ParseEnum<Category>(e.Value))
-            //    {
-            //        x.Add(grocery);
-            //    }
-            //}
-
-            //pom.Groceries= x;
-            //groceryListView.Adapter = new GroceryListItemAdapter(pom.Groceries, this, false);
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+            availableGroceries.FilterByType(Grocery.ParseEnum<Category>(categoriesComboBox.Text));
+            GroceryListItemAdapter adapterGroceryListItem =
+                new GroceryListItemAdapter(availableGroceries.Groceries, this, false);
+            groceryListView.Adapter = adapterGroceryListItem;
+            watch.Stop();
+            Toast.MakeText(this, "Vreme:" + watch.ElapsedMilliseconds, ToastLength.Short).Show();
         }
 
         private void EatButton_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(searchView.Query))
-            {
-                foreach (var grocery in pom.Groceries.ToList())
-                {
-                    if (grocery.Checked)
-                    {
-                        pom.Groceries.Remove(grocery);
-                        availableGroceries.Groceries.Remove(grocery);
-                    }
-                }
-            }
-            else
-            {
                 //ToList because:
                 //The issue is that availableGroceries.Groceries is being modified inside the foreach loop.
                 //Calling availableGroceries.Groceries.ToList() copies the values of groceries
@@ -189,10 +133,8 @@ namespace SmartFridge
                     {
                         availableGroceries.Groceries.Remove(grocery);
                     }
-
                 }
-            }
-            groceryListView.Adapter = new GroceryListItemAdapter(pom.Groceries, this, false);
+            groceryListView.Adapter = new GroceryListItemAdapter(availableGroceries.Groceries, this, false);
         }
 
         private void GroceriesFAB_Click(object sender, EventArgs e)

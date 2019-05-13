@@ -23,13 +23,13 @@ namespace SmartFridge.Model
         public Group()
         {
             Id = new Random().Next(1, 10000);
-            Recipes= new AvailableGroceries();
-            MyGroupMembers= new List<User>();
-            ShoppingCart=new ShoppingCart();
+            Recipes = new AvailableGroceries();
+            MyGroupMembers = new List<User>();
+            ShoppingCart = new ShoppingCart();
         }
         public Group(int x)
         {
-            Id =x;
+            Id = x;
             Recipes = new AvailableGroceries();
             MyGroupMembers = new List<User>();
             ShoppingCart = new ShoppingCart();
@@ -42,6 +42,7 @@ namespace SmartFridge.Model
             ShoppingCart = shoppingCart;
             Recipes = recipes;
         }
+
 
         public bool AddMember(User user,int id)
         {
