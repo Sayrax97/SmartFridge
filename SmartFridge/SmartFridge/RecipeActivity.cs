@@ -28,21 +28,18 @@ namespace SmartFridge
         private Toolbar topToolbar;
         private BottomNavigationView recipeBottomNavigationView;
         private Recipe recipe;
-        private Intent intent;
         private AvailableGroceries groceryList;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
             SetContentView(Resource.Layout.recipe_layout);
-            init();
+            Init();
             topToolbar.Title = Resources.GetString(Resource.String.receipt);
             SetSupportActionBar(topToolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
-            GroceryListItemAdapter adapterGroceryListItem = new GroceryListItemAdapter(groceryList.Groceries, this, true);
-            groceriesListView.Adapter = adapterGroceryListItem;
-            putOnScreen();
+            groceriesListView.Adapter = new GroceryListItemAdapter(groceryList.Groceries, this, true);
+            PutOnScreen();
 
         }
 
@@ -59,7 +56,7 @@ namespace SmartFridge
             return true;
 
         }
-        private void init()
+        private void Init()
         {
             recipeImageView = FindViewById<ImageView>(Resource.Id.imageViewRecipe);
             recipeNameTextView = FindViewById<TextView>(Resource.Id.txtViewRecipeName);
@@ -68,13 +65,31 @@ namespace SmartFridge
             recipeDescriptionTextView = FindViewById<TextView>(Resource.Id.txtViewRecipeDescription);
             recipeBottomNavigationView = FindViewById<BottomNavigationView>(Resource.Id.bottomNavigationViewRecipe);
             recipe = JsonConvert.DeserializeObject<Recipe>(Intent.GetStringExtra("recept"));
-            groceryList = new AvailableGroceries(recipe.Groceries);
+            groceryList = recipe.Groceries;
+            groceryList.SetDefault();
+            foreach (var grocery in recipe.Groceries.Groceries)
+            {
+                if (CheckIfIsAvailable(grocery))
+                {
+                    recipeBottomNavigationView.Menu.GetItem(1).SetEnabled(false);
+                    recipeBottomNavigationView.Menu.GetItem(2).SetEnabled(true);
+                    break;
+                }
+                recipeBottomNavigationView.Menu.GetItem(1).SetEnabled(true);
+                recipeBottomNavigationView.Menu.GetItem(2).SetEnabled(false);
+            }
         }
-
-        private void putOnScreen()
+        private void PutOnScreen()
         {
             recipeNameTextView.Text = recipe.Name;
             recipeDescriptionTextView.Text = recipe.Description;
+        }
+
+        private bool CheckIfIsAvailable(Grocery grocery)
+        {
+            if (GroceriesActivity.availableGroceries.Groceries.Exists(x => x.Name == grocery.Name))
+                return false;
+            return true;
         }
     }
 }

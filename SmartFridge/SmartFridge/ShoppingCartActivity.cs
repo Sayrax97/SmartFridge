@@ -28,7 +28,6 @@ namespace SmartFridge
         public static ShoppingCart shoppingCart = new ShoppingCart();
         protected override void OnCreate(Bundle savedInstanceState)
         {
-
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.shopping_cart_layout);
             Init();
@@ -54,15 +53,24 @@ namespace SmartFridge
 
         private void Init()
         {
+            FillUpShoppingCart();
             shoppingCartFloatingActionButton = FindViewById<FloatingActionButton>(Resource.Id.fABshoppingCart);
             addToGroceriesListButton = FindViewById<Button>(Resource.Id.btnAddtoGroceriesList);
             addToGroceriesListButton.Click += AddToGroceriesListButton_Click;
             topToolbar = FindViewById<Toolbar>(Resource.Id.topToolbarCart);
             shoppingCartListView = FindViewById<ListView>(Resource.Id.listViewShoppingCart);
-            ShoppingCartItemAdapter adapter= new ShoppingCartItemAdapter(this,shoppingCart);
-            shoppingCartListView.Adapter = adapter;
+            LoadGroceries();
             shoppingCartFloatingActionButton.Click += ShoppingCartFloatingActionButton_Click;
+            
+        }
 
+        private void FillUpShoppingCart()
+        {
+            shoppingCart.AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
+            shoppingCart.AddToList(new Grocery("Hleb", Unit.Komad, Category.Flour, 3));
+            shoppingCart.AddToList(new Grocery("Mast", Unit.Kilogram, Category.Cooking_oils, 1));
+            shoppingCart.AddToList(new Grocery("Pasulj", Unit.Kilogram, Category.Vegtables, 5));
+            shoppingCart.AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
         }
 
         private void ShoppingCartFloatingActionButton_Click(object sender, EventArgs e)
@@ -87,19 +95,19 @@ namespace SmartFridge
             foreach (var grocery in shoppingCart.Groceries.ToList())
             {
                 if (grocery.Checked)
-                {
                     shoppingCart.Buy(grocery);
-                    grocery.Bought = 0;
-                }
 
             }
-            ShoppingCartItemAdapter adapter = new ShoppingCartItemAdapter(this, shoppingCart);
-            shoppingCartListView.Adapter = adapter;
+            LoadGroceries();
             foreach (var grocery in shoppingCart.Groceries.ToList())
             {
                 grocery.Checked = false;
 
             }
+        }
+        public void LoadGroceries()
+        {
+            shoppingCartListView.Adapter = new ShoppingCartItemAdapter(this,shoppingCart);
         }
     }
 }

@@ -48,17 +48,17 @@ namespace SmartFridge.Model
 
         public void Buy(Grocery grocery)
         {
-            if (grocery.Checked && grocery.Bought!=0)
+            if (grocery.Bought!=0)
             {
                 GroceriesActivity.availableGroceries.AddToList(grocery, grocery.Bought);
-            if ((Groceries.Find(x => x.Equals(grocery)).Amount -= grocery.Bought) <= 0)
-                {
-                    RemoveFromShoppingCart(grocery);
-                }
-            else
-            Groceries.Find(x => x.Equals(grocery)).Bought = 0;
+                if ((Groceries.Find(x => x.Equals(grocery)).Amount -= grocery.Bought) <= 0)
+                    {
+                        RemoveFromShoppingCart(grocery);
+                    }
+                else
+                Groceries.Find(x => x.Equals(grocery)).Bought = 0;
             }
-            else if(grocery.Checked && grocery.Bought == 0)
+            else if(grocery.Bought == 0)
             {
                 GroceriesActivity.availableGroceries.AddToList(grocery, grocery.Amount);
                     RemoveFromShoppingCart(grocery);

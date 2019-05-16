@@ -1,22 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto"
-      android:checkableBehavior="single">
+      android:checkableBehavior="single"
+      android:id="@+id/menu_recipe">
   <item
     android:id="@+id/menu_feedback"
     android:enabled="true"
+    android:icon="@drawable/baseline_rss_feed_black_18dp"
     android:title="Zatrazi Feedback"
     app:showAsAction="ifRoom" />
 
   <item
     android:id="@+id/menu_make"
     android:enabled="true"
+    android:icon="@drawable/cooking_on_fire"
     android:title="Napravi"
     app:showAsAction="ifRoom" />
 
   <item
     android:id="@+id/menu_addToCart"
     android:enabled="true"
+    android:icon="@drawable/add_to_cart"
     android:title="Dodaj u korpu"
     app:showAsAction="ifRoom" />
 </menu>

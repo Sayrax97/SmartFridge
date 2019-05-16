@@ -19,20 +19,6 @@ namespace SmartFridge.Model
         public AvailableGroceries()
         {
             Groceries=new List<Grocery>();
-            AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
-            AddToList(new Grocery("Hleb", Unit.Komad, Category.Flour, 3));
-            AddToList(new Grocery("Mast", Unit.Kilogram, Category.Cooking_oils, 1));
-            AddToList(new Grocery("Pasulj", Unit.Kilogram, Category.Vegtables, 5));
-            AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
-            AddToList(new Grocery("garlic", Unit.Kilogram, Category.Vegtables, 6));
-            AddToList(new Grocery("powder", Unit.Gram, Category.Condiments, 2));
-            AddToList(new Grocery("bourbon", Unit.Mililitar, Category.Drink, 6));
-            AddToList(new Grocery("huckleberries", Unit.Gram, Category.Fruits, 6));
-            AddToList(new Grocery("Havarti cheese", Unit.Gram, Category.Milky, 3));
-            AddToList(new Grocery("cauliflower", Unit.Gram, Category.Vegtables, 7));
-            AddToList(new Grocery("lima beans", Unit.Gram, Category.Vegtables, 33));
-            AddToList(new Grocery("ice cream", Unit.Gram, Category.Milky, 23));
-            AddToList(new Grocery("oregano", Unit.Gram, Category.Food_additives‎, 22));
         }
 
         public AvailableGroceries(List<Grocery> groceries )
@@ -42,7 +28,7 @@ namespace SmartFridge.Model
 
         public void AddToList(Grocery grocery)
         {
-            if (Groceries.Exists(x => x.Name.Contains(grocery.Name)))
+            if (Groceries.Exists(x => x.Name==grocery.Name))
             {
                Groceries.Find(x => x.Equals(grocery)).Amount += grocery.Amount;
             }
@@ -53,6 +39,7 @@ namespace SmartFridge.Model
 
             }
         }
+
         public void AddToList(Grocery grocery,double amount)
         {
             if (Groceries.Exists(x => x.Name.Contains(grocery.Name)))
@@ -112,5 +99,12 @@ namespace SmartFridge.Model
             }
         }
 
+        public void SetDefault()
+        {
+            foreach (var grocery in Groceries)
+            {
+                grocery.Default();
+            }
+        }
     }
 }

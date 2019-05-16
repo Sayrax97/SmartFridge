@@ -57,28 +57,28 @@
 	<LinearLayout
 		android:orientation="horizontal"
 		android:layout_width="match_parent"
-		android:weightSum="99"
+		android:weightSum="100"
 		android:layout_height="wrap_content"
 		android:id="@+id/linearLayout2">
 	<TextView
 		android:text="Ime"
 		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_width="wrap_content"
-		android:layout_weight="33"
+		android:layout_weight="30"
 		android:layout_height="wrap_content"
 		android:id="@+id/textViewName" />
 	<TextView
 		android:text="Prezime"
 		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_width="wrap_content"
-		android:layout_weight="33"
+		android:layout_weight="30"
 		android:layout_height="wrap_content"
 		android:id="@+id/textViewSurName" />
 	<TextView
 		android:text="Email"
 		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_width="wrap_content"
-		android:layout_weight="33"
+		android:layout_weight="40"
 		android:layout_height="wrap_content"
 		android:id="@+id/textViewEmail" />
 	</LinearLayout>

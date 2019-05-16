@@ -2,24 +2,42 @@
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-	android:padding="10dp">
+	android:layout_width="500px"
+    android:layout_height="700px"
+    android:minWidth="500px"
+    android:minHeight="700px"
+	android:weightSum="100">
 	<TextView
 		android:text="Dodaj novu namirnicu"
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:gravity="center"
+		android:layout_margin="10dp"
 		android:layout_height="wrap_content"
 		android:id="@+id/textView1" />
+	<android.support.v7.widget.Toolbar
+		 android:minHeight="?android:attr/actionBarSize"
+        android:background="@color/material_grey_100"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+		android:layout_gravity="center"
+        android:id="@+id/toolbarTopGroceriesList">
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:focusableInTouchMode="true"
+			android:layout_height="match_parent"
+			android:id="@+id/linearLayout3">
+			<Syncfusion.Android.ComboBox.SfComboBox
+				android:layout_width="match_parent"
+				android:gravity="center"
+				android:layout_height="match_parent"
+				android:id="@+id/cmboBoxCategories" />
+		</LinearLayout>
+		</android.support.v7.widget.Toolbar>
 	<Com.Syncfusion.Autocomplete.SfAutoComplete
 		android:layout_width="match_parent"
-		android:layout_marginTop="10dp"
-		android:layout_height="wrap_content"
-		android:id="@+id/autoCompletecategory" />
-	<Com.Syncfusion.Autocomplete.SfAutoComplete
-		android:layout_width="match_parent"
-		android:layout_marginTop="10dp"
+		android:layout_margin="10dp"
 		android:layout_height="wrap_content"
 		android:id="@+id/autoCompleteGrocery" />
 	<EditText
@@ -28,24 +46,29 @@
 		android:inputType="numberDecimal"
 		android:layout_height="wrap_content"
 		android:id="@+id/editTxtAmountGrocery" />
+	<Space
+		android:layout_width="match_parent"
+		android:layout_weight="99"
+		android:layout_height="match_parent"
+		android:id="@+id/space1" />
 	<LinearLayout
-	android:orientation="horizontal"
-	android:layout_width="match_parent"
-	android:weightSum="100"
-	android:layout_height="wrap_content">
-	<Button
-		android:text="OK"
-		android:layout_weight="50"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/btnOK"
-		android:layout_marginTop="10dp" />
-	<Button
-		android:text="Otkaži"
-		android:layout_weight="50"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="10dp"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:weightSum="100"
+		android:layout_height="wrap_content">
+		<Button
+			android:text="OK"
+			android:layout_weight="50"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/btnOK"
+			android:layout_marginTop="10dp" />
+		<Button
+			android:text="Otkaži"
+			android:layout_weight="50"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
 			android:id="@+id/btnCancel" />
-		</LinearLayout>
+	</LinearLayout>
 </LinearLayout>

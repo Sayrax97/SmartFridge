@@ -69,8 +69,6 @@ namespace SmartFridge
             nameTextView.Text = user.Name;
             surNameTextView.Text = user.SurName;
             emailTextView.Text = user.Email;
-
-
         }
 
         private string ToPassword(string s)

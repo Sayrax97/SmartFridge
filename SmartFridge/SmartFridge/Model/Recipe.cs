@@ -18,16 +18,16 @@ namespace SmartFridge.Model
         public int Id { get;set; }
         public string Description { get; set; }
         public string Image { get; set; }
-        public List<Grocery> Groceries { get; set; }
+        public AvailableGroceries Groceries { get; set; }
 
         public Recipe()
         {
-            Groceries= new List<Grocery>();
+            Groceries= new AvailableGroceries();
         }
 
         public Recipe(string name, int id, string description, string image)
         {
-            Groceries = new List<Grocery>();
+            Groceries = new AvailableGroceries();
             Name = name;
             Id = id;
             Description = description;
@@ -37,7 +37,7 @@ namespace SmartFridge.Model
 
         public void AddToList(Grocery grocery)
         {
-            Groceries.Add(grocery);
+            Groceries.AddToList(grocery);
             //Groceries.Sort();
         }
     }

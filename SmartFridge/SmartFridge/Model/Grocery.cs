@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Media;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -68,15 +69,21 @@ namespace SmartFridge.Model
 
         public override bool Equals(object obj)
         {
-            var grocery = obj as Grocery;
-            if (Name == grocery.Name)
-                return true;
+                var grocery = obj as Grocery;
+                if (Name == grocery.Name)
+                    return true;
             return false;
         }
 
         public static T ParseEnum<T>(string value)
         {
             return (T)Enum.Parse(typeof(T), value, true);
+        }
+        
+        public void Default()
+        {
+            IsInList = true;
+            IsCategorized = true;
         }
     }
 }

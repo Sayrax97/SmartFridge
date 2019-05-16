@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.Icu.Text;
 using Android.OS;
 using Android.Runtime;
@@ -41,7 +42,7 @@ namespace SmartFridge
         {
             if (convertView == null)
             {
-                if(flagReceipt==false)
+                if(!flagReceipt)
                 convertView = LayoutInflater.From(context).Inflate(Resource.Layout.groceies_list_item_layout,null);
                 else
                 {
@@ -56,12 +57,32 @@ namespace SmartFridge
             name.Text = groceries[position].Name;
             amount.Text = groceries[position].Amount.ToString();
             unit.Text = groceries[position].MeasurementUnit.ToString();
-            if (flagReceipt == false)
-                checkBox.CheckedChange+= (sender, args) => {
+            if (!flagReceipt)
+                checkBox.CheckedChange+= (sender, args) => 
+                {
                 groceries[position].Checked = !groceries[position].Checked;
                 GroceriesActivity.availableGroceries.Groceries[position].Checked = groceries[position].Checked;
-            };
+                };
+            if(flagReceipt)
+            if (CheckIfIsAvailable(groceries[position]))
+            {
+                groceries[position].IsInList = false;
+                name.SetTextColor(Color.Red);
+                name.SetTypeface(null,TypefaceStyle.Bold);
+                amount.SetTextColor(Color.Red);
+                amount.SetTypeface(null, TypefaceStyle.Bold);
+                unit.SetTextColor(Color.Red);
+                unit.SetTypeface(null, TypefaceStyle.Bold);
+                }
+
             return convertView;
+        }
+
+        private bool CheckIfIsAvailable(Grocery grocery)
+        {
+            if (GroceriesActivity.availableGroceries.Groceries.Exists(x=>x.Name==grocery.Name))
+                return false;
+            return true;
         }
     }
 }
