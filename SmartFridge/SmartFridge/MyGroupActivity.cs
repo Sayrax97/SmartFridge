@@ -11,6 +11,7 @@ using Android.Graphics;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
 using SmartFridge.Adapters;
 using SmartFridge.Model;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
@@ -22,12 +23,12 @@ namespace SmartFridge
     {
         private ListView groupMembersListView;
         private Toolbar myGroupToolbar;
-        public Group MyGroup;
+        private Group group;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.group_layout);
-            init();
+            Init();
             myGroupToolbar.SetTitle(Resource.String.my_group);
             base.SetSupportActionBar(myGroupToolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
@@ -46,15 +47,12 @@ namespace SmartFridge
             return true;
         }
 
-        private void init()
+        private void Init()
         {
             groupMembersListView = FindViewById<ListView>(Resource.Id.listViewGroupMembers);
             myGroupToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyGroup);
-            MyGroup = new Group(33, new AvailableGroceries(new List<Grocery>()), new List<User>(), new ShoppingCart(), new AvailableGroceries());
-            MyGroup.MyGroupMembers.Add(new User("Dusan", "Janakovic", "Xamar", "distingi97", "dusann.jankovic@elfak.rs", ""));
-            MyGroup.MyGroupMembers.Add(new User("Matija", "Janic", "AnubisLP", "matko123", "matija.janic@elfak.rs", ""));
-            MyGroup.MyGroupMembers.Add(new User("Lazar", "Pavlovic", "Brahman_n", "perfeks38", "lazarp@elfak.rs", ""));
-            GroupMemberAdapter adapter = new GroupMemberAdapter(MyGroup, this);
+            group=JsonConvert.DeserializeObject<Group>("grupa");
+            GroupMemberAdapter adapter = new GroupMemberAdapter(group, this);
             groupMembersListView.Adapter = adapter;
         }
 

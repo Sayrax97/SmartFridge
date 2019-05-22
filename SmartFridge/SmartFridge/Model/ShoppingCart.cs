@@ -19,11 +19,6 @@ namespace SmartFridge.Model
         public ShoppingCart()
         {
             Groceries = new List<Grocery>();
-            AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
-            AddToList(new Grocery("Hleb", Unit.Komad, Category.Flour, 3));
-            AddToList(new Grocery("Mast", Unit.Kilogram, Category.Cooking_oils, 1));
-            AddToList(new Grocery("Pasulj", Unit.Kilogram, Category.Vegtables, 5));
-            AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
         }
 
         public ShoppingCart(List<Grocery> groceries)
@@ -50,7 +45,7 @@ namespace SmartFridge.Model
         {
             if (grocery.Bought!=0)
             {
-                GroceriesActivity.availableGroceries.AddToList(grocery, grocery.Bought);
+                ChamberOfSecrets.Instance.availableGroceries.AddToList(grocery, grocery.Bought);
                 if ((Groceries.Find(x => x.Equals(grocery)).Amount -= grocery.Bought) <= 0)
                     {
                         RemoveFromShoppingCart(grocery);
@@ -60,7 +55,7 @@ namespace SmartFridge.Model
             }
             else if(grocery.Bought == 0)
             {
-                GroceriesActivity.availableGroceries.AddToList(grocery, grocery.Amount);
+                ChamberOfSecrets.Instance.availableGroceries.AddToList(grocery, grocery.Amount);
                     RemoveFromShoppingCart(grocery);
             }
         }

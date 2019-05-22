@@ -34,12 +34,11 @@ namespace SmartFridge
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.my_profile_layout);
-            init();
+            Init();
             topToolbar.Title = Resources.GetString(Resource.String.my_profile);
             SetSupportActionBar(topToolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
-
         }
         public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
         {
@@ -52,7 +51,7 @@ namespace SmartFridge
             }
             return true;
         }
-        private void init()
+        private void Init()
         {
             userNameTextView = FindViewById<TextView>(Resource.Id.textViewUsername);
             passwordTextView = FindViewById<TextView>(Resource.Id.textViewPassword);
@@ -63,6 +62,7 @@ namespace SmartFridge
             changeUsernameButton = FindViewById<Button>(Resource.Id.btnChangeUsername);
             changePasswordButton = FindViewById<Button>(Resource.Id.btnChangePassword);
             topToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyProfile);
+
             user = JsonConvert.DeserializeObject<User>("user");
             userNameTextView.Text = user.UserName;
             passwordTextView.Text = ToPassword(user.Password);
@@ -73,9 +73,8 @@ namespace SmartFridge
 
         private string ToPassword(string s)
         {
-            int x = s.Length;
             string p="";
-            for (int i = 0; i < x; i++)
+            for (int i = 0; i < s.Length; i++)
                 p += "*";
             return p;
         }

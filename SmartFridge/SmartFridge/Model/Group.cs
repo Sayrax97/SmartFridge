@@ -18,23 +18,23 @@ namespace SmartFridge.Model
         public AvailableGroceries AvailableGroceries { get; set; }
         public List<User> MyGroupMembers { get; set; }
         public ShoppingCart ShoppingCart { get; set; }
-        public AvailableGroceries Recipes { get; set; }
+        public List<Recipe> Recipes { get; set; }
 
         public Group()
         {
             Id = new Random().Next(1, 10000);
-            Recipes = new AvailableGroceries();
+            Recipes = new List<Recipe>();
             MyGroupMembers = new List<User>();
             ShoppingCart = new ShoppingCart();
         }
         public Group(int x)
         {
             Id = x;
-            Recipes = new AvailableGroceries();
+            Recipes = new List<Recipe>();
             MyGroupMembers = new List<User>();
             ShoppingCart = new ShoppingCart();
         }
-        public Group(int id, AvailableGroceries availableGroceries, List<User> myGroupMembers, ShoppingCart shoppingCart, AvailableGroceries recipes)
+        public Group(int id, AvailableGroceries availableGroceries, List<User> myGroupMembers, ShoppingCart shoppingCart, List<Recipe> recipes)
         {
             Id = id;
             AvailableGroceries = availableGroceries;
@@ -44,14 +44,9 @@ namespace SmartFridge.Model
         }
 
 
-        public bool AddMember(User user,int id)
+        public void AddMember(User user)
         {
-            if(Id==id)
-            { MyGroupMembers.Add(user);
-                return true;
-            }
-
-            return false;
+            MyGroupMembers.Add(user);
         }
     }
 }

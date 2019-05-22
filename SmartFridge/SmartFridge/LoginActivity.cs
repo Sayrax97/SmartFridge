@@ -9,6 +9,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
+using SmartFridge.Model;
 
 namespace SmartFridge
 {
@@ -43,17 +45,39 @@ namespace SmartFridge
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            StartActivity(typeof(MainActivity));
-            Finish();
-            //if (usernameEditText.Text == "admin" && passwordEditText.Text == "admin")
-            //{
-            //    StartActivity(typeof(MainActivity));
-            //    Finish();
-            //}
-            //else
-            //{
-            //    Toast.MakeText(this, "pogresno uneto kucaj admin u oba", ToastLength.Long).Show();
-            //}
+            var groups = ChamberOfSecrets.Instance.groups;
+            string password="";
+            User user=new User();
+            foreach (var group in groups)
+            {
+                for (int i = 0; i < group.MyGroupMembers.Count; i++)
+                {
+                    if (group.MyGroupMembers[i].UserName == usernameEditText.Text)
+                    {
+                        password = group.MyGroupMembers[i].Password;
+                        user = group.MyGroupMembers[i];
+                        break;
+                    }
+                }
+            }
+
+            if (password == "")
+            {
+                Toast.MakeText(this, "Korisnik ne postoji. Proverite da li ste lepo ukucali korisničko ime!", ToastLength.Long).Show();
+                return;
+            }
+
+            if (password==passwordEditText.Text)
+            {
+                var intent=new Intent(this,typeof(MainActivity));
+                intent.PutExtra("user", JsonConvert.SerializeObject(user));
+                StartActivity(intent);
+                Finish();
+            }
+            else
+            {
+                Toast.MakeText(this, "Pogrsno ste uneli lozinku, pokusajte ponovo!", ToastLength.Long).Show();
+            }
         }
     }
 }

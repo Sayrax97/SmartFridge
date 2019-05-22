@@ -69,6 +69,7 @@
     <Compile Include="LoginActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Model\AvailableGroceries.cs" />
+    <Compile Include="Model\ChamberOfSecrets.cs" />
     <Compile Include="Model\Grocery.cs" />
     <Compile Include="Model\Group.cs" />
     <Compile Include="Model\Option.cs" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 
 using Android.App;
@@ -96,7 +97,7 @@ namespace SmartFridge
             {
                 Toast.MakeText(this, "Polje za prezime ne sme biti prazno", ToastLength.Short).Show();
             }
-            else if(groupIdEditText.Length()!=7 && groupIdEditText.Visibility==ViewStates.Visible)
+            else if(groupIdEditText.Visibility == ViewStates.Visible && groupIdEditText.Length()!=7)
             {
                 Toast.MakeText(this, "Polje za ID grupe mora da ima 7 karaktera", ToastLength.Short).Show();
             }
@@ -104,7 +105,21 @@ namespace SmartFridge
             {
                 User user=new User(nameEditText.Text,surnameEditText.Text,usernameEditText.Text,
                 passwordEditText.Text,emailEditText.Text,"");
-                user.AddToGroup(groupIdEditText.Text);
+                if (groupIdEditText.Visibility != ViewStates.Gone)
+                {
+                    int groupId = int.Parse(groupIdEditText.Text);
+                    user.AddToGroup(groupId);
+                    ChamberOfSecrets.Instance.groups.Find(x => x.Id == groupId).AddMember(user);
+                }
+                else
+                {
+                    Random random = new Random();
+                    int randomNum =random.Next(1, 9999999);
+                    ChamberOfSecrets.Instance.groups.Add(new Group(randomNum,new AvailableGroceries(),new List<User>(),new ShoppingCart(),
+                        ChamberOfSecrets.Instance.recipes));
+                    user.AddToGroup(randomNum);
+                }
+                
                 Intent intent=new Intent(this, typeof(MainActivity));
                 intent.PutExtra("user", JsonConvert.SerializeObject(user));
                 StartActivity(intent);

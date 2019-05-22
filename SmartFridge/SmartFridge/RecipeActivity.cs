@@ -42,6 +42,7 @@ namespace SmartFridge
             PutOnScreen();
 
         }
+        
 
         public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
         {
@@ -51,6 +52,7 @@ namespace SmartFridge
                 case Android.Resource.Id.Home:
                     Finish();
                     break;
+                
             }
 
             return true;
@@ -64,12 +66,14 @@ namespace SmartFridge
             groceriesListView = FindViewById<ListView>(Resource.Id.listViewGroceriesRecipe);
             recipeDescriptionTextView = FindViewById<TextView>(Resource.Id.txtViewRecipeDescription);
             recipeBottomNavigationView = FindViewById<BottomNavigationView>(Resource.Id.bottomNavigationViewRecipe);
+            recipeBottomNavigationView.NavigationItemSelected += RecipeBottomNavigationView_NavigationItemSelected;
+
             recipe = JsonConvert.DeserializeObject<Recipe>(Intent.GetStringExtra("recept"));
             groceryList = recipe.Groceries;
             groceryList.SetDefault();
             foreach (var grocery in recipe.Groceries.Groceries)
             {
-                if (CheckIfIsAvailable(grocery))
+                if (!CheckIfIsAvailable())
                 {
                     recipeBottomNavigationView.Menu.GetItem(1).SetEnabled(false);
                     recipeBottomNavigationView.Menu.GetItem(2).SetEnabled(true);
@@ -79,15 +83,43 @@ namespace SmartFridge
                 recipeBottomNavigationView.Menu.GetItem(2).SetEnabled(false);
             }
         }
+
+        private void RecipeBottomNavigationView_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
+        {
+            switch (e.Item.ItemId)
+            {
+                case Resource.Id.menu_make:
+                    foreach (var grocery in groceryList.Groceries)
+                    {
+                        ChamberOfSecrets.Instance.availableGroceries.Groceries.Find(x => x.Name == grocery.Name).Amount -= grocery.Amount;
+                        groceriesListView.Adapter = new GroceryListItemAdapter(groceryList.Groceries, this, true);
+                    }
+                    break;
+                case Resource.Id.menu_addToCart:
+                    foreach (var grocery in groceryList.Groceries)
+                    {
+                        if (!CheckIfIsAvailable())
+                        {
+                            ChamberOfSecrets.Instance.shoppingCart.AddToList(grocery);
+                        }
+                    }
+                    break;
+                case Resource.Id.menu_feedback:
+                    //Ovo ce da se odradi kad se rade notifikacije
+                    break;
+            }
+        }
+
         private void PutOnScreen()
         {
             recipeNameTextView.Text = recipe.Name;
             recipeDescriptionTextView.Text = recipe.Description;
         }
 
-        private bool CheckIfIsAvailable(Grocery grocery)
+        private bool CheckIfIsAvailable()
         {
-            if (GroceriesActivity.availableGroceries.Groceries.Exists(x => x.Name == grocery.Name))
+            foreach (var grocery in recipe.Groceries.Groceries)
+                if (!ChamberOfSecrets.Instance.availableGroceries.Groceries.Exists(x => x.Name == grocery.Name))
                 return false;
             return true;
         }

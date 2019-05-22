@@ -2964,20 +2964,17 @@ namespace SmartFridge
 			// aapt resource value: 0x7f0800db
 			public const int media_actions = 2131230939;
 			
-			// aapt resource value: 0x7f080116
-			public const int menu_addToCart = 2131230998;
+			// aapt resource value: 0x7f080115
+			public const int menu_addToCart = 2131230997;
 			
-			// aapt resource value: 0x7f080114
-			public const int menu_feedback = 2131230996;
+			// aapt resource value: 0x7f080113
+			public const int menu_feedback = 2131230995;
 			
 			// aapt resource value: 0x7f08010b
 			public const int menu_goceries = 2131230987;
 			
-			// aapt resource value: 0x7f080115
-			public const int menu_make = 2131230997;
-			
-			// aapt resource value: 0x7f080113
-			public const int menu_recipe = 2131230995;
+			// aapt resource value: 0x7f080114
+			public const int menu_make = 2131230996;
 			
 			// aapt resource value: 0x7f08010c
 			public const int menu_recipes = 2131230988;

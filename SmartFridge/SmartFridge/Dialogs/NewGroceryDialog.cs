@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 using Android.App;
@@ -23,7 +24,7 @@ namespace SmartFridge.Dialogs
 {
     class NewGroceryDialog:DialogFragment
     {
-        private static AvailableGroceries groceries=new AvailableGroceries();
+        private static AvailableGroceries allGroceries=new AvailableGroceries();
         private SfAutoComplete groceriesAutoComplete;
         private SfComboBox categoriesComboBox;
         private EditText amountEditText;
@@ -32,7 +33,6 @@ namespace SmartFridge.Dialogs
         private View view;
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            InitLists();
             view = inflater.Inflate(Resource.Layout.dialog_new_grocery_layout, container, false);
             groceriesAutoComplete = view.FindViewById<SfAutoComplete>(Resource.Id.autoCompleteGrocery);
             categoriesComboBox = view.FindViewById<SfComboBox>(Resource.Id.cmboBoxCategories);
@@ -48,7 +48,7 @@ namespace SmartFridge.Dialogs
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Dismiss();
-            Toast.MakeText(Activity, "Dialog fragment dismissed!", ToastLength.Short).Show();
+            Toast.MakeText(Activity, "Dodavanje otkazano!!!", ToastLength.Short).Show();
         }
 
         private void OkButton_Click(object sender, EventArgs e)
@@ -66,17 +66,17 @@ namespace SmartFridge.Dialogs
                 unit = getUnit(name, category);
                 if (category == Category.None)
                 {
-                    category = groceries.Groceries.Find(x => x.Name == name).Type;
+                    category = ChamberOfSecrets.Instance.allGroceries.Groceries.Find(x => x.Name == name).Type;
                 }
                 Grocery gr = new Grocery(name, unit, category, amount);
                 gr.Default();
                 if (this.Activity.GetType() == typeof(GroceriesActivity))
                 {
-                    GroceriesActivity.availableGroceries.AddToList(gr);
+                    ChamberOfSecrets.Instance.availableGroceries.AddToList(gr);
                 }
                 else if (this.Activity.GetType() == typeof(ShoppingCartActivity))
                 {
-                    ShoppingCartActivity.shoppingCart.AddToList(gr);
+                    ChamberOfSecrets.Instance.shoppingCart.AddToList(gr);
                 }
 
                 Dismiss();
@@ -98,27 +98,6 @@ namespace SmartFridge.Dialogs
                 Toast.MakeText(Activity, "Morate uneti podatke u prazna polja", ToastLength.Short).Show();
             }
         }
-        private void InitLists()
-        {
-            groceries.Groceries.Clear();
-            groceries.AddToList(new Grocery("garlic", Unit.Kilogram, Category.Vegtables, 0));
-            groceries.AddToList(new Grocery("powder", Unit.Gram, Category.Condiments, 0));
-            groceries.AddToList(new Grocery("bourbon", Unit.Mililitar, Category.Drink, 0));
-            groceries.AddToList(new Grocery("spearmint", Unit.Komad, Category.Herbs, 0));
-            groceries.AddToList(new Grocery("rose water", Unit.Litar, Category.Drink, 0));
-            groceries.AddToList(new Grocery("anchovies", Unit.Gram, Category.Animal_product, 0));
-            groceries.AddToList(new Grocery("huckleberries", Unit.Gram, Category.Fruits, 0));
-            groceries.AddToList(new Grocery("Havarti cheese", Unit.Gram, Category.Milky, 0));    
-            groceries.AddToList(new Grocery("cauliflower", Unit.Gram, Category.Vegtables, 0));
-            groceries.AddToList(new Grocery("lima beans", Unit.Gram, Category.Vegtables, 0));
-            groceries.AddToList(new Grocery("ice cream", Unit.Gram, Category.Milky, 0));
-            groceries.AddToList(new Grocery("oregano", Unit.Gram, Category.Food_additives‎, 0));
-            groceries.AddToList(new Grocery("vinegar", Unit.Mililitar, Category.Cooking_oils, 0));
-            groceries.AddToList(new Grocery("olive oil", Unit.Mililitar, Category.Cooking_oils, 0));
-            groceries.AddToList(new Grocery("cashew nut", Unit.Gram, Category.Vegtables, 0));
-            groceries.AddToList(new Grocery("rice", Unit.Gram, Category.Cereals, 0));
-        }
-
         private void AutoCompleteInit(View view)
         {
             groceriesAutoComplete.AutoCompleteMode = AutoCompleteMode.Suggest;
@@ -126,7 +105,7 @@ namespace SmartFridge.Dialogs
             groceriesAutoComplete.MaximumDropDownHeight = 200;
             groceriesAutoComplete.Watermark = "Unesi ime namirnice";
             groceriesAutoComplete.PopUpDelay = 200;
-            groceriesAutoComplete.DataSource = groceries.Groceries;
+            groceriesAutoComplete.DataSource = ChamberOfSecrets.Instance.allGroceries.Groceries;
             groceriesAutoComplete.DisplayMemberPath = "Name";
             groceriesAutoComplete.MinimumPrefixCharacters = 0;
             groceriesAutoComplete.TextHighlightMode = OccurrenceMode.FirstOccurrence;
@@ -135,7 +114,7 @@ namespace SmartFridge.Dialogs
 
             categoriesComboBox.TextColor = Color.Chocolate;
             categoriesComboBox.ComboBoxMode = ComboBoxMode.Suggest;
-            categoriesComboBox.DataSource = Model.Grocery.Categories;
+            categoriesComboBox.DataSource = Grocery.Categories;
             categoriesComboBox.IsEditableMode = false;
             categoriesComboBox.SuggestionBoxPlacement = SuggestionBoxPlacement.Bottom;
             categoriesComboBox.MaximumSuggestion = 5;
@@ -145,15 +124,15 @@ namespace SmartFridge.Dialogs
 
         private void CategoriesComboBox_TextChanged(object sender, Syncfusion.Android.ComboBox.TextChangedEventArgs e)
         {
-            groceries.FilterByType(Grocery.ParseEnum<Category>(categoriesComboBox.Text));
-            groceriesAutoComplete.DataSource = from grocery in groceries.Groceries
+            ChamberOfSecrets.Instance.allGroceries.FilterByType(Grocery.ParseEnum<Category>(categoriesComboBox.Text));
+            groceriesAutoComplete.DataSource = from grocery in ChamberOfSecrets.Instance.allGroceries.Groceries
                 where grocery.IsCategorized == true
                 select grocery.Name;
         }
 
         private Unit getUnit(string name, Category type)
         {
-            foreach (var grocery in groceries.Groceries)
+            foreach (var grocery in ChamberOfSecrets.Instance.allGroceries.Groceries)
             {
                 if (grocery.Name == name && grocery.Type == type)
                     return grocery.MeasurementUnit;

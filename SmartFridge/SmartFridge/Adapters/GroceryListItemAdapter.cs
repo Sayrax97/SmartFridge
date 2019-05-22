@@ -25,7 +25,7 @@ namespace SmartFridge
         public GroceryListItemAdapter(List<Grocery> groceries, Context context,bool flagReceipt)
         {
             this.groceries = (from grocery in groceries
-                where grocery.IsInList == true && grocery.IsCategorized==true
+                where grocery.IsInList == true && grocery.IsCategorized==true && grocery.Amount>=0
                 select grocery).ToList();
             this.context = context;
             this.flagReceipt = flagReceipt;
@@ -57,14 +57,20 @@ namespace SmartFridge
             name.Text = groceries[position].Name;
             amount.Text = groceries[position].Amount.ToString();
             unit.Text = groceries[position].MeasurementUnit.ToString();
+            name.SetTextColor(Color.Gray);
+            name.SetTypeface(null, TypefaceStyle.Normal);
+            amount.SetTextColor(Color.Gray);
+            amount.SetTypeface(null, TypefaceStyle.Normal);
+            unit.SetTextColor(Color.Gray);
+            unit.SetTypeface(null, TypefaceStyle.Normal);
             if (!flagReceipt)
                 checkBox.CheckedChange+= (sender, args) => 
                 {
                 groceries[position].Checked = !groceries[position].Checked;
-                GroceriesActivity.availableGroceries.Groceries[position].Checked = groceries[position].Checked;
+                ChamberOfSecrets.Instance.availableGroceries.Groceries[position].Checked = groceries[position].Checked;
                 };
             if(flagReceipt)
-            if (CheckIfIsAvailable(groceries[position]))
+            if (!CheckIfIsAvailable(groceries[position]))
             {
                 groceries[position].IsInList = false;
                 name.SetTextColor(Color.Red);
@@ -80,9 +86,9 @@ namespace SmartFridge
 
         private bool CheckIfIsAvailable(Grocery grocery)
         {
-            if (GroceriesActivity.availableGroceries.Groceries.Exists(x=>x.Name==grocery.Name))
-                return false;
-            return true;
+            if (ChamberOfSecrets.Instance.availableGroceries.Groceries.Exists(x=>x.Name==grocery.Name))
+                return true;
+            return false;
         }
     }
 }

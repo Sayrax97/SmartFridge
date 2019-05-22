@@ -25,7 +25,6 @@ namespace SmartFridge
         private Button addToGroceriesListButton;
         private FloatingActionButton shoppingCartFloatingActionButton;
         private Toolbar topToolbar;
-        public static ShoppingCart shoppingCart = new ShoppingCart();
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -53,26 +52,16 @@ namespace SmartFridge
 
         private void Init()
         {
-            FillUpShoppingCart();
             shoppingCartFloatingActionButton = FindViewById<FloatingActionButton>(Resource.Id.fABshoppingCart);
             addToGroceriesListButton = FindViewById<Button>(Resource.Id.btnAddtoGroceriesList);
             addToGroceriesListButton.Click += AddToGroceriesListButton_Click;
             topToolbar = FindViewById<Toolbar>(Resource.Id.topToolbarCart);
             shoppingCartListView = FindViewById<ListView>(Resource.Id.listViewShoppingCart);
+
             LoadGroceries();
             shoppingCartFloatingActionButton.Click += ShoppingCartFloatingActionButton_Click;
             
         }
-
-        private void FillUpShoppingCart()
-        {
-            shoppingCart.AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
-            shoppingCart.AddToList(new Grocery("Hleb", Unit.Komad, Category.Flour, 3));
-            shoppingCart.AddToList(new Grocery("Mast", Unit.Kilogram, Category.Cooking_oils, 1));
-            shoppingCart.AddToList(new Grocery("Pasulj", Unit.Kilogram, Category.Vegtables, 5));
-            shoppingCart.AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
-        }
-
         private void ShoppingCartFloatingActionButton_Click(object sender, EventArgs e)
         {
             FragmentTransaction ft = FragmentManager.BeginTransaction();
@@ -92,14 +81,14 @@ namespace SmartFridge
 
         private void AddToGroceriesListButton_Click(object sender, EventArgs e)
         {
-            foreach (var grocery in shoppingCart.Groceries.ToList())
+            foreach (var grocery in ChamberOfSecrets.Instance.shoppingCart.Groceries.ToList())
             {
                 if (grocery.Checked)
-                    shoppingCart.Buy(grocery);
+                    ChamberOfSecrets.Instance.shoppingCart.Buy(grocery);
 
             }
             LoadGroceries();
-            foreach (var grocery in shoppingCart.Groceries.ToList())
+            foreach (var grocery in ChamberOfSecrets.Instance.shoppingCart.Groceries.ToList())
             {
                 grocery.Checked = false;
 
@@ -107,7 +96,7 @@ namespace SmartFridge
         }
         public void LoadGroceries()
         {
-            shoppingCartListView.Adapter = new ShoppingCartItemAdapter(this,shoppingCart);
+            shoppingCartListView.Adapter = new ShoppingCartItemAdapter(this, ChamberOfSecrets.Instance.shoppingCart);
         }
     }
 }

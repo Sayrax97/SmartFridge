@@ -25,8 +25,8 @@ namespace SmartFridge
         private FrameLayout contentMainFrameLayout;
         private DrawerLayout mainDrawerLayout;
         private NavigationView drawerMainNavigationView;
-        public static List<Group> groups=new List<Group>();
         private User user;
+        private Group group;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -76,9 +76,17 @@ namespace SmartFridge
                 case Resource.Id.myProfileMain:
                     Intent userIntent=new Intent(this, typeof(MyProfileActivity));
                     userIntent.PutExtra("user", JsonConvert.SerializeObject(user));
-                    StartActivity(userIntent); break;
-                case Resource.Id.myGroupMain: StartActivity(typeof(MyGroupActivity)); break;
-                case Resource.Id.settingsMain: StartActivity(typeof(OptionsActivity)); break;
+                    StartActivity(userIntent);
+                    break;
+                case Resource.Id.myGroupMain:
+                    Intent groupIntent = new Intent(this, typeof(MyGroupActivity));
+                    groupIntent.PutExtra("grupa", JsonConvert.SerializeObject(group));
+                    StartActivity(groupIntent);
+                    break;
+                case Resource.Id.settingsMain:
+                    Intent optionsIntent = new Intent(this, typeof(OptionsActivity));
+                    optionsIntent.PutExtra("opcije", JsonConvert.SerializeObject(user.MyOptions));
+                    StartActivity(optionsIntent); break;
                 case Resource.Id.feedbackMain:
                     Intent emailIntent = new Intent(Intent.ActionSendto, Uri.FromParts("mailto", "4infinityteam@gmail.com", null));
                     emailIntent.PutExtra(Intent.ExtraSubject, "Feedback");
@@ -98,8 +106,8 @@ namespace SmartFridge
             drawerMainNavigationView = FindViewById<NavigationView>(Resource.Id.navViewDrawerMain);
             mainBottomNavigationView = FindViewById<BottomNavigationView>(Resource.Id.navigationViewMain);
             mainDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawerMain);
-            //if (JsonConvert.DeserializeObject<User>("user") != null)
-            //    user = JsonConvert.DeserializeObject<User>("user");
+            user = JsonConvert.DeserializeObject<User>("user");
+            group = ChamberOfSecrets.Instance.groups.Find(x => x.Id == user.MyGroup);
         }
     }
 }

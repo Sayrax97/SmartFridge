@@ -50,14 +50,14 @@ namespace SmartFridge.Adapters
                 if (!string.IsNullOrEmpty(amountBought.Text))
                 {
                     shoppingCart.Groceries[position].Bought = int.Parse(amountBought.Text);
-                    ShoppingCartActivity.shoppingCart.Groceries[position].Bought = int.Parse(amountBought.Text);
+                    ChamberOfSecrets.Instance.shoppingCart.Groceries[position].Bought = int.Parse(amountBought.Text);
                 }
             };
             
             checkBox.CheckedChange += (sender, args) =>
                 {
                     shoppingCart.Groceries[position].Checked = checkBox.Checked;
-                    ShoppingCartActivity.shoppingCart.Groceries[position].Checked =
+                    ChamberOfSecrets.Instance.shoppingCart.Groceries[position].Checked =
                         shoppingCart.Groceries[position].Checked;
 
                 };

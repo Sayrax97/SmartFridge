@@ -20,8 +20,13 @@ namespace SmartFridge.Model
         public string Password { get; set; }
         public string Email { get; set; }
         public string Image { get; set; }
-        public string MyGroup { get; set; }
+        public int MyGroup { get; set; }
         public Option MyOptions { get; set; }
+
+        public User()
+        {
+
+        }
 
         public User(string name, string surName, string userName, string password, string email, string image)
         {
@@ -33,7 +38,7 @@ namespace SmartFridge.Model
             Image = image;
         }
 
-        public void AddToGroup(string group)
+        public void AddToGroup(int group)
         {
             MyGroup = group;
         }

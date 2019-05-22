@@ -4,6 +4,7 @@ using Android.Graphics;
 using Android.OS;
 using Android.Support.V7.App;
 using Gr.Net.MaroulisLib;
+using SmartFridge.Model;
 
 namespace SmartFridge
 {
@@ -21,6 +22,7 @@ namespace SmartFridge
                 .WithBackgroundResource(Resource.Drawable.refrigeratorSplash)
                 .WithFooterText("©2019,4InfinityTeam");
             SetContentView(splash.Create());
+            ChamberOfSecrets c=ChamberOfSecrets.Instance;
         }
     }
 }
