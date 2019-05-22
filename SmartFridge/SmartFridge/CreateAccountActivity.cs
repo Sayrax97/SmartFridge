@@ -97,9 +97,10 @@ namespace SmartFridge
             {
                 Toast.MakeText(this, "Polje za prezime ne sme biti prazno", ToastLength.Short).Show();
             }
-            else if(groupIdEditText.Visibility == ViewStates.Visible && groupIdEditText.Length()!=7)
+            else if(groupIdEditText.Visibility == ViewStates.Visible && groupIdEditText.Length()!=7 
+                                                                     && IsIdAvailable((int.Parse(groupIdEditText.Text))))
             {
-                Toast.MakeText(this, "Polje za ID grupe mora da ima 7 karaktera", ToastLength.Short).Show();
+                Toast.MakeText(this, "Polje za ID grupe nema 7 broja ili broj grupe vecp postoji", ToastLength.Short).Show();
             }
             else
             {
@@ -109,21 +110,25 @@ namespace SmartFridge
                 {
                     int groupId = int.Parse(groupIdEditText.Text);
                     user.AddToGroup(groupId);
-                    ChamberOfSecrets.Instance.groups.Find(x => x.Id == groupId).AddMember(user);
+                    ChamberOfSecrets.Instance.group.AddMember(user);
                 }
                 else
                 {
                     Random random = new Random();
                     int randomNum =random.Next(1, 9999999);
-                    ChamberOfSecrets.Instance.groups.Add(new Group(randomNum,new AvailableGroceries(),new List<User>(),new ShoppingCart(),
-                        ChamberOfSecrets.Instance.recipes));
                     user.AddToGroup(randomNum);
+                    ChamberOfSecrets.Instance.group.AddMember(user);
                 }
                 
                 Intent intent=new Intent(this, typeof(MainActivity));
                 intent.PutExtra("user", JsonConvert.SerializeObject(user));
                 StartActivity(intent);
             }
+        }
+
+        private bool IsIdAvailable(int id)
+        {
+            return true;
         }
     }
 }

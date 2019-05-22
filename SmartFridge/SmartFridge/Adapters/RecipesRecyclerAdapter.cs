@@ -6,7 +6,11 @@ using System.Text;
 using Android.App;
 using Android.Content;
 using Android.Content.Res;
+using Android.Graphics;
+using Android.Graphics.Drawables;
+using Android.Media;
 using Android.OS;
+using Android.Provider;
 using Android.Runtime;
 using Android.Support.V7.Widget;
 using Android.Views;
@@ -37,6 +41,9 @@ namespace SmartFridge.Adapters
             MyViewHolder vh = holder as MyViewHolder;
             vh.TitleTextView.Text = recipes[position].Name;
             vh.ShortDescTextView.Text = recipes[position].Description.Substring(0, 50) + "...";
+            //var bitmap = BitmapDrawable.cre(context.GetExternalFilesDir("jpg").AbsolutePath+"/"+recipes[position].Image+".jpg");
+            vh.RecipeImage.SetImageDrawable(context.GetDrawable
+                (context.Resources.GetIdentifier(recipes[position].Image,"drawable",context.PackageName)));
             vh.ItemView.Click += ItemView_Click;
         }
 
@@ -46,11 +53,7 @@ namespace SmartFridge.Adapters
             Recipe recipeClicked = recipes[position];
             intent= new Intent(context,typeof(RecipeActivity));
             intent.PutExtra("recept", JsonConvert.SerializeObject(recipeClicked));
-            //intent.PutExtra("name",recipeClicked.Name)
-            //    .PutExtra("id", recipeClicked.Id)
-            //    .PutExtra("desc", recipeClicked.Description);
             context.StartActivity(intent);
-
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)

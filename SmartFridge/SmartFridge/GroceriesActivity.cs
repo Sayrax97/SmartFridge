@@ -26,6 +26,7 @@ using SuggestionMode = Syncfusion.Android.ComboBox.SuggestionMode;
 using TokensWrapMode = Syncfusion.Android.ComboBox.TokensWrapMode;
 using TokenSettings = Syncfusion.Android.ComboBox.TokenSettings;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
+using Android.Net.Wifi;
 
 namespace SmartFridge
 {
@@ -142,7 +143,6 @@ namespace SmartFridge
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-           
         }
         public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
         {

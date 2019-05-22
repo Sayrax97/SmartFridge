@@ -63,7 +63,7 @@ namespace SmartFridge
             changePasswordButton = FindViewById<Button>(Resource.Id.btnChangePassword);
             topToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyProfile);
 
-            user = JsonConvert.DeserializeObject<User>("user");
+            user = JsonConvert.DeserializeObject<User>(Intent.GetStringExtra("user"));
             userNameTextView.Text = user.UserName;
             passwordTextView.Text = ToPassword(user.Password);
             nameTextView.Text = user.Name;

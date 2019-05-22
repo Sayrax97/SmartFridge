@@ -106,8 +106,8 @@ namespace SmartFridge
             drawerMainNavigationView = FindViewById<NavigationView>(Resource.Id.navViewDrawerMain);
             mainBottomNavigationView = FindViewById<BottomNavigationView>(Resource.Id.navigationViewMain);
             mainDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawerMain);
-            user = JsonConvert.DeserializeObject<User>("user");
-            group = ChamberOfSecrets.Instance.groups.Find(x => x.Id == user.MyGroup);
+            user = JsonConvert.DeserializeObject<User>(Intent.GetStringExtra("user"));
+            group = ChamberOfSecrets.Instance.group;
         }
     }
 }

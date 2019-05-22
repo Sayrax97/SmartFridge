@@ -36,6 +36,7 @@ namespace SmartFridge.Model
             Password = password;
             Email = email;
             Image = image;
+            MyOptions= new Option();
         }
 
         public void AddToGroup(int group)

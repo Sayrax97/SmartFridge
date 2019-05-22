@@ -5,6 +5,8 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Net;
+using Android.Net.Wifi;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -25,12 +27,12 @@ namespace SmartFridge
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.login_layout);
-            init();
+            Init();
             loginButton.Click += LoginButton_Click;
             createAccountButton.Click += CreateAccountButton_Click;
         }
 
-        private void init()
+        private void Init()
         {
             usernameEditText = FindViewById<EditText>(Resource.Id.editTxtUsername);
             passwordEditText = FindViewById<EditText>(Resource.Id.editTxtPassword);
@@ -45,20 +47,18 @@ namespace SmartFridge
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            var groups = ChamberOfSecrets.Instance.groups;
+            Connect();
+            var group = ChamberOfSecrets.Instance.group;
             string password="";
             User user=new User();
-            foreach (var group in groups)
+            foreach (var member in group.MyGroupMembers)
             {
-                for (int i = 0; i < group.MyGroupMembers.Count; i++)
-                {
-                    if (group.MyGroupMembers[i].UserName == usernameEditText.Text)
+                    if (member.UserName == usernameEditText.Text)
                     {
-                        password = group.MyGroupMembers[i].Password;
-                        user = group.MyGroupMembers[i];
+                        password = member.Password;
+                        user = member;
                         break;
                     }
-                }
             }
 
             if (password == "")
@@ -77,6 +77,21 @@ namespace SmartFridge
             else
             {
                 Toast.MakeText(this, "Pogrsno ste uneli lozinku, pokusajte ponovo!", ToastLength.Long).Show();
+            }
+        }
+
+        private void Connect()
+        {
+
+            WifiManager wifi = (WifiManager)Application.Context.GetSystemService(WifiService);
+            if (wifi.IsWifiEnabled)
+            {
+                Toast.MakeText(this, "Wifi je vec ukljucen", ToastLength.Short).Show();
+            }
+            else if (!wifi.IsWifiEnabled)
+            {
+                wifi.SetWifiEnabled(true);
+                Toast.MakeText(this, "Wifi ukljucen", ToastLength.Short).Show();
             }
         }
     }

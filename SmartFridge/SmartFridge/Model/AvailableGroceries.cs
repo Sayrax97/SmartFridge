@@ -42,7 +42,7 @@ namespace SmartFridge.Model
 
         public void AddToList(Grocery grocery,double amount)
         {
-            if (Groceries.Exists(x => x.Name.Contains(grocery.Name)))
+            if (Groceries.Exists(x => x.Name==grocery.Name))
             {
                 Groceries.Find(x => x.Equals(grocery)).Amount += amount;
             }

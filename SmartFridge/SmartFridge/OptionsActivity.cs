@@ -42,7 +42,7 @@ namespace SmartFridge
             fontTextView = FindViewById<TextView>(Resource.Id.txtViewFontOptions);
             themeTextView = FindViewById<TextView>(Resource.Id.txtViewThemeOptions);
             notificationsTextView = FindViewById<TextView>(Resource.Id.txtViewNotificationsOptions);
-            options = JsonConvert.DeserializeObject<Option>("opcije");
+            options = JsonConvert.DeserializeObject<Option>(Intent.GetStringExtra("opcije"));
             fontTextView.Text = options.Font;
             themeTextView.Text = options.Theme;
             notificationsTextView.Text = options.Notifications.ToString();

@@ -47,6 +47,7 @@ namespace SmartFridge.Model
         public void AddMember(User user)
         {
             MyGroupMembers.Add(user);
+            user.MyGroup = Id;
         }
     }
 }

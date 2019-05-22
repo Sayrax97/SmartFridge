@@ -51,7 +51,7 @@ namespace SmartFridge
         {
             groupMembersListView = FindViewById<ListView>(Resource.Id.listViewGroupMembers);
             myGroupToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyGroup);
-            group=JsonConvert.DeserializeObject<Group>("grupa");
+            group=JsonConvert.DeserializeObject<Group>(Intent.GetStringExtra("grupa"));
             GroupMemberAdapter adapter = new GroupMemberAdapter(group, this);
             groupMembersListView.Adapter = adapter;
         }

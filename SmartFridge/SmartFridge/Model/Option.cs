@@ -18,6 +18,13 @@ namespace SmartFridge.Model
         public string Font { get; set; }
         public bool Notifications { get; set; }
 
+        public Option()
+        {
+            Theme = "Dark";
+            Font = "default";
+            Notifications = true;
+        }
+
         public Option(string theme, string font)
         {
             Theme = theme;

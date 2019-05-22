@@ -32,6 +32,7 @@ namespace SmartFridge.Model
             Id = id;
             Description = description;
             Image = image;
+            AddImage();
         }
 
 
@@ -39,6 +40,18 @@ namespace SmartFridge.Model
         {
             Groceries.AddToList(grocery);
             //Groceries.Sort();
+        }
+
+        public void AddImage()
+        {
+            var words = Name.Split(' ');
+            Image = "";
+            foreach (var word in words)
+            {
+                Image += word.ToLower() + "_";
+            }
+
+            //Image += ".jpg";
         }
     }
 }

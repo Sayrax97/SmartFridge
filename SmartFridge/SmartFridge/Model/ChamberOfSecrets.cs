@@ -31,7 +31,7 @@ namespace SmartFridge.Model
             }
         }
 
-        public List<Group> groups { get; set; }
+        public Group group { get; set; }
         public AvailableGroceries allGroceries { get; set; }
         public AvailableGroceries availableGroceries { get; set; }
         public ShoppingCart shoppingCart { get; set; }
@@ -40,8 +40,8 @@ namespace SmartFridge.Model
 
         protected ChamberOfSecrets()
         {
-            option=new Option("Light","timenewroman");
-
+            option=new Option("Dark","timenewroman");
+            
             allGroceries=new AvailableGroceries();
             allGroceries.AddToList(new Grocery("garlic", Unit.Kilogram, Category.Vegtables, 0));
             allGroceries.AddToList(new Grocery("powder", Unit.Gram, Category.Condiments, 0));
@@ -84,7 +84,7 @@ namespace SmartFridge.Model
             shoppingCart.AddToList(new Grocery("Mleko", Unit.Litar, Category.Milky, 2));
 
             recipes = new List<Recipe>();
-            recipes.Add(new Recipe("Pica od suvog hleba", 23, "Na podmazanu tepsiju ređati suvi hleb (bez korica). Ubutati jaja, mlijeko, kajmak i sir sjednitini i natopiti preko hleba.Stavljati preko hleba, salamu, pršutu, kulen i sir dobro poređati i poprskati kečapom.", ""));
+            recipes.Add(new Recipe("Pica od suvog hleba", 23, "Na podmazanu tepsiju ređati suvi hleb (bez korica).\nUbutati jaja, mlijeko, kajmak i sir sjednitini i natopiti preko hleba.\nStavljati preko hleba, salamu, pršutu, kulen i sir dobro poređati i poprskati kečapom.\nZapeći u pekaru zagrijanu na 200C oko 15 minuta.\nPečenu picu poprskati majonezom malo ohladini i iseći po želji.", ""));
             recipes[0].AddToList(new Grocery("Jaje", Unit.Komad, Category.Animal_product, 2));
             recipes[0].AddToList(new Grocery("Hleb", Unit.Komad, Category.Flour, 2));
             recipes[0].AddToList(new Grocery("Brasno", Unit.Kilogram, Category.Flour, 0.5));
@@ -98,10 +98,10 @@ namespace SmartFridge.Model
             recipes.Add(new Recipe("Pita sa koprivom", 64, "Koprivu očistiti obariti u slanoj vodi oko 5 minuta. Ocediti i iseckati ukupno da bude 250 g. Umutiti jaja. Dodati jogurt i ulje. Izmešati. Dodati brašna pomešana sa prašom za pecivo u so. Umutiti smesu.", ""));
             recipes.Add(new Recipe("Torta Pahuljica", 94, "Umutiti bjelanca sa šećerom, dodati brašno i prašak za pecivo. Smjesu izliti u kalup, obložen papirom za pečenje, pa peći na 200 C oko 30 minuta. Prokuhati 100 ml mlijeka i vanilin šećer. Pečen biskvit odvojiti od papira, izbockati pa preliti vrelim mlijekom. Ostaviti da se ohladi.", ""));
 
-            groups[0] = new Group(4,availableGroceries,new List<User>(),shoppingCart,recipes);
-            groups[0].MyGroupMembers.Add(new User("Dusan", "Janakovic", "Wicked", "pecenikrompir21", "dusann.jankovic@elfak.rs", ""));
-            groups[0].MyGroupMembers.Add(new User("Matija", "Janic", "AnubisLP", "matko123", "matija.janic@elfak.rs", ""));
-            groups[0].MyGroupMembers.Add(new User("Lazar", "Pavlovic", "Brahman_n", "perfeks38", "lazarp@elfak.rs", ""));
+            group= new Group(4, availableGroceries, new List<User>(), shoppingCart, recipes);
+            group.AddMember(new User("Dusan", "Janakovic", "Wicked", "qwerty", "dusann.jankovic@elfak.rs", ""));
+            group.AddMember(new User("Matija", "Janic", "AnubisLP", "matko123", "matija.janic@elfak.rs", ""));
+            group.AddMember(new User("Lazar", "Pavlovic", "Brahman_n", "perfeks38", "lazarp@elfak.rs", ""));
         }
     }
 }

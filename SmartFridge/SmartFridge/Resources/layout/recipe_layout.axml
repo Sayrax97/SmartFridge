@@ -36,13 +36,13 @@
 		android:layout_height="wrap_content"
 		android:id="@+id/listViewGroceriesRecipe" />
 	<TextView
-		android:text="Opis"
+		android:text="Nacin pripreme"
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:id="@+id/textView2" />
 	<TextView
-		android:text="blablablalallablablbblaablblalbalbalablbalab"
+		android:text="nacin pripreme text"
 		android:textAppearance="?android:attr/textAppearanceSmall"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
