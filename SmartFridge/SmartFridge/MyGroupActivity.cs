@@ -15,6 +15,7 @@ using Newtonsoft.Json;
 using SmartFridge.Adapters;
 using SmartFridge.Model;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
+using Android.Content.PM;
 
 namespace SmartFridge
 {
@@ -23,12 +24,12 @@ namespace SmartFridge
     {
         private ListView groupMembersListView;
         private Toolbar myGroupToolbar;
-        private Group group;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.group_layout);
             Init();
+            this.RequestedOrientation = ScreenOrientation.Portrait;
             myGroupToolbar.SetTitle(Resource.String.my_group);
             base.SetSupportActionBar(myGroupToolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
@@ -51,8 +52,7 @@ namespace SmartFridge
         {
             groupMembersListView = FindViewById<ListView>(Resource.Id.listViewGroupMembers);
             myGroupToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyGroup);
-            group=JsonConvert.DeserializeObject<Group>(Intent.GetStringExtra("grupa"));
-            GroupMemberAdapter adapter = new GroupMemberAdapter(group, this);
+            GroupMemberAdapter adapter = new GroupMemberAdapter(ChamberOfSecrets.Instance.group, this);
             groupMembersListView.Adapter = adapter;
         }
 

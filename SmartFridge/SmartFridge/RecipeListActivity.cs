@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Android.App;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.App;
@@ -23,11 +24,13 @@ namespace SmartFridge
         private RecyclerView recipeListRecyclerView;
         private RecyclerView.LayoutManager manager;
         private RecyclerView.Adapter adapter;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.recipe_list_layout);
             Init();
+            this.RequestedOrientation = ScreenOrientation.Portrait;
             topToolbar.Title = Resources.GetString(Resource.String.recipe_list);
             SetSupportActionBar(topToolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
@@ -54,7 +57,7 @@ namespace SmartFridge
             recipeListRecyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerViewRecipeList);
             manager = new LinearLayoutManager(this);
             recipeListRecyclerView.SetLayoutManager(manager);
-            recipeListRecyclerView.SetAdapter(new RecipesRecyclerAdapter(this,ChamberOfSecrets.Instance.recipes,recipeListRecyclerView));
+            recipeListRecyclerView.SetAdapter(new RecipesRecyclerAdapter(this,ChamberOfSecrets.Instance.group.Recipes,recipeListRecyclerView));
         }
     }
 }

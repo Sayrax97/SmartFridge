@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Net;
 using Android.Net.Wifi;
 using Android.OS;
@@ -13,6 +14,7 @@ using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
 using SmartFridge.Model;
+using SmartFridge.WebReference;
 
 namespace SmartFridge
 {
@@ -28,8 +30,10 @@ namespace SmartFridge
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.login_layout);
             Init();
-            loginButton.Click += LoginButton_Click;
+            this.RequestedOrientation = ScreenOrientation.Portrait;
+            loginButton.Click += LoginButton_ClickAsync;
             createAccountButton.Click += CreateAccountButton_Click;
+
         }
 
         private void Init()
@@ -45,32 +49,37 @@ namespace SmartFridge
             StartActivity(typeof(CreateAccountActivity));
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
+        private async void LoginButton_ClickAsync(object sender, EventArgs e)
         {
             Connect();
-            var group = ChamberOfSecrets.Instance.group;
-            string password="";
-            User user=new User();
-            foreach (var member in group.MyGroupMembers)
-            {
-                    if (member.UserName == usernameEditText.Text)
-                    {
-                        password = member.Password;
-                        user = member;
-                        break;
-                    }
-            }
+            User user= new User();
+            user.ToUser(await Task.Run(() => ChamberOfSecrets.Proxy.dbFindUser(usernameEditText.Text)));
 
-            if (password == "")
+            if (user.Password == "")
             {
                 Toast.MakeText(this, "Korisnik ne postoji. Proverite da li ste lepo ukucali korisničko ime!", ToastLength.Long).Show();
                 return;
             }
 
-            if (password==passwordEditText.Text)
+            if(user.Password == passwordEditText.Text)
             {
+
                 var intent=new Intent(this,typeof(MainActivity));
-                intent.PutExtra("user", JsonConvert.SerializeObject(user));
+                ChamberOfSecrets.Instance.LoggedUser = user;
+
+                ChamberOfSecrets.Instance.LoggedUser.MyOptions.ToOption(await Task.Run(() =>
+                    ChamberOfSecrets.Proxy.dbGetOptions(user.UserName)));
+
+                ChamberOfSecrets.Instance.@group.Id = user.MyGroup;
+                ChamberOfSecrets.Instance.@group.MyGroupMembers= await Task.Run(() =>
+                    ChamberOfSecrets.Proxy.dbInMyGroup(user.MyGroup).ToList());
+
+                ChamberOfSecrets.Instance.@group.AvailableGroceries.ToAvailableGroceries(await Task.Run(() =>
+                    ChamberOfSecrets.Proxy.dbGetAvailableGroceries(user.MyGroup).ToList()));
+
+                ChamberOfSecrets.Instance.@group.ShoppingCart.ToShoppingCart( await Task.Run(() => 
+                    ChamberOfSecrets.Proxy.dbGetShoppingCart(user.MyGroup).ToList()));
+                
                 StartActivity(intent);
                 Finish();
             }
@@ -79,7 +88,6 @@ namespace SmartFridge
                 Toast.MakeText(this, "Pogrsno ste uneli lozinku, pokusajte ponovo!", ToastLength.Long).Show();
             }
         }
-
         private void Connect()
         {
 
@@ -93,6 +101,8 @@ namespace SmartFridge
                 wifi.SetWifiEnabled(true);
                 Toast.MakeText(this, "Wifi ukljucen", ToastLength.Short).Show();
             }
+
         }
+
     }
 }

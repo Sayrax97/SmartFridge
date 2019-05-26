@@ -42,12 +42,7 @@ namespace SmartFridge
         {
             if (convertView == null)
             {
-                if(!flagReceipt)
-                convertView = LayoutInflater.From(context).Inflate(Resource.Layout.groceies_list_item_layout,null);
-                else
-                {
-                    convertView = LayoutInflater.From(context).Inflate(Resource.Layout.groceries_recipe_item_layout, null);
-                }
+                convertView = LayoutInflater.From(context).Inflate(!flagReceipt ? Resource.Layout.groceies_list_item_layout : Resource.Layout.groceries_recipe_item_layout, null);
             }
 
             TextView name = convertView.FindViewById<TextView>(Resource.Id.txtNameGrocery);
@@ -67,27 +62,32 @@ namespace SmartFridge
                 checkBox.CheckedChange+= (sender, args) => 
                 {
                 groceries[position].Checked = !groceries[position].Checked;
-                ChamberOfSecrets.Instance.availableGroceries.Groceries[position].Checked = groceries[position].Checked;
+                ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries[position].Checked = groceries[position].Checked;
                 };
             if(flagReceipt)
-            if (!CheckIfIsAvailable(groceries[position]))
             {
-                groceries[position].IsInList = false;
-                name.SetTextColor(Color.Red);
-                name.SetTypeface(null,TypefaceStyle.Bold);
-                amount.SetTextColor(Color.Red);
-                amount.SetTypeface(null, TypefaceStyle.Bold);
-                unit.SetTextColor(Color.Red);
-                unit.SetTypeface(null, TypefaceStyle.Bold);
+                if (!CheckIfIsAvailable(groceries[position]))
+                {
+                    groceries[position].IsInList = false;
+                    name.SetTextColor(Color.Red);
+                    name.SetTypeface(null,TypefaceStyle.Bold);
+                    amount.SetTextColor(Color.Red);
+                    amount.SetTypeface(null, TypefaceStyle.Bold);
+                    unit.SetTextColor(Color.Red);
+                    unit.SetTypeface(null, TypefaceStyle.Bold);
                 }
+            }
 
             return convertView;
         }
 
         private bool CheckIfIsAvailable(Grocery grocery)
         {
-            if (ChamberOfSecrets.Instance.availableGroceries.Groceries.Exists(x=>x.Name==grocery.Name))
+            if (ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries.Exists(x=>x.Name==grocery.Name))
+            {
                 return true;
+            }
+
             return false;
         }
     }

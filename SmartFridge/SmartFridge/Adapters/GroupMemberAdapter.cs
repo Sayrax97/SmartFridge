@@ -13,7 +13,7 @@ using SmartFridge.Model;
 
 namespace SmartFridge.Adapters
 {
-    class GroupMemberAdapter:BaseAdapter<User>
+    class GroupMemberAdapter:BaseAdapter<string>
     {
         private Group myGroup;
         private Context context;
@@ -39,7 +39,7 @@ namespace SmartFridge.Adapters
             TextView name = convertView.FindViewById<TextView>(Resource.Id.txtViewGroupMember);
             ImageButton remove = convertView.FindViewById<ImageButton>(Resource.Id.imageBtnRemove);
             ImageButton plus = convertView.FindViewById<ImageButton>(Resource.Id.imageBtnPlus);
-            name.Text = myGroup.MyGroupMembers[position].ToString();
+            name.Text = myGroup.MyGroupMembers[position];
             return convertView;
         }
 
@@ -48,6 +48,6 @@ namespace SmartFridge.Adapters
             get { return myGroup.MyGroupMembers.Count; }
         }
 
-        public override User this[int position] =>myGroup.MyGroupMembers[position] ;
+        public override string this[int position] =>myGroup.MyGroupMembers[position] ;
     }
 }

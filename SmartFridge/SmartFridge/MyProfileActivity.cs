@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V4.View;
@@ -35,6 +36,7 @@ namespace SmartFridge
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.my_profile_layout);
             Init();
+            this.RequestedOrientation = ScreenOrientation.Portrait;
             topToolbar.Title = Resources.GetString(Resource.String.my_profile);
             SetSupportActionBar(topToolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
@@ -63,7 +65,7 @@ namespace SmartFridge
             changePasswordButton = FindViewById<Button>(Resource.Id.btnChangePassword);
             topToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyProfile);
 
-            user = JsonConvert.DeserializeObject<User>(Intent.GetStringExtra("user"));
+            user = ChamberOfSecrets.Instance.LoggedUser;
             userNameTextView.Text = user.UserName;
             passwordTextView.Text = ToPassword(user.Password);
             nameTextView.Text = user.Name;
@@ -73,8 +75,8 @@ namespace SmartFridge
 
         private string ToPassword(string s)
         {
-            string p="";
-            for (int i = 0; i < s.Length; i++)
+            var p="";
+            for (var i = 0; i < s.Length; i++)
                 p += "*";
             return p;
         }

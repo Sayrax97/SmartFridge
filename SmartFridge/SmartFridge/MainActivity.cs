@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Net;
 using Android.OS;
 using Android.Provider;
@@ -25,13 +26,12 @@ namespace SmartFridge
         private FrameLayout contentMainFrameLayout;
         private DrawerLayout mainDrawerLayout;
         private NavigationView drawerMainNavigationView;
-        private User user;
-        private Group group;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
             Init();
+            this.RequestedOrientation = ScreenOrientation.Portrait;
             mainTopToolbar.Title = Resources.GetString(Resource.String.application_name);
             SetSupportActionBar(mainTopToolbar);
             drawerMainNavigationView.NavigationItemSelected += OnMenuItemSelected;
@@ -75,17 +75,14 @@ namespace SmartFridge
             {
                 case Resource.Id.myProfileMain:
                     Intent userIntent=new Intent(this, typeof(MyProfileActivity));
-                    userIntent.PutExtra("user", JsonConvert.SerializeObject(user));
                     StartActivity(userIntent);
                     break;
                 case Resource.Id.myGroupMain:
                     Intent groupIntent = new Intent(this, typeof(MyGroupActivity));
-                    groupIntent.PutExtra("grupa", JsonConvert.SerializeObject(group));
                     StartActivity(groupIntent);
                     break;
                 case Resource.Id.settingsMain:
                     Intent optionsIntent = new Intent(this, typeof(OptionsActivity));
-                    optionsIntent.PutExtra("opcije", JsonConvert.SerializeObject(user.MyOptions));
                     StartActivity(optionsIntent); break;
                 case Resource.Id.feedbackMain:
                     Intent emailIntent = new Intent(Intent.ActionSendto, Uri.FromParts("mailto", "4infinityteam@gmail.com", null));
@@ -93,7 +90,12 @@ namespace SmartFridge
                     emailIntent.PutExtra(Intent.ExtraText, "Problem/Suggestion/etc.");
                     StartActivity(Intent.CreateChooser(emailIntent, "Send email..."));
                      break;
-                case Resource.Id.logoutMain: StartActivity(typeof(LoginActivity));Finish(); break;
+                case Resource.Id.logoutMain:
+                    StartActivity(typeof(LoginActivity));
+                    Finish();
+                    ChamberOfSecrets.Instance.group=new Group();
+                    ChamberOfSecrets.Instance.LoggedUser=new User();
+                    break;
 
             }
             
@@ -106,8 +108,6 @@ namespace SmartFridge
             drawerMainNavigationView = FindViewById<NavigationView>(Resource.Id.navViewDrawerMain);
             mainBottomNavigationView = FindViewById<BottomNavigationView>(Resource.Id.navigationViewMain);
             mainDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawerMain);
-            user = JsonConvert.DeserializeObject<User>(Intent.GetStringExtra("user"));
-            group = ChamberOfSecrets.Instance.group;
         }
     }
 }

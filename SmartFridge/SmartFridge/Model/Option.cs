@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using SmartFridge.WebReference;
 
 namespace SmartFridge.Model
 {
@@ -36,9 +37,17 @@ namespace SmartFridge.Model
         {
             Notifications = false;
         }
+
         public void TurnOnNotifications()
         {
             Notifications = true;
+        }
+
+        public void ToOption(OptionDetails details)
+        {
+            Theme = details.Theme;
+            Font = details.Font;
+            Notifications = details.Notification;
         }
     }
 }

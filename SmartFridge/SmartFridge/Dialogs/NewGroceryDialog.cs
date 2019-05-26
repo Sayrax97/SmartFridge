@@ -31,6 +31,7 @@ namespace SmartFridge.Dialogs
         private Button okButton;
         private Button cancelButton;
         private View view;
+
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             view = inflater.Inflate(Resource.Layout.dialog_new_grocery_layout, container, false);
@@ -72,11 +73,11 @@ namespace SmartFridge.Dialogs
                 gr.Default();
                 if (this.Activity.GetType() == typeof(GroceriesActivity))
                 {
-                    ChamberOfSecrets.Instance.availableGroceries.AddToList(gr);
+                    ChamberOfSecrets.Instance.group.AvailableGroceries.AddToList(gr);
                 }
                 else if (this.Activity.GetType() == typeof(ShoppingCartActivity))
                 {
-                    ChamberOfSecrets.Instance.shoppingCart.AddToList(gr);
+                    ChamberOfSecrets.Instance.group.ShoppingCart.AddToList(gr);
                 }
 
                 Dismiss();

@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Internal;
@@ -34,13 +35,13 @@ namespace SmartFridge
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.recipe_layout);
             Init();
+            this.RequestedOrientation = ScreenOrientation.Portrait;
             topToolbar.Title = Resources.GetString(Resource.String.receipt);
             SetSupportActionBar(topToolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
             groceriesListView.Adapter = new GroceryListItemAdapter(groceryList.Groceries, this, true);
             PutOnScreen();
-
         }
         
 
@@ -82,6 +83,8 @@ namespace SmartFridge
                 recipeBottomNavigationView.Menu.GetItem(1).SetEnabled(true);
                 recipeBottomNavigationView.Menu.GetItem(2).SetEnabled(false);
             }
+            recipeImageView.SetImageDrawable(this.GetDrawable
+                (Resources.GetIdentifier(recipe.Image, "drawable", this.PackageName)));
         }
 
         private void RecipeBottomNavigationView_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
@@ -91,7 +94,7 @@ namespace SmartFridge
                 case Resource.Id.menu_make:
                     foreach (var grocery in groceryList.Groceries)
                     {
-                        ChamberOfSecrets.Instance.availableGroceries.Groceries.Find(x => x.Name == grocery.Name).Amount -= grocery.Amount;
+                        ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries.Find(x => x.Name == grocery.Name).Amount -= grocery.Amount;
                         groceriesListView.Adapter = new GroceryListItemAdapter(groceryList.Groceries, this, true);
                     }
                     break;
@@ -100,7 +103,7 @@ namespace SmartFridge
                     {
                         if (!CheckIfIsAvailable())
                         {
-                            ChamberOfSecrets.Instance.shoppingCart.AddToList(grocery);
+                            ChamberOfSecrets.Instance.group.ShoppingCart.AddToList(grocery);
                         }
                     }
                     break;
@@ -119,7 +122,7 @@ namespace SmartFridge
         private bool CheckIfIsAvailable()
         {
             foreach (var grocery in recipe.Groceries.Groceries)
-                if (!ChamberOfSecrets.Instance.availableGroceries.Groceries.Exists(x => x.Name == grocery.Name))
+                if (!ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries.Exists(x => x.Name == grocery.Name))
                 return false;
             return true;
         }

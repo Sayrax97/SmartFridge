@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using SmartFridge.WebReference;
 
 namespace SmartFridge.Model
 {
@@ -58,13 +59,10 @@ namespace SmartFridge.Model
         public void FilterByName(string name)
         {
             if(!string.IsNullOrEmpty(name))
-            foreach (Grocery grocery in Groceries)
             {
-                if(!grocery.Name.ToLower().Contains(name.ToLower()))
-                    grocery.IsInList=false;
-                else
+                foreach (Grocery grocery in Groceries)
                 {
-                    grocery.IsInList = true;
+                    grocery.IsInList = grocery.Name.ToLower().Contains(name.ToLower());
                 }
             }
             else
@@ -80,15 +78,11 @@ namespace SmartFridge.Model
         public void FilterByType(Category type)
         {
             if(type!=Category.None)
-            foreach (Grocery grocery in Groceries)
             {
-                    if (grocery.Type != type)
-                    grocery.IsCategorized = false;
-                    else
-                    {
-                        grocery.IsCategorized = true;
-                    }
-
+                foreach (Grocery grocery in Groceries)
+                {
+                    grocery.IsCategorized = grocery.Type == type;
+                }
             }
             else
             {
@@ -104,6 +98,23 @@ namespace SmartFridge.Model
             foreach (var grocery in Groceries)
             {
                 grocery.Default();
+            }
+        }
+
+        public void ToAvailableGroceries(List<AvailableGroceriesDetails> details)
+        {
+            foreach (var grocery in details)
+            {
+                Grocery newGrocery= new Grocery(grocery.Grocery.Name,Grocery.ParseEnum<Unit>(grocery.Grocery.Unit),Grocery.ParseEnum<Category>(grocery.Grocery.Category),grocery.Amount);
+                this.AddToList(newGrocery);
+            }
+        }
+        public void ToAllGroceries(List<GroceryDetails> details)
+        {
+            foreach (var grocery in details)
+            {
+                Grocery newGrocery = new Grocery(grocery.Name, Grocery.ParseEnum<Unit>(grocery.Unit), Grocery.ParseEnum<Category>(grocery.Category),0);
+                this.AddToList(newGrocery);
             }
         }
     }

@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using SmartFridge.WebReference;
 
 namespace SmartFridge.Model
 {
@@ -52,6 +53,20 @@ namespace SmartFridge.Model
             }
 
             //Image += ".jpg";
+        }
+
+        public void ToRecipe(RecipeDetails details)
+        {
+            Name = details.Name;
+            Id = details.ID;
+            Description = details.Description;
+            Image = details.Image;
+            var list = ChamberOfSecrets.Proxy.dbGetContains(Id,true).ToList();
+            foreach (var item in list)
+            {
+                var grocery= new Grocery(item.Grocery.Name,Grocery.ParseEnum<Unit>(item.Grocery.Unit),Grocery.ParseEnum<Category>(item.Grocery.Category),item.Amount);
+                Groceries.AddToList(grocery);
+            }
         }
     }
 }

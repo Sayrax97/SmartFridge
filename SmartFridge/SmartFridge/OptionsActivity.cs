@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.App;
@@ -29,6 +30,7 @@ namespace SmartFridge
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.options_menu_layout);
             Init();
+            this.RequestedOrientation = ScreenOrientation.Portrait;
             topToolbar.SetTitle(Resource.String.options);
             base.SetSupportActionBar(topToolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);

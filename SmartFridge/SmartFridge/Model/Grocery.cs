@@ -39,6 +39,9 @@ namespace SmartFridge.Model
         Animal_product,
         Drink,
         Vegtables,
+        ZivotinjskiProizvod,
+        KonzerviranaHrana,
+        Brasno,
     }
 
     public class Grocery
@@ -67,10 +70,14 @@ namespace SmartFridge.Model
             IsCategorized = false;
         }
 
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
         public override bool Equals(object obj)
         {
-                var grocery = obj as Grocery;
-                if (Name == grocery.Name)
+            if (obj is Grocery grocery && Name == grocery.Name)
                     return true;
             return false;
         }

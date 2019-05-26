@@ -1,10 +1,15 @@
 ﻿
+using System.Linq;
+using System.Threading.Tasks;
 using Android.App;
+using Android.Content.PM;
 using Android.Graphics;
 using Android.OS;
 using Android.Support.V7.App;
+using Android.Util;
 using Gr.Net.MaroulisLib;
 using SmartFridge.Model;
+using SmartFridge.WebReference;
 
 namespace SmartFridge
 {
@@ -14,15 +19,21 @@ namespace SmartFridge
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            this.RequestedOrientation = ScreenOrientation.Portrait;
+            ChamberOfSecrets c = ChamberOfSecrets.Instance;
+            Service1 service1 = ChamberOfSecrets.Proxy;
+            ChamberOfSecrets.Instance.@group.ToRecipes(ChamberOfSecrets.Proxy.dbLoadRecipe().ToList());
+            ChamberOfSecrets.Instance.allGroceries.ToAllGroceries(ChamberOfSecrets.Proxy.dbGetgroceriesName().ToList());
+
             var splash = new EasySplashScreen(this)
                 .WithFullScreen()
                 .WithTargetActivity(Java.Lang.Class.FromType(typeof(LoginActivity)))
-                .WithSplashTimeOut(3000)
+                .WithSplashTimeOut(1000)
                 .WithBackgroundColor(Color.ParseColor("#99ffcc"))
                 .WithBackgroundResource(Resource.Drawable.refrigeratorSplash)
                 .WithFooterText("©2019,4InfinityTeam");
             SetContentView(splash.Create());
-            ChamberOfSecrets c=ChamberOfSecrets.Instance;
-        }
+            }
+
     }
 }

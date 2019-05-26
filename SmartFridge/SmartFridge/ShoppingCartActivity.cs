@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
@@ -25,6 +26,7 @@ namespace SmartFridge
         private Button addToGroceriesListButton;
         private FloatingActionButton shoppingCartFloatingActionButton;
         private Toolbar topToolbar;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -32,6 +34,7 @@ namespace SmartFridge
             Init();
             topToolbar.Title = Resources.GetString(Resource.String.shopping_cart);
             SetSupportActionBar(topToolbar);
+            this.RequestedOrientation = ScreenOrientation.Portrait;
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
 
@@ -81,14 +84,14 @@ namespace SmartFridge
 
         private void AddToGroceriesListButton_Click(object sender, EventArgs e)
         {
-            foreach (var grocery in ChamberOfSecrets.Instance.shoppingCart.Groceries.ToList())
+            foreach (var grocery in ChamberOfSecrets.Instance.group.ShoppingCart.Groceries.ToList())
             {
                 if (grocery.Checked)
-                    ChamberOfSecrets.Instance.shoppingCart.Buy(grocery);
+                    ChamberOfSecrets.Instance.group.ShoppingCart.Buy(grocery);
 
             }
             LoadGroceries();
-            foreach (var grocery in ChamberOfSecrets.Instance.shoppingCart.Groceries.ToList())
+            foreach (var grocery in ChamberOfSecrets.Instance.group.ShoppingCart.Groceries.ToList())
             {
                 grocery.Checked = false;
 
@@ -96,7 +99,7 @@ namespace SmartFridge
         }
         public void LoadGroceries()
         {
-            shoppingCartListView.Adapter = new ShoppingCartItemAdapter(this, ChamberOfSecrets.Instance.shoppingCart);
+            shoppingCartListView.Adapter = new ShoppingCartItemAdapter(this, ChamberOfSecrets.Instance.group.ShoppingCart);
         }
     }
 }

@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://178.149.83.180:808/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://178.149.83.180:808/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://178.149.83.180:808/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfSmartFridge" />
+      <xsd:import schemaLocation="http://178.149.83.180:808/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_dbFindUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbFindUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbFindUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbFindUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbInMyGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbInMyGroup" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbInMyGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbInMyGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbInsertUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbInsertUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbInsertUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbInsertUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbAddGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbAddGroup" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbAddGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbAddGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbDeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbDeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbDeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbDeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbDeleteGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbDeleteGroup" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbDeleteGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbDeleteGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbAddToGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbAddToGroup" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbAddToGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbAddToGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbGroupExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbGroupExists" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbGroupExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbGroupExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbUpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbUpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbUpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbUpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbGetOptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbGetOptions" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbGetOptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbGetOptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbModifyOptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbModifyOptions" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbModifyOptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbModifyOptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbGetAvailableGroceries_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbGetAvailableGroceries" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbGetAvailableGroceries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbGetAvailableGroceriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbGetShoppingCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbGetShoppingCart" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbGetShoppingCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbGetShoppingCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbUpdateAvailableGroceries_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbUpdateAvailableGroceries" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbUpdateAvailableGroceries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbUpdateAvailableGroceriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbUpdateShoppingCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbUpdateShoppingCart" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbUpdateShoppingCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbUpdateShoppingCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbDeleteAvailableGroceries_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbDeleteAvailableGroceries" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbDeleteAvailableGroceries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbDeleteAvailableGroceriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbDeleteShoppingCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbDeleteShoppingCart" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbDeleteShoppingCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbDeleteShoppingCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbInsertAvailableGroceries_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbInsertAvailableGroceries" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbInsertAvailableGroceries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbInsertAvailableGroceriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbInsertShoppingCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbInsertShoppingCart" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbInsertShoppingCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbInsertShoppingCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbLoadRecipe_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbLoadRecipe" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbLoadRecipe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbLoadRecipeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbGetgroceriesName_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbGetgroceriesName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbGetgroceriesName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbGetgroceriesNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbGetContains_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbGetContains" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbGetContains_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbGetContainsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="dbFindUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbFindUser" message="tns:IService1_dbFindUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbFindUserResponse" message="tns:IService1_dbFindUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbInMyGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbInMyGroup" message="tns:IService1_dbInMyGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbInMyGroupResponse" message="tns:IService1_dbInMyGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbInsertUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbInsertUser" message="tns:IService1_dbInsertUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbInsertUserResponse" message="tns:IService1_dbInsertUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbAddGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbAddGroup" message="tns:IService1_dbAddGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbAddGroupResponse" message="tns:IService1_dbAddGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbDeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbDeleteUser" message="tns:IService1_dbDeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbDeleteUserResponse" message="tns:IService1_dbDeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbDeleteGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbDeleteGroup" message="tns:IService1_dbDeleteGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbDeleteGroupResponse" message="tns:IService1_dbDeleteGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbAddToGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbAddToGroup" message="tns:IService1_dbAddToGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbAddToGroupResponse" message="tns:IService1_dbAddToGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbGroupExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbGroupExists" message="tns:IService1_dbGroupExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbGroupExistsResponse" message="tns:IService1_dbGroupExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbUpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbUpdateUser" message="tns:IService1_dbUpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbUpdateUserResponse" message="tns:IService1_dbUpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbGetOptions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbGetOptions" message="tns:IService1_dbGetOptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbGetOptionsResponse" message="tns:IService1_dbGetOptions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbModifyOptions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbModifyOptions" message="tns:IService1_dbModifyOptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbModifyOptionsResponse" message="tns:IService1_dbModifyOptions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbGetAvailableGroceries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbGetAvailableGroceries" message="tns:IService1_dbGetAvailableGroceries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbGetAvailableGroceriesResponse" message="tns:IService1_dbGetAvailableGroceries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbGetShoppingCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbGetShoppingCart" message="tns:IService1_dbGetShoppingCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbGetShoppingCartResponse" message="tns:IService1_dbGetShoppingCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbUpdateAvailableGroceries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbUpdateAvailableGroceries" message="tns:IService1_dbUpdateAvailableGroceries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbUpdateAvailableGroceriesResponse" message="tns:IService1_dbUpdateAvailableGroceries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbUpdateShoppingCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbUpdateShoppingCart" message="tns:IService1_dbUpdateShoppingCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbUpdateShoppingCartResponse" message="tns:IService1_dbUpdateShoppingCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbDeleteAvailableGroceries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbDeleteAvailableGroceries" message="tns:IService1_dbDeleteAvailableGroceries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbDeleteAvailableGroceriesResponse" message="tns:IService1_dbDeleteAvailableGroceries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbDeleteShoppingCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbDeleteShoppingCart" message="tns:IService1_dbDeleteShoppingCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbDeleteShoppingCartResponse" message="tns:IService1_dbDeleteShoppingCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbInsertAvailableGroceries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbInsertAvailableGroceries" message="tns:IService1_dbInsertAvailableGroceries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbInsertAvailableGroceriesResponse" message="tns:IService1_dbInsertAvailableGroceries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbInsertShoppingCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbInsertShoppingCart" message="tns:IService1_dbInsertShoppingCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbInsertShoppingCartResponse" message="tns:IService1_dbInsertShoppingCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbLoadRecipe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbLoadRecipe" message="tns:IService1_dbLoadRecipe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbLoadRecipeResponse" message="tns:IService1_dbLoadRecipe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbGetgroceriesName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbGetgroceriesName" message="tns:IService1_dbGetgroceriesName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbGetgroceriesNameResponse" message="tns:IService1_dbGetgroceriesName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbGetContains">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbGetContains" message="tns:IService1_dbGetContains_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbGetContainsResponse" message="tns:IService1_dbGetContains_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="dbFindUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbFindUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbInMyGroup">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbInMyGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbInsertUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbInsertUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbAddGroup">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbAddGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbDeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbDeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbDeleteGroup">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbDeleteGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbAddToGroup">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbAddToGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbGroupExists">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbGroupExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbUpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbUpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbGetOptions">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbGetOptions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbModifyOptions">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbModifyOptions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbGetAvailableGroceries">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbGetAvailableGroceries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbGetShoppingCart">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbGetShoppingCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbUpdateAvailableGroceries">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbUpdateAvailableGroceries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbUpdateShoppingCart">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbUpdateShoppingCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbDeleteAvailableGroceries">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbDeleteAvailableGroceries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbDeleteShoppingCart">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbDeleteShoppingCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbInsertAvailableGroceries">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbInsertAvailableGroceries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbInsertShoppingCart">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbInsertShoppingCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbLoadRecipe">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbLoadRecipe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbGetgroceriesName">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbGetgroceriesName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbGetContains">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbGetContains" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://178.149.83.180:808/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

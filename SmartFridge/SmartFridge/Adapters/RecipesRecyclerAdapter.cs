@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -41,7 +42,6 @@ namespace SmartFridge.Adapters
             MyViewHolder vh = holder as MyViewHolder;
             vh.TitleTextView.Text = recipes[position].Name;
             vh.ShortDescTextView.Text = recipes[position].Description.Substring(0, 50) + "...";
-            //var bitmap = BitmapDrawable.cre(context.GetExternalFilesDir("jpg").AbsolutePath+"/"+recipes[position].Image+".jpg");
             vh.RecipeImage.SetImageDrawable(context.GetDrawable
                 (context.Resources.GetIdentifier(recipes[position].Image,"drawable",context.PackageName)));
             vh.ItemView.Click += ItemView_Click;
@@ -64,8 +64,6 @@ namespace SmartFridge.Adapters
             MyViewHolder myView = new MyViewHolder(view);
             return myView;
         }
-
-
 
         public class MyViewHolder:RecyclerView.ViewHolder
         {

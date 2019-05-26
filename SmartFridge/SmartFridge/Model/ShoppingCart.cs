@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using SmartFridge.WebReference;
 
 namespace SmartFridge.Model
 {
@@ -45,17 +46,17 @@ namespace SmartFridge.Model
         {
             if (grocery.Bought!=0)
             {
-                ChamberOfSecrets.Instance.availableGroceries.AddToList(grocery, grocery.Bought);
+                ChamberOfSecrets.Instance.group.AvailableGroceries.AddToList(grocery, grocery.Bought);
                 if ((Groceries.Find(x => x.Equals(grocery)).Amount -= grocery.Bought) <= 0)
-                    {
-                        RemoveFromShoppingCart(grocery);
-                    }
+                {
+                    RemoveFromShoppingCart(grocery);
+                }
                 else
-                Groceries.Find(x => x.Equals(grocery)).Bought = 0;
+                    Groceries.Find(x => x.Equals(grocery)).Bought = 0;
             }
             else if(grocery.Bought == 0)
             {
-                ChamberOfSecrets.Instance.availableGroceries.AddToList(grocery, grocery.Amount);
+                ChamberOfSecrets.Instance.group.AvailableGroceries.AddToList(grocery, grocery.Amount);
                     RemoveFromShoppingCart(grocery);
             }
         }
@@ -63,6 +64,22 @@ namespace SmartFridge.Model
         public void RemoveFromShoppingCart(Grocery grocery)
         {
             Groceries.Remove(grocery);
+        }
+
+        public void ToShoppingCart(List<ShoppingCartDetails> details)
+        {
+            if(details.Count!=0)
+            {
+                foreach (var grocery in details)
+                {
+                    Grocery newGrocery= new Grocery(grocery.Grocery.Name,Grocery.ParseEnum<Unit>(grocery.Grocery.Unit),Grocery.ParseEnum<Category>(grocery.Grocery.Category),grocery.Amount);
+                    Groceries.Add(newGrocery);
+                }
+            }
+            else
+            {
+                Groceries=new List<Grocery>();
+            }
         }
     }
 }

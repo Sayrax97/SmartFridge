@@ -27,6 +27,7 @@ using TokensWrapMode = Syncfusion.Android.ComboBox.TokensWrapMode;
 using TokenSettings = Syncfusion.Android.ComboBox.TokenSettings;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Net.Wifi;
+using Android.Content.PM;
 
 namespace SmartFridge
 {
@@ -46,6 +47,7 @@ namespace SmartFridge
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.gorceries_list_layout);
             Init();
+            this.RequestedOrientation = ScreenOrientation.Portrait;
             topToolbar.Title = Resources.GetString(Resource.String.grocery_list);
             SetSupportActionBar(topToolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
@@ -57,7 +59,7 @@ namespace SmartFridge
         private void SearchView_QueryTextChange(object sender, SearchView.QueryTextChangeEventArgs e)
         {
             var watch=System.Diagnostics.Stopwatch.StartNew();
-            ChamberOfSecrets.Instance.availableGroceries.FilterByName(searchView.Query);
+            ChamberOfSecrets.Instance.group.AvailableGroceries.FilterByName(searchView.Query);
             LoadGroceries();
             watch.Stop();
             Toast.MakeText(this,"Vreme:"+watch.ElapsedMilliseconds,ToastLength.Short).Show();
@@ -80,7 +82,7 @@ namespace SmartFridge
         }
         private void SetDefault()
         {
-            foreach (var grocery in ChamberOfSecrets.Instance.availableGroceries.Groceries)
+            foreach (var grocery in ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries)
             {
                 grocery.Default();
             }
@@ -101,7 +103,7 @@ namespace SmartFridge
         private void CategoriesComboBox_TextChanged(object sender, Syncfusion.Android.ComboBox.TextChangedEventArgs e)
         {
             var watch = System.Diagnostics.Stopwatch.StartNew();
-            ChamberOfSecrets.Instance.availableGroceries.FilterByType(Grocery.ParseEnum<Category>(categoriesComboBox.Text));
+            ChamberOfSecrets.Instance.group.AvailableGroceries.FilterByType(Grocery.ParseEnum<Category>(categoriesComboBox.Text));
             LoadGroceries();
             watch.Stop();
             Toast.MakeText(this, "Vreme:" + watch.ElapsedMilliseconds, ToastLength.Short).Show();
@@ -114,14 +116,14 @@ namespace SmartFridge
                 //Calling availableGroceries.Groceries.ToList() copies the values of groceries
                 //to a separate list at the start of the foreach.
                 //Nothing else has access to this list (it doesn't even have a variable name!), so nothing can modify it inside the loop.
-                foreach (var grocery in ChamberOfSecrets.Instance.availableGroceries.Groceries.ToList())
+                foreach (var grocery in ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries.ToList())
                 {
                     if (grocery.Checked)
                     {
-                        ChamberOfSecrets.Instance.availableGroceries.Groceries.Remove(grocery);
+                        ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries.Remove(grocery);
                     }
                 }
-            LoadGroceries();
+                LoadGroceries();
         }
 
         private void GroceriesFAB_Click(object sender, EventArgs e)
@@ -160,7 +162,7 @@ namespace SmartFridge
 
         public void  LoadGroceries()
         {
-            groceryListView.Adapter = new GroceryListItemAdapter(ChamberOfSecrets.Instance.availableGroceries.Groceries, this, false);
+            groceryListView.Adapter = new GroceryListItemAdapter(ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries, this, false);
         }
     }
 }

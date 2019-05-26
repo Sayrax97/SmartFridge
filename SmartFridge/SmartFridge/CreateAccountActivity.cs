@@ -1,17 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
 using SmartFridge.Model;
+using System.ServiceModel;
+using SmartFridge.WebReference;
 
 namespace SmartFridge
 {
@@ -29,28 +34,22 @@ namespace SmartFridge
         private Button cancelButton;
         private CheckBox groupCheckBox;
         private EditText groupIdEditText;
+        private string random;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.create_account_layout);
             Init();
+            this.RequestedOrientation = ScreenOrientation.Portrait;
             okButton.Click += OkButton_Click;
             cancelButton.Click += CancelButton_Click;
             groupCheckBox.CheckedChange += GroupCheckBox_CheckedChange;
 
         }
-
         private void GroupCheckBox_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
         {
-            if (groupCheckBox.Checked == false)
-            {
-                groupIdEditText.Visibility = ViewStates.Gone;
-            }
-            else
-            {
-                groupIdEditText.Visibility = ViewStates.Visible;
-            }
+            groupIdEditText.Visibility = groupCheckBox.Checked == false ? ViewStates.Gone : ViewStates.Visible;
         }
 
         private void Init()
@@ -77,7 +76,7 @@ namespace SmartFridge
            Finish();
         }
 
-        private void OkButton_Click(object sender, EventArgs e)
+        private async void OkButton_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(usernameEditText.Text))
                 Toast.MakeText(this, "Polje za korisničko ime ne sme biti prazno", ToastLength.Short).Show();
@@ -97,10 +96,9 @@ namespace SmartFridge
             {
                 Toast.MakeText(this, "Polje za prezime ne sme biti prazno", ToastLength.Short).Show();
             }
-            else if(groupIdEditText.Visibility == ViewStates.Visible && groupIdEditText.Length()!=7 
-                                                                     && IsIdAvailable((int.Parse(groupIdEditText.Text))))
+            else if (groupIdEditText.Visibility == ViewStates.Visible && !string.IsNullOrEmpty(groupIdEditText.Text))
             {
-                Toast.MakeText(this, "Polje za ID grupe nema 7 broja ili broj grupe vecp postoji", ToastLength.Short).Show();
+                    Toast.MakeText(this, "Polje za grupu nesme biti prazno", ToastLength.Short).Show();
             }
             else
             {
@@ -108,27 +106,53 @@ namespace SmartFridge
                 passwordEditText.Text,emailEditText.Text,"");
                 if (groupIdEditText.Visibility != ViewStates.Gone)
                 {
-                    int groupId = int.Parse(groupIdEditText.Text);
-                    user.AddToGroup(groupId);
-                    ChamberOfSecrets.Instance.group.AddMember(user);
+                    if (await ChamberOfSecrets.Instance.group.CheckGroupAsync(groupIdEditText.Text) == false)
+                    {
+                        Toast.MakeText(this, "Grupa koju ste uneli ne postoji!Pokusajte ponovo!", ToastLength.Short).Show();
+                        return;
+                    }
+
+                    user.AddToGroup(groupIdEditText.Text);
+                    var x = 0;
+                    var y = true;
+                    await Task.Run(()=> ChamberOfSecrets.Proxy.dbInsertUser(user.ToUserDetails(), out x, out y));
+                    if (x == 0)
+                    {
+                        Toast.MakeText(this, "Korisničko ime vec postoji", ToastLength.Short).Show();
+                        return;
+                    }
+
                 }
                 else
                 {
-                    Random random = new Random();
-                    int randomNum =random.Next(1, 9999999);
-                    user.AddToGroup(randomNum);
-                    ChamberOfSecrets.Instance.group.AddMember(user);
+                    var x = 0;
+                    var y = true;
+                    do
+                    {
+                        random = Guid.NewGuid().ToString().Replace("-", string.Empty)
+                            .Replace("+", string.Empty).Substring(0, 9);
+                    }
+                    while (await ChamberOfSecrets.Instance.group.CheckGroupAsync(random));
+
+                    user.AddToGroup(random);
+                    ChamberOfSecrets.Instance.group.Id = random;
+                    ChamberOfSecrets.Instance.group.AddMember(user.UserName);
+                    //ChamberOfSecrets.Proxy.dbAddGroup(random,out x,out y); exception ako vec postoji grupa
+                    await Task.Run(() => ChamberOfSecrets.Proxy.dbInsertUser(user.ToUserDetails(), out x, out y));
+                    if (x == 0)
+                    {
+                        Toast.MakeText(this, "Korisničko ime vec postoji", ToastLength.Short).Show();
+                        return;
+                    }
                 }
                 
                 Intent intent=new Intent(this, typeof(MainActivity));
                 intent.PutExtra("user", JsonConvert.SerializeObject(user));
                 StartActivity(intent);
             }
+
+        
         }
 
-        private bool IsIdAvailable(int id)
-        {
-            return true;
-        }
     }
 }

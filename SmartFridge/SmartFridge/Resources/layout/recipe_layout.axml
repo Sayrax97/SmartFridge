@@ -14,18 +14,21 @@
 	<LinearLayout
 		android:orientation="horizontal"
 		android:layout_width="match_parent"
-		android:layout_height="100dp"
+		android:layout_height="180dp"
+		android:weightSum="100"
 		android:id="@+id/linearLayout1">
 		<ImageView
 			android:src="@android:drawable/ic_menu_gallery"
-			android:layout_width="wrap_content"
-			
+			android:layout_width="match_parent"
+			android:layout_weight="50"
 			android:layout_height="match_parent"
 			android:id="@+id/imageViewRecipe" />
 		<TextView
 			android:text="Large Text"
+			android:layout_weight="50"
+			android:gravity="center"
 			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:id="@+id/txtViewRecipeName" />
 	</LinearLayout>
