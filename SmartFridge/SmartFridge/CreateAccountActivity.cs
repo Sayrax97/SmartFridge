@@ -16,6 +16,7 @@ using Android.Widget;
 using Newtonsoft.Json;
 using SmartFridge.Model;
 using System.ServiceModel;
+using Android.Net;
 using SmartFridge.WebReference;
 
 namespace SmartFridge
@@ -73,11 +74,18 @@ namespace SmartFridge
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-           Finish();
+            ChamberOfSecrets.Instance.AllGroceries=new AvailableGroceries();
+            Finish();
         }
 
         private async void OkButton_Click(object sender, EventArgs e)
         {
+            if (!IsOnline())
+            {
+                Toast.MakeText(this, "Nemožete napraviti nalog ako niste poveyani na internet.Pokusajte ponovo!!!", ToastLength.Short).Show();
+                return;
+            }
+
             if (string.IsNullOrEmpty(usernameEditText.Text))
                 Toast.MakeText(this, "Polje za korisničko ime ne sme biti prazno", ToastLength.Short).Show();
             else if(string.IsNullOrEmpty(passwordEditText.Text))
@@ -96,14 +104,18 @@ namespace SmartFridge
             {
                 Toast.MakeText(this, "Polje za prezime ne sme biti prazno", ToastLength.Short).Show();
             }
-            else if (groupIdEditText.Visibility == ViewStates.Visible && !string.IsNullOrEmpty(groupIdEditText.Text))
+            else if (groupIdEditText.Visibility == ViewStates.Visible && string.IsNullOrEmpty(groupIdEditText.Text))
             {
                     Toast.MakeText(this, "Polje za grupu nesme biti prazno", ToastLength.Short).Show();
             }
             else
             {
-                User user=new User(nameEditText.Text,surnameEditText.Text,usernameEditText.Text,
-                passwordEditText.Text,emailEditText.Text,"");
+                //ovde treba da se prover dali korisnik postoji
+                ChamberOfSecrets.Instance.LoggedUser = new User(nameEditText.Text, surnameEditText.Text, usernameEditText.Text,
+                passwordEditText.Text, emailEditText.Text, "")
+                {
+                    MyOptions = new Option()
+                };
                 if (groupIdEditText.Visibility != ViewStates.Gone)
                 {
                     if (await ChamberOfSecrets.Instance.group.CheckGroupAsync(groupIdEditText.Text) == false)
@@ -112,15 +124,11 @@ namespace SmartFridge
                         return;
                     }
 
-                    user.AddToGroup(groupIdEditText.Text);
+                    ChamberOfSecrets.Instance.LoggedUser.AddToGroup(groupIdEditText.Text);
                     var x = 0;
                     var y = true;
-                    await Task.Run(()=> ChamberOfSecrets.Proxy.dbInsertUser(user.ToUserDetails(), out x, out y));
-                    if (x == 0)
-                    {
-                        Toast.MakeText(this, "Korisničko ime vec postoji", ToastLength.Short).Show();
-                        return;
-                    }
+                    ChamberOfSecrets.Proxy.dbInsertUser(ChamberOfSecrets.Instance.LoggedUser.ToUserDetails(), out x, out y);
+                    ChamberOfSecrets.Proxy.dbInsertOptions(ChamberOfSecrets.Instance.LoggedUser.MyOptions.ToOptionDetails());
 
                 }
                 else
@@ -130,28 +138,37 @@ namespace SmartFridge
                     do
                     {
                         random = Guid.NewGuid().ToString().Replace("-", string.Empty)
-                            .Replace("+", string.Empty).Substring(0, 9);
+                            .Replace("+", string.Empty).Substring(0, 9).ToLower();
                     }
                     while (await ChamberOfSecrets.Instance.group.CheckGroupAsync(random));
 
-                    user.AddToGroup(random);
+                    ChamberOfSecrets.Instance.LoggedUser.AddToGroup(random);
                     ChamberOfSecrets.Instance.group.Id = random;
-                    ChamberOfSecrets.Instance.group.AddMember(user.UserName);
-                    //ChamberOfSecrets.Proxy.dbAddGroup(random,out x,out y); exception ako vec postoji grupa
-                    await Task.Run(() => ChamberOfSecrets.Proxy.dbInsertUser(user.ToUserDetails(), out x, out y));
-                    if (x == 0)
-                    {
-                        Toast.MakeText(this, "Korisničko ime vec postoji", ToastLength.Short).Show();
-                        return;
-                    }
+                    ChamberOfSecrets.Instance.group.AddMember(ChamberOfSecrets.Instance.LoggedUser.UserName);
+                    ChamberOfSecrets.Proxy.dbAddGroup(ChamberOfSecrets.Instance.group.ToGroupDetails(),out x,out y);
+                    ChamberOfSecrets.Proxy.dbInsertUser(ChamberOfSecrets.Instance.LoggedUser.ToUserDetails(), out x, out y);
+                    ChamberOfSecrets.Proxy.dbInsertOptions(ChamberOfSecrets.Instance.LoggedUser.MyOptions.ToOptionDetails());
                 }
-                
+
+                ChamberOfSecrets.Instance.@group.AvailableGroceries.ToAvailableGroceries(await Task.Run(() =>
+                    ChamberOfSecrets.Proxy.dbGetAvailableGroceries(ChamberOfSecrets.Instance.LoggedUser.MyGroup).ToList()));
+
+                ChamberOfSecrets.Instance.@group.ShoppingCart.ToShoppingCart(await Task.Run(() =>
+                    ChamberOfSecrets.Proxy.dbGetShoppingCart(ChamberOfSecrets.Instance.LoggedUser.MyGroup).ToList()));
+
                 Intent intent=new Intent(this, typeof(MainActivity));
-                intent.PutExtra("user", JsonConvert.SerializeObject(user));
                 StartActivity(intent);
             }
 
-        
+        }
+        public bool IsOnline()
+        {
+            ConnectivityManager manager = (ConnectivityManager)this.GetSystemService(Context.ConnectivityService);
+            if (manager == null)
+                return false;
+            NetworkInfo networkInfo = manager.ActiveNetworkInfo;
+
+            return networkInfo != null && networkInfo.IsConnected;
         }
 
     }

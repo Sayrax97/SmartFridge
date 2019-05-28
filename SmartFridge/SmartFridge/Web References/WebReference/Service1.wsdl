@@ -26,6 +26,12 @@
   <wsdl:message name="IService1_dbInsertUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:dbInsertUserResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_dbFindUserBool_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbFindUserBool" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbFindUserBool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbFindUserBoolResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_dbAddGroup_InputMessage">
     <wsdl:part name="parameters" element="tns:dbAddGroup" />
   </wsdl:message>
@@ -140,6 +146,36 @@
   <wsdl:message name="IService1_dbGetContains_OutputMessage">
     <wsdl:part name="parameters" element="tns:dbGetContainsResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_dbInsertOptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbInsertOptions" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbInsertOptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbInsertOptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_loadRecipe_InputMessage">
+    <wsdl:part name="parameters" element="tns:loadRecipe" />
+  </wsdl:message>
+  <wsdl:message name="IService1_loadRecipe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loadRecipeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_loadGrocerie_InputMessage">
+    <wsdl:part name="parameters" element="tns:loadGrocerie" />
+  </wsdl:message>
+  <wsdl:message name="IService1_loadGrocerie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loadGrocerieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteRecipe_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteRecipe" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteRecipe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteRecipeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteGrocerie_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteGrocerie" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteGrocerie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteGrocerieResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="dbFindUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbFindUser" message="tns:IService1_dbFindUser_InputMessage" />
@@ -152,6 +188,10 @@
     <wsdl:operation name="dbInsertUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbInsertUser" message="tns:IService1_dbInsertUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbInsertUserResponse" message="tns:IService1_dbInsertUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbFindUserBool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbFindUserBool" message="tns:IService1_dbFindUserBool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbFindUserBoolResponse" message="tns:IService1_dbFindUserBool_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="dbAddGroup">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbAddGroup" message="tns:IService1_dbAddGroup_InputMessage" />
@@ -229,6 +269,26 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbGetContains" message="tns:IService1_dbGetContains_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbGetContainsResponse" message="tns:IService1_dbGetContains_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="dbInsertOptions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbInsertOptions" message="tns:IService1_dbInsertOptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbInsertOptionsResponse" message="tns:IService1_dbInsertOptions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="loadRecipe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/loadRecipe" message="tns:IService1_loadRecipe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/loadRecipeResponse" message="tns:IService1_loadRecipe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="loadGrocerie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/loadGrocerie" message="tns:IService1_loadGrocerie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/loadGrocerieResponse" message="tns:IService1_loadGrocerie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteRecipe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteRecipe" message="tns:IService1_deleteRecipe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteRecipeResponse" message="tns:IService1_deleteRecipe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteGrocerie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteGrocerie" message="tns:IService1_deleteGrocerie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteGrocerieResponse" message="tns:IService1_deleteGrocerie_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -252,6 +312,15 @@
     </wsdl:operation>
     <wsdl:operation name="dbInsertUser">
       <soap:operation soapAction="http://tempuri.org/IService1/dbInsertUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbFindUserBool">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbFindUserBool" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -423,6 +492,51 @@
     </wsdl:operation>
     <wsdl:operation name="dbGetContains">
       <soap:operation soapAction="http://tempuri.org/IService1/dbGetContains" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbInsertOptions">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbInsertOptions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadRecipe">
+      <soap:operation soapAction="http://tempuri.org/IService1/loadRecipe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadGrocerie">
+      <soap:operation soapAction="http://tempuri.org/IService1/loadGrocerie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteRecipe">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleteRecipe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteGrocerie">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleteGrocerie" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -67,7 +67,7 @@ namespace SmartFridge.Dialogs
                 unit = getUnit(name, category);
                 if (category == Category.None)
                 {
-                    category = ChamberOfSecrets.Instance.allGroceries.Groceries.Find(x => x.Name == name).Type;
+                    category = ChamberOfSecrets.Instance.AllGroceries.Groceries.Find(x => x.Name == name).Type;
                 }
                 Grocery gr = new Grocery(name, unit, category, amount);
                 gr.Default();
@@ -106,7 +106,7 @@ namespace SmartFridge.Dialogs
             groceriesAutoComplete.MaximumDropDownHeight = 200;
             groceriesAutoComplete.Watermark = "Unesi ime namirnice";
             groceriesAutoComplete.PopUpDelay = 200;
-            groceriesAutoComplete.DataSource = ChamberOfSecrets.Instance.allGroceries.Groceries;
+            groceriesAutoComplete.DataSource = ChamberOfSecrets.Instance.AllGroceries.Groceries;
             groceriesAutoComplete.DisplayMemberPath = "Name";
             groceriesAutoComplete.MinimumPrefixCharacters = 0;
             groceriesAutoComplete.TextHighlightMode = OccurrenceMode.FirstOccurrence;
@@ -125,15 +125,15 @@ namespace SmartFridge.Dialogs
 
         private void CategoriesComboBox_TextChanged(object sender, Syncfusion.Android.ComboBox.TextChangedEventArgs e)
         {
-            ChamberOfSecrets.Instance.allGroceries.FilterByType(Grocery.ParseEnum<Category>(categoriesComboBox.Text));
-            groceriesAutoComplete.DataSource = from grocery in ChamberOfSecrets.Instance.allGroceries.Groceries
+            ChamberOfSecrets.Instance.AllGroceries.FilterByType(Grocery.ParseEnum<Category>(categoriesComboBox.Text));
+            groceriesAutoComplete.DataSource = from grocery in ChamberOfSecrets.Instance.AllGroceries.Groceries
                 where grocery.IsCategorized == true
                 select grocery.Name;
         }
 
         private Unit getUnit(string name, Category type)
         {
-            foreach (var grocery in ChamberOfSecrets.Instance.allGroceries.Groceries)
+            foreach (var grocery in ChamberOfSecrets.Instance.AllGroceries.Groceries)
             {
                 if (grocery.Name == name && grocery.Type == type)
                     return grocery.MeasurementUnit;

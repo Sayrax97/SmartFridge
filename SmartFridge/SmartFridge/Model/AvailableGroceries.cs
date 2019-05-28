@@ -31,7 +31,7 @@ namespace SmartFridge.Model
         {
             if (Groceries.Exists(x => x.Name==grocery.Name))
             {
-               Groceries.Find(x => x.Equals(grocery)).Amount += grocery.Amount;
+               Groceries.Find(x => x.Name==grocery.Name).Amount += grocery.Amount;
             }
             else
             {
@@ -45,13 +45,23 @@ namespace SmartFridge.Model
         {
             if (Groceries.Exists(x => x.Name==grocery.Name))
             {
-                Groceries.Find(x => x.Equals(grocery)).Amount += amount;
+                Groceries.Find(x => x.Name==grocery.Name).Amount += amount;
             }
             else
             {
-                grocery.IsInList = true;
-                grocery.Amount = amount;
-                Groceries.Add(grocery);
+                var gr = new Grocery()
+                {
+                    IsInList = true,
+                    Amount = amount,
+                    IsCategorized = true,
+                    Bought = 0,
+                    Checked = false,
+                    Image = grocery.Image,
+                    MeasurementUnit = grocery.MeasurementUnit,
+                    Type = grocery.Type,
+                    Name = grocery.Name
+                };
+                Groceries.Add(gr);
 
             }
         }

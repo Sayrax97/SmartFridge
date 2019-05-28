@@ -41,9 +41,11 @@ namespace SmartFridge.Adapters
         {
             MyViewHolder vh = holder as MyViewHolder;
             vh.TitleTextView.Text = recipes[position].Name;
-            vh.ShortDescTextView.Text = recipes[position].Description.Substring(0, 50) + "...";
-            vh.RecipeImage.SetImageDrawable(context.GetDrawable
-                (context.Resources.GetIdentifier(recipes[position].Image,"drawable",context.PackageName)));
+            vh.ShortDescTextView.Text = recipes[position].Description;
+            vh.ShortDescTextView.Text = recipes[position].Description.Substring
+              (0, recipes[position].Description.Length < 50 ? recipes[position].Description.Length : 50) + "...";
+            //vh.RecipeImage.SetImageDrawable(context.GetDrawable
+                //(context.Resources.GetIdentifier(recipes[position].Image,"drawable",context.PackageName)));
             vh.ItemView.Click += ItemView_Click;
         }
 

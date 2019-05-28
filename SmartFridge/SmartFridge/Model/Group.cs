@@ -73,5 +73,10 @@ namespace SmartFridge.Model
                 Recipes.Add(r);
             }
         }
+
+        public GroupDetails ToGroupDetails()
+        {
+            return new GroupDetails { ID = Id };
+        }
     }
 }

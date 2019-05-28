@@ -44,7 +44,6 @@ namespace SmartFridge.Adapters
             TextView amount = convertView.FindViewById<TextView>(Resource.Id.textViewAmount);
             TextView unit = convertView.FindViewById<TextView>(Resource.Id.textViewUnit);
             EditText amountBought = convertView.FindViewById<EditText>(Resource.Id.editTxtBought);
-            CheckBox checkBox = convertView.FindViewById<CheckBox>(Resource.Id.checkBoxBought);
             amountBought.TextChanged += (sender, args) => 
             {
                 if (!string.IsNullOrEmpty(amountBought.Text))
@@ -53,14 +52,15 @@ namespace SmartFridge.Adapters
                     ChamberOfSecrets.Instance.group.ShoppingCart.Groceries[position].Bought = int.Parse(amountBought.Text);
                 }
             };
-            
-            checkBox.CheckedChange += (sender, args) =>
-                {
-                    shoppingCart.Groceries[position].Checked = checkBox.Checked;
-                    ChamberOfSecrets.Instance.group.ShoppingCart.Groceries[position].Checked =
-                        shoppingCart.Groceries[position].Checked;
+            CheckBox checkBox = convertView.FindViewById<CheckBox>(Resource.Id.checkBoxBought);
 
-                };
+            void OnCheckBoxOnCheckedChange(object sender, CompoundButton.CheckedChangeEventArgs args)
+            {
+                shoppingCart.Groceries[position].Checked = checkBox.Checked;
+                ChamberOfSecrets.Instance.@group.ShoppingCart.Groceries[position].Checked = shoppingCart.Groceries[position].Checked;
+            }
+
+            checkBox.CheckedChange += OnCheckBoxOnCheckedChange;
             name.Text = shoppingCart.Groceries[position].Name;
             unit.Text = shoppingCart.Groceries[position].MeasurementUnit.ToString();
             amount.Text = shoppingCart.Groceries[position].Amount.ToString();

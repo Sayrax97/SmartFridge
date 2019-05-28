@@ -58,6 +58,10 @@ namespace SmartFridge.Model
 
         public static List<string> Categories =Enum.GetNames(typeof(Category)).ToList();
 
+        public Grocery()
+        {
+        }
+
         public Grocery(string name, Unit measurementUnit, Category type, double amount)
         {
             Name = name;

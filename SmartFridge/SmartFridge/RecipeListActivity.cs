@@ -23,7 +23,6 @@ namespace SmartFridge
         private Toolbar topToolbar;
         private RecyclerView recipeListRecyclerView;
         private RecyclerView.LayoutManager manager;
-        private RecyclerView.Adapter adapter;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {

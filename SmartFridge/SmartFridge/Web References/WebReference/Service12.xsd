@@ -44,6 +44,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="dbFindUserBool">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userNickname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbFindUserBoolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dbFindUserBoolResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="dbAddGroup">
     <xs:complexType>
       <xs:sequence>
@@ -292,6 +306,66 @@
       <xs:sequence>
         <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WcfSmartFridge" minOccurs="0" name="dbGetContainsResult" nillable="true" type="q13:ArrayOfContainsDetails" />
       </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbInsertOptions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WcfSmartFridge" minOccurs="0" name="option" nillable="true" type="q14:OptionDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbInsertOptionsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loadRecipe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WcfSmartFridge" minOccurs="0" name="recipe" nillable="true" type="q15:RecipeDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loadRecipeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loadGrocerie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WcfSmartFridge" minOccurs="0" name="grocery" nillable="true" type="q16:GroceryDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loadGrocerieResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteRecipe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteRecipeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteGrocerie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteGrocerieResponse">
+    <xs:complexType>
+      <xs:sequence />
     </xs:complexType>
   </xs:element>
 </xs:schema>

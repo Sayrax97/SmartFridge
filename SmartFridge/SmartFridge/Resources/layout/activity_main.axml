@@ -20,12 +20,37 @@
 			android:layout_height="match_parent"
 			android:layout_gravity="start"
 			android:id="@+id/contentFrameMain">
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
 			<android.support.design.widget.BottomNavigationView
-			android:id="@+id/navigationViewMain"
-			android:layout_gravity="bottom"
-			android:layout_width  ="match_parent"
-			android:layout_height ="wrap_content"
-			app:menu="@menu/main_bottom_menu"/>
+				android:id="@+id/navigationViewMain"
+				android:background="@color/tooltip_background_light"
+				android:layout_width  ="match_parent"
+				android:layout_alignParentBottom="true"
+				android:layout_height ="wrap_content"
+				app:menu="@menu/main_bottom_menu"/>
+			<TextView
+				android:text="Random recept"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="match_parent"
+				android:gravity="center"
+				android:layout_height="wrap_content"
+				android:id="@+id/txtRecipeName" />
+			<ImageView
+				android:src="@drawable/pica_od_suvog_hleba_"
+				android:layout_width="500dp"
+				android:layout_below="@id/txtRecipeName"
+				android:layout_height="400dp"
+				android:id="@+id/imageRecipe" />
+			<TextView
+				android:text="Lorem ipsum dolor sit amet, consectetuer adipiscin"
+				android:layout_below="@id/imageRecipe"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/txtRecipeDescription" />
+				</RelativeLayout>
 		</FrameLayout>
 	</LinearLayout>
 		<android.support.design.widget.NavigationView

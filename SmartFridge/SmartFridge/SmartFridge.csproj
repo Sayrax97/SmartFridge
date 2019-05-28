@@ -334,9 +334,6 @@
     <AndroidResource Include="Resources\drawable\add_to_cart.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\pica_od_suvog_hleba_.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\pita_sa_koprivom_.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -362,6 +359,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\WebReference\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\pica_od_suvog_hleba_.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

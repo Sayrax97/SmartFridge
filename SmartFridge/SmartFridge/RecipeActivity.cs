@@ -83,8 +83,8 @@ namespace SmartFridge
                 recipeBottomNavigationView.Menu.GetItem(1).SetEnabled(true);
                 recipeBottomNavigationView.Menu.GetItem(2).SetEnabled(false);
             }
-            recipeImageView.SetImageDrawable(this.GetDrawable
-                (Resources.GetIdentifier(recipe.Image, "drawable", this.PackageName)));
+            //recipeImageView.SetImageDrawable(this.GetDrawable
+            //(Resources.GetIdentifier(recipe.Image, "drawable", this.PackageName)));
         }
 
         private void RecipeBottomNavigationView_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
@@ -123,7 +123,7 @@ namespace SmartFridge
         {
             foreach (var grocery in recipe.Groceries.Groceries)
                 if (!ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries.Exists(x => x.Name == grocery.Name))
-                return false;
+                    return false;
             return true;
         }
     }

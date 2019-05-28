@@ -49,5 +49,15 @@ namespace SmartFridge.Model
             Font = details.Font;
             Notifications = details.Notification;
         }
+
+        public OptionDetails ToOptionDetails()
+        {
+            OptionDetails od= new OptionDetails();
+            od.Font = Font;
+            od.Notification = Notifications;
+            od.Theme = Theme;
+            od.UserNickname = ChamberOfSecrets.Instance.LoggedUser.UserName;
+            return od;
+        }
     }
 }

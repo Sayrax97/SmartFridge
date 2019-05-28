@@ -25,6 +25,7 @@ namespace SmartFridge
         private EditText passwordEditText;
         private Button loginButton;
         private Button createAccountButton;
+        private ProgressBar loadingProgressBar;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -36,12 +37,28 @@ namespace SmartFridge
 
         }
 
+
+        protected override async void OnResume()
+        {
+            base.OnResume();
+            while (!IsOnline())
+            {
+                Toast.MakeText(this, "Niste povezani na internet!!!", ToastLength.Short).Show();
+                await Task.Delay(5000);
+            }
+
+            await Task.Run(()=>ChamberOfSecrets.Instance.AllGroceries.ToAllGroceries(ChamberOfSecrets.Proxy.dbGetgroceriesName().ToList()));
+            await Task.Run(()=>ChamberOfSecrets.Instance.@group.ToRecipes(ChamberOfSecrets.Proxy.dbLoadRecipe().ToList()));
+        }
+
         private void Init()
         {
             usernameEditText = FindViewById<EditText>(Resource.Id.editTxtUsername);
             passwordEditText = FindViewById<EditText>(Resource.Id.editTxtPassword);
             loginButton = FindViewById<Button>(Resource.Id.btnLogin);
             createAccountButton = FindViewById<Button>(Resource.Id.btnCreateAcc);
+            loadingProgressBar = FindViewById<ProgressBar>(Resource.Id.progressBar1);
+            loadingProgressBar.Visibility = ViewStates.Invisible;
         }
 
         private void CreateAccountButton_Click(object sender, EventArgs e)
@@ -51,13 +68,21 @@ namespace SmartFridge
 
         private async void LoginButton_ClickAsync(object sender, EventArgs e)
         {
-            Connect();
+            await Task.Delay(1000);
+            if (!IsOnline())
+            {
+                Toast.MakeText(this, "Niste povezani na internet!!!", ToastLength.Short).Show();
+                return;
+            }
+
+            loadingProgressBar.Visibility = ViewStates.Visible;
             User user= new User();
             user.ToUser(await Task.Run(() => ChamberOfSecrets.Proxy.dbFindUser(usernameEditText.Text)));
 
             if (user.Password == "")
             {
                 Toast.MakeText(this, "Korisnik ne postoji. Proverite da li ste lepo ukucali korisničko ime!", ToastLength.Long).Show();
+                loadingProgressBar.Visibility = ViewStates.Invisible;
                 return;
             }
 
@@ -81,28 +106,23 @@ namespace SmartFridge
                     ChamberOfSecrets.Proxy.dbGetShoppingCart(user.MyGroup).ToList()));
                 
                 StartActivity(intent);
+                loadingProgressBar.Visibility = ViewStates.Invisible;
                 Finish();
             }
             else
             {
-                Toast.MakeText(this, "Pogrsno ste uneli lozinku, pokusajte ponovo!", ToastLength.Long).Show();
+                Toast.MakeText(this, "Pogrešno ste uneli lozinku, pokušajte ponovo!", ToastLength.Long).Show();
+                loadingProgressBar.Visibility = ViewStates.Invisible;
             }
         }
-        private void Connect()
+        public bool IsOnline()
         {
+            ConnectivityManager manager = (ConnectivityManager) this.GetSystemService(Context.ConnectivityService);
+            if (manager == null)
+                return false;
+            NetworkInfo networkInfo = manager.ActiveNetworkInfo;
 
-            WifiManager wifi = (WifiManager)Application.Context.GetSystemService(WifiService);
-            if (wifi.IsWifiEnabled)
-            {
-                Toast.MakeText(this, "Wifi je vec ukljucen", ToastLength.Short).Show();
-            }
-            else if (!wifi.IsWifiEnabled)
-            {
-                wifi.SetWifiEnabled(true);
-                Toast.MakeText(this, "Wifi ukljucen", ToastLength.Short).Show();
-            }
-
+            return networkInfo != null && networkInfo.IsConnected;
         }
-
     }
 }

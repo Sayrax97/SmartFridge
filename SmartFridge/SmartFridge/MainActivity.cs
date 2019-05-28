@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
-using Android.Net;
 using Android.OS;
 using Android.Provider;
 using Android.Runtime;
@@ -15,6 +15,7 @@ using Android.Widget;
 using Newtonsoft.Json;
 using SmartFridge.Model;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
+using Uri = Android.Net.Uri;
 
 namespace SmartFridge
 {
@@ -26,6 +27,10 @@ namespace SmartFridge
         private FrameLayout contentMainFrameLayout;
         private DrawerLayout mainDrawerLayout;
         private NavigationView drawerMainNavigationView;
+        private Recipe recipeOfTheDay;
+        private ImageView recipeImageView;
+        private TextView recipeNameTextView;
+        private TextView recipeDescriptioTextView;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -38,6 +43,16 @@ namespace SmartFridge
             mainBottomNavigationView.NavigationItemSelected += MainBottomNavigationView_NavigationItemSelected;
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_menu_black_24dp);
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+            var random = new Random();
+            recipeOfTheDay =
+                ChamberOfSecrets.Instance.group.Recipes[random.Next(0, ChamberOfSecrets.Instance.group.Recipes.Count)];
+            recipeNameTextView.Text = recipeOfTheDay.Name;
+            recipeDescriptioTextView.Text = recipeOfTheDay.Description;
         }
 
         private void MainBottomNavigationView_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
@@ -95,6 +110,7 @@ namespace SmartFridge
                     Finish();
                     ChamberOfSecrets.Instance.group=new Group();
                     ChamberOfSecrets.Instance.LoggedUser=new User();
+                    ChamberOfSecrets.Instance.AllGroceries=new AvailableGroceries();
                     break;
 
             }
@@ -108,6 +124,9 @@ namespace SmartFridge
             drawerMainNavigationView = FindViewById<NavigationView>(Resource.Id.navViewDrawerMain);
             mainBottomNavigationView = FindViewById<BottomNavigationView>(Resource.Id.navigationViewMain);
             mainDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawerMain);
+            recipeImageView = FindViewById<ImageView>(Resource.Id.imageRecipe);
+            recipeNameTextView = FindViewById<TextView>(Resource.Id.txtRecipeName);
+            recipeDescriptioTextView = FindViewById<TextView>(Resource.Id.txtRecipeDescription);
         }
     }
 }
