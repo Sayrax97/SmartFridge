@@ -43,7 +43,22 @@ namespace SmartFridge
             groceriesListView.Adapter = new GroceryListItemAdapter(groceryList.Groceries, this, true);
             PutOnScreen();
         }
-        
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+            foreach (var grocery in recipe.Groceries.Groceries)
+            {
+                if (!CheckIfIsAvailable(grocery))
+                {
+                    recipeBottomNavigationView.Menu.GetItem(1).SetEnabled(false);
+                    recipeBottomNavigationView.Menu.GetItem(2).SetEnabled(true);
+                    break;
+                }
+                recipeBottomNavigationView.Menu.GetItem(1).SetEnabled(true);
+                recipeBottomNavigationView.Menu.GetItem(2).SetEnabled(false);
+            }
+        }
 
         public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
         {
@@ -53,7 +68,6 @@ namespace SmartFridge
                 case Android.Resource.Id.Home:
                     Finish();
                     break;
-                
             }
 
             return true;
@@ -71,18 +85,7 @@ namespace SmartFridge
 
             recipe = JsonConvert.DeserializeObject<Recipe>(Intent.GetStringExtra("recept"));
             groceryList = recipe.Groceries;
-            groceryList.SetDefault();
-            foreach (var grocery in recipe.Groceries.Groceries)
-            {
-                if (!CheckIfIsAvailable())
-                {
-                    recipeBottomNavigationView.Menu.GetItem(1).SetEnabled(false);
-                    recipeBottomNavigationView.Menu.GetItem(2).SetEnabled(true);
-                    break;
-                }
-                recipeBottomNavigationView.Menu.GetItem(1).SetEnabled(true);
-                recipeBottomNavigationView.Menu.GetItem(2).SetEnabled(false);
-            }
+            recipe.Groceries.SetDefault();
             //recipeImageView.SetImageDrawable(this.GetDrawable
             //(Resources.GetIdentifier(recipe.Image, "drawable", this.PackageName)));
         }
@@ -101,7 +104,7 @@ namespace SmartFridge
                 case Resource.Id.menu_addToCart:
                     foreach (var grocery in groceryList.Groceries)
                     {
-                        if (!CheckIfIsAvailable())
+                        if (!CheckIfIsAvailable(grocery))
                         {
                             ChamberOfSecrets.Instance.group.ShoppingCart.AddToList(grocery);
                         }
@@ -119,12 +122,9 @@ namespace SmartFridge
             recipeDescriptionTextView.Text = recipe.Description;
         }
 
-        private bool CheckIfIsAvailable()
+        private bool CheckIfIsAvailable(Grocery grocery)
         {
-            foreach (var grocery in recipe.Groceries.Groceries)
-                if (!ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries.Exists(x => x.Name == grocery.Name))
-                    return false;
-            return true;
+            return ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries.Exists(x => x.Name == grocery.Name);
         }
     }
 }

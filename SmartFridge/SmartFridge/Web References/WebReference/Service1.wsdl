@@ -176,6 +176,18 @@
   <wsdl:message name="IService1_deleteGrocerie_OutputMessage">
     <wsdl:part name="parameters" element="tns:deleteGrocerieResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_loadContains_InputMessage">
+    <wsdl:part name="parameters" element="tns:loadContains" />
+  </wsdl:message>
+  <wsdl:message name="IService1_loadContains_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loadContainsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteContains_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteContains" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteContains_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteContainsResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="dbFindUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbFindUser" message="tns:IService1_dbFindUser_InputMessage" />
@@ -288,6 +300,14 @@
     <wsdl:operation name="deleteGrocerie">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteGrocerie" message="tns:IService1_deleteGrocerie_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteGrocerieResponse" message="tns:IService1_deleteGrocerie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="loadContains">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/loadContains" message="tns:IService1_loadContains_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/loadContainsResponse" message="tns:IService1_loadContains_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteContains">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteContains" message="tns:IService1_deleteContains_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteContainsResponse" message="tns:IService1_deleteContains_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -537,6 +557,24 @@
     </wsdl:operation>
     <wsdl:operation name="deleteGrocerie">
       <soap:operation soapAction="http://tempuri.org/IService1/deleteGrocerie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadContains">
+      <soap:operation soapAction="http://tempuri.org/IService1/loadContains" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteContains">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleteContains" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

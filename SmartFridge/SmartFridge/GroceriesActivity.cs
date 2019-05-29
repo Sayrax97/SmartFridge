@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.Graphics;
@@ -18,15 +18,9 @@ using Android.Widget;
 using SmartFridge.Dialogs;
 using SmartFridge.Model;
 using Syncfusion.Android.ComboBox;
-using MultiSelectMode = Syncfusion.Android.ComboBox.MultiSelectMode;
-using OccurrenceMode = Syncfusion.Android.ComboBox.OccurrenceMode;
 using SearchView = Android.Widget.SearchView;
 using SuggestionBoxPlacement = Syncfusion.Android.ComboBox.SuggestionBoxPlacement;
-using SuggestionMode = Syncfusion.Android.ComboBox.SuggestionMode;
-using TokensWrapMode = Syncfusion.Android.ComboBox.TokensWrapMode;
-using TokenSettings = Syncfusion.Android.ComboBox.TokenSettings;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
-using Android.Net.Wifi;
 using Android.Content.PM;
 
 namespace SmartFridge
@@ -76,7 +70,13 @@ namespace SmartFridge
             eatButton.Click += EatButton_Click;
             searchView = FindViewById<SearchView>(Resource.Id.searchGroceries);
             groceriesFAB = FindViewById<FloatingActionButton>(Resource.Id.fABgroceries);
-            groceriesFAB.Click += GroceriesFAB_Click;
+            groceriesFAB.Visibility = ViewStates.Invisible;
+            if (ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Nabavljac ||
+                ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Administrator)
+            {
+                groceriesFAB.Visibility = ViewStates.Visible;
+                groceriesFAB.Click += GroceriesFAB_Click;
+            }
             InitCategories();
             SetDefault();
         }
@@ -118,9 +118,16 @@ namespace SmartFridge
                 //Nothing else has access to this list (it doesn't even have a variable name!), so nothing can modify it inside the loop.
                 foreach (var grocery in ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries.ToList())
                 {
-                    if (grocery.Checked)
+                    if (!grocery.Checked) continue;
+                    if ((ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries
+                            .Find(x => x.Name == grocery.Name).Amount -= grocery.Bought) <= 0)
                     {
-                        ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries.Remove(grocery);
+                        ChamberOfSecrets.Instance.@group.AvailableGroceries.RemoveFromList(grocery.Name);
+                    }
+                    else
+                    {
+                        ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries
+                            .Find(x => x.Name == grocery.Name).Bought = 0;
                     }
                 }
                 LoadGroceries();
@@ -145,6 +152,17 @@ namespace SmartFridge
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
+            ChamberOfSecrets.Instance.group.DefaultRanks(0);
+            foreach (var grocery in ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries)
+            {
+                if (grocery.Checked)
+                {
+                    ChamberOfSecrets.Instance.group.CheckForGrocery(grocery.Name);
+                }
+            }
+            var intent = new Intent(this, typeof(RecipeListActivity));
+            intent.PutExtra("Activity", "grocery");
+            StartActivity(intent);
         }
         public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
         {
@@ -155,7 +173,6 @@ namespace SmartFridge
                     Finish();
                     break;
             }
-            
             return true;
             
         }

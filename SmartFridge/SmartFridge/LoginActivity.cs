@@ -68,28 +68,41 @@ namespace SmartFridge
 
         private async void LoginButton_ClickAsync(object sender, EventArgs e)
         {
-            await Task.Delay(1000);
+            await Task.Delay(500);
             if (!IsOnline())
             {
                 Toast.MakeText(this, "Niste povezani na internet!!!", ToastLength.Short).Show();
                 return;
             }
-
             loadingProgressBar.Visibility = ViewStates.Visible;
             User user= new User();
-            user.ToUser(await Task.Run(() => ChamberOfSecrets.Proxy.dbFindUser(usernameEditText.Text)));
-
-            if (user.Password == "")
+            if (string.IsNullOrEmpty(passwordEditText.Text))
             {
-                Toast.MakeText(this, "Korisnik ne postoji. Proverite da li ste lepo ukucali korisničko ime!", ToastLength.Long).Show();
+                Toast.MakeText(this, "Unesite sifru", ToastLength.Long).Show();
+                loadingProgressBar.Visibility = ViewStates.Invisible;
+                return;
+            }
+            bool findUserResult = false;
+            bool x = true;
+            await Task.Run(() => ChamberOfSecrets.Proxy.dbFindUserBool(usernameEditText.Text,out findUserResult, out x));
+            if (!findUserResult)
+            {
+                Toast.MakeText(this, "Korisnik ne postoji.Proverite da li ste lepo ukucali korisničko ime!", ToastLength.Long).Show();
                 loadingProgressBar.Visibility = ViewStates.Invisible;
                 return;
             }
 
-            if(user.Password == passwordEditText.Text)
+            user.ToUser(await Task.Run(() =>
+                ChamberOfSecrets.Proxy.dbFindUser(usernameEditText.Text, passwordEditText.Text)));
+            if (user.Password == null)
             {
-
-                var intent=new Intent(this,typeof(MainActivity));
+                Toast.MakeText(this, "Pogrešili ste šifru!!!", ToastLength.Long).Show();
+                loadingProgressBar.Visibility = ViewStates.Invisible;
+                return;
+            }
+            else
+            {
+                var intent =new Intent(this,typeof(MainActivity));
                 ChamberOfSecrets.Instance.LoggedUser = user;
 
                 ChamberOfSecrets.Instance.LoggedUser.MyOptions.ToOption(await Task.Run(() =>
@@ -108,11 +121,6 @@ namespace SmartFridge
                 StartActivity(intent);
                 loadingProgressBar.Visibility = ViewStates.Invisible;
                 Finish();
-            }
-            else
-            {
-                Toast.MakeText(this, "Pogrešno ste uneli lozinku, pokušajte ponovo!", ToastLength.Long).Show();
-                loadingProgressBar.Visibility = ViewStates.Invisible;
             }
         }
         public bool IsOnline()

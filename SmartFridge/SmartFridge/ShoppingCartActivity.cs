@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
@@ -57,7 +56,14 @@ namespace SmartFridge
         {
             shoppingCartFloatingActionButton = FindViewById<FloatingActionButton>(Resource.Id.fABshoppingCart);
             addToGroceriesListButton = FindViewById<Button>(Resource.Id.btnAddtoGroceriesList);
-            addToGroceriesListButton.Click += AddToGroceriesListButton_Click;
+            addToGroceriesListButton.Visibility = ViewStates.Invisible;
+            if (ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Nabavljac ||
+                ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Administrator)
+            {
+                addToGroceriesListButton.Visibility = ViewStates.Visible;
+                addToGroceriesListButton.Click += AddToGroceriesListButton_Click;
+            }
+
             topToolbar = FindViewById<Toolbar>(Resource.Id.topToolbarCart);
             shoppingCartListView = FindViewById<ListView>(Resource.Id.listViewShoppingCart);
 

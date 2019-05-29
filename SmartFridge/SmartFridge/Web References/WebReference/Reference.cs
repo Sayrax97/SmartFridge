@@ -85,6 +85,10 @@ namespace SmartFridge.WebReference {
         
         private System.Threading.SendOrPostCallback deleteGrocerieOperationCompleted;
         
+        private System.Threading.SendOrPostCallback loadContainsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback deleteContainsOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -208,26 +212,34 @@ namespace SmartFridge.WebReference {
         public event deleteGrocerieCompletedEventHandler deleteGrocerieCompleted;
         
         /// <remarks/>
+        public event loadContainsCompletedEventHandler loadContainsCompleted;
+        
+        /// <remarks/>
+        public event deleteContainsCompletedEventHandler deleteContainsCompleted;
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbFindUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public UserDetails dbFindUser([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userNickname) {
+        public UserDetails dbFindUser([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userNickname, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password) {
             object[] results = this.Invoke("dbFindUser", new object[] {
-                        userNickname});
+                        userNickname,
+                        password});
             return ((UserDetails)(results[0]));
         }
         
         /// <remarks/>
-        public void dbFindUserAsync(string userNickname) {
-            this.dbFindUserAsync(userNickname, null);
+        public void dbFindUserAsync(string userNickname, string password) {
+            this.dbFindUserAsync(userNickname, password, null);
         }
         
         /// <remarks/>
-        public void dbFindUserAsync(string userNickname, object userState) {
+        public void dbFindUserAsync(string userNickname, string password, object userState) {
             if ((this.dbFindUserOperationCompleted == null)) {
                 this.dbFindUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OndbFindUserOperationCompleted);
             }
             this.InvokeAsync("dbFindUser", new object[] {
-                        userNickname}, this.dbFindUserOperationCompleted, userState);
+                        userNickname,
+                        password}, this.dbFindUserOperationCompleted, userState);
         }
         
         private void OndbFindUserOperationCompleted(object arg) {
@@ -1040,6 +1052,66 @@ namespace SmartFridge.WebReference {
             if ((this.deleteGrocerieCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.deleteGrocerieCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/loadContains", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void loadContains([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] ContainsDetails contains) {
+            this.Invoke("loadContains", new object[] {
+                        contains});
+        }
+        
+        /// <remarks/>
+        public void loadContainsAsync(ContainsDetails contains) {
+            this.loadContainsAsync(contains, null);
+        }
+        
+        /// <remarks/>
+        public void loadContainsAsync(ContainsDetails contains, object userState) {
+            if ((this.loadContainsOperationCompleted == null)) {
+                this.loadContainsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnloadContainsOperationCompleted);
+            }
+            this.InvokeAsync("loadContains", new object[] {
+                        contains}, this.loadContainsOperationCompleted, userState);
+        }
+        
+        private void OnloadContainsOperationCompleted(object arg) {
+            if ((this.loadContainsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.loadContainsCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/deleteContains", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void deleteContains([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string Name, int ID, [System.Xml.Serialization.XmlIgnoreAttribute()] bool IDSpecified) {
+            this.Invoke("deleteContains", new object[] {
+                        Name,
+                        ID,
+                        IDSpecified});
+        }
+        
+        /// <remarks/>
+        public void deleteContainsAsync(string Name, int ID, bool IDSpecified) {
+            this.deleteContainsAsync(Name, ID, IDSpecified, null);
+        }
+        
+        /// <remarks/>
+        public void deleteContainsAsync(string Name, int ID, bool IDSpecified, object userState) {
+            if ((this.deleteContainsOperationCompleted == null)) {
+                this.deleteContainsOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeleteContainsOperationCompleted);
+            }
+            this.InvokeAsync("deleteContains", new object[] {
+                        Name,
+                        ID,
+                        IDSpecified}, this.deleteContainsOperationCompleted, userState);
+        }
+        
+        private void OndeleteContainsOperationCompleted(object arg) {
+            if ((this.deleteContainsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deleteContainsCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2033,6 +2105,14 @@ namespace SmartFridge.WebReference {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
     public delegate void deleteGrocerieCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    public delegate void loadContainsCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    public delegate void deleteContainsCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591

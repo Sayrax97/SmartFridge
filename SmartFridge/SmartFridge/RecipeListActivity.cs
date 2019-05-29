@@ -37,6 +37,11 @@ namespace SmartFridge
 
         }
 
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            base.MenuInflater.Inflate(Resource.Menu.recipelist_top_menu, menu);
+            return true;
+        }
         public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
         {
             switch (item.ItemId)
@@ -44,6 +49,14 @@ namespace SmartFridge
 
                 case Android.Resource.Id.Home:
                     Finish();
+                    break;
+                case Resource.Id.@ascending:
+                    ChamberOfSecrets.Instance.group.Recipes = ChamberOfSecrets.Instance.group.Recipes.OrderBy(x => x.Name).ToList();
+                    LoadRecepies();
+                    break;
+                case Resource.Id.@descending:
+                    ChamberOfSecrets.Instance.group.Recipes = ChamberOfSecrets.Instance.group.Recipes.OrderByDescending(x => x.Name).ToList();
+                    LoadRecepies();
                     break;
             }
 
@@ -56,7 +69,18 @@ namespace SmartFridge
             recipeListRecyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerViewRecipeList);
             manager = new LinearLayoutManager(this);
             recipeListRecyclerView.SetLayoutManager(manager);
-            recipeListRecyclerView.SetAdapter(new RecipesRecyclerAdapter(this,ChamberOfSecrets.Instance.group.Recipes,recipeListRecyclerView));
+            string intent = this.Intent.GetStringExtra("Activity");
+            if (intent == "main")
+            {
+                ChamberOfSecrets.Instance.group.DefaultRanks(1);
+            }
+            LoadRecepies();
+        }
+
+        private void LoadRecepies()
+        {
+            recipeListRecyclerView.SetAdapter(new RecipesRecyclerAdapter
+                (this, ChamberOfSecrets.Instance.group.Recipes, recipeListRecyclerView));
         }
     }
 }

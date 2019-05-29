@@ -31,7 +31,9 @@ namespace SmartFridge.Adapters
         public RecipesRecyclerAdapter(Context context, List<Recipe> recipes, RecyclerView recyclerView)
         {
             this.context = context;
-            this.recipes = recipes;
+            this.recipes = (from receipt in recipes
+                where receipt.Rank > 0
+                select receipt).ToList();
             this.recyclerView = recyclerView;
         }
 

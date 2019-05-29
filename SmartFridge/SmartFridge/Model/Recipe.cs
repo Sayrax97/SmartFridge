@@ -20,10 +20,12 @@ namespace SmartFridge.Model
         public string Description { get; set; }
         public string Image { get; set; }
         public AvailableGroceries Groceries { get; set; }
+        public int Rank { get; set; }
 
         public Recipe()
         {
             Groceries= new AvailableGroceries();
+            Rank = 0;
         }
 
         public Recipe(string name, int id, string description, string image)
@@ -31,6 +33,7 @@ namespace SmartFridge.Model
             Groceries = new AvailableGroceries();
             Name = name;
             Id = id;
+            Rank = 0;
             Description = description;
             Image = image;
             AddImage();

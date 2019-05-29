@@ -48,8 +48,8 @@ namespace SmartFridge.Adapters
             {
                 if (!string.IsNullOrEmpty(amountBought.Text))
                 {
-                    shoppingCart.Groceries[position].Bought = int.Parse(amountBought.Text);
-                    ChamberOfSecrets.Instance.group.ShoppingCart.Groceries[position].Bought = int.Parse(amountBought.Text);
+                    shoppingCart.Groceries[position].Bought = double.Parse(amountBought.Text);
+                    ChamberOfSecrets.Instance.group.ShoppingCart.Groceries[position].Bought = double.Parse(amountBought.Text);
                 }
             };
             CheckBox checkBox = convertView.FindViewById<CheckBox>(Resource.Id.checkBoxBought);
@@ -59,8 +59,14 @@ namespace SmartFridge.Adapters
                 shoppingCart.Groceries[position].Checked = checkBox.Checked;
                 ChamberOfSecrets.Instance.@group.ShoppingCart.Groceries[position].Checked = shoppingCart.Groceries[position].Checked;
             }
-
             checkBox.CheckedChange += OnCheckBoxOnCheckedChange;
+            ImageButton xButton = convertView.FindViewById<ImageButton>(Resource.Id.imageButton1);
+            xButton.Click += XButton_Click;
+            void XButton_Click(object sender, EventArgs e)
+            {
+                shoppingCart.RemoveFromShoppingCart(shoppingCart.Groceries[position]);
+                ChamberOfSecrets.Instance.group.ShoppingCart.RemoveFromShoppingCart(shoppingCart.Groceries[position]);
+            }
             name.Text = shoppingCart.Groceries[position].Name;
             unit.Text = shoppingCart.Groceries[position].MeasurementUnit.ToString();
             amount.Text = shoppingCart.Groceries[position].Amount.ToString();

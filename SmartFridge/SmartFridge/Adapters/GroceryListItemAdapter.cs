@@ -42,13 +42,49 @@ namespace SmartFridge
         {
             if (convertView == null)
             {
-                convertView = LayoutInflater.From(context).Inflate(!flagReceipt ? Resource.Layout.groceies_list_item_layout : Resource.Layout.groceries_recipe_item_layout, null);
+                convertView = LayoutInflater.From(context).Inflate(!flagReceipt ? Resource.Layout.shopping_cart_item_layout : Resource.Layout.groceries_recipe_item_layout, null);
             }
 
-            TextView name = convertView.FindViewById<TextView>(Resource.Id.txtNameGrocery);
-            TextView amount = convertView.FindViewById<TextView>(Resource.Id.txtAmountGrocery);
-            TextView unit = convertView.FindViewById<TextView>(Resource.Id.txtUnitGrocery);
-            CheckBox checkBox = convertView.FindViewById<CheckBox>(Resource.Id.checkBoxGrocery);
+            TextView name = convertView.FindViewById<TextView>(Resource.Id.textViewName);
+            TextView amount = convertView.FindViewById<TextView>(Resource.Id.textViewAmount);
+            TextView unit = convertView.FindViewById<TextView>(Resource.Id.textViewUnit);
+            if(!flagReceipt)
+            {
+                CheckBox checkBox = convertView.FindViewById<CheckBox>(Resource.Id.checkBoxBought);
+                EditText boughtEditText = convertView.FindViewById<EditText>(Resource.Id.editTxtBought);
+                ImageButton xButton = convertView.FindViewById<ImageButton>(Resource.Id.imageButton1);
+                xButton.Visibility = ViewStates.Invisible;
+
+                void XButtonClick(object sender, EventArgs e)
+                {
+                    groceries.RemoveAt(position);
+                    ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries.RemoveAt(position);
+                }
+                if (ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Supervizor ||
+                    ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Administrator)
+                {
+                    xButton.Visibility = ViewStates.Visible;
+                    xButton.Click += XButtonClick;
+                }
+                boughtEditText.TextChanged += (sender, args) =>
+                {
+                    if (!string.IsNullOrEmpty(boughtEditText.Text))
+                    {
+                        groceries[position].Bought = double.Parse(boughtEditText.Text);
+                        ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries[position].Bought= double.Parse(boughtEditText.Text);
+                    }
+                };
+                
+                void OnChange(object sender, CompoundButton.CheckedChangeEventArgs args)
+                {
+                    groceries[position].Checked = !groceries[position].Checked;
+                    groceries[position].Bought = 1;
+                    ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries[position].Checked = groceries[position].Checked;
+                }
+
+                checkBox.CheckedChange += OnChange;
+
+            }
             name.Text = groceries[position].Name;
             amount.Text = groceries[position].Amount.ToString();
             unit.Text = groceries[position].MeasurementUnit.ToString();
@@ -58,37 +94,23 @@ namespace SmartFridge
             amount.SetTypeface(null, TypefaceStyle.Normal);
             unit.SetTextColor(Color.Gray);
             unit.SetTypeface(null, TypefaceStyle.Normal);
-            if (!flagReceipt)
-                checkBox.CheckedChange+= (sender, args) => 
-                {
-                groceries[position].Checked = !groceries[position].Checked;
-                ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries[position].Checked = groceries[position].Checked;
-                };
-            if(flagReceipt)
-            {
-                if (!CheckIfIsAvailable(groceries[position]))
-                {
-                    groceries[position].IsInList = false;
-                    name.SetTextColor(Color.Red);
-                    name.SetTypeface(null,TypefaceStyle.Bold);
-                    amount.SetTextColor(Color.Red);
-                    amount.SetTypeface(null, TypefaceStyle.Bold);
-                    unit.SetTextColor(Color.Red);
-                    unit.SetTypeface(null, TypefaceStyle.Bold);
-                }
-            }
 
+            if(flagReceipt && !CheckIfIsAvailable(groceries[position]))
+            {
+                groceries[position].IsInList = false;
+                name.SetTextColor(Color.Red);
+                name.SetTypeface(null,TypefaceStyle.Bold);
+                amount.SetTextColor(Color.Red);
+                amount.SetTypeface(null, TypefaceStyle.Bold);
+                unit.SetTextColor(Color.Red);
+                unit.SetTypeface(null, TypefaceStyle.Bold);
+            }
             return convertView;
         }
 
         private bool CheckIfIsAvailable(Grocery grocery)
         {
-            if (ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries.Exists(x=>x.Name==grocery.Name))
-            {
-                return true;
-            }
-
-            return false;
+            return ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries.Exists(x=>x.Name==grocery.Name);
         }
     }
 }

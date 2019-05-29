@@ -52,8 +52,12 @@ namespace SmartFridge
         {
             groupMembersListView = FindViewById<ListView>(Resource.Id.listViewGroupMembers);
             myGroupToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyGroup);
-            GroupMemberAdapter adapter = new GroupMemberAdapter(ChamberOfSecrets.Instance.group, this);
-            groupMembersListView.Adapter = adapter;
+            groupMembersListView.Adapter = new GroupMemberAdapter(ChamberOfSecrets.Instance.group, this);
+        }
+
+        public void Update()
+        {
+            groupMembersListView.Adapter = new GroupMemberAdapter(ChamberOfSecrets.Instance.group, this);
         }
 
     }

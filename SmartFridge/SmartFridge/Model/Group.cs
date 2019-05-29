@@ -78,5 +78,27 @@ namespace SmartFridge.Model
         {
             return new GroupDetails { ID = Id };
         }
+
+        public void CheckForGrocery(string name)
+        {
+            foreach (var recipe in Recipes)
+            {
+                foreach (var grocery in recipe.Groceries.Groceries)
+                {
+                    if (grocery.Name == name)
+                    {
+                        recipe.Rank++;
+                    }
+                }
+            }
+        }
+
+        public void DefaultRanks(int value)
+        {
+            foreach (var recipe in Recipes)
+            {
+               recipe.Rank= value;
+            }
+        }
     }
 }

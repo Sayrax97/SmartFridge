@@ -127,5 +127,10 @@ namespace SmartFridge.Model
                 this.AddToList(newGrocery);
             }
         }
+
+        public void RemoveFromList(string Name)
+        {
+            Groceries.Remove(Groceries.Find(x => x.Name == Name));
+        }
     }
 }

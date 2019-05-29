@@ -10,6 +10,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using SmartFridge.WebReference;
 
 namespace SmartFridge.Model
 {
@@ -27,21 +28,18 @@ namespace SmartFridge.Model
     public enum Category
     {
         None,
-        Food_additives‎,
-        Cereals,
-        Condiments,
-        Cooking_oils,
-        Flour,
-        Herbs,
-        Fruits,
-        Sauces,
-        Milky,
-        Animal_product,
-        Drink,
-        Vegtables,
-        ZivotinjskiProizvod,
-        KonzerviranaHrana,
-        Brasno,
+        Riba,
+        Povrce,
+        Pica,
+        Zacin,
+        Žitarice,
+        Mlecni_proizvod,
+        Životinjski_proizvod,
+        Dodatak,
+        Ulja,
+        Bilje,
+        Pecurke,
+        Meso
     }
 
     public class Grocery
@@ -95,6 +93,17 @@ namespace SmartFridge.Model
         {
             IsInList = true;
             IsCategorized = true;
+        }
+
+        public GroceryDetails GetGroceryDetails()
+        {
+            return new GroceryDetails()
+            {
+                Name = Name,
+                Category = Type.ToString(),
+                Unit = MeasurementUnit.ToString(),
+                Image = Image
+            };
         }
     }
 }

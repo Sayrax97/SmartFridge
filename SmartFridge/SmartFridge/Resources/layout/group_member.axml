@@ -9,28 +9,27 @@
 		android:text="Member Name"
 		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_width="match_parent"
-		android:layout_weight="20"
+		android:layout_weight="50"
 		android:layout_height="wrap_content"
 		android:id="@+id/txtViewGroupMember" />
 	<LinearLayout
 		android:orientation="horizontal"
-		android:layout_weight="80"
+		android:layout_weight="50"
 		android:gravity="center"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
+		android:layout_height="match_parent"
 		android:id="@+id/linearLayout2">
+		<Spinner
+			android:layout_width="150dp"
+			android:layout_height="match_parent"
+			android:id="@+id/spinner1" />
 		<ImageButton
 			android:src="@drawable/baseline_clear_black_18dp"
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:background="@android:color/white"
-			android:layout_height="wrap_content"
+			android:layout_height="match_parent"
 			android:id="@+id/imageBtnRemove" />
-		<ImageButton
-			android:src="@drawable/baseline_add_black_18dp"
-			android:layout_width="wrap_content"
-			android:background="@android:color/white"
-			android:layout_height="wrap_content"
-			android:id="@+id/imageBtnPlus" />
+
 	</LinearLayout>
 
 </LinearLayout>

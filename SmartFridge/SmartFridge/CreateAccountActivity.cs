@@ -87,35 +87,50 @@ namespace SmartFridge
             }
 
             if (string.IsNullOrEmpty(usernameEditText.Text))
+            {
                 Toast.MakeText(this, "Polje za korisničko ime ne sme biti prazno", ToastLength.Short).Show();
+                return;
+            }
             else if(string.IsNullOrEmpty(passwordEditText.Text))
             { 
                 Toast.MakeText(this, "Polje za šifru ne sme biti prazno", ToastLength.Short).Show();
+                return;
             }
             else if (string.IsNullOrEmpty(emailEditText.Text))
             {
                 Toast.MakeText(this, "Polje za email ne sme biti prazno", ToastLength.Short).Show();
+                return;
             }
             else if (string.IsNullOrEmpty(nameEditText.Text))
             {
                 Toast.MakeText(this, "Polje za ime ne sme biti prazno", ToastLength.Short).Show();
+                return;
             }
             else if (string.IsNullOrEmpty(surnameEditText.Text))
             {
                 Toast.MakeText(this, "Polje za prezime ne sme biti prazno", ToastLength.Short).Show();
+                return;
             }
             else if (groupIdEditText.Visibility == ViewStates.Visible && string.IsNullOrEmpty(groupIdEditText.Text))
             {
                     Toast.MakeText(this, "Polje za grupu nesme biti prazno", ToastLength.Short).Show();
+                    return;
             }
             else
             {
-                //ovde treba da se prover dali korisnik postoji
                 ChamberOfSecrets.Instance.LoggedUser = new User(nameEditText.Text, surnameEditText.Text, usernameEditText.Text,
                 passwordEditText.Text, emailEditText.Text, "")
                 {
                     MyOptions = new Option()
                 };
+                bool z = true;
+                ChamberOfSecrets.Proxy.dbFindUserBool(ChamberOfSecrets.Instance.LoggedUser.UserName,out var findUserResult,out z);
+                if (findUserResult)
+                {
+                    Toast.MakeText(this, "Korisnik vec postoji!!Promenite korisničko ime!", ToastLength.Short).Show();
+                    return;
+                }
+
                 if (groupIdEditText.Visibility != ViewStates.Gone)
                 {
                     if (await ChamberOfSecrets.Instance.group.CheckGroupAsync(groupIdEditText.Text) == false)

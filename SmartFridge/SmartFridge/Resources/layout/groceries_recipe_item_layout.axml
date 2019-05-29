@@ -13,7 +13,7 @@
 		android:layout_height="match_parent"
 		android:paddingLeft="5dp"
 		android:gravity="left"
-		android:id="@+id/txtNameGrocery" />
+		android:id="@+id/textViewName" />
 	<TextView
 		android:text="Small Text"
 	 android:layout_weight="33"
@@ -21,7 +21,7 @@
 		android:layout_width="match_parent"
 		android:gravity="left"
 		android:layout_height="match_parent"
-		android:id="@+id/txtAmountGrocery" />
+		android:id="@+id/textViewAmount" />
 	<TextView
 		android:text="Small Text"
 	 android:layout_weight="33"
@@ -29,6 +29,6 @@
 		android:layout_width="match_parent"
 		android:gravity="left"
 		android:layout_height="match_parent"
-		android:id="@+id/txtUnitGrocery" />
+		android:id="@+id/textViewUnit" />
 
 </LinearLayout>

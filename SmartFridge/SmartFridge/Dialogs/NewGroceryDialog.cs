@@ -15,6 +15,7 @@ using Android.Views.InputMethods;
 using Android.Widget;
 using Com.Syncfusion.Autocomplete;
 using SmartFridge.Model;
+using SmartFridge.WebReference;
 using Syncfusion.Android.ComboBox;
 using OccurrenceMode = Com.Syncfusion.Autocomplete.OccurrenceMode;
 using SuggestionBoxPlacement = Syncfusion.Android.ComboBox.SuggestionBoxPlacement;
@@ -24,7 +25,6 @@ namespace SmartFridge.Dialogs
 {
     class NewGroceryDialog:DialogFragment
     {
-        private static AvailableGroceries allGroceries=new AvailableGroceries();
         private SfAutoComplete groceriesAutoComplete;
         private SfComboBox categoriesComboBox;
         private EditText amountEditText;
@@ -64,7 +64,7 @@ namespace SmartFridge.Dialogs
                 category = Grocery.ParseEnum<Category>(categoriesComboBox.Text);
                 name = groceriesAutoComplete.Text;
                 amount = double.Parse(amountEditText.Text);
-                unit = getUnit(name, category);
+                unit = GetUnit(name, category);
                 if (category == Category.None)
                 {
                     category = ChamberOfSecrets.Instance.AllGroceries.Groceries.Find(x => x.Name == name).Type;
@@ -74,10 +74,24 @@ namespace SmartFridge.Dialogs
                 if (this.Activity.GetType() == typeof(GroceriesActivity))
                 {
                     ChamberOfSecrets.Instance.group.AvailableGroceries.AddToList(gr);
+                    //ChamberOfSecrets.Proxy.dbInsertAvailableGroceries(new AvailableGroceriesDetails()
+                    //{
+                    //    Amount = (float)gr.Amount,
+                    //    GroupID = ChamberOfSecrets.Instance.group.Id,
+                    //    Grocery = gr.GetGroceryDetails(),
+                    //    AmountSpecified = true
+                    //});
                 }
                 else if (this.Activity.GetType() == typeof(ShoppingCartActivity))
                 {
                     ChamberOfSecrets.Instance.group.ShoppingCart.AddToList(gr);
+                    //ChamberOfSecrets.Proxy.dbInsertShoppingCart(new ShoppingCartDetails()
+                    //{
+                    //    Amount = (float)gr.Amount,
+                    //    GroupID = ChamberOfSecrets.Instance.group.Id,
+                    //    Grocery = gr.GetGroceryDetails(),
+                    //    AmountSpecified = true
+                    //});
                 }
 
                 Dismiss();
@@ -85,13 +99,11 @@ namespace SmartFridge.Dialogs
                     .Show();
                 if (this.Activity.GetType() == typeof(GroceriesActivity))
                 {
-                    GroceriesActivity x= this.Activity as GroceriesActivity;
-                    x.LoadGroceries();
+                    if (this.Activity is GroceriesActivity x) x.LoadGroceries();
                 }
                 else if(this.Activity.GetType() == typeof(ShoppingCartActivity))
                 {
-                    ShoppingCartActivity x = this.Activity as ShoppingCartActivity;
-                    x.LoadGroceries();
+                    if (this.Activity is ShoppingCartActivity x) x.LoadGroceries();
                 }
             }
             else
@@ -131,7 +143,7 @@ namespace SmartFridge.Dialogs
                 select grocery.Name;
         }
 
-        private Unit getUnit(string name, Category type)
+        private Unit GetUnit(string name, Category type)
         {
             foreach (var grocery in ChamberOfSecrets.Instance.AllGroceries.Groceries)
             {
