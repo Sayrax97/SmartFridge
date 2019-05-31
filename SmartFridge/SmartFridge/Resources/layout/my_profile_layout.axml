@@ -84,8 +84,9 @@
 	</LinearLayout>
 	<ImageButton
 		android:src="@android:drawable/ic_menu_gallery"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
+		android:layout_width="400px"
+		android:layout_height="400px"
+		android:layout_gravity="center"
 		android:id="@+id/imageBtnPictureMyProfile" />
 	
 

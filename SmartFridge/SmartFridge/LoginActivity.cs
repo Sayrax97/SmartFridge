@@ -102,6 +102,7 @@ namespace SmartFridge
             }
             else
             {
+                user.Password = passwordEditText.Text;
                 var intent =new Intent(this,typeof(MainActivity));
                 ChamberOfSecrets.Instance.LoggedUser = user;
 

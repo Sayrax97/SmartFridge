@@ -44,7 +44,6 @@ namespace SmartFridge.Model
                     if (_proxy == null)
                     {
                         _proxy = new Service1();
-                        AvailableGroceriesDetails details=new AvailableGroceriesDetails();
                     }
                 }
                 return _proxy;
@@ -57,9 +56,10 @@ namespace SmartFridge.Model
 
         protected ChamberOfSecrets()
         {
-            LoggedUser= new User();
+            LoggedUser = new User();
             AllGroceries = new AvailableGroceries();
             group = new Group();
+
         }
 
     }

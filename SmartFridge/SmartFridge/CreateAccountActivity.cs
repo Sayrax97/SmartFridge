@@ -159,6 +159,7 @@ namespace SmartFridge
 
                     ChamberOfSecrets.Instance.LoggedUser.AddToGroup(random);
                     ChamberOfSecrets.Instance.group.Id = random;
+                    ChamberOfSecrets.Instance.LoggedUser.UserStatus = Status.Supervizor;
                     ChamberOfSecrets.Instance.group.AddMember(ChamberOfSecrets.Instance.LoggedUser.UserName);
                     ChamberOfSecrets.Proxy.dbAddGroup(ChamberOfSecrets.Instance.group.ToGroupDetails(),out x,out y);
                     ChamberOfSecrets.Proxy.dbInsertUser(ChamberOfSecrets.Instance.LoggedUser.ToUserDetails(), out x, out y);

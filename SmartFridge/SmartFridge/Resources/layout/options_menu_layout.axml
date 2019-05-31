@@ -1,34 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-		<android.support.v7.widget.Toolbar
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<android.support.v7.widget.Toolbar
 		android:minHeight="?android:attr/actionBarSize"
 		android:background="?android:attr/colorPrimary"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:id="@+id/toolbarTopOptions" />
-	<TextView
-		android:text="Font"
-		android:textAppearance="?android:attr/textAppearanceMedium"
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:weightSum="100"
+		android:layout_margin="5dp"
+		android:layout_height="wrap_content"
+		android:id="@+id/linearLayout1">
+		<TextView
+			android:text="Font"
+			android:layout_weight="50"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:id="@+id/txtViewFontOptions" />
+		<Spinner
+			android:layout_width="match_parent"
+			android:layout_weight="50"
+			android:layout_height="match_parent"
+			android:id="@+id/spinnerFont" />
+	</LinearLayout>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:weightSum="100"
+		android:layout_margin="5dp"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:id="@+id/linearLayout2">
+		<TextView
+			android:text="Tema"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_weight="50"
+			android:layout_height="match_parent"
+			android:id="@+id/txtViewThemeOptions" />
+		<Spinner
+			android:layout_width="match_parent"
+			android:layout_weight="50"
+			android:layout_height="match_parent"
+			android:id="@+id/spnnerTheme" />
+	</LinearLayout>
+	<LinearLayout
+		android:orientation="horizontal"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:id="@+id/txtViewFontOptions" />
-	<TextView
-		android:text="Tema"
-		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_margin="5dp"
+		android:weightSum="100"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/txtViewThemeOptions" />
-	<TextView
-		android:text="Notifikacije"
-		android:textAppearance="?android:attr/textAppearanceMedium"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/txtViewNotificationsOptions" />
+		android:id="@+id/linearLayout3">
+		<TextView
+			android:text="Notifikacije"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_weight="50"
+			android:layout_height="match_parent"
+			android:id="@+id/txtViewNotificationsOptions" />
+		<CheckBox
+			android:text=""
+			android:layout_weight="50"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/checkBoxNotifications" />
+	</LinearLayout>
 
 
 </LinearLayout>

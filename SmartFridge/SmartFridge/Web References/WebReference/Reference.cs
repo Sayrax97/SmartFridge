@@ -93,7 +93,7 @@ namespace SmartFridge.WebReference {
         
         /// <remarks/>
         public Service1() {
-            this.Url = "http://178.149.83.180:808/Service1.svc";
+            this.Url = "http://proba1.hopto.org:808/Service1.svc";
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;

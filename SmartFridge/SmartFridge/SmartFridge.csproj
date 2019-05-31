@@ -66,6 +66,7 @@
     <Compile Include="Adapters\RecipesRecyclerAdapter.cs" />
     <Compile Include="Adapters\ShoppingCartItemAdapter.cs" />
     <Compile Include="CreateAccountActivity.cs" />
+    <Compile Include="Dialogs\ChangePasswordDialog.cs" />
     <Compile Include="Dialogs\NewGroceryDialog.cs" />
     <Compile Include="GroceriesActivity.cs" />
     <Compile Include="Adapters\GroceryListItemAdapter.cs" />
@@ -173,10 +174,10 @@
       <Version>12.0.2</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete.Android">
-      <Version>17.1.0.44</Version>
+      <Version>17.1.0.49</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox.Android">
-      <Version>17.1.0.44</Version>
+      <Version>17.1.0.49</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
@@ -343,10 +344,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://178.149.83.180:808/Service1.svc">
+    <WebReferenceUrl Include="http://proba1.hopto.org:808/Service1.svc">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WebReference\</RelPath>
-      <UpdateFromURL>http://178.149.83.180:808/Service1.svc</UpdateFromURL>
+      <UpdateFromURL>http://proba1.hopto.org:808/Service1.svc</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -365,6 +366,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\menu\recipelist_top_menu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\change_password_dialog_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

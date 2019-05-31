@@ -39,13 +39,15 @@
 				android:id="@+id/txtRecipeName" />
 			<ImageView
 				android:src="@drawable/pica_od_suvog_hleba_"
-				android:layout_width="500dp"
+				android:layout_width="500px"
+				android:layout_centerInParent="true"
 				android:layout_below="@id/txtRecipeName"
-				android:layout_height="400dp"
+				android:layout_height="500px"
 				android:id="@+id/imageRecipe" />
 			<TextView
 				android:text="Lorem ipsum dolor sit amet, consectetuer adipiscin"
 				android:layout_below="@id/imageRecipe"
+				android:layout_margin="10dp"
 				android:textAppearance="?android:attr/textAppearanceSmall"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"

@@ -29,11 +29,12 @@ namespace SmartFridge.Model
 
         public void AddToList(Grocery grocery)
         {
-            
-            if (Groceries.Exists(x => x.Equals(grocery)))
+            //proxy
+
+            if (Groceries.Exists(x => x.Name==grocery.Name))
             {
 
-                    Groceries.Find(x => x.Equals(grocery)).Amount += grocery.Amount;
+                    Groceries.Find(x => x.Name == grocery.Name).Amount += grocery.Amount;
             }
             else
             {
@@ -44,15 +45,16 @@ namespace SmartFridge.Model
 
         public void Buy(Grocery grocery)
         {
+            //proxy
             if (grocery.Bought!=0)
             {
                 ChamberOfSecrets.Instance.group.AvailableGroceries.AddToList(grocery, grocery.Bought);
-                if ((Groceries.Find(x => x.Equals(grocery)).Amount -= grocery.Bought) <= 0)
+                if ((Groceries.Find(x => x.Name == grocery.Name).Amount -= grocery.Bought) <= 0)
                 {
                     RemoveFromShoppingCart(grocery);
                 }
                 else
-                    Groceries.Find(x => x.Equals(grocery)).Bought = 0;
+                    Groceries.Find(x => x.Name == grocery.Name).Bought = 0;
             }
             else if(grocery.Bought == 0)
             {
@@ -63,6 +65,7 @@ namespace SmartFridge.Model
 
         public void RemoveFromShoppingCart(Grocery grocery)
         {
+            //proxy
             Groceries.Remove(grocery);
         }
 

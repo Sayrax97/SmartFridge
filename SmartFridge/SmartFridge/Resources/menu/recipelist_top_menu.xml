@@ -4,7 +4,6 @@
       android:checkableBehavior="single">
 
   <item android:id="@+id/ascending"
-        android:checked="true"
           android:title="Ascending"/>
   <item android:id="@+id/descending"
           android:title="Descending"/>

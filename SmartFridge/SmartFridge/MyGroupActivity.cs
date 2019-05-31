@@ -24,6 +24,7 @@ namespace SmartFridge
     {
         private ListView groupMembersListView;
         private Toolbar myGroupToolbar;
+        private TextView groupIdTextView;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -44,7 +45,6 @@ namespace SmartFridge
                     Finish();
                     break;
             }
-
             return true;
         }
 
@@ -52,7 +52,9 @@ namespace SmartFridge
         {
             groupMembersListView = FindViewById<ListView>(Resource.Id.listViewGroupMembers);
             myGroupToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyGroup);
-            groupMembersListView.Adapter = new GroupMemberAdapter(ChamberOfSecrets.Instance.group, this);
+            groupIdTextView = FindViewById<TextView>(Resource.Id.txtViewGroupId);
+            groupIdTextView.Text = $"ID grupe je: {ChamberOfSecrets.Instance.group.Id}";
+            Update();
         }
 
         public void Update()

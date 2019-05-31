@@ -179,7 +179,8 @@ namespace SmartFridge
 
         public void  LoadGroceries()
         {
-            groceryListView.Adapter = new GroceryListItemAdapter(ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries, this, false);
+            groceryListView.Adapter = new GroceryListItemAdapter
+                (ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries, this, false);
         }
     }
 }

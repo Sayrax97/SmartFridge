@@ -45,7 +45,7 @@ namespace SmartFridge.Adapters
             vh.TitleTextView.Text = recipes[position].Name;
             vh.ShortDescTextView.Text = recipes[position].Description;
             vh.ShortDescTextView.Text = recipes[position].Description.Substring
-              (0, recipes[position].Description.Length < 50 ? recipes[position].Description.Length : 50) + "...";
+              (0, recipes[position].Description.Length < 80 ? recipes[position].Description.Length : 80) + "...";
             //vh.RecipeImage.SetImageDrawable(context.GetDrawable
                 //(context.Resources.GetIdentifier(recipes[position].Image,"drawable",context.PackageName)));
             vh.ItemView.Click += ItemView_Click;

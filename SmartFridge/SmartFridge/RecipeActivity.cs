@@ -98,7 +98,8 @@ namespace SmartFridge
                     foreach (var grocery in groceryList.Groceries)
                     {
                         ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries.Find(x => x.Name == grocery.Name).Amount -= grocery.Amount;
-                        groceriesListView.Adapter = new GroceryListItemAdapter(groceryList.Groceries, this, true);
+                        //proxy
+                        Finish();
                     }
                     break;
                 case Resource.Id.menu_addToCart:
@@ -107,13 +108,16 @@ namespace SmartFridge
                         if (!CheckIfIsAvailable(grocery))
                         {
                             ChamberOfSecrets.Instance.group.ShoppingCart.AddToList(grocery);
+                            //proxy
                         }
                     }
+                    Finish();
                     break;
                 case Resource.Id.menu_feedback:
                     //Ovo ce da se odradi kad se rade notifikacije
                     break;
             }
+            Finish();
         }
 
         private void PutOnScreen()
@@ -124,7 +128,8 @@ namespace SmartFridge
 
         private bool CheckIfIsAvailable(Grocery grocery)
         {
-            return ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries.Exists(x => x.Name == grocery.Name);
+            return ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries.Exists
+                (x => x.Name == grocery.Name && x.Amount>=grocery.Amount);
         }
     }
 }

@@ -43,7 +43,6 @@ namespace SmartFridge.Model
         public void AddToList(Grocery grocery)
         {
             Groceries.AddToList(grocery);
-            //Groceries.Sort();
         }
 
         public void AddImage()

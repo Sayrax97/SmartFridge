@@ -24,13 +24,12 @@ namespace SmartFridge
     {
         private Toolbar mainTopToolbar;
         private BottomNavigationView mainBottomNavigationView;
-        private FrameLayout contentMainFrameLayout;
         private DrawerLayout mainDrawerLayout;
         private NavigationView drawerMainNavigationView;
-        private Recipe recipeOfTheDay;
         private ImageView recipeImageView;
         private TextView recipeNameTextView;
-        private TextView recipeDescriptioTextView;
+        private TextView recipeDescriptionTextView;
+        private Recipe recipeOfTheDay;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -51,8 +50,17 @@ namespace SmartFridge
             var random = new Random();
             recipeOfTheDay =
                 ChamberOfSecrets.Instance.group.Recipes[random.Next(0, ChamberOfSecrets.Instance.group.Recipes.Count)];
-            recipeNameTextView.Text = recipeOfTheDay.Name;
-            recipeDescriptioTextView.Text = recipeOfTheDay.Description;
+            recipeNameTextView.Text = recipeOfTheDay.Name ;
+            recipeDescriptionTextView.Text = recipeOfTheDay.Description.Substring
+                       (0, recipeOfTheDay.Description.Length < 80 ? recipeOfTheDay.Description.Length : 80) + "...";
+            recipeImageView.Click += RecipeImageView_Click;
+        }
+
+        private void RecipeImageView_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(RecipeActivity));
+            intent.PutExtra("recept", JsonConvert.SerializeObject(recipeOfTheDay));
+            StartActivity(intent);
         }
 
         private void MainBottomNavigationView_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
@@ -130,7 +138,7 @@ namespace SmartFridge
             mainDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawerMain);
             recipeImageView = FindViewById<ImageView>(Resource.Id.imageRecipe);
             recipeNameTextView = FindViewById<TextView>(Resource.Id.txtRecipeName);
-            recipeDescriptioTextView = FindViewById<TextView>(Resource.Id.txtRecipeDescription);
+            recipeDescriptionTextView = FindViewById<TextView>(Resource.Id.txtRecipeDescription);
         }
     }
 }

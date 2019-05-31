@@ -23,9 +23,11 @@ namespace SmartFridge.Adapters
         {
             this.myGroup = myGroup;
             this.context = context;
-            status= new List<string>();
-            status.Add(Status.Potrosac.ToString());
-            status.Add(Status.Nabavljac.ToString());
+            status = new List<string>
+            {
+                Status.Potrosac.ToString(),
+                Status.Nabavljac.ToString()
+            };
         }
 
         public override long GetItemId(int position)
@@ -50,11 +52,16 @@ namespace SmartFridge.Adapters
             void RemoveClick(object sender, EventArgs e)
             {
                 ChamberOfSecrets.Instance.group.MyGroupMembers.RemoveAt(position);
+                //proxy
+                if (context is MyGroupActivity activity)
+                {
+                    activity.Update();
+                }
             }
 
             void SpinnerItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
             {
-                //ovo se u bazi menja
+                //proxy
             }
 
             if (ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Supervizor ||
@@ -63,7 +70,7 @@ namespace SmartFridge.Adapters
                 remove.Visibility = ViewStates.Visible;
                 spinner.Visibility = ViewStates.Visible;
                 remove.Click += RemoveClick;
-                spinner.Adapter= new ArrayAdapter(context,Resource.Id.list_item,status);
+                spinner.Adapter= new ArrayAdapter(context,Resource.Layout.support_simple_spinner_dropdown_item,status);
                 spinner.ItemSelected += SpinnerItemSelected;
             }
 

@@ -13,6 +13,7 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
+using SmartFridge.Dialogs;
 using SmartFridge.Model;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 
@@ -61,9 +62,10 @@ namespace SmartFridge
             surNameTextView = FindViewById<TextView>(Resource.Id.textViewSurName);
             emailTextView = FindViewById<TextView>(Resource.Id.textViewEmail);
             profilePictureImageButton = FindViewById<ImageButton>(Resource.Id.imageBtnPictureMyProfile);
+            topToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyProfile);
             changeUsernameButton = FindViewById<Button>(Resource.Id.btnChangeUsername);
             changePasswordButton = FindViewById<Button>(Resource.Id.btnChangePassword);
-            topToolbar = FindViewById<Toolbar>(Resource.Id.toolbarMyProfile);
+            changePasswordButton.Click += ChangePasswordButton_Click;
 
             user = ChamberOfSecrets.Instance.LoggedUser;
             userNameTextView.Text = user.UserName;
@@ -71,6 +73,19 @@ namespace SmartFridge
             nameTextView.Text = user.Name;
             surNameTextView.Text = user.SurName;
             emailTextView.Text = user.Email;
+        }
+
+        private void ChangePasswordButton_Click(object sender, EventArgs e)
+        {
+            FragmentTransaction ft = FragmentManager.BeginTransaction();
+            Fragment prev = FragmentManager.FindFragmentByTag("Promena Sifre");
+            if (prev != null)
+            {
+                ft.Remove(prev);
+            }
+            ft.AddToBackStack(null);
+            ChangePasswordDialog newFragment = new ChangePasswordDialog();
+            newFragment.Show(ft, "Promena Sifre");
         }
 
         private string ToPassword(string s)

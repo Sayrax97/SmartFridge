@@ -74,24 +74,10 @@ namespace SmartFridge.Dialogs
                 if (this.Activity.GetType() == typeof(GroceriesActivity))
                 {
                     ChamberOfSecrets.Instance.group.AvailableGroceries.AddToList(gr);
-                    //ChamberOfSecrets.Proxy.dbInsertAvailableGroceries(new AvailableGroceriesDetails()
-                    //{
-                    //    Amount = (float)gr.Amount,
-                    //    GroupID = ChamberOfSecrets.Instance.group.Id,
-                    //    Grocery = gr.GetGroceryDetails(),
-                    //    AmountSpecified = true
-                    //});
                 }
                 else if (this.Activity.GetType() == typeof(ShoppingCartActivity))
                 {
                     ChamberOfSecrets.Instance.group.ShoppingCart.AddToList(gr);
-                    //ChamberOfSecrets.Proxy.dbInsertShoppingCart(new ShoppingCartDetails()
-                    //{
-                    //    Amount = (float)gr.Amount,
-                    //    GroupID = ChamberOfSecrets.Instance.group.Id,
-                    //    Grocery = gr.GetGroceryDetails(),
-                    //    AmountSpecified = true
-                    //});
                 }
 
                 Dismiss();
