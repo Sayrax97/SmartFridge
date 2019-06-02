@@ -87,9 +87,9 @@ namespace SmartFridge
             recipe = JsonConvert.DeserializeObject<Recipe>(Intent.GetStringExtra("recept"));
             groceryList = recipe.Groceries;
             recipe.Groceries.SetDefault();
-            //Bitmap bitmap = BitmapFactory.DecodeByteArray(recipe.Image ,0, recipe.Image.Length);
-            //400*400
-            //recipeImageView.SetImageBitmap(bitmap);
+            Bitmap bitmap = BitmapFactory.DecodeByteArray(recipe.Image, 0, recipe.Image.Length);
+            var bitmapdScaled = Bitmap.CreateScaledBitmap(bitmap, 400, 400, false);
+            recipeImageView.SetImageBitmap(bitmapdScaled);
         }
 
         private void RecipeBottomNavigationView_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)

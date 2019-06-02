@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Security.Cryptography;
@@ -16,8 +17,10 @@ using Android.Widget;
 using Newtonsoft.Json;
 using SmartFridge.Model;
 using System.ServiceModel;
+using Android.Graphics;
 using Android.Net;
 using SmartFridge.WebReference;
+using Option = SmartFridge.Model.Option;
 
 namespace SmartFridge
 {
@@ -36,6 +39,7 @@ namespace SmartFridge
         private CheckBox groupCheckBox;
         private EditText groupIdEditText;
         private string random;
+        private byte[] bitData;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -61,6 +65,7 @@ namespace SmartFridge
             nameEditText = FindViewById<EditText>(Resource.Id.editTxtNameCreateAcc);
             surnameEditText = FindViewById<EditText>(Resource.Id.editTxtSurNameCreateAcc);
             pictureImageButton = FindViewById<ImageButton>(Resource.Id.imagebtnPictureCreateAcc);
+            pictureImageButton.Click += PictureImageButton_Click;
             okButton = FindViewById<Button>(Resource.Id.btnOkCreateAcc);
             cancelButton = FindViewById<Button>(Resource.Id.btnCancelCreateAcc);
             groupCheckBox = FindViewById<CheckBox>(Resource.Id.checkBoxGroup);
@@ -69,6 +74,30 @@ namespace SmartFridge
             if (groupCheckBox.Checked == false)
             {
                 groupIdEditText.Visibility = ViewStates.Gone;
+            }
+        }
+
+        private void PictureImageButton_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent();
+            intent.SetType("image/*");
+            intent.SetAction(Intent.ActionGetContent);
+            StartActivityForResult(Intent.CreateChooser(intent, "Izabrite sliku"), 0);
+        }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            if (resultCode == Result.Ok)
+            {
+                Stream stream = ContentResolver.OpenInputStream(data.Data);
+                var bitmap = BitmapFactory.DecodeStream(stream);
+                var bitmapScaled = Bitmap.CreateScaledBitmap(bitmap, 250, 250, false);
+                pictureImageButton.SetImageBitmap(bitmapScaled);
+                var memStream = new MemoryStream();
+                var bitmapScaled2 = Bitmap.CreateScaledBitmap(bitmap, 500, 500, false);
+                bitmapScaled2.Compress(Bitmap.CompressFormat.Png, 0, memStream);
+                bitData = memStream.ToArray();
             }
         }
 
@@ -119,7 +148,7 @@ namespace SmartFridge
             else
             {
                 ChamberOfSecrets.Instance.LoggedUser = new User(nameEditText.Text, surnameEditText.Text, usernameEditText.Text,
-                passwordEditText.Text, emailEditText.Text, new byte[1])
+                passwordEditText.Text, emailEditText.Text, bitData)
                 {
                     MyOptions = new Option()
                 };

@@ -6,13 +6,11 @@
     android:layout_height="100dp">
 	<ImageView
 		android:src="@drawable/iconsmartfridge"
-		android:layout_weight="70"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
+		android:layout_width="200px"
+		android:layout_height="200px"
 		android:id="@+id/imageRecipe" />
 	<LinearLayout
 		android:orientation="vertical"
-		android:layout_weight="30"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:id="@+id/linearLayout1" >

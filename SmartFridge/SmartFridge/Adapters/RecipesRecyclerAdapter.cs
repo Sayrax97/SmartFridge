@@ -53,9 +53,10 @@ namespace SmartFridge.Adapters
             vh.ShortDescTextView.Text = recipes[position].Description;
             vh.ShortDescTextView.Text = recipes[position].Description.Substring
               (0, recipes[position].Description.Length < 80 ? recipes[position].Description.Length : 80) + "...";
-            //Bitmap bitmap = BitmapFactory.DecodeByteArray(ChamberOfSecrets.Instance.group.Recipes[position].Image,
-            //    0, ChamberOfSecrets.Instance.group.Recipes[position].Image.Length);
-            //vh.RecipeImage.SetImageBitmap(bitmap);
+            Bitmap bitmap = BitmapFactory.DecodeByteArray(ChamberOfSecrets.Instance.group.Recipes[position].Image,
+                0, ChamberOfSecrets.Instance.group.Recipes[position].Image.Length);
+            var bitmapScaled = Bitmap.CreateScaledBitmap(bitmap, 200, 200, false);
+            vh.RecipeImage.SetImageBitmap(bitmapScaled);
             vh.ItemView.Click += ItemViewClick;
         }
 
