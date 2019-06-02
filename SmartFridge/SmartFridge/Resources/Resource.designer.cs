@@ -26,6 +26,1945 @@ namespace SmartFridge
 		
 		public static void UpdateIdValues()
 		{
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_fade_in = global::SmartFridge.Resource.Animation.abc_fade_in;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_fade_out = global::SmartFridge.Resource.Animation.abc_fade_out;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_grow_fade_in_from_bottom = global::SmartFridge.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_popup_enter = global::SmartFridge.Resource.Animation.abc_popup_enter;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_popup_exit = global::SmartFridge.Resource.Animation.abc_popup_exit;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_shrink_fade_out_from_bottom = global::SmartFridge.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_slide_in_bottom = global::SmartFridge.Resource.Animation.abc_slide_in_bottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_slide_in_top = global::SmartFridge.Resource.Animation.abc_slide_in_top;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_slide_out_bottom = global::SmartFridge.Resource.Animation.abc_slide_out_bottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.abc_slide_out_top = global::SmartFridge.Resource.Animation.abc_slide_out_top;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.design_bottom_sheet_slide_in = global::SmartFridge.Resource.Animation.design_bottom_sheet_slide_in;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.design_bottom_sheet_slide_out = global::SmartFridge.Resource.Animation.design_bottom_sheet_slide_out;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.design_snackbar_in = global::SmartFridge.Resource.Animation.design_snackbar_in;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.design_snackbar_out = global::SmartFridge.Resource.Animation.design_snackbar_out;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.tooltip_enter = global::SmartFridge.Resource.Animation.tooltip_enter;
+			global::PCLAppConfig.FileSystemStream.Resource.Animation.tooltip_exit = global::SmartFridge.Resource.Animation.tooltip_exit;
+			global::PCLAppConfig.FileSystemStream.Resource.Animator.design_appbar_state_list_animator = global::SmartFridge.Resource.Animator.design_appbar_state_list_animator;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarDivider = global::SmartFridge.Resource.Attribute.actionBarDivider;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarItemBackground = global::SmartFridge.Resource.Attribute.actionBarItemBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarPopupTheme = global::SmartFridge.Resource.Attribute.actionBarPopupTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarSize = global::SmartFridge.Resource.Attribute.actionBarSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarSplitStyle = global::SmartFridge.Resource.Attribute.actionBarSplitStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarStyle = global::SmartFridge.Resource.Attribute.actionBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarTabBarStyle = global::SmartFridge.Resource.Attribute.actionBarTabBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarTabStyle = global::SmartFridge.Resource.Attribute.actionBarTabStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarTabTextStyle = global::SmartFridge.Resource.Attribute.actionBarTabTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarTheme = global::SmartFridge.Resource.Attribute.actionBarTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionBarWidgetTheme = global::SmartFridge.Resource.Attribute.actionBarWidgetTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionButtonStyle = global::SmartFridge.Resource.Attribute.actionButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionDropDownStyle = global::SmartFridge.Resource.Attribute.actionDropDownStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionLayout = global::SmartFridge.Resource.Attribute.actionLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionMenuTextAppearance = global::SmartFridge.Resource.Attribute.actionMenuTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionMenuTextColor = global::SmartFridge.Resource.Attribute.actionMenuTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeBackground = global::SmartFridge.Resource.Attribute.actionModeBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeCloseButtonStyle = global::SmartFridge.Resource.Attribute.actionModeCloseButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeCloseDrawable = global::SmartFridge.Resource.Attribute.actionModeCloseDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeCopyDrawable = global::SmartFridge.Resource.Attribute.actionModeCopyDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeCutDrawable = global::SmartFridge.Resource.Attribute.actionModeCutDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeFindDrawable = global::SmartFridge.Resource.Attribute.actionModeFindDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModePasteDrawable = global::SmartFridge.Resource.Attribute.actionModePasteDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModePopupWindowStyle = global::SmartFridge.Resource.Attribute.actionModePopupWindowStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeSelectAllDrawable = global::SmartFridge.Resource.Attribute.actionModeSelectAllDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeShareDrawable = global::SmartFridge.Resource.Attribute.actionModeShareDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeSplitBackground = global::SmartFridge.Resource.Attribute.actionModeSplitBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeStyle = global::SmartFridge.Resource.Attribute.actionModeStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionModeWebSearchDrawable = global::SmartFridge.Resource.Attribute.actionModeWebSearchDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionOverflowButtonStyle = global::SmartFridge.Resource.Attribute.actionOverflowButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionOverflowMenuStyle = global::SmartFridge.Resource.Attribute.actionOverflowMenuStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionProviderClass = global::SmartFridge.Resource.Attribute.actionProviderClass;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.actionViewClass = global::SmartFridge.Resource.Attribute.actionViewClass;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.activityChooserViewStyle = global::SmartFridge.Resource.Attribute.activityChooserViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.alertDialogButtonGroupStyle = global::SmartFridge.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.alertDialogCenterButtons = global::SmartFridge.Resource.Attribute.alertDialogCenterButtons;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.alertDialogStyle = global::SmartFridge.Resource.Attribute.alertDialogStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.alertDialogTheme = global::SmartFridge.Resource.Attribute.alertDialogTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.allowStacking = global::SmartFridge.Resource.Attribute.allowStacking;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.alpha = global::SmartFridge.Resource.Attribute.alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.alphabeticModifiers = global::SmartFridge.Resource.Attribute.alphabeticModifiers;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.arrowHeadLength = global::SmartFridge.Resource.Attribute.arrowHeadLength;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.arrowShaftLength = global::SmartFridge.Resource.Attribute.arrowShaftLength;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.autoCompleteTextViewStyle = global::SmartFridge.Resource.Attribute.autoCompleteTextViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.autoSizeMaxTextSize = global::SmartFridge.Resource.Attribute.autoSizeMaxTextSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.autoSizeMinTextSize = global::SmartFridge.Resource.Attribute.autoSizeMinTextSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.autoSizePresetSizes = global::SmartFridge.Resource.Attribute.autoSizePresetSizes;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.autoSizeStepGranularity = global::SmartFridge.Resource.Attribute.autoSizeStepGranularity;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.autoSizeTextType = global::SmartFridge.Resource.Attribute.autoSizeTextType;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.background = global::SmartFridge.Resource.Attribute.background;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.backgroundSplit = global::SmartFridge.Resource.Attribute.backgroundSplit;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.backgroundStacked = global::SmartFridge.Resource.Attribute.backgroundStacked;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.backgroundTint = global::SmartFridge.Resource.Attribute.backgroundTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.backgroundTintMode = global::SmartFridge.Resource.Attribute.backgroundTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.barLength = global::SmartFridge.Resource.Attribute.barLength;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.behavior_autoHide = global::SmartFridge.Resource.Attribute.behavior_autoHide;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.behavior_hideable = global::SmartFridge.Resource.Attribute.behavior_hideable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.behavior_overlapTop = global::SmartFridge.Resource.Attribute.behavior_overlapTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.behavior_peekHeight = global::SmartFridge.Resource.Attribute.behavior_peekHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.behavior_skipCollapsed = global::SmartFridge.Resource.Attribute.behavior_skipCollapsed;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.borderWidth = global::SmartFridge.Resource.Attribute.borderWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.borderlessButtonStyle = global::SmartFridge.Resource.Attribute.borderlessButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.bottomSheetDialogTheme = global::SmartFridge.Resource.Attribute.bottomSheetDialogTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.bottomSheetStyle = global::SmartFridge.Resource.Attribute.bottomSheetStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonBarButtonStyle = global::SmartFridge.Resource.Attribute.buttonBarButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonBarNegativeButtonStyle = global::SmartFridge.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonBarNeutralButtonStyle = global::SmartFridge.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonBarPositiveButtonStyle = global::SmartFridge.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonBarStyle = global::SmartFridge.Resource.Attribute.buttonBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonGravity = global::SmartFridge.Resource.Attribute.buttonGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonPanelSideLayout = global::SmartFridge.Resource.Attribute.buttonPanelSideLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonStyle = global::SmartFridge.Resource.Attribute.buttonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonStyleSmall = global::SmartFridge.Resource.Attribute.buttonStyleSmall;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonTint = global::SmartFridge.Resource.Attribute.buttonTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.buttonTintMode = global::SmartFridge.Resource.Attribute.buttonTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.checkboxStyle = global::SmartFridge.Resource.Attribute.checkboxStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.checkedTextViewStyle = global::SmartFridge.Resource.Attribute.checkedTextViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.closeIcon = global::SmartFridge.Resource.Attribute.closeIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.closeItemLayout = global::SmartFridge.Resource.Attribute.closeItemLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.collapseContentDescription = global::SmartFridge.Resource.Attribute.collapseContentDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.collapseIcon = global::SmartFridge.Resource.Attribute.collapseIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.collapsedTitleGravity = global::SmartFridge.Resource.Attribute.collapsedTitleGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.collapsedTitleTextAppearance = global::SmartFridge.Resource.Attribute.collapsedTitleTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.color = global::SmartFridge.Resource.Attribute.color;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorAccent = global::SmartFridge.Resource.Attribute.colorAccent;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorBackgroundFloating = global::SmartFridge.Resource.Attribute.colorBackgroundFloating;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorButtonNormal = global::SmartFridge.Resource.Attribute.colorButtonNormal;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorControlActivated = global::SmartFridge.Resource.Attribute.colorControlActivated;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorControlHighlight = global::SmartFridge.Resource.Attribute.colorControlHighlight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorControlNormal = global::SmartFridge.Resource.Attribute.colorControlNormal;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorError = global::SmartFridge.Resource.Attribute.colorError;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorPrimary = global::SmartFridge.Resource.Attribute.colorPrimary;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorPrimaryDark = global::SmartFridge.Resource.Attribute.colorPrimaryDark;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.colorSwitchThumbNormal = global::SmartFridge.Resource.Attribute.colorSwitchThumbNormal;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.commitIcon = global::SmartFridge.Resource.Attribute.commitIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentDescription = global::SmartFridge.Resource.Attribute.contentDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentInsetEnd = global::SmartFridge.Resource.Attribute.contentInsetEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentInsetEndWithActions = global::SmartFridge.Resource.Attribute.contentInsetEndWithActions;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentInsetLeft = global::SmartFridge.Resource.Attribute.contentInsetLeft;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentInsetRight = global::SmartFridge.Resource.Attribute.contentInsetRight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentInsetStart = global::SmartFridge.Resource.Attribute.contentInsetStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentInsetStartWithNavigation = global::SmartFridge.Resource.Attribute.contentInsetStartWithNavigation;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.contentScrim = global::SmartFridge.Resource.Attribute.contentScrim;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.controlBackground = global::SmartFridge.Resource.Attribute.controlBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.counterEnabled = global::SmartFridge.Resource.Attribute.counterEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.counterMaxLength = global::SmartFridge.Resource.Attribute.counterMaxLength;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.counterOverflowTextAppearance = global::SmartFridge.Resource.Attribute.counterOverflowTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.counterTextAppearance = global::SmartFridge.Resource.Attribute.counterTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.customNavigationLayout = global::SmartFridge.Resource.Attribute.customNavigationLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.defaultQueryHint = global::SmartFridge.Resource.Attribute.defaultQueryHint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.dialogPreferredPadding = global::SmartFridge.Resource.Attribute.dialogPreferredPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.dialogTheme = global::SmartFridge.Resource.Attribute.dialogTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.displayOptions = global::SmartFridge.Resource.Attribute.displayOptions;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.divider = global::SmartFridge.Resource.Attribute.divider;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.dividerHorizontal = global::SmartFridge.Resource.Attribute.dividerHorizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.dividerPadding = global::SmartFridge.Resource.Attribute.dividerPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.dividerVertical = global::SmartFridge.Resource.Attribute.dividerVertical;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.drawableSize = global::SmartFridge.Resource.Attribute.drawableSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.drawerArrowStyle = global::SmartFridge.Resource.Attribute.drawerArrowStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.dropDownListViewStyle = global::SmartFridge.Resource.Attribute.dropDownListViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.dropdownListPreferredItemHeight = global::SmartFridge.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.editTextBackground = global::SmartFridge.Resource.Attribute.editTextBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.editTextColor = global::SmartFridge.Resource.Attribute.editTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.editTextStyle = global::SmartFridge.Resource.Attribute.editTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.elevation = global::SmartFridge.Resource.Attribute.elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.errorEnabled = global::SmartFridge.Resource.Attribute.errorEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.errorTextAppearance = global::SmartFridge.Resource.Attribute.errorTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expandActivityOverflowButtonDrawable = global::SmartFridge.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expanded = global::SmartFridge.Resource.Attribute.expanded;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expandedTitleGravity = global::SmartFridge.Resource.Attribute.expandedTitleGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expandedTitleMargin = global::SmartFridge.Resource.Attribute.expandedTitleMargin;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expandedTitleMarginBottom = global::SmartFridge.Resource.Attribute.expandedTitleMarginBottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expandedTitleMarginEnd = global::SmartFridge.Resource.Attribute.expandedTitleMarginEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expandedTitleMarginStart = global::SmartFridge.Resource.Attribute.expandedTitleMarginStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expandedTitleMarginTop = global::SmartFridge.Resource.Attribute.expandedTitleMarginTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.expandedTitleTextAppearance = global::SmartFridge.Resource.Attribute.expandedTitleTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fabSize = global::SmartFridge.Resource.Attribute.fabSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fastScrollEnabled = global::SmartFridge.Resource.Attribute.fastScrollEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::SmartFridge.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::SmartFridge.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fastScrollVerticalThumbDrawable = global::SmartFridge.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fastScrollVerticalTrackDrawable = global::SmartFridge.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.font = global::SmartFridge.Resource.Attribute.font;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontFamily = global::SmartFridge.Resource.Attribute.fontFamily;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontProviderAuthority = global::SmartFridge.Resource.Attribute.fontProviderAuthority;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontProviderCerts = global::SmartFridge.Resource.Attribute.fontProviderCerts;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontProviderFetchStrategy = global::SmartFridge.Resource.Attribute.fontProviderFetchStrategy;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontProviderFetchTimeout = global::SmartFridge.Resource.Attribute.fontProviderFetchTimeout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontProviderPackage = global::SmartFridge.Resource.Attribute.fontProviderPackage;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontProviderQuery = global::SmartFridge.Resource.Attribute.fontProviderQuery;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontStyle = global::SmartFridge.Resource.Attribute.fontStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.fontWeight = global::SmartFridge.Resource.Attribute.fontWeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.foregroundInsidePadding = global::SmartFridge.Resource.Attribute.foregroundInsidePadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.gapBetweenBars = global::SmartFridge.Resource.Attribute.gapBetweenBars;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.goIcon = global::SmartFridge.Resource.Attribute.goIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.headerLayout = global::SmartFridge.Resource.Attribute.headerLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.height = global::SmartFridge.Resource.Attribute.height;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.hideOnContentScroll = global::SmartFridge.Resource.Attribute.hideOnContentScroll;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.hintAnimationEnabled = global::SmartFridge.Resource.Attribute.hintAnimationEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.hintEnabled = global::SmartFridge.Resource.Attribute.hintEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.hintTextAppearance = global::SmartFridge.Resource.Attribute.hintTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.homeAsUpIndicator = global::SmartFridge.Resource.Attribute.homeAsUpIndicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.homeLayout = global::SmartFridge.Resource.Attribute.homeLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.icon = global::SmartFridge.Resource.Attribute.icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.iconTint = global::SmartFridge.Resource.Attribute.iconTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.iconTintMode = global::SmartFridge.Resource.Attribute.iconTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.iconifiedByDefault = global::SmartFridge.Resource.Attribute.iconifiedByDefault;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.imageButtonStyle = global::SmartFridge.Resource.Attribute.imageButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.indeterminateProgressStyle = global::SmartFridge.Resource.Attribute.indeterminateProgressStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.initialActivityCount = global::SmartFridge.Resource.Attribute.initialActivityCount;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.insetForeground = global::SmartFridge.Resource.Attribute.insetForeground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.isLightTheme = global::SmartFridge.Resource.Attribute.isLightTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.itemBackground = global::SmartFridge.Resource.Attribute.itemBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.itemIconTint = global::SmartFridge.Resource.Attribute.itemIconTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.itemPadding = global::SmartFridge.Resource.Attribute.itemPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.itemTextAppearance = global::SmartFridge.Resource.Attribute.itemTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.itemTextColor = global::SmartFridge.Resource.Attribute.itemTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.keylines = global::SmartFridge.Resource.Attribute.keylines;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout = global::SmartFridge.Resource.Attribute.layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layoutManager = global::SmartFridge.Resource.Attribute.layoutManager;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_anchor = global::SmartFridge.Resource.Attribute.layout_anchor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_anchorGravity = global::SmartFridge.Resource.Attribute.layout_anchorGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_behavior = global::SmartFridge.Resource.Attribute.layout_behavior;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_collapseMode = global::SmartFridge.Resource.Attribute.layout_collapseMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_collapseParallaxMultiplier = global::SmartFridge.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_dodgeInsetEdges = global::SmartFridge.Resource.Attribute.layout_dodgeInsetEdges;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_insetEdge = global::SmartFridge.Resource.Attribute.layout_insetEdge;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_keyline = global::SmartFridge.Resource.Attribute.layout_keyline;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_scrollFlags = global::SmartFridge.Resource.Attribute.layout_scrollFlags;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.layout_scrollInterpolator = global::SmartFridge.Resource.Attribute.layout_scrollInterpolator;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listChoiceBackgroundIndicator = global::SmartFridge.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listDividerAlertDialog = global::SmartFridge.Resource.Attribute.listDividerAlertDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listItemLayout = global::SmartFridge.Resource.Attribute.listItemLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listLayout = global::SmartFridge.Resource.Attribute.listLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listMenuViewStyle = global::SmartFridge.Resource.Attribute.listMenuViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listPopupWindowStyle = global::SmartFridge.Resource.Attribute.listPopupWindowStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listPreferredItemHeight = global::SmartFridge.Resource.Attribute.listPreferredItemHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listPreferredItemHeightLarge = global::SmartFridge.Resource.Attribute.listPreferredItemHeightLarge;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listPreferredItemHeightSmall = global::SmartFridge.Resource.Attribute.listPreferredItemHeightSmall;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listPreferredItemPaddingLeft = global::SmartFridge.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.listPreferredItemPaddingRight = global::SmartFridge.Resource.Attribute.listPreferredItemPaddingRight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.logo = global::SmartFridge.Resource.Attribute.logo;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.logoDescription = global::SmartFridge.Resource.Attribute.logoDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.maxActionInlineWidth = global::SmartFridge.Resource.Attribute.maxActionInlineWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.maxButtonHeight = global::SmartFridge.Resource.Attribute.maxButtonHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.measureWithLargestChild = global::SmartFridge.Resource.Attribute.measureWithLargestChild;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.menu = global::SmartFridge.Resource.Attribute.menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.multiChoiceItemLayout = global::SmartFridge.Resource.Attribute.multiChoiceItemLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.navigationContentDescription = global::SmartFridge.Resource.Attribute.navigationContentDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.navigationIcon = global::SmartFridge.Resource.Attribute.navigationIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.navigationMode = global::SmartFridge.Resource.Attribute.navigationMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.numericModifiers = global::SmartFridge.Resource.Attribute.numericModifiers;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.overlapAnchor = global::SmartFridge.Resource.Attribute.overlapAnchor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.paddingBottomNoButtons = global::SmartFridge.Resource.Attribute.paddingBottomNoButtons;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.paddingEnd = global::SmartFridge.Resource.Attribute.paddingEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.paddingStart = global::SmartFridge.Resource.Attribute.paddingStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.paddingTopNoTitle = global::SmartFridge.Resource.Attribute.paddingTopNoTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.panelBackground = global::SmartFridge.Resource.Attribute.panelBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.panelMenuListTheme = global::SmartFridge.Resource.Attribute.panelMenuListTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.panelMenuListWidth = global::SmartFridge.Resource.Attribute.panelMenuListWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.passwordToggleContentDescription = global::SmartFridge.Resource.Attribute.passwordToggleContentDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.passwordToggleDrawable = global::SmartFridge.Resource.Attribute.passwordToggleDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.passwordToggleEnabled = global::SmartFridge.Resource.Attribute.passwordToggleEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.passwordToggleTint = global::SmartFridge.Resource.Attribute.passwordToggleTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.passwordToggleTintMode = global::SmartFridge.Resource.Attribute.passwordToggleTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.popupMenuStyle = global::SmartFridge.Resource.Attribute.popupMenuStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.popupTheme = global::SmartFridge.Resource.Attribute.popupTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.popupWindowStyle = global::SmartFridge.Resource.Attribute.popupWindowStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.preserveIconSpacing = global::SmartFridge.Resource.Attribute.preserveIconSpacing;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.pressedTranslationZ = global::SmartFridge.Resource.Attribute.pressedTranslationZ;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.progressBarPadding = global::SmartFridge.Resource.Attribute.progressBarPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.progressBarStyle = global::SmartFridge.Resource.Attribute.progressBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.queryBackground = global::SmartFridge.Resource.Attribute.queryBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.queryHint = global::SmartFridge.Resource.Attribute.queryHint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.radioButtonStyle = global::SmartFridge.Resource.Attribute.radioButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.ratingBarStyle = global::SmartFridge.Resource.Attribute.ratingBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.ratingBarStyleIndicator = global::SmartFridge.Resource.Attribute.ratingBarStyleIndicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.ratingBarStyleSmall = global::SmartFridge.Resource.Attribute.ratingBarStyleSmall;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.reverseLayout = global::SmartFridge.Resource.Attribute.reverseLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.rippleColor = global::SmartFridge.Resource.Attribute.rippleColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.scrimAnimationDuration = global::SmartFridge.Resource.Attribute.scrimAnimationDuration;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.scrimVisibleHeightTrigger = global::SmartFridge.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.searchHintIcon = global::SmartFridge.Resource.Attribute.searchHintIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.searchIcon = global::SmartFridge.Resource.Attribute.searchIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.searchViewStyle = global::SmartFridge.Resource.Attribute.searchViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.seekBarStyle = global::SmartFridge.Resource.Attribute.seekBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.selectableItemBackground = global::SmartFridge.Resource.Attribute.selectableItemBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.selectableItemBackgroundBorderless = global::SmartFridge.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.showAsAction = global::SmartFridge.Resource.Attribute.showAsAction;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.showDividers = global::SmartFridge.Resource.Attribute.showDividers;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.showText = global::SmartFridge.Resource.Attribute.showText;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.showTitle = global::SmartFridge.Resource.Attribute.showTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.singleChoiceItemLayout = global::SmartFridge.Resource.Attribute.singleChoiceItemLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.spanCount = global::SmartFridge.Resource.Attribute.spanCount;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.spinBars = global::SmartFridge.Resource.Attribute.spinBars;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.spinnerDropDownItemStyle = global::SmartFridge.Resource.Attribute.spinnerDropDownItemStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.spinnerStyle = global::SmartFridge.Resource.Attribute.spinnerStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.splitTrack = global::SmartFridge.Resource.Attribute.splitTrack;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.srcCompat = global::SmartFridge.Resource.Attribute.srcCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.stackFromEnd = global::SmartFridge.Resource.Attribute.stackFromEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.state_above_anchor = global::SmartFridge.Resource.Attribute.state_above_anchor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.state_collapsed = global::SmartFridge.Resource.Attribute.state_collapsed;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.state_collapsible = global::SmartFridge.Resource.Attribute.state_collapsible;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.statusBarBackground = global::SmartFridge.Resource.Attribute.statusBarBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.statusBarScrim = global::SmartFridge.Resource.Attribute.statusBarScrim;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.subMenuArrow = global::SmartFridge.Resource.Attribute.subMenuArrow;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.submitBackground = global::SmartFridge.Resource.Attribute.submitBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.subtitle = global::SmartFridge.Resource.Attribute.subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.subtitleTextAppearance = global::SmartFridge.Resource.Attribute.subtitleTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.subtitleTextColor = global::SmartFridge.Resource.Attribute.subtitleTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.subtitleTextStyle = global::SmartFridge.Resource.Attribute.subtitleTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.suggestionRowLayout = global::SmartFridge.Resource.Attribute.suggestionRowLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.switchMinWidth = global::SmartFridge.Resource.Attribute.switchMinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.switchPadding = global::SmartFridge.Resource.Attribute.switchPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.switchStyle = global::SmartFridge.Resource.Attribute.switchStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.switchTextAppearance = global::SmartFridge.Resource.Attribute.switchTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabBackground = global::SmartFridge.Resource.Attribute.tabBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabContentStart = global::SmartFridge.Resource.Attribute.tabContentStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabGravity = global::SmartFridge.Resource.Attribute.tabGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabIndicatorColor = global::SmartFridge.Resource.Attribute.tabIndicatorColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabIndicatorHeight = global::SmartFridge.Resource.Attribute.tabIndicatorHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabMaxWidth = global::SmartFridge.Resource.Attribute.tabMaxWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabMinWidth = global::SmartFridge.Resource.Attribute.tabMinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabMode = global::SmartFridge.Resource.Attribute.tabMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabPadding = global::SmartFridge.Resource.Attribute.tabPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabPaddingBottom = global::SmartFridge.Resource.Attribute.tabPaddingBottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabPaddingEnd = global::SmartFridge.Resource.Attribute.tabPaddingEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabPaddingStart = global::SmartFridge.Resource.Attribute.tabPaddingStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabPaddingTop = global::SmartFridge.Resource.Attribute.tabPaddingTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabSelectedTextColor = global::SmartFridge.Resource.Attribute.tabSelectedTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabTextAppearance = global::SmartFridge.Resource.Attribute.tabTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tabTextColor = global::SmartFridge.Resource.Attribute.tabTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAllCaps = global::SmartFridge.Resource.Attribute.textAllCaps;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAppearanceLargePopupMenu = global::SmartFridge.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAppearanceListItem = global::SmartFridge.Resource.Attribute.textAppearanceListItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAppearanceListItemSecondary = global::SmartFridge.Resource.Attribute.textAppearanceListItemSecondary;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAppearanceListItemSmall = global::SmartFridge.Resource.Attribute.textAppearanceListItemSmall;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAppearancePopupMenuHeader = global::SmartFridge.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAppearanceSearchResultSubtitle = global::SmartFridge.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAppearanceSearchResultTitle = global::SmartFridge.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textAppearanceSmallPopupMenu = global::SmartFridge.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textColorAlertDialogListItem = global::SmartFridge.Resource.Attribute.textColorAlertDialogListItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textColorError = global::SmartFridge.Resource.Attribute.textColorError;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.textColorSearchUrl = global::SmartFridge.Resource.Attribute.textColorSearchUrl;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.theme = global::SmartFridge.Resource.Attribute.theme;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.thickness = global::SmartFridge.Resource.Attribute.thickness;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.thumbTextPadding = global::SmartFridge.Resource.Attribute.thumbTextPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.thumbTint = global::SmartFridge.Resource.Attribute.thumbTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.thumbTintMode = global::SmartFridge.Resource.Attribute.thumbTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tickMark = global::SmartFridge.Resource.Attribute.tickMark;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tickMarkTint = global::SmartFridge.Resource.Attribute.tickMarkTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tickMarkTintMode = global::SmartFridge.Resource.Attribute.tickMarkTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tint = global::SmartFridge.Resource.Attribute.tint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tintMode = global::SmartFridge.Resource.Attribute.tintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.title = global::SmartFridge.Resource.Attribute.title;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleEnabled = global::SmartFridge.Resource.Attribute.titleEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleMargin = global::SmartFridge.Resource.Attribute.titleMargin;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleMarginBottom = global::SmartFridge.Resource.Attribute.titleMarginBottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleMarginEnd = global::SmartFridge.Resource.Attribute.titleMarginEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleMarginStart = global::SmartFridge.Resource.Attribute.titleMarginStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleMarginTop = global::SmartFridge.Resource.Attribute.titleMarginTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleMargins = global::SmartFridge.Resource.Attribute.titleMargins;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleTextAppearance = global::SmartFridge.Resource.Attribute.titleTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleTextColor = global::SmartFridge.Resource.Attribute.titleTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.titleTextStyle = global::SmartFridge.Resource.Attribute.titleTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.toolbarId = global::SmartFridge.Resource.Attribute.toolbarId;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.toolbarNavigationButtonStyle = global::SmartFridge.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.toolbarStyle = global::SmartFridge.Resource.Attribute.toolbarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tooltipForegroundColor = global::SmartFridge.Resource.Attribute.tooltipForegroundColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tooltipFrameBackground = global::SmartFridge.Resource.Attribute.tooltipFrameBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.tooltipText = global::SmartFridge.Resource.Attribute.tooltipText;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.track = global::SmartFridge.Resource.Attribute.track;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.trackTint = global::SmartFridge.Resource.Attribute.trackTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.trackTintMode = global::SmartFridge.Resource.Attribute.trackTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.useCompatPadding = global::SmartFridge.Resource.Attribute.useCompatPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.voiceIcon = global::SmartFridge.Resource.Attribute.voiceIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowActionBar = global::SmartFridge.Resource.Attribute.windowActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowActionBarOverlay = global::SmartFridge.Resource.Attribute.windowActionBarOverlay;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowActionModeOverlay = global::SmartFridge.Resource.Attribute.windowActionModeOverlay;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowFixedHeightMajor = global::SmartFridge.Resource.Attribute.windowFixedHeightMajor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowFixedHeightMinor = global::SmartFridge.Resource.Attribute.windowFixedHeightMinor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowFixedWidthMajor = global::SmartFridge.Resource.Attribute.windowFixedWidthMajor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowFixedWidthMinor = global::SmartFridge.Resource.Attribute.windowFixedWidthMinor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowMinWidthMajor = global::SmartFridge.Resource.Attribute.windowMinWidthMajor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowMinWidthMinor = global::SmartFridge.Resource.Attribute.windowMinWidthMinor;
+			global::PCLAppConfig.FileSystemStream.Resource.Attribute.windowNoTitle = global::SmartFridge.Resource.Attribute.windowNoTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Boolean.abc_action_bar_embed_tabs = global::SmartFridge.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::PCLAppConfig.FileSystemStream.Resource.Boolean.abc_allow_stacked_button_bar = global::SmartFridge.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::PCLAppConfig.FileSystemStream.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::SmartFridge.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::PCLAppConfig.FileSystemStream.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::SmartFridge.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
+			global::PCLAppConfig.FileSystemStream.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::SmartFridge.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_background_cache_hint_selector_material_dark = global::SmartFridge.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_background_cache_hint_selector_material_light = global::SmartFridge.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_btn_colored_borderless_text_material = global::SmartFridge.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_btn_colored_text_material = global::SmartFridge.Resource.Color.abc_btn_colored_text_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_color_highlight_material = global::SmartFridge.Resource.Color.abc_color_highlight_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_hint_foreground_material_dark = global::SmartFridge.Resource.Color.abc_hint_foreground_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_hint_foreground_material_light = global::SmartFridge.Resource.Color.abc_hint_foreground_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_input_method_navigation_guard = global::SmartFridge.Resource.Color.abc_input_method_navigation_guard;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_primary_text_disable_only_material_dark = global::SmartFridge.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_primary_text_disable_only_material_light = global::SmartFridge.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_primary_text_material_dark = global::SmartFridge.Resource.Color.abc_primary_text_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_primary_text_material_light = global::SmartFridge.Resource.Color.abc_primary_text_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_search_url_text = global::SmartFridge.Resource.Color.abc_search_url_text;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_search_url_text_normal = global::SmartFridge.Resource.Color.abc_search_url_text_normal;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_search_url_text_pressed = global::SmartFridge.Resource.Color.abc_search_url_text_pressed;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_search_url_text_selected = global::SmartFridge.Resource.Color.abc_search_url_text_selected;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_secondary_text_material_dark = global::SmartFridge.Resource.Color.abc_secondary_text_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_secondary_text_material_light = global::SmartFridge.Resource.Color.abc_secondary_text_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_tint_btn_checkable = global::SmartFridge.Resource.Color.abc_tint_btn_checkable;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_tint_default = global::SmartFridge.Resource.Color.abc_tint_default;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_tint_edittext = global::SmartFridge.Resource.Color.abc_tint_edittext;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_tint_seek_thumb = global::SmartFridge.Resource.Color.abc_tint_seek_thumb;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_tint_spinner = global::SmartFridge.Resource.Color.abc_tint_spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.abc_tint_switch_track = global::SmartFridge.Resource.Color.abc_tint_switch_track;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.accent_material_dark = global::SmartFridge.Resource.Color.accent_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.accent_material_light = global::SmartFridge.Resource.Color.accent_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.background_floating_material_dark = global::SmartFridge.Resource.Color.background_floating_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.background_floating_material_light = global::SmartFridge.Resource.Color.background_floating_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.background_material_dark = global::SmartFridge.Resource.Color.background_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.background_material_light = global::SmartFridge.Resource.Color.background_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.bright_foreground_disabled_material_dark = global::SmartFridge.Resource.Color.bright_foreground_disabled_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.bright_foreground_disabled_material_light = global::SmartFridge.Resource.Color.bright_foreground_disabled_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.bright_foreground_inverse_material_dark = global::SmartFridge.Resource.Color.bright_foreground_inverse_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.bright_foreground_inverse_material_light = global::SmartFridge.Resource.Color.bright_foreground_inverse_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.bright_foreground_material_dark = global::SmartFridge.Resource.Color.bright_foreground_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.bright_foreground_material_light = global::SmartFridge.Resource.Color.bright_foreground_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.button_material_dark = global::SmartFridge.Resource.Color.button_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.button_material_light = global::SmartFridge.Resource.Color.button_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_bottom_navigation_shadow_color = global::SmartFridge.Resource.Color.design_bottom_navigation_shadow_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_error = global::SmartFridge.Resource.Color.design_error;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_fab_shadow_end_color = global::SmartFridge.Resource.Color.design_fab_shadow_end_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_fab_shadow_mid_color = global::SmartFridge.Resource.Color.design_fab_shadow_mid_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_fab_shadow_start_color = global::SmartFridge.Resource.Color.design_fab_shadow_start_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_fab_stroke_end_inner_color = global::SmartFridge.Resource.Color.design_fab_stroke_end_inner_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_fab_stroke_end_outer_color = global::SmartFridge.Resource.Color.design_fab_stroke_end_outer_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_fab_stroke_top_inner_color = global::SmartFridge.Resource.Color.design_fab_stroke_top_inner_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_fab_stroke_top_outer_color = global::SmartFridge.Resource.Color.design_fab_stroke_top_outer_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_snackbar_background_color = global::SmartFridge.Resource.Color.design_snackbar_background_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.design_tint_password_toggle = global::SmartFridge.Resource.Color.design_tint_password_toggle;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.dim_foreground_disabled_material_dark = global::SmartFridge.Resource.Color.dim_foreground_disabled_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.dim_foreground_disabled_material_light = global::SmartFridge.Resource.Color.dim_foreground_disabled_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.dim_foreground_material_dark = global::SmartFridge.Resource.Color.dim_foreground_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.dim_foreground_material_light = global::SmartFridge.Resource.Color.dim_foreground_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.error_color_material = global::SmartFridge.Resource.Color.error_color_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.foreground_material_dark = global::SmartFridge.Resource.Color.foreground_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.foreground_material_light = global::SmartFridge.Resource.Color.foreground_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.highlighted_text_material_dark = global::SmartFridge.Resource.Color.highlighted_text_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.highlighted_text_material_light = global::SmartFridge.Resource.Color.highlighted_text_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_blue_grey_800 = global::SmartFridge.Resource.Color.material_blue_grey_800;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_blue_grey_900 = global::SmartFridge.Resource.Color.material_blue_grey_900;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_blue_grey_950 = global::SmartFridge.Resource.Color.material_blue_grey_950;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_deep_teal_200 = global::SmartFridge.Resource.Color.material_deep_teal_200;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_deep_teal_500 = global::SmartFridge.Resource.Color.material_deep_teal_500;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_grey_100 = global::SmartFridge.Resource.Color.material_grey_100;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_grey_300 = global::SmartFridge.Resource.Color.material_grey_300;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_grey_50 = global::SmartFridge.Resource.Color.material_grey_50;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_grey_600 = global::SmartFridge.Resource.Color.material_grey_600;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_grey_800 = global::SmartFridge.Resource.Color.material_grey_800;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_grey_850 = global::SmartFridge.Resource.Color.material_grey_850;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.material_grey_900 = global::SmartFridge.Resource.Color.material_grey_900;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.notification_action_color_filter = global::SmartFridge.Resource.Color.notification_action_color_filter;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.notification_icon_bg_color = global::SmartFridge.Resource.Color.notification_icon_bg_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.notification_material_background_media_default_color = global::SmartFridge.Resource.Color.notification_material_background_media_default_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.primary_dark_material_dark = global::SmartFridge.Resource.Color.primary_dark_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.primary_dark_material_light = global::SmartFridge.Resource.Color.primary_dark_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.primary_material_dark = global::SmartFridge.Resource.Color.primary_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.primary_material_light = global::SmartFridge.Resource.Color.primary_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.primary_text_default_material_dark = global::SmartFridge.Resource.Color.primary_text_default_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.primary_text_default_material_light = global::SmartFridge.Resource.Color.primary_text_default_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.primary_text_disabled_material_dark = global::SmartFridge.Resource.Color.primary_text_disabled_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.primary_text_disabled_material_light = global::SmartFridge.Resource.Color.primary_text_disabled_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.ripple_material_dark = global::SmartFridge.Resource.Color.ripple_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.ripple_material_light = global::SmartFridge.Resource.Color.ripple_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.secondary_text_default_material_dark = global::SmartFridge.Resource.Color.secondary_text_default_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.secondary_text_default_material_light = global::SmartFridge.Resource.Color.secondary_text_default_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.secondary_text_disabled_material_dark = global::SmartFridge.Resource.Color.secondary_text_disabled_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.secondary_text_disabled_material_light = global::SmartFridge.Resource.Color.secondary_text_disabled_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.switch_thumb_disabled_material_dark = global::SmartFridge.Resource.Color.switch_thumb_disabled_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.switch_thumb_disabled_material_light = global::SmartFridge.Resource.Color.switch_thumb_disabled_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.switch_thumb_material_dark = global::SmartFridge.Resource.Color.switch_thumb_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.switch_thumb_material_light = global::SmartFridge.Resource.Color.switch_thumb_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.switch_thumb_normal_material_dark = global::SmartFridge.Resource.Color.switch_thumb_normal_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.switch_thumb_normal_material_light = global::SmartFridge.Resource.Color.switch_thumb_normal_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.tooltip_background_dark = global::SmartFridge.Resource.Color.tooltip_background_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Color.tooltip_background_light = global::SmartFridge.Resource.Color.tooltip_background_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_content_inset_material = global::SmartFridge.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::SmartFridge.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_default_height_material = global::SmartFridge.Resource.Dimension.abc_action_bar_default_height_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_default_padding_end_material = global::SmartFridge.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_default_padding_start_material = global::SmartFridge.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_elevation_material = global::SmartFridge.Resource.Dimension.abc_action_bar_elevation_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::SmartFridge.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::SmartFridge.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::SmartFridge.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_progress_bar_size = global::SmartFridge.Resource.Dimension.abc_action_bar_progress_bar_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_stacked_max_height = global::SmartFridge.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::SmartFridge.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::SmartFridge.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::SmartFridge.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_button_min_height_material = global::SmartFridge.Resource.Dimension.abc_action_button_min_height_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_button_min_width_material = global::SmartFridge.Resource.Dimension.abc_action_button_min_width_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_action_button_min_width_overflow_material = global::SmartFridge.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_alert_dialog_button_bar_height = global::SmartFridge.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_button_inset_horizontal_material = global::SmartFridge.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_button_inset_vertical_material = global::SmartFridge.Resource.Dimension.abc_button_inset_vertical_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_button_padding_horizontal_material = global::SmartFridge.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_button_padding_vertical_material = global::SmartFridge.Resource.Dimension.abc_button_padding_vertical_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::SmartFridge.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_config_prefDialogWidth = global::SmartFridge.Resource.Dimension.abc_config_prefDialogWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_control_corner_material = global::SmartFridge.Resource.Dimension.abc_control_corner_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_control_inset_material = global::SmartFridge.Resource.Dimension.abc_control_inset_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_control_padding_material = global::SmartFridge.Resource.Dimension.abc_control_padding_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_fixed_height_major = global::SmartFridge.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_fixed_height_minor = global::SmartFridge.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_fixed_width_major = global::SmartFridge.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_fixed_width_minor = global::SmartFridge.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::SmartFridge.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::SmartFridge.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_min_width_major = global::SmartFridge.Resource.Dimension.abc_dialog_min_width_major;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_min_width_minor = global::SmartFridge.Resource.Dimension.abc_dialog_min_width_minor;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_padding_material = global::SmartFridge.Resource.Dimension.abc_dialog_padding_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_padding_top_material = global::SmartFridge.Resource.Dimension.abc_dialog_padding_top_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dialog_title_divider_material = global::SmartFridge.Resource.Dimension.abc_dialog_title_divider_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_disabled_alpha_material_dark = global::SmartFridge.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_disabled_alpha_material_light = global::SmartFridge.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dropdownitem_icon_width = global::SmartFridge.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dropdownitem_text_padding_left = global::SmartFridge.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_dropdownitem_text_padding_right = global::SmartFridge.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_edit_text_inset_bottom_material = global::SmartFridge.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::SmartFridge.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_edit_text_inset_top_material = global::SmartFridge.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_floating_window_z = global::SmartFridge.Resource.Dimension.abc_floating_window_z;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_list_item_padding_horizontal_material = global::SmartFridge.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_panel_menu_list_width = global::SmartFridge.Resource.Dimension.abc_panel_menu_list_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_progress_bar_height_material = global::SmartFridge.Resource.Dimension.abc_progress_bar_height_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_search_view_preferred_height = global::SmartFridge.Resource.Dimension.abc_search_view_preferred_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_search_view_preferred_width = global::SmartFridge.Resource.Dimension.abc_search_view_preferred_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_seekbar_track_background_height_material = global::SmartFridge.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_seekbar_track_progress_height_material = global::SmartFridge.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_select_dialog_padding_start_material = global::SmartFridge.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_switch_padding = global::SmartFridge.Resource.Dimension.abc_switch_padding;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_body_1_material = global::SmartFridge.Resource.Dimension.abc_text_size_body_1_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_body_2_material = global::SmartFridge.Resource.Dimension.abc_text_size_body_2_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_button_material = global::SmartFridge.Resource.Dimension.abc_text_size_button_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_caption_material = global::SmartFridge.Resource.Dimension.abc_text_size_caption_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_display_1_material = global::SmartFridge.Resource.Dimension.abc_text_size_display_1_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_display_2_material = global::SmartFridge.Resource.Dimension.abc_text_size_display_2_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_display_3_material = global::SmartFridge.Resource.Dimension.abc_text_size_display_3_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_display_4_material = global::SmartFridge.Resource.Dimension.abc_text_size_display_4_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_headline_material = global::SmartFridge.Resource.Dimension.abc_text_size_headline_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_large_material = global::SmartFridge.Resource.Dimension.abc_text_size_large_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_medium_material = global::SmartFridge.Resource.Dimension.abc_text_size_medium_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_menu_header_material = global::SmartFridge.Resource.Dimension.abc_text_size_menu_header_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_menu_material = global::SmartFridge.Resource.Dimension.abc_text_size_menu_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_small_material = global::SmartFridge.Resource.Dimension.abc_text_size_small_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_subhead_material = global::SmartFridge.Resource.Dimension.abc_text_size_subhead_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::SmartFridge.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_title_material = global::SmartFridge.Resource.Dimension.abc_text_size_title_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.abc_text_size_title_material_toolbar = global::SmartFridge.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.compat_button_inset_horizontal_material = global::SmartFridge.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.compat_button_inset_vertical_material = global::SmartFridge.Resource.Dimension.compat_button_inset_vertical_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.compat_button_padding_horizontal_material = global::SmartFridge.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.compat_button_padding_vertical_material = global::SmartFridge.Resource.Dimension.compat_button_padding_vertical_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.compat_control_corner_material = global::SmartFridge.Resource.Dimension.compat_control_corner_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_appbar_elevation = global::SmartFridge.Resource.Dimension.design_appbar_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::SmartFridge.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_active_text_size = global::SmartFridge.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_elevation = global::SmartFridge.Resource.Dimension.design_bottom_navigation_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_height = global::SmartFridge.Resource.Dimension.design_bottom_navigation_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_item_max_width = global::SmartFridge.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_item_min_width = global::SmartFridge.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_margin = global::SmartFridge.Resource.Dimension.design_bottom_navigation_margin;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_shadow_height = global::SmartFridge.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_navigation_text_size = global::SmartFridge.Resource.Dimension.design_bottom_navigation_text_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_sheet_modal_elevation = global::SmartFridge.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_bottom_sheet_peek_height_min = global::SmartFridge.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_fab_border_width = global::SmartFridge.Resource.Dimension.design_fab_border_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_fab_elevation = global::SmartFridge.Resource.Dimension.design_fab_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_fab_image_size = global::SmartFridge.Resource.Dimension.design_fab_image_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_fab_size_mini = global::SmartFridge.Resource.Dimension.design_fab_size_mini;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_fab_size_normal = global::SmartFridge.Resource.Dimension.design_fab_size_normal;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_fab_translation_z_pressed = global::SmartFridge.Resource.Dimension.design_fab_translation_z_pressed;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_navigation_elevation = global::SmartFridge.Resource.Dimension.design_navigation_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_navigation_icon_padding = global::SmartFridge.Resource.Dimension.design_navigation_icon_padding;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_navigation_icon_size = global::SmartFridge.Resource.Dimension.design_navigation_icon_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_navigation_max_width = global::SmartFridge.Resource.Dimension.design_navigation_max_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_navigation_padding_bottom = global::SmartFridge.Resource.Dimension.design_navigation_padding_bottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_navigation_separator_vertical_padding = global::SmartFridge.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_action_inline_max_width = global::SmartFridge.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_background_corner_radius = global::SmartFridge.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_elevation = global::SmartFridge.Resource.Dimension.design_snackbar_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::SmartFridge.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_max_width = global::SmartFridge.Resource.Dimension.design_snackbar_max_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_min_width = global::SmartFridge.Resource.Dimension.design_snackbar_min_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_padding_horizontal = global::SmartFridge.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_padding_vertical = global::SmartFridge.Resource.Dimension.design_snackbar_padding_vertical;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::SmartFridge.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_snackbar_text_size = global::SmartFridge.Resource.Dimension.design_snackbar_text_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_tab_max_width = global::SmartFridge.Resource.Dimension.design_tab_max_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_tab_scrollable_min_width = global::SmartFridge.Resource.Dimension.design_tab_scrollable_min_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_tab_text_size = global::SmartFridge.Resource.Dimension.design_tab_text_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.design_tab_text_size_2line = global::SmartFridge.Resource.Dimension.design_tab_text_size_2line;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.disabled_alpha_material_dark = global::SmartFridge.Resource.Dimension.disabled_alpha_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.disabled_alpha_material_light = global::SmartFridge.Resource.Dimension.disabled_alpha_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.fastscroll_default_thickness = global::SmartFridge.Resource.Dimension.fastscroll_default_thickness;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.fastscroll_margin = global::SmartFridge.Resource.Dimension.fastscroll_margin;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.fastscroll_minimum_range = global::SmartFridge.Resource.Dimension.fastscroll_minimum_range;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.highlight_alpha_material_colored = global::SmartFridge.Resource.Dimension.highlight_alpha_material_colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.highlight_alpha_material_dark = global::SmartFridge.Resource.Dimension.highlight_alpha_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.highlight_alpha_material_light = global::SmartFridge.Resource.Dimension.highlight_alpha_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.hint_alpha_material_dark = global::SmartFridge.Resource.Dimension.hint_alpha_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.hint_alpha_material_light = global::SmartFridge.Resource.Dimension.hint_alpha_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.hint_pressed_alpha_material_dark = global::SmartFridge.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.hint_pressed_alpha_material_light = global::SmartFridge.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::SmartFridge.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::SmartFridge.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::SmartFridge.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_action_icon_size = global::SmartFridge.Resource.Dimension.notification_action_icon_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_action_text_size = global::SmartFridge.Resource.Dimension.notification_action_text_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_big_circle_margin = global::SmartFridge.Resource.Dimension.notification_big_circle_margin;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_content_margin_start = global::SmartFridge.Resource.Dimension.notification_content_margin_start;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_large_icon_height = global::SmartFridge.Resource.Dimension.notification_large_icon_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_large_icon_width = global::SmartFridge.Resource.Dimension.notification_large_icon_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_main_column_padding_top = global::SmartFridge.Resource.Dimension.notification_main_column_padding_top;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_media_narrow_margin = global::SmartFridge.Resource.Dimension.notification_media_narrow_margin;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_right_icon_size = global::SmartFridge.Resource.Dimension.notification_right_icon_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_right_side_padding_top = global::SmartFridge.Resource.Dimension.notification_right_side_padding_top;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_small_icon_background_padding = global::SmartFridge.Resource.Dimension.notification_small_icon_background_padding;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_small_icon_size_as_large = global::SmartFridge.Resource.Dimension.notification_small_icon_size_as_large;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_subtext_size = global::SmartFridge.Resource.Dimension.notification_subtext_size;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_top_pad = global::SmartFridge.Resource.Dimension.notification_top_pad;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.notification_top_pad_large_text = global::SmartFridge.Resource.Dimension.notification_top_pad_large_text;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.tooltip_corner_radius = global::SmartFridge.Resource.Dimension.tooltip_corner_radius;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.tooltip_horizontal_padding = global::SmartFridge.Resource.Dimension.tooltip_horizontal_padding;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.tooltip_margin = global::SmartFridge.Resource.Dimension.tooltip_margin;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::SmartFridge.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.tooltip_precise_anchor_threshold = global::SmartFridge.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.tooltip_vertical_padding = global::SmartFridge.Resource.Dimension.tooltip_vertical_padding;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.tooltip_y_offset_non_touch = global::SmartFridge.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::PCLAppConfig.FileSystemStream.Resource.Dimension.tooltip_y_offset_touch = global::SmartFridge.Resource.Dimension.tooltip_y_offset_touch;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::SmartFridge.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_action_bar_item_background_material = global::SmartFridge.Resource.Drawable.abc_action_bar_item_background_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_borderless_material = global::SmartFridge.Resource.Drawable.abc_btn_borderless_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_check_material = global::SmartFridge.Resource.Drawable.abc_btn_check_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::SmartFridge.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::SmartFridge.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_colored_material = global::SmartFridge.Resource.Drawable.abc_btn_colored_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_default_mtrl_shape = global::SmartFridge.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_radio_material = global::SmartFridge.Resource.Drawable.abc_btn_radio_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::SmartFridge.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::SmartFridge.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::SmartFridge.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::SmartFridge.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_cab_background_internal_bg = global::SmartFridge.Resource.Drawable.abc_cab_background_internal_bg;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_cab_background_top_material = global::SmartFridge.Resource.Drawable.abc_cab_background_top_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::SmartFridge.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_control_background_material = global::SmartFridge.Resource.Drawable.abc_control_background_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_dialog_material_background = global::SmartFridge.Resource.Drawable.abc_dialog_material_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_edit_text_material = global::SmartFridge.Resource.Drawable.abc_edit_text_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_ab_back_material = global::SmartFridge.Resource.Drawable.abc_ic_ab_back_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::SmartFridge.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_clear_material = global::SmartFridge.Resource.Drawable.abc_ic_clear_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::SmartFridge.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_go_search_api_material = global::SmartFridge.Resource.Drawable.abc_ic_go_search_api_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::SmartFridge.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::SmartFridge.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_menu_overflow_material = global::SmartFridge.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::SmartFridge.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::SmartFridge.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::SmartFridge.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_search_api_material = global::SmartFridge.Resource.Drawable.abc_ic_search_api_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_star_black_16dp = global::SmartFridge.Resource.Drawable.abc_ic_star_black_16dp;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_star_black_36dp = global::SmartFridge.Resource.Drawable.abc_ic_star_black_36dp;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_star_black_48dp = global::SmartFridge.Resource.Drawable.abc_ic_star_black_48dp;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_star_half_black_16dp = global::SmartFridge.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_star_half_black_36dp = global::SmartFridge.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_star_half_black_48dp = global::SmartFridge.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ic_voice_search_api_material = global::SmartFridge.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_item_background_holo_dark = global::SmartFridge.Resource.Drawable.abc_item_background_holo_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_item_background_holo_light = global::SmartFridge.Resource.Drawable.abc_item_background_holo_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_divider_mtrl_alpha = global::SmartFridge.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_focused_holo = global::SmartFridge.Resource.Drawable.abc_list_focused_holo;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_longpressed_holo = global::SmartFridge.Resource.Drawable.abc_list_longpressed_holo;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_pressed_holo_dark = global::SmartFridge.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_pressed_holo_light = global::SmartFridge.Resource.Drawable.abc_list_pressed_holo_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::SmartFridge.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::SmartFridge.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::SmartFridge.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_selector_disabled_holo_light = global::SmartFridge.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_selector_holo_dark = global::SmartFridge.Resource.Drawable.abc_list_selector_holo_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_list_selector_holo_light = global::SmartFridge.Resource.Drawable.abc_list_selector_holo_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::SmartFridge.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_popup_background_mtrl_mult = global::SmartFridge.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ratingbar_indicator_material = global::SmartFridge.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ratingbar_material = global::SmartFridge.Resource.Drawable.abc_ratingbar_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_ratingbar_small_material = global::SmartFridge.Resource.Drawable.abc_ratingbar_small_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::SmartFridge.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::SmartFridge.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::SmartFridge.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::SmartFridge.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::SmartFridge.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_seekbar_thumb_material = global::SmartFridge.Resource.Drawable.abc_seekbar_thumb_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_seekbar_tick_mark_material = global::SmartFridge.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_seekbar_track_material = global::SmartFridge.Resource.Drawable.abc_seekbar_track_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::SmartFridge.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_spinner_textfield_background_material = global::SmartFridge.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_switch_thumb_material = global::SmartFridge.Resource.Drawable.abc_switch_thumb_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_switch_track_mtrl_alpha = global::SmartFridge.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_tab_indicator_material = global::SmartFridge.Resource.Drawable.abc_tab_indicator_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::SmartFridge.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_text_cursor_material = global::SmartFridge.Resource.Drawable.abc_text_cursor_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::SmartFridge.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::SmartFridge.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::SmartFridge.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::SmartFridge.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::SmartFridge.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::SmartFridge.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::SmartFridge.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::SmartFridge.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::SmartFridge.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::SmartFridge.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_textfield_search_material = global::SmartFridge.Resource.Drawable.abc_textfield_search_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.abc_vector_test = global::SmartFridge.Resource.Drawable.abc_vector_test;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.avd_hide_password = global::SmartFridge.Resource.Drawable.avd_hide_password;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.avd_hide_password_1 = global::SmartFridge.Resource.Drawable.avd_hide_password_1;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.avd_hide_password_2 = global::SmartFridge.Resource.Drawable.avd_hide_password_2;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.avd_hide_password_3 = global::SmartFridge.Resource.Drawable.avd_hide_password_3;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.avd_show_password = global::SmartFridge.Resource.Drawable.avd_show_password;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.avd_show_password_1 = global::SmartFridge.Resource.Drawable.avd_show_password_1;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.avd_show_password_2 = global::SmartFridge.Resource.Drawable.avd_show_password_2;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.avd_show_password_3 = global::SmartFridge.Resource.Drawable.avd_show_password_3;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.design_bottom_navigation_item_background = global::SmartFridge.Resource.Drawable.design_bottom_navigation_item_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.design_fab_background = global::SmartFridge.Resource.Drawable.design_fab_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.design_ic_visibility = global::SmartFridge.Resource.Drawable.design_ic_visibility;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.design_ic_visibility_off = global::SmartFridge.Resource.Drawable.design_ic_visibility_off;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.design_password_eye = global::SmartFridge.Resource.Drawable.design_password_eye;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.design_snackbar_background = global::SmartFridge.Resource.Drawable.design_snackbar_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.navigation_empty_icon = global::SmartFridge.Resource.Drawable.navigation_empty_icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_action_background = global::SmartFridge.Resource.Drawable.notification_action_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_bg = global::SmartFridge.Resource.Drawable.notification_bg;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_bg_low = global::SmartFridge.Resource.Drawable.notification_bg_low;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_bg_low_normal = global::SmartFridge.Resource.Drawable.notification_bg_low_normal;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_bg_low_pressed = global::SmartFridge.Resource.Drawable.notification_bg_low_pressed;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_bg_normal = global::SmartFridge.Resource.Drawable.notification_bg_normal;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_bg_normal_pressed = global::SmartFridge.Resource.Drawable.notification_bg_normal_pressed;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_icon_background = global::SmartFridge.Resource.Drawable.notification_icon_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_template_icon_bg = global::SmartFridge.Resource.Drawable.notification_template_icon_bg;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_template_icon_low_bg = global::SmartFridge.Resource.Drawable.notification_template_icon_low_bg;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notification_tile_bg = global::SmartFridge.Resource.Drawable.notification_tile_bg;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.notify_panel_notification_icon_bg = global::SmartFridge.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.tooltip_frame_dark = global::SmartFridge.Resource.Drawable.tooltip_frame_dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Drawable.tooltip_frame_light = global::SmartFridge.Resource.Drawable.tooltip_frame_light;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.ALT = global::SmartFridge.Resource.Id.ALT;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.CTRL = global::SmartFridge.Resource.Id.CTRL;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.FUNCTION = global::SmartFridge.Resource.Id.FUNCTION;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.META = global::SmartFridge.Resource.Id.META;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.SHIFT = global::SmartFridge.Resource.Id.SHIFT;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.SYM = global::SmartFridge.Resource.Id.SYM;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action0 = global::SmartFridge.Resource.Id.action0;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_bar = global::SmartFridge.Resource.Id.action_bar;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_bar_activity_content = global::SmartFridge.Resource.Id.action_bar_activity_content;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_bar_container = global::SmartFridge.Resource.Id.action_bar_container;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_bar_root = global::SmartFridge.Resource.Id.action_bar_root;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_bar_spinner = global::SmartFridge.Resource.Id.action_bar_spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_bar_subtitle = global::SmartFridge.Resource.Id.action_bar_subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_bar_title = global::SmartFridge.Resource.Id.action_bar_title;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_container = global::SmartFridge.Resource.Id.action_container;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_context_bar = global::SmartFridge.Resource.Id.action_context_bar;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_divider = global::SmartFridge.Resource.Id.action_divider;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_image = global::SmartFridge.Resource.Id.action_image;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_menu_divider = global::SmartFridge.Resource.Id.action_menu_divider;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_menu_presenter = global::SmartFridge.Resource.Id.action_menu_presenter;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_mode_bar = global::SmartFridge.Resource.Id.action_mode_bar;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_mode_bar_stub = global::SmartFridge.Resource.Id.action_mode_bar_stub;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_mode_close_button = global::SmartFridge.Resource.Id.action_mode_close_button;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.action_text = global::SmartFridge.Resource.Id.action_text;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.actions = global::SmartFridge.Resource.Id.actions;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.activity_chooser_view_content = global::SmartFridge.Resource.Id.activity_chooser_view_content;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.add = global::SmartFridge.Resource.Id.add;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.alertTitle = global::SmartFridge.Resource.Id.alertTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.all = global::SmartFridge.Resource.Id.all;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.always = global::SmartFridge.Resource.Id.always;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.async = global::SmartFridge.Resource.Id.async;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.auto = global::SmartFridge.Resource.Id.auto;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.beginning = global::SmartFridge.Resource.Id.beginning;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.blocking = global::SmartFridge.Resource.Id.blocking;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.bottom = global::SmartFridge.Resource.Id.bottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.buttonPanel = global::SmartFridge.Resource.Id.buttonPanel;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.cancel_action = global::SmartFridge.Resource.Id.cancel_action;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.center = global::SmartFridge.Resource.Id.center;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.center_horizontal = global::SmartFridge.Resource.Id.center_horizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.center_vertical = global::SmartFridge.Resource.Id.center_vertical;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.checkbox = global::SmartFridge.Resource.Id.checkbox;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.chronometer = global::SmartFridge.Resource.Id.chronometer;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.clip_horizontal = global::SmartFridge.Resource.Id.clip_horizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.clip_vertical = global::SmartFridge.Resource.Id.clip_vertical;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.collapseActionView = global::SmartFridge.Resource.Id.collapseActionView;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.container = global::SmartFridge.Resource.Id.container;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.contentPanel = global::SmartFridge.Resource.Id.contentPanel;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.coordinator = global::SmartFridge.Resource.Id.coordinator;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.custom = global::SmartFridge.Resource.Id.custom;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.customPanel = global::SmartFridge.Resource.Id.customPanel;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.decor_content_parent = global::SmartFridge.Resource.Id.decor_content_parent;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.default_activity_button = global::SmartFridge.Resource.Id.default_activity_button;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.design_bottom_sheet = global::SmartFridge.Resource.Id.design_bottom_sheet;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.design_menu_item_action_area = global::SmartFridge.Resource.Id.design_menu_item_action_area;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.design_menu_item_action_area_stub = global::SmartFridge.Resource.Id.design_menu_item_action_area_stub;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.design_menu_item_text = global::SmartFridge.Resource.Id.design_menu_item_text;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.design_navigation_view = global::SmartFridge.Resource.Id.design_navigation_view;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.disableHome = global::SmartFridge.Resource.Id.disableHome;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.edit_query = global::SmartFridge.Resource.Id.edit_query;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.end = global::SmartFridge.Resource.Id.end;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.end_padder = global::SmartFridge.Resource.Id.end_padder;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.enterAlways = global::SmartFridge.Resource.Id.enterAlways;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.enterAlwaysCollapsed = global::SmartFridge.Resource.Id.enterAlwaysCollapsed;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.exitUntilCollapsed = global::SmartFridge.Resource.Id.exitUntilCollapsed;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.expand_activities_button = global::SmartFridge.Resource.Id.expand_activities_button;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.expanded_menu = global::SmartFridge.Resource.Id.expanded_menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.fill = global::SmartFridge.Resource.Id.fill;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.fill_horizontal = global::SmartFridge.Resource.Id.fill_horizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.fill_vertical = global::SmartFridge.Resource.Id.fill_vertical;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.@fixed = global::SmartFridge.Resource.Id.@fixed;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.forever = global::SmartFridge.Resource.Id.forever;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.ghost_view = global::SmartFridge.Resource.Id.ghost_view;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.home = global::SmartFridge.Resource.Id.home;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.homeAsUp = global::SmartFridge.Resource.Id.homeAsUp;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.icon = global::SmartFridge.Resource.Id.icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.icon_group = global::SmartFridge.Resource.Id.icon_group;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.ifRoom = global::SmartFridge.Resource.Id.ifRoom;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.image = global::SmartFridge.Resource.Id.image;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.info = global::SmartFridge.Resource.Id.info;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.italic = global::SmartFridge.Resource.Id.italic;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.item_touch_helper_previous_elevation = global::SmartFridge.Resource.Id.item_touch_helper_previous_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.largeLabel = global::SmartFridge.Resource.Id.largeLabel;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.left = global::SmartFridge.Resource.Id.left;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.line1 = global::SmartFridge.Resource.Id.line1;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.line3 = global::SmartFridge.Resource.Id.line3;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.listMode = global::SmartFridge.Resource.Id.listMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.list_item = global::SmartFridge.Resource.Id.list_item;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.masked = global::SmartFridge.Resource.Id.masked;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.media_actions = global::SmartFridge.Resource.Id.media_actions;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.message = global::SmartFridge.Resource.Id.message;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.middle = global::SmartFridge.Resource.Id.middle;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.mini = global::SmartFridge.Resource.Id.mini;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.multiply = global::SmartFridge.Resource.Id.multiply;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.navigation_header_container = global::SmartFridge.Resource.Id.navigation_header_container;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.never = global::SmartFridge.Resource.Id.never;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.none = global::SmartFridge.Resource.Id.none;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.normal = global::SmartFridge.Resource.Id.normal;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.notification_background = global::SmartFridge.Resource.Id.notification_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.notification_main_column = global::SmartFridge.Resource.Id.notification_main_column;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.notification_main_column_container = global::SmartFridge.Resource.Id.notification_main_column_container;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.parallax = global::SmartFridge.Resource.Id.parallax;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.parentPanel = global::SmartFridge.Resource.Id.parentPanel;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.parent_matrix = global::SmartFridge.Resource.Id.parent_matrix;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.pin = global::SmartFridge.Resource.Id.pin;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.progress_circular = global::SmartFridge.Resource.Id.progress_circular;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.progress_horizontal = global::SmartFridge.Resource.Id.progress_horizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.radio = global::SmartFridge.Resource.Id.radio;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.right = global::SmartFridge.Resource.Id.right;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.right_icon = global::SmartFridge.Resource.Id.right_icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.right_side = global::SmartFridge.Resource.Id.right_side;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.save_image_matrix = global::SmartFridge.Resource.Id.save_image_matrix;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.save_non_transition_alpha = global::SmartFridge.Resource.Id.save_non_transition_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.save_scale_type = global::SmartFridge.Resource.Id.save_scale_type;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.screen = global::SmartFridge.Resource.Id.screen;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.scroll = global::SmartFridge.Resource.Id.scroll;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.scrollIndicatorDown = global::SmartFridge.Resource.Id.scrollIndicatorDown;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.scrollIndicatorUp = global::SmartFridge.Resource.Id.scrollIndicatorUp;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.scrollView = global::SmartFridge.Resource.Id.scrollView;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.scrollable = global::SmartFridge.Resource.Id.scrollable;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_badge = global::SmartFridge.Resource.Id.search_badge;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_bar = global::SmartFridge.Resource.Id.search_bar;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_button = global::SmartFridge.Resource.Id.search_button;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_close_btn = global::SmartFridge.Resource.Id.search_close_btn;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_edit_frame = global::SmartFridge.Resource.Id.search_edit_frame;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_go_btn = global::SmartFridge.Resource.Id.search_go_btn;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_mag_icon = global::SmartFridge.Resource.Id.search_mag_icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_plate = global::SmartFridge.Resource.Id.search_plate;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_src_text = global::SmartFridge.Resource.Id.search_src_text;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.search_voice_btn = global::SmartFridge.Resource.Id.search_voice_btn;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.select_dialog_listview = global::SmartFridge.Resource.Id.select_dialog_listview;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.shortcut = global::SmartFridge.Resource.Id.shortcut;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.showCustom = global::SmartFridge.Resource.Id.showCustom;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.showHome = global::SmartFridge.Resource.Id.showHome;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.showTitle = global::SmartFridge.Resource.Id.showTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.smallLabel = global::SmartFridge.Resource.Id.smallLabel;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.snackbar_action = global::SmartFridge.Resource.Id.snackbar_action;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.snackbar_text = global::SmartFridge.Resource.Id.snackbar_text;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.snap = global::SmartFridge.Resource.Id.snap;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.spacer = global::SmartFridge.Resource.Id.spacer;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.split_action_bar = global::SmartFridge.Resource.Id.split_action_bar;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.src_atop = global::SmartFridge.Resource.Id.src_atop;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.src_in = global::SmartFridge.Resource.Id.src_in;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.src_over = global::SmartFridge.Resource.Id.src_over;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.start = global::SmartFridge.Resource.Id.start;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.status_bar_latest_event_content = global::SmartFridge.Resource.Id.status_bar_latest_event_content;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.submenuarrow = global::SmartFridge.Resource.Id.submenuarrow;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.submit_area = global::SmartFridge.Resource.Id.submit_area;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.tabMode = global::SmartFridge.Resource.Id.tabMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.tag_transition_group = global::SmartFridge.Resource.Id.tag_transition_group;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.text = global::SmartFridge.Resource.Id.text;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.text2 = global::SmartFridge.Resource.Id.text2;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.textSpacerNoButtons = global::SmartFridge.Resource.Id.textSpacerNoButtons;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.textSpacerNoTitle = global::SmartFridge.Resource.Id.textSpacerNoTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.text_input_password_toggle = global::SmartFridge.Resource.Id.text_input_password_toggle;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.textinput_counter = global::SmartFridge.Resource.Id.textinput_counter;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.textinput_error = global::SmartFridge.Resource.Id.textinput_error;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.time = global::SmartFridge.Resource.Id.time;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.title = global::SmartFridge.Resource.Id.title;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.titleDividerNoCustom = global::SmartFridge.Resource.Id.titleDividerNoCustom;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.title_template = global::SmartFridge.Resource.Id.title_template;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.top = global::SmartFridge.Resource.Id.top;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.topPanel = global::SmartFridge.Resource.Id.topPanel;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.touch_outside = global::SmartFridge.Resource.Id.touch_outside;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.transition_current_scene = global::SmartFridge.Resource.Id.transition_current_scene;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.transition_layout_save = global::SmartFridge.Resource.Id.transition_layout_save;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.transition_position = global::SmartFridge.Resource.Id.transition_position;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.transition_scene_layoutid_cache = global::SmartFridge.Resource.Id.transition_scene_layoutid_cache;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.transition_transform = global::SmartFridge.Resource.Id.transition_transform;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.uniform = global::SmartFridge.Resource.Id.uniform;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.up = global::SmartFridge.Resource.Id.up;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.useLogo = global::SmartFridge.Resource.Id.useLogo;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.view_offset_helper = global::SmartFridge.Resource.Id.view_offset_helper;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.visible = global::SmartFridge.Resource.Id.visible;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.withText = global::SmartFridge.Resource.Id.withText;
+			global::PCLAppConfig.FileSystemStream.Resource.Id.wrap_content = global::SmartFridge.Resource.Id.wrap_content;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.abc_config_activityDefaultDur = global::SmartFridge.Resource.Integer.abc_config_activityDefaultDur;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.abc_config_activityShortDur = global::SmartFridge.Resource.Integer.abc_config_activityShortDur;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.app_bar_elevation_anim_duration = global::SmartFridge.Resource.Integer.app_bar_elevation_anim_duration;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.bottom_sheet_slide_duration = global::SmartFridge.Resource.Integer.bottom_sheet_slide_duration;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.cancel_button_image_alpha = global::SmartFridge.Resource.Integer.cancel_button_image_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.config_tooltipAnimTime = global::SmartFridge.Resource.Integer.config_tooltipAnimTime;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.design_snackbar_text_max_lines = global::SmartFridge.Resource.Integer.design_snackbar_text_max_lines;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.hide_password_duration = global::SmartFridge.Resource.Integer.hide_password_duration;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.show_password_duration = global::SmartFridge.Resource.Integer.show_password_duration;
+			global::PCLAppConfig.FileSystemStream.Resource.Integer.status_bar_notification_info_maxnum = global::SmartFridge.Resource.Integer.status_bar_notification_info_maxnum;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_action_bar_title_item = global::SmartFridge.Resource.Layout.abc_action_bar_title_item;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_action_bar_up_container = global::SmartFridge.Resource.Layout.abc_action_bar_up_container;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_action_menu_item_layout = global::SmartFridge.Resource.Layout.abc_action_menu_item_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_action_menu_layout = global::SmartFridge.Resource.Layout.abc_action_menu_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_action_mode_bar = global::SmartFridge.Resource.Layout.abc_action_mode_bar;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_action_mode_close_item_material = global::SmartFridge.Resource.Layout.abc_action_mode_close_item_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_activity_chooser_view = global::SmartFridge.Resource.Layout.abc_activity_chooser_view;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_activity_chooser_view_list_item = global::SmartFridge.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_alert_dialog_button_bar_material = global::SmartFridge.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_alert_dialog_material = global::SmartFridge.Resource.Layout.abc_alert_dialog_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_alert_dialog_title_material = global::SmartFridge.Resource.Layout.abc_alert_dialog_title_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_dialog_title_material = global::SmartFridge.Resource.Layout.abc_dialog_title_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_expanded_menu_layout = global::SmartFridge.Resource.Layout.abc_expanded_menu_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_list_menu_item_checkbox = global::SmartFridge.Resource.Layout.abc_list_menu_item_checkbox;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_list_menu_item_icon = global::SmartFridge.Resource.Layout.abc_list_menu_item_icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_list_menu_item_layout = global::SmartFridge.Resource.Layout.abc_list_menu_item_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_list_menu_item_radio = global::SmartFridge.Resource.Layout.abc_list_menu_item_radio;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_popup_menu_header_item_layout = global::SmartFridge.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_popup_menu_item_layout = global::SmartFridge.Resource.Layout.abc_popup_menu_item_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_screen_content_include = global::SmartFridge.Resource.Layout.abc_screen_content_include;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_screen_simple = global::SmartFridge.Resource.Layout.abc_screen_simple;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_screen_simple_overlay_action_mode = global::SmartFridge.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_screen_toolbar = global::SmartFridge.Resource.Layout.abc_screen_toolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_search_dropdown_item_icons_2line = global::SmartFridge.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_search_view = global::SmartFridge.Resource.Layout.abc_search_view;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.abc_select_dialog_material = global::SmartFridge.Resource.Layout.abc_select_dialog_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_bottom_navigation_item = global::SmartFridge.Resource.Layout.design_bottom_navigation_item;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_bottom_sheet_dialog = global::SmartFridge.Resource.Layout.design_bottom_sheet_dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_layout_snackbar = global::SmartFridge.Resource.Layout.design_layout_snackbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_layout_snackbar_include = global::SmartFridge.Resource.Layout.design_layout_snackbar_include;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_layout_tab_icon = global::SmartFridge.Resource.Layout.design_layout_tab_icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_layout_tab_text = global::SmartFridge.Resource.Layout.design_layout_tab_text;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_menu_item_action_area = global::SmartFridge.Resource.Layout.design_menu_item_action_area;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_navigation_item = global::SmartFridge.Resource.Layout.design_navigation_item;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_navigation_item_header = global::SmartFridge.Resource.Layout.design_navigation_item_header;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_navigation_item_separator = global::SmartFridge.Resource.Layout.design_navigation_item_separator;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_navigation_item_subheader = global::SmartFridge.Resource.Layout.design_navigation_item_subheader;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_navigation_menu = global::SmartFridge.Resource.Layout.design_navigation_menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_navigation_menu_item = global::SmartFridge.Resource.Layout.design_navigation_menu_item;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.design_text_input_password_icon = global::SmartFridge.Resource.Layout.design_text_input_password_icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_action = global::SmartFridge.Resource.Layout.notification_action;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_action_tombstone = global::SmartFridge.Resource.Layout.notification_action_tombstone;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_media_action = global::SmartFridge.Resource.Layout.notification_media_action;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_media_cancel_action = global::SmartFridge.Resource.Layout.notification_media_cancel_action;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_big_media = global::SmartFridge.Resource.Layout.notification_template_big_media;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_big_media_custom = global::SmartFridge.Resource.Layout.notification_template_big_media_custom;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_big_media_narrow = global::SmartFridge.Resource.Layout.notification_template_big_media_narrow;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_big_media_narrow_custom = global::SmartFridge.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_custom_big = global::SmartFridge.Resource.Layout.notification_template_custom_big;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_icon_group = global::SmartFridge.Resource.Layout.notification_template_icon_group;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_lines_media = global::SmartFridge.Resource.Layout.notification_template_lines_media;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_media = global::SmartFridge.Resource.Layout.notification_template_media;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_media_custom = global::SmartFridge.Resource.Layout.notification_template_media_custom;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_part_chronometer = global::SmartFridge.Resource.Layout.notification_template_part_chronometer;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.notification_template_part_time = global::SmartFridge.Resource.Layout.notification_template_part_time;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.select_dialog_item_material = global::SmartFridge.Resource.Layout.select_dialog_item_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.select_dialog_multichoice_material = global::SmartFridge.Resource.Layout.select_dialog_multichoice_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.select_dialog_singlechoice_material = global::SmartFridge.Resource.Layout.select_dialog_singlechoice_material;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.support_simple_spinner_dropdown_item = global::SmartFridge.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::PCLAppConfig.FileSystemStream.Resource.Layout.tooltip = global::SmartFridge.Resource.Layout.tooltip;
+			global::PCLAppConfig.FileSystemStream.Resource.String.ApplicationName = global::SmartFridge.Resource.String.ApplicationName;
+			global::PCLAppConfig.FileSystemStream.Resource.String.Hello = global::SmartFridge.Resource.String.Hello;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_action_bar_home_description = global::SmartFridge.Resource.String.abc_action_bar_home_description;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_action_bar_up_description = global::SmartFridge.Resource.String.abc_action_bar_up_description;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_action_menu_overflow_description = global::SmartFridge.Resource.String.abc_action_menu_overflow_description;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_action_mode_done = global::SmartFridge.Resource.String.abc_action_mode_done;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_activity_chooser_view_see_all = global::SmartFridge.Resource.String.abc_activity_chooser_view_see_all;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_activitychooserview_choose_application = global::SmartFridge.Resource.String.abc_activitychooserview_choose_application;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_capital_off = global::SmartFridge.Resource.String.abc_capital_off;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_capital_on = global::SmartFridge.Resource.String.abc_capital_on;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_font_family_body_1_material = global::SmartFridge.Resource.String.abc_font_family_body_1_material;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_font_family_body_2_material = global::SmartFridge.Resource.String.abc_font_family_body_2_material;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_font_family_button_material = global::SmartFridge.Resource.String.abc_font_family_button_material;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_font_family_caption_material = global::SmartFridge.Resource.String.abc_font_family_caption_material;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_font_family_display_1_material = global::SmartFridge.Resource.String.abc_font_family_display_1_material;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_font_family_display_2_material = global::SmartFridge.Resource.String.abc_font_family_display_2_material;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_font_family_display_3_material = global::SmartFridge.Resource.String.abc_font_family_display_3_material;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_font_family_display_4_material = global::SmartFridge.Resource.String.abc_font_family_display_4_material;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_font_family_headline_material = global::SmartFridge.Resource.String.abc_font_family_headline_material;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_font_family_menu_material = global::SmartFridge.Resource.String.abc_font_family_menu_material;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_font_family_subhead_material = global::SmartFridge.Resource.String.abc_font_family_subhead_material;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_font_family_title_material = global::SmartFridge.Resource.String.abc_font_family_title_material;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_search_hint = global::SmartFridge.Resource.String.abc_search_hint;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_searchview_description_clear = global::SmartFridge.Resource.String.abc_searchview_description_clear;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_searchview_description_query = global::SmartFridge.Resource.String.abc_searchview_description_query;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_searchview_description_search = global::SmartFridge.Resource.String.abc_searchview_description_search;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_searchview_description_submit = global::SmartFridge.Resource.String.abc_searchview_description_submit;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_searchview_description_voice = global::SmartFridge.Resource.String.abc_searchview_description_voice;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_shareactionprovider_share_with = global::SmartFridge.Resource.String.abc_shareactionprovider_share_with;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_shareactionprovider_share_with_application = global::SmartFridge.Resource.String.abc_shareactionprovider_share_with_application;
+			global::PCLAppConfig.FileSystemStream.Resource.String.abc_toolbar_collapse_description = global::SmartFridge.Resource.String.abc_toolbar_collapse_description;
+			global::PCLAppConfig.FileSystemStream.Resource.String.appbar_scrolling_view_behavior = global::SmartFridge.Resource.String.appbar_scrolling_view_behavior;
+			global::PCLAppConfig.FileSystemStream.Resource.String.bottom_sheet_behavior = global::SmartFridge.Resource.String.bottom_sheet_behavior;
+			global::PCLAppConfig.FileSystemStream.Resource.String.character_counter_pattern = global::SmartFridge.Resource.String.character_counter_pattern;
+			global::PCLAppConfig.FileSystemStream.Resource.String.password_toggle_content_description = global::SmartFridge.Resource.String.password_toggle_content_description;
+			global::PCLAppConfig.FileSystemStream.Resource.String.path_password_eye = global::SmartFridge.Resource.String.path_password_eye;
+			global::PCLAppConfig.FileSystemStream.Resource.String.path_password_eye_mask_strike_through = global::SmartFridge.Resource.String.path_password_eye_mask_strike_through;
+			global::PCLAppConfig.FileSystemStream.Resource.String.path_password_eye_mask_visible = global::SmartFridge.Resource.String.path_password_eye_mask_visible;
+			global::PCLAppConfig.FileSystemStream.Resource.String.path_password_strike_through = global::SmartFridge.Resource.String.path_password_strike_through;
+			global::PCLAppConfig.FileSystemStream.Resource.String.search_menu_title = global::SmartFridge.Resource.String.search_menu_title;
+			global::PCLAppConfig.FileSystemStream.Resource.String.status_bar_notification_info_overflow = global::SmartFridge.Resource.String.status_bar_notification_info_overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.AlertDialog_AppCompat = global::SmartFridge.Resource.Style.AlertDialog_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.AlertDialog_AppCompat_Light = global::SmartFridge.Resource.Style.AlertDialog_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Animation_AppCompat_Dialog = global::SmartFridge.Resource.Style.Animation_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Animation_AppCompat_DropDownUp = global::SmartFridge.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Animation_AppCompat_Tooltip = global::SmartFridge.Resource.Style.Animation_AppCompat_Tooltip;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Animation_Design_BottomSheetDialog = global::SmartFridge.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_AlertDialog_AppCompat = global::SmartFridge.Resource.Style.Base_AlertDialog_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_AlertDialog_AppCompat_Light = global::SmartFridge.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Animation_AppCompat_Dialog = global::SmartFridge.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::SmartFridge.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Animation_AppCompat_Tooltip = global::SmartFridge.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_DialogWindowTitle_AppCompat = global::SmartFridge.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::SmartFridge.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Button = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Large = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Small = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Title = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::SmartFridge.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::SmartFridge.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::SmartFridge.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::SmartFridge.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat = global::SmartFridge.Resource.Style.Base_Theme_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::SmartFridge.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Dialog = global::SmartFridge.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::SmartFridge.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::SmartFridge.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::SmartFridge.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::SmartFridge.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Light = global::SmartFridge.Resource.Style.Base_Theme_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::SmartFridge.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::SmartFridge.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::SmartFridge.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::SmartFridge.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::SmartFridge.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::SmartFridge.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_ThemeOverlay_AppCompat = global::SmartFridge.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::SmartFridge.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::SmartFridge.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::SmartFridge.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::SmartFridge.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::SmartFridge.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::SmartFridge.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::SmartFridge.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::SmartFridge.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog = global::SmartFridge.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::SmartFridge.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::SmartFridge.Resource.Style.Base_V12_Widget_AppCompat_EditText;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V14_Widget_Design_AppBarLayout = global::SmartFridge.Resource.Style.Base_V14_Widget_Design_AppBarLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V21_Theme_AppCompat = global::SmartFridge.Resource.Style.Base_V21_Theme_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::SmartFridge.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V21_Theme_AppCompat_Light = global::SmartFridge.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::SmartFridge.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::SmartFridge.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V21_Widget_Design_AppBarLayout = global::SmartFridge.Resource.Style.Base_V21_Widget_Design_AppBarLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V22_Theme_AppCompat = global::SmartFridge.Resource.Style.Base_V22_Theme_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V22_Theme_AppCompat_Light = global::SmartFridge.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V23_Theme_AppCompat = global::SmartFridge.Resource.Style.Base_V23_Theme_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V23_Theme_AppCompat_Light = global::SmartFridge.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V26_Theme_AppCompat = global::SmartFridge.Resource.Style.Base_V26_Theme_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V26_Theme_AppCompat_Light = global::SmartFridge.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::SmartFridge.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V26_Widget_Design_AppBarLayout = global::SmartFridge.Resource.Style.Base_V26_Widget_Design_AppBarLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V7_Theme_AppCompat = global::SmartFridge.Resource.Style.Base_V7_Theme_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::SmartFridge.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V7_Theme_AppCompat_Light = global::SmartFridge.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::SmartFridge.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::SmartFridge.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::SmartFridge.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::SmartFridge.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::SmartFridge.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionBar = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionButton = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActionMode = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Button = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Button;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Button_Small = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_EditText = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ImageButton = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ListView = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_RatingBar = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_SearchView = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_SeekBar = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Spinner = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Toolbar = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::SmartFridge.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_Design_AppBarLayout = global::SmartFridge.Resource.Style.Base_Widget_Design_AppBarLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Base_Widget_Design_TabLayout = global::SmartFridge.Resource.Style.Base_Widget_Design_TabLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_AppCompat = global::SmartFridge.Resource.Style.Platform_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_AppCompat_Light = global::SmartFridge.Resource.Style.Platform_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_ThemeOverlay_AppCompat = global::SmartFridge.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::SmartFridge.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::SmartFridge.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_V11_AppCompat = global::SmartFridge.Resource.Style.Platform_V11_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_V11_AppCompat_Light = global::SmartFridge.Resource.Style.Platform_V11_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_V14_AppCompat = global::SmartFridge.Resource.Style.Platform_V14_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_V14_AppCompat_Light = global::SmartFridge.Resource.Style.Platform_V14_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_V21_AppCompat = global::SmartFridge.Resource.Style.Platform_V21_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_V21_AppCompat_Light = global::SmartFridge.Resource.Style.Platform_V21_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_V25_AppCompat = global::SmartFridge.Resource.Style.Platform_V25_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_V25_AppCompat_Light = global::SmartFridge.Resource.Style.Platform_V25_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Platform_Widget_AppCompat_Spinner = global::SmartFridge.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::SmartFridge.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::SmartFridge.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::SmartFridge.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::SmartFridge.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::SmartFridge.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::SmartFridge.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::SmartFridge.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::SmartFridge.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::SmartFridge.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::SmartFridge.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::SmartFridge.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::SmartFridge.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::SmartFridge.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::SmartFridge.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat = global::SmartFridge.Resource.Style.TextAppearance_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Body1 = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Body2 = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Button = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Button;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Caption = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Display1 = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Display2 = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Display3 = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Display4 = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Headline = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Inverse = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Large = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Large;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Medium = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Menu = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Small = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Subhead = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Title = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Tooltip = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::SmartFridge.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification = global::SmartFridge.Resource.Style.TextAppearance_Compat_Notification;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Info = global::SmartFridge.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::SmartFridge.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::SmartFridge.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::SmartFridge.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Media = global::SmartFridge.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Time = global::SmartFridge.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::SmartFridge.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Title = global::SmartFridge.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::SmartFridge.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::SmartFridge.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Design_Counter = global::SmartFridge.Resource.Style.TextAppearance_Design_Counter;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Design_Counter_Overflow = global::SmartFridge.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Design_Error = global::SmartFridge.Resource.Style.TextAppearance_Design_Error;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Design_Hint = global::SmartFridge.Resource.Style.TextAppearance_Design_Hint;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Design_Snackbar_Message = global::SmartFridge.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Design_Tab = global::SmartFridge.Resource.Style.TextAppearance_Design_Tab;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::SmartFridge.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::SmartFridge.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::SmartFridge.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat = global::SmartFridge.Resource.Style.Theme_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_CompactMenu = global::SmartFridge.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_DayNight = global::SmartFridge.Resource.Style.Theme_AppCompat_DayNight;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::SmartFridge.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::SmartFridge.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::SmartFridge.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::SmartFridge.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::SmartFridge.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::SmartFridge.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Dialog = global::SmartFridge.Resource.Style.Theme_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Dialog_Alert = global::SmartFridge.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::SmartFridge.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::SmartFridge.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Light = global::SmartFridge.Resource.Style.Theme_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::SmartFridge.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Light_Dialog = global::SmartFridge.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::SmartFridge.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::SmartFridge.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::SmartFridge.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::SmartFridge.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_AppCompat_NoActionBar = global::SmartFridge.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_Design = global::SmartFridge.Resource.Style.Theme_Design;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_Design_BottomSheetDialog = global::SmartFridge.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_Design_Light = global::SmartFridge.Resource.Style.Theme_Design_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::SmartFridge.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_Design_Light_NoActionBar = global::SmartFridge.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Theme_Design_NoActionBar = global::SmartFridge.Resource.Style.Theme_Design_NoActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.ThemeOverlay_AppCompat = global::SmartFridge.Resource.Style.ThemeOverlay_AppCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::SmartFridge.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.ThemeOverlay_AppCompat_Dark = global::SmartFridge.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::SmartFridge.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::SmartFridge.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::SmartFridge.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.ThemeOverlay_AppCompat_Light = global::SmartFridge.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionBar = global::SmartFridge.Resource.Style.Widget_AppCompat_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::SmartFridge.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::SmartFridge.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::SmartFridge.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::SmartFridge.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionButton = global::SmartFridge.Resource.Style.Widget_AppCompat_ActionButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::SmartFridge.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::SmartFridge.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActionMode = global::SmartFridge.Resource.Style.Widget_AppCompat_ActionMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ActivityChooserView = global::SmartFridge.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::SmartFridge.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Button = global::SmartFridge.Resource.Style.Widget_AppCompat_Button;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Button_Borderless = global::SmartFridge.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::SmartFridge.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::SmartFridge.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Button_Colored = global::SmartFridge.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Button_Small = global::SmartFridge.Resource.Style.Widget_AppCompat_Button_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ButtonBar = global::SmartFridge.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::SmartFridge.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::SmartFridge.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::SmartFridge.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::SmartFridge.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::SmartFridge.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::SmartFridge.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_EditText = global::SmartFridge.Resource.Style.Widget_AppCompat_EditText;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ImageButton = global::SmartFridge.Resource.Style.Widget_AppCompat_ImageButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionButton = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_SearchView = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::SmartFridge.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ListMenuView = global::SmartFridge.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ListPopupWindow = global::SmartFridge.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ListView = global::SmartFridge.Resource.Style.Widget_AppCompat_ListView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ListView_DropDown = global::SmartFridge.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ListView_Menu = global::SmartFridge.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_PopupMenu = global::SmartFridge.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::SmartFridge.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_PopupWindow = global::SmartFridge.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ProgressBar = global::SmartFridge.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::SmartFridge.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_RatingBar = global::SmartFridge.Resource.Style.Widget_AppCompat_RatingBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::SmartFridge.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_RatingBar_Small = global::SmartFridge.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_SearchView = global::SmartFridge.Resource.Style.Widget_AppCompat_SearchView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::SmartFridge.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_SeekBar = global::SmartFridge.Resource.Style.Widget_AppCompat_SeekBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::SmartFridge.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Spinner = global::SmartFridge.Resource.Style.Widget_AppCompat_Spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::SmartFridge.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::SmartFridge.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::SmartFridge.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::SmartFridge.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Toolbar = global::SmartFridge.Resource.Style.Widget_AppCompat_Toolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::SmartFridge.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Compat_NotificationActionContainer = global::SmartFridge.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Compat_NotificationActionText = global::SmartFridge.Resource.Style.Widget_Compat_NotificationActionText;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_AppBarLayout = global::SmartFridge.Resource.Style.Widget_Design_AppBarLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_BottomNavigationView = global::SmartFridge.Resource.Style.Widget_Design_BottomNavigationView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_BottomSheet_Modal = global::SmartFridge.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_CollapsingToolbar = global::SmartFridge.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_CoordinatorLayout = global::SmartFridge.Resource.Style.Widget_Design_CoordinatorLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_FloatingActionButton = global::SmartFridge.Resource.Style.Widget_Design_FloatingActionButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_NavigationView = global::SmartFridge.Resource.Style.Widget_Design_NavigationView;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::SmartFridge.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_Snackbar = global::SmartFridge.Resource.Style.Widget_Design_Snackbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_TabLayout = global::SmartFridge.Resource.Style.Widget_Design_TabLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Style.Widget_Design_TextInputLayout = global::SmartFridge.Resource.Style.Widget_Design_TextInputLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar = global::SmartFridge.Resource.Styleable.ActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_background = global::SmartFridge.Resource.Styleable.ActionBar_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_backgroundSplit = global::SmartFridge.Resource.Styleable.ActionBar_backgroundSplit;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_backgroundStacked = global::SmartFridge.Resource.Styleable.ActionBar_backgroundStacked;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_contentInsetEnd = global::SmartFridge.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::SmartFridge.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_contentInsetLeft = global::SmartFridge.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_contentInsetRight = global::SmartFridge.Resource.Styleable.ActionBar_contentInsetRight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_contentInsetStart = global::SmartFridge.Resource.Styleable.ActionBar_contentInsetStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::SmartFridge.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_customNavigationLayout = global::SmartFridge.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_displayOptions = global::SmartFridge.Resource.Styleable.ActionBar_displayOptions;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_divider = global::SmartFridge.Resource.Styleable.ActionBar_divider;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_elevation = global::SmartFridge.Resource.Styleable.ActionBar_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_height = global::SmartFridge.Resource.Styleable.ActionBar_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_hideOnContentScroll = global::SmartFridge.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_homeAsUpIndicator = global::SmartFridge.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_homeLayout = global::SmartFridge.Resource.Styleable.ActionBar_homeLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_icon = global::SmartFridge.Resource.Styleable.ActionBar_icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::SmartFridge.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_itemPadding = global::SmartFridge.Resource.Styleable.ActionBar_itemPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_logo = global::SmartFridge.Resource.Styleable.ActionBar_logo;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_navigationMode = global::SmartFridge.Resource.Styleable.ActionBar_navigationMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_popupTheme = global::SmartFridge.Resource.Styleable.ActionBar_popupTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_progressBarPadding = global::SmartFridge.Resource.Styleable.ActionBar_progressBarPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_progressBarStyle = global::SmartFridge.Resource.Styleable.ActionBar_progressBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_subtitle = global::SmartFridge.Resource.Styleable.ActionBar_subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_subtitleTextStyle = global::SmartFridge.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_title = global::SmartFridge.Resource.Styleable.ActionBar_title;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBar_titleTextStyle = global::SmartFridge.Resource.Styleable.ActionBar_titleTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBarLayout = global::SmartFridge.Resource.Styleable.ActionBarLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::SmartFridge.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMenuItemView = global::SmartFridge.Resource.Styleable.ActionMenuItemView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMenuItemView_android_minWidth = global::SmartFridge.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMenuView = global::SmartFridge.Resource.Styleable.ActionMenuView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMode = global::SmartFridge.Resource.Styleable.ActionMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMode_background = global::SmartFridge.Resource.Styleable.ActionMode_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMode_backgroundSplit = global::SmartFridge.Resource.Styleable.ActionMode_backgroundSplit;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMode_closeItemLayout = global::SmartFridge.Resource.Styleable.ActionMode_closeItemLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMode_height = global::SmartFridge.Resource.Styleable.ActionMode_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMode_subtitleTextStyle = global::SmartFridge.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActionMode_titleTextStyle = global::SmartFridge.Resource.Styleable.ActionMode_titleTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActivityChooserView = global::SmartFridge.Resource.Styleable.ActivityChooserView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::SmartFridge.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ActivityChooserView_initialActivityCount = global::SmartFridge.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AlertDialog = global::SmartFridge.Resource.Styleable.AlertDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AlertDialog_android_layout = global::SmartFridge.Resource.Styleable.AlertDialog_android_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::SmartFridge.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AlertDialog_listItemLayout = global::SmartFridge.Resource.Styleable.AlertDialog_listItemLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AlertDialog_listLayout = global::SmartFridge.Resource.Styleable.AlertDialog_listLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::SmartFridge.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AlertDialog_showTitle = global::SmartFridge.Resource.Styleable.AlertDialog_showTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::SmartFridge.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout = global::SmartFridge.Resource.Styleable.AppBarLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout_android_background = global::SmartFridge.Resource.Styleable.AppBarLayout_android_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::SmartFridge.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::SmartFridge.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout_elevation = global::SmartFridge.Resource.Styleable.AppBarLayout_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout_expanded = global::SmartFridge.Resource.Styleable.AppBarLayout_expanded;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayoutStates = global::SmartFridge.Resource.Styleable.AppBarLayoutStates;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::SmartFridge.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::SmartFridge.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout_Layout = global::SmartFridge.Resource.Styleable.AppBarLayout_Layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::SmartFridge.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::SmartFridge.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatImageView = global::SmartFridge.Resource.Styleable.AppCompatImageView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatImageView_android_src = global::SmartFridge.Resource.Styleable.AppCompatImageView_android_src;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatImageView_srcCompat = global::SmartFridge.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatImageView_tint = global::SmartFridge.Resource.Styleable.AppCompatImageView_tint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatImageView_tintMode = global::SmartFridge.Resource.Styleable.AppCompatImageView_tintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatSeekBar = global::SmartFridge.Resource.Styleable.AppCompatSeekBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatSeekBar_android_thumb = global::SmartFridge.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatSeekBar_tickMark = global::SmartFridge.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::SmartFridge.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::SmartFridge.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextHelper = global::SmartFridge.Resource.Styleable.AppCompatTextHelper;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::SmartFridge.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::SmartFridge.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::SmartFridge.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::SmartFridge.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::SmartFridge.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::SmartFridge.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::SmartFridge.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView = global::SmartFridge.Resource.Styleable.AppCompatTextView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView_android_textAppearance = global::SmartFridge.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::SmartFridge.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::SmartFridge.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::SmartFridge.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::SmartFridge.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::SmartFridge.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView_fontFamily = global::SmartFridge.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTextView_textAllCaps = global::SmartFridge.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme = global::SmartFridge.Resource.Styleable.AppCompatTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarDivider = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarSize = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarTheme = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeBackground = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::SmartFridge.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::SmartFridge.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::SmartFridge.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_buttonStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::SmartFridge.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_checkboxStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorAccent = global::SmartFridge.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::SmartFridge.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::SmartFridge.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorControlActivated = global::SmartFridge.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::SmartFridge.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorControlNormal = global::SmartFridge.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorError = global::SmartFridge.Resource.Styleable.AppCompatTheme_colorError;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorPrimary = global::SmartFridge.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::SmartFridge.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::SmartFridge.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_controlBackground = global::SmartFridge.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::SmartFridge.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_dialogTheme = global::SmartFridge.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::SmartFridge.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_dividerVertical = global::SmartFridge.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::SmartFridge.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_editTextBackground = global::SmartFridge.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_editTextColor = global::SmartFridge.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_editTextStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::SmartFridge.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::SmartFridge.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::SmartFridge.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::SmartFridge.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::SmartFridge.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::SmartFridge.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::SmartFridge.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::SmartFridge.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_panelBackground = global::SmartFridge.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::SmartFridge.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::SmartFridge.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::SmartFridge.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::SmartFridge.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_searchViewStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_seekBarStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::SmartFridge.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::SmartFridge.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_spinnerStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_switchStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::SmartFridge.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::SmartFridge.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::SmartFridge.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::SmartFridge.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::SmartFridge.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::SmartFridge.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::SmartFridge.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::SmartFridge.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::SmartFridge.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::SmartFridge.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_toolbarStyle = global::SmartFridge.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::SmartFridge.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::SmartFridge.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowActionBar = global::SmartFridge.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::SmartFridge.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::SmartFridge.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::SmartFridge.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::SmartFridge.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::SmartFridge.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::SmartFridge.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::SmartFridge.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::SmartFridge.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.AppCompatTheme_windowNoTitle = global::SmartFridge.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.BottomNavigationView = global::SmartFridge.Resource.Styleable.BottomNavigationView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.BottomNavigationView_elevation = global::SmartFridge.Resource.Styleable.BottomNavigationView_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.BottomNavigationView_itemBackground = global::SmartFridge.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.BottomNavigationView_itemIconTint = global::SmartFridge.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.BottomNavigationView_itemTextColor = global::SmartFridge.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.BottomNavigationView_menu = global::SmartFridge.Resource.Styleable.BottomNavigationView_menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.BottomSheetBehavior_Layout = global::SmartFridge.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::SmartFridge.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::SmartFridge.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::SmartFridge.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ButtonBarLayout = global::SmartFridge.Resource.Styleable.ButtonBarLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ButtonBarLayout_allowStacking = global::SmartFridge.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_title = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_Layout = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::SmartFridge.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ColorStateListItem = global::SmartFridge.Resource.Styleable.ColorStateListItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ColorStateListItem_alpha = global::SmartFridge.Resource.Styleable.ColorStateListItem_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ColorStateListItem_android_alpha = global::SmartFridge.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ColorStateListItem_android_color = global::SmartFridge.Resource.Styleable.ColorStateListItem_android_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CompoundButton = global::SmartFridge.Resource.Styleable.CompoundButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CompoundButton_android_button = global::SmartFridge.Resource.Styleable.CompoundButton_android_button;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CompoundButton_buttonTint = global::SmartFridge.Resource.Styleable.CompoundButton_buttonTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CompoundButton_buttonTintMode = global::SmartFridge.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout = global::SmartFridge.Resource.Styleable.CoordinatorLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_keylines = global::SmartFridge.Resource.Styleable.CoordinatorLayout_keylines;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::SmartFridge.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_Layout = global::SmartFridge.Resource.Styleable.CoordinatorLayout_Layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::SmartFridge.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::SmartFridge.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::SmartFridge.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::SmartFridge.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::SmartFridge.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::SmartFridge.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::SmartFridge.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DesignTheme = global::SmartFridge.Resource.Styleable.DesignTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::SmartFridge.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DesignTheme_bottomSheetStyle = global::SmartFridge.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DesignTheme_textColorError = global::SmartFridge.Resource.Styleable.DesignTheme_textColorError;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle = global::SmartFridge.Resource.Styleable.DrawerArrowToggle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::SmartFridge.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::SmartFridge.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle_barLength = global::SmartFridge.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle_color = global::SmartFridge.Resource.Styleable.DrawerArrowToggle_color;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle_drawableSize = global::SmartFridge.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::SmartFridge.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle_spinBars = global::SmartFridge.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.DrawerArrowToggle_thickness = global::SmartFridge.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton = global::SmartFridge.Resource.Styleable.FloatingActionButton;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_backgroundTint = global::SmartFridge.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::SmartFridge.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_borderWidth = global::SmartFridge.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_elevation = global::SmartFridge.Resource.Styleable.FloatingActionButton_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_fabSize = global::SmartFridge.Resource.Styleable.FloatingActionButton_fabSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::SmartFridge.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_rippleColor = global::SmartFridge.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_useCompatPadding = global::SmartFridge.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::SmartFridge.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::SmartFridge.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamily = global::SmartFridge.Resource.Styleable.FontFamily;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamily_fontProviderAuthority = global::SmartFridge.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamily_fontProviderCerts = global::SmartFridge.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::SmartFridge.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::SmartFridge.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamily_fontProviderPackage = global::SmartFridge.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamily_fontProviderQuery = global::SmartFridge.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamilyFont = global::SmartFridge.Resource.Styleable.FontFamilyFont;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamilyFont_android_font = global::SmartFridge.Resource.Styleable.FontFamilyFont_android_font;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamilyFont_android_fontStyle = global::SmartFridge.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamilyFont_android_fontWeight = global::SmartFridge.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamilyFont_font = global::SmartFridge.Resource.Styleable.FontFamilyFont_font;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamilyFont_fontStyle = global::SmartFridge.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.FontFamilyFont_fontWeight = global::SmartFridge.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ForegroundLinearLayout = global::SmartFridge.Resource.Styleable.ForegroundLinearLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::SmartFridge.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::SmartFridge.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::SmartFridge.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat = global::SmartFridge.Resource.Styleable.LinearLayoutCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::SmartFridge.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::SmartFridge.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_android_gravity = global::SmartFridge.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_android_orientation = global::SmartFridge.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::SmartFridge.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_divider = global::SmartFridge.Resource.Styleable.LinearLayoutCompat_divider;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::SmartFridge.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::SmartFridge.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_showDividers = global::SmartFridge.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_Layout = global::SmartFridge.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::SmartFridge.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::SmartFridge.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::SmartFridge.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::SmartFridge.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ListPopupWindow = global::SmartFridge.Resource.Styleable.ListPopupWindow;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::SmartFridge.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::SmartFridge.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuGroup = global::SmartFridge.Resource.Styleable.MenuGroup;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuGroup_android_checkableBehavior = global::SmartFridge.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuGroup_android_enabled = global::SmartFridge.Resource.Styleable.MenuGroup_android_enabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuGroup_android_id = global::SmartFridge.Resource.Styleable.MenuGroup_android_id;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuGroup_android_menuCategory = global::SmartFridge.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuGroup_android_orderInCategory = global::SmartFridge.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuGroup_android_visible = global::SmartFridge.Resource.Styleable.MenuGroup_android_visible;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem = global::SmartFridge.Resource.Styleable.MenuItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_actionLayout = global::SmartFridge.Resource.Styleable.MenuItem_actionLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_actionProviderClass = global::SmartFridge.Resource.Styleable.MenuItem_actionProviderClass;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_actionViewClass = global::SmartFridge.Resource.Styleable.MenuItem_actionViewClass;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_alphabeticModifiers = global::SmartFridge.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::SmartFridge.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_checkable = global::SmartFridge.Resource.Styleable.MenuItem_android_checkable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_checked = global::SmartFridge.Resource.Styleable.MenuItem_android_checked;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_enabled = global::SmartFridge.Resource.Styleable.MenuItem_android_enabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_icon = global::SmartFridge.Resource.Styleable.MenuItem_android_icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_id = global::SmartFridge.Resource.Styleable.MenuItem_android_id;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_menuCategory = global::SmartFridge.Resource.Styleable.MenuItem_android_menuCategory;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_numericShortcut = global::SmartFridge.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_onClick = global::SmartFridge.Resource.Styleable.MenuItem_android_onClick;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_orderInCategory = global::SmartFridge.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_title = global::SmartFridge.Resource.Styleable.MenuItem_android_title;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_titleCondensed = global::SmartFridge.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_android_visible = global::SmartFridge.Resource.Styleable.MenuItem_android_visible;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_contentDescription = global::SmartFridge.Resource.Styleable.MenuItem_contentDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_iconTint = global::SmartFridge.Resource.Styleable.MenuItem_iconTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_iconTintMode = global::SmartFridge.Resource.Styleable.MenuItem_iconTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_numericModifiers = global::SmartFridge.Resource.Styleable.MenuItem_numericModifiers;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_showAsAction = global::SmartFridge.Resource.Styleable.MenuItem_showAsAction;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuItem_tooltipText = global::SmartFridge.Resource.Styleable.MenuItem_tooltipText;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView = global::SmartFridge.Resource.Styleable.MenuView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_android_headerBackground = global::SmartFridge.Resource.Styleable.MenuView_android_headerBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_android_horizontalDivider = global::SmartFridge.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_android_itemBackground = global::SmartFridge.Resource.Styleable.MenuView_android_itemBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::SmartFridge.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_android_itemTextAppearance = global::SmartFridge.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_android_verticalDivider = global::SmartFridge.Resource.Styleable.MenuView_android_verticalDivider;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_android_windowAnimationStyle = global::SmartFridge.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_preserveIconSpacing = global::SmartFridge.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.MenuView_subMenuArrow = global::SmartFridge.Resource.Styleable.MenuView_subMenuArrow;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView = global::SmartFridge.Resource.Styleable.NavigationView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_android_background = global::SmartFridge.Resource.Styleable.NavigationView_android_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::SmartFridge.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_android_maxWidth = global::SmartFridge.Resource.Styleable.NavigationView_android_maxWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_elevation = global::SmartFridge.Resource.Styleable.NavigationView_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_headerLayout = global::SmartFridge.Resource.Styleable.NavigationView_headerLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_itemBackground = global::SmartFridge.Resource.Styleable.NavigationView_itemBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_itemIconTint = global::SmartFridge.Resource.Styleable.NavigationView_itemIconTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_itemTextAppearance = global::SmartFridge.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_itemTextColor = global::SmartFridge.Resource.Styleable.NavigationView_itemTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.NavigationView_menu = global::SmartFridge.Resource.Styleable.NavigationView_menu;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.PopupWindow = global::SmartFridge.Resource.Styleable.PopupWindow;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::SmartFridge.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.PopupWindow_android_popupBackground = global::SmartFridge.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.PopupWindow_overlapAnchor = global::SmartFridge.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.PopupWindowBackgroundState = global::SmartFridge.Resource.Styleable.PopupWindowBackgroundState;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::SmartFridge.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecycleListView = global::SmartFridge.Resource.Styleable.RecycleListView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::SmartFridge.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::SmartFridge.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView = global::SmartFridge.Resource.Styleable.RecyclerView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_android_descendantFocusability = global::SmartFridge.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_android_orientation = global::SmartFridge.Resource.Styleable.RecyclerView_android_orientation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_fastScrollEnabled = global::SmartFridge.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::SmartFridge.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::SmartFridge.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::SmartFridge.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::SmartFridge.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_layoutManager = global::SmartFridge.Resource.Styleable.RecyclerView_layoutManager;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_reverseLayout = global::SmartFridge.Resource.Styleable.RecyclerView_reverseLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_spanCount = global::SmartFridge.Resource.Styleable.RecyclerView_spanCount;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.RecyclerView_stackFromEnd = global::SmartFridge.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ScrimInsetsFrameLayout = global::SmartFridge.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::SmartFridge.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ScrollingViewBehavior_Layout = global::SmartFridge.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::SmartFridge.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView = global::SmartFridge.Resource.Styleable.SearchView;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_android_focusable = global::SmartFridge.Resource.Styleable.SearchView_android_focusable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_android_imeOptions = global::SmartFridge.Resource.Styleable.SearchView_android_imeOptions;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_android_inputType = global::SmartFridge.Resource.Styleable.SearchView_android_inputType;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_android_maxWidth = global::SmartFridge.Resource.Styleable.SearchView_android_maxWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_closeIcon = global::SmartFridge.Resource.Styleable.SearchView_closeIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_commitIcon = global::SmartFridge.Resource.Styleable.SearchView_commitIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_defaultQueryHint = global::SmartFridge.Resource.Styleable.SearchView_defaultQueryHint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_goIcon = global::SmartFridge.Resource.Styleable.SearchView_goIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_iconifiedByDefault = global::SmartFridge.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_layout = global::SmartFridge.Resource.Styleable.SearchView_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_queryBackground = global::SmartFridge.Resource.Styleable.SearchView_queryBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_queryHint = global::SmartFridge.Resource.Styleable.SearchView_queryHint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_searchHintIcon = global::SmartFridge.Resource.Styleable.SearchView_searchHintIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_searchIcon = global::SmartFridge.Resource.Styleable.SearchView_searchIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_submitBackground = global::SmartFridge.Resource.Styleable.SearchView_submitBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_suggestionRowLayout = global::SmartFridge.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SearchView_voiceIcon = global::SmartFridge.Resource.Styleable.SearchView_voiceIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SnackbarLayout = global::SmartFridge.Resource.Styleable.SnackbarLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SnackbarLayout_android_maxWidth = global::SmartFridge.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SnackbarLayout_elevation = global::SmartFridge.Resource.Styleable.SnackbarLayout_elevation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::SmartFridge.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Spinner = global::SmartFridge.Resource.Styleable.Spinner;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Spinner_android_dropDownWidth = global::SmartFridge.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Spinner_android_entries = global::SmartFridge.Resource.Styleable.Spinner_android_entries;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Spinner_android_popupBackground = global::SmartFridge.Resource.Styleable.Spinner_android_popupBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Spinner_android_prompt = global::SmartFridge.Resource.Styleable.Spinner_android_prompt;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Spinner_popupTheme = global::SmartFridge.Resource.Styleable.Spinner_popupTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat = global::SmartFridge.Resource.Styleable.SwitchCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_android_textOff = global::SmartFridge.Resource.Styleable.SwitchCompat_android_textOff;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_android_textOn = global::SmartFridge.Resource.Styleable.SwitchCompat_android_textOn;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_android_thumb = global::SmartFridge.Resource.Styleable.SwitchCompat_android_thumb;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_showText = global::SmartFridge.Resource.Styleable.SwitchCompat_showText;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_splitTrack = global::SmartFridge.Resource.Styleable.SwitchCompat_splitTrack;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_switchMinWidth = global::SmartFridge.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_switchPadding = global::SmartFridge.Resource.Styleable.SwitchCompat_switchPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_switchTextAppearance = global::SmartFridge.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_thumbTextPadding = global::SmartFridge.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_thumbTint = global::SmartFridge.Resource.Styleable.SwitchCompat_thumbTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_thumbTintMode = global::SmartFridge.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_track = global::SmartFridge.Resource.Styleable.SwitchCompat_track;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_trackTint = global::SmartFridge.Resource.Styleable.SwitchCompat_trackTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.SwitchCompat_trackTintMode = global::SmartFridge.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabItem = global::SmartFridge.Resource.Styleable.TabItem;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabItem_android_icon = global::SmartFridge.Resource.Styleable.TabItem_android_icon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabItem_android_layout = global::SmartFridge.Resource.Styleable.TabItem_android_layout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabItem_android_text = global::SmartFridge.Resource.Styleable.TabItem_android_text;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout = global::SmartFridge.Resource.Styleable.TabLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabBackground = global::SmartFridge.Resource.Styleable.TabLayout_tabBackground;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabContentStart = global::SmartFridge.Resource.Styleable.TabLayout_tabContentStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabGravity = global::SmartFridge.Resource.Styleable.TabLayout_tabGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabIndicatorColor = global::SmartFridge.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabIndicatorHeight = global::SmartFridge.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabMaxWidth = global::SmartFridge.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabMinWidth = global::SmartFridge.Resource.Styleable.TabLayout_tabMinWidth;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabMode = global::SmartFridge.Resource.Styleable.TabLayout_tabMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabPadding = global::SmartFridge.Resource.Styleable.TabLayout_tabPadding;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabPaddingBottom = global::SmartFridge.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabPaddingEnd = global::SmartFridge.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabPaddingStart = global::SmartFridge.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabPaddingTop = global::SmartFridge.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabSelectedTextColor = global::SmartFridge.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabTextAppearance = global::SmartFridge.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TabLayout_tabTextColor = global::SmartFridge.Resource.Styleable.TabLayout_tabTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance = global::SmartFridge.Resource.Styleable.TextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_fontFamily = global::SmartFridge.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_shadowColor = global::SmartFridge.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_shadowDx = global::SmartFridge.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_shadowDy = global::SmartFridge.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_shadowRadius = global::SmartFridge.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_textColor = global::SmartFridge.Resource.Styleable.TextAppearance_android_textColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_textColorHint = global::SmartFridge.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_textColorLink = global::SmartFridge.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_textSize = global::SmartFridge.Resource.Styleable.TextAppearance_android_textSize;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_textStyle = global::SmartFridge.Resource.Styleable.TextAppearance_android_textStyle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_android_typeface = global::SmartFridge.Resource.Styleable.TextAppearance_android_typeface;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_fontFamily = global::SmartFridge.Resource.Styleable.TextAppearance_fontFamily;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextAppearance_textAllCaps = global::SmartFridge.Resource.Styleable.TextAppearance_textAllCaps;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout = global::SmartFridge.Resource.Styleable.TextInputLayout;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_android_hint = global::SmartFridge.Resource.Styleable.TextInputLayout_android_hint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_android_textColorHint = global::SmartFridge.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_counterEnabled = global::SmartFridge.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_counterMaxLength = global::SmartFridge.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::SmartFridge.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_counterTextAppearance = global::SmartFridge.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_errorEnabled = global::SmartFridge.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_errorTextAppearance = global::SmartFridge.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::SmartFridge.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_hintEnabled = global::SmartFridge.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_hintTextAppearance = global::SmartFridge.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::SmartFridge.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::SmartFridge.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::SmartFridge.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_passwordToggleTint = global::SmartFridge.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::SmartFridge.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar = global::SmartFridge.Resource.Styleable.Toolbar;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_android_gravity = global::SmartFridge.Resource.Styleable.Toolbar_android_gravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_android_minHeight = global::SmartFridge.Resource.Styleable.Toolbar_android_minHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_buttonGravity = global::SmartFridge.Resource.Styleable.Toolbar_buttonGravity;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_collapseContentDescription = global::SmartFridge.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_collapseIcon = global::SmartFridge.Resource.Styleable.Toolbar_collapseIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_contentInsetEnd = global::SmartFridge.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::SmartFridge.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_contentInsetLeft = global::SmartFridge.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_contentInsetRight = global::SmartFridge.Resource.Styleable.Toolbar_contentInsetRight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_contentInsetStart = global::SmartFridge.Resource.Styleable.Toolbar_contentInsetStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::SmartFridge.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_logo = global::SmartFridge.Resource.Styleable.Toolbar_logo;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_logoDescription = global::SmartFridge.Resource.Styleable.Toolbar_logoDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_maxButtonHeight = global::SmartFridge.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_navigationContentDescription = global::SmartFridge.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_navigationIcon = global::SmartFridge.Resource.Styleable.Toolbar_navigationIcon;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_popupTheme = global::SmartFridge.Resource.Styleable.Toolbar_popupTheme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_subtitle = global::SmartFridge.Resource.Styleable.Toolbar_subtitle;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_subtitleTextAppearance = global::SmartFridge.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_subtitleTextColor = global::SmartFridge.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_title = global::SmartFridge.Resource.Styleable.Toolbar_title;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_titleMargin = global::SmartFridge.Resource.Styleable.Toolbar_titleMargin;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_titleMarginBottom = global::SmartFridge.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_titleMarginEnd = global::SmartFridge.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_titleMarginStart = global::SmartFridge.Resource.Styleable.Toolbar_titleMarginStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_titleMarginTop = global::SmartFridge.Resource.Styleable.Toolbar_titleMarginTop;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_titleMargins = global::SmartFridge.Resource.Styleable.Toolbar_titleMargins;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_titleTextAppearance = global::SmartFridge.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.Toolbar_titleTextColor = global::SmartFridge.Resource.Styleable.Toolbar_titleTextColor;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.View = global::SmartFridge.Resource.Styleable.View;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.View_android_focusable = global::SmartFridge.Resource.Styleable.View_android_focusable;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.View_android_theme = global::SmartFridge.Resource.Styleable.View_android_theme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.View_paddingEnd = global::SmartFridge.Resource.Styleable.View_paddingEnd;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.View_paddingStart = global::SmartFridge.Resource.Styleable.View_paddingStart;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.View_theme = global::SmartFridge.Resource.Styleable.View_theme;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ViewBackgroundHelper = global::SmartFridge.Resource.Styleable.ViewBackgroundHelper;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ViewBackgroundHelper_android_background = global::SmartFridge.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::SmartFridge.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::SmartFridge.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ViewStubCompat = global::SmartFridge.Resource.Styleable.ViewStubCompat;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ViewStubCompat_android_id = global::SmartFridge.Resource.Styleable.ViewStubCompat_android_id;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ViewStubCompat_android_inflatedId = global::SmartFridge.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::PCLAppConfig.FileSystemStream.Resource.Styleable.ViewStubCompat_android_layout = global::SmartFridge.Resource.Styleable.ViewStubCompat_android_layout;
 			global::Com.Syncfusion.Autocomplete.Resource.Attribute.autocompleteBorderColor = global::SmartFridge.Resource.Attribute.autocompleteBorderColor;
 			global::Com.Syncfusion.Autocomplete.Resource.Attribute.autocompleteShowBorder = global::SmartFridge.Resource.Attribute.autocompleteShowBorder;
 			global::Com.Syncfusion.Autocomplete.Resource.Attribute.autocompleteShowClearButton = global::SmartFridge.Resource.Attribute.autocompleteShowClearButton;
@@ -2357,167 +4296,185 @@ namespace SmartFridge
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f020085
-			public const int avd_hide_password_1 = 2130837637;
+			// aapt resource value: 0x7f02008b
+			public const int avd_hide_password_1 = 2130837643;
 			
-			// aapt resource value: 0x7f020086
-			public const int avd_hide_password_2 = 2130837638;
+			// aapt resource value: 0x7f02008c
+			public const int avd_hide_password_2 = 2130837644;
 			
-			// aapt resource value: 0x7f020087
-			public const int avd_hide_password_3 = 2130837639;
+			// aapt resource value: 0x7f02008d
+			public const int avd_hide_password_3 = 2130837645;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f020088
-			public const int avd_show_password_1 = 2130837640;
+			// aapt resource value: 0x7f02008e
+			public const int avd_show_password_1 = 2130837646;
 			
-			// aapt resource value: 0x7f020089
-			public const int avd_show_password_2 = 2130837641;
+			// aapt resource value: 0x7f02008f
+			public const int avd_show_password_2 = 2130837647;
 			
-			// aapt resource value: 0x7f02008a
-			public const int avd_show_password_3 = 2130837642;
+			// aapt resource value: 0x7f020090
+			public const int avd_show_password_3 = 2130837648;
 			
 			// aapt resource value: 0x7f020056
-			public const int baseline_account_circle_black_24dp = 2130837590;
+			public const int background_1 = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int baseline_add_black_18dp = 2130837591;
+			public const int background_2 = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int baseline_add_black_24dp = 2130837592;
+			public const int baseline_account_circle_black_24dp = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int baseline_arrow_back_white_18dp = 2130837593;
+			public const int baseline_add_black_18dp = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int baseline_build_black_24dp = 2130837594;
+			public const int baseline_add_black_24dp = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int baseline_clear_black_18dp = 2130837595;
+			public const int baseline_arrow_back_white_18dp = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int baseline_exit_to_app_black_24dp = 2130837596;
+			public const int baseline_build_black_24dp = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int baseline_feedback_black_24dp = 2130837597;
+			public const int baseline_clear_black_18dp = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int baseline_group_black_24dp = 2130837598;
+			public const int baseline_exit_to_app_black_24dp = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int baseline_menu_black_24dp = 2130837599;
+			public const int baseline_feedback_black_24dp = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int baseline_menu_white_24dp = 2130837600;
+			public const int baseline_group_black_24dp = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int baseline_restaurant_black_24dp = 2130837601;
+			public const int baseline_menu_black_24dp = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int baseline_rss_feed_black_18dp = 2130837602;
+			public const int baseline_menu_white_24dp = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int baseline_search_white_18dp = 2130837603;
+			public const int baseline_restaurant_black_24dp = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int baseline_shopping_cart_black_24dp = 2130837604;
+			public const int baseline_rss_feed_black_18dp = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int baseline_shopping_cart_white_24dp = 2130837605;
+			public const int baseline_search_white_18dp = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int cooking_on_fire = 2130837606;
+			public const int baseline_shopping_cart_black_24dp = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int design_bottom_navigation_item_background = 2130837607;
+			public const int baseline_shopping_cart_white_24dp = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int design_fab_background = 2130837608;
+			public const int cooking_on_fire = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int design_ic_visibility = 2130837609;
+			public const int custom_progressbar = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int design_ic_visibility_off = 2130837610;
+			public const int design_bottom_navigation_item_background = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int design_password_eye = 2130837611;
+			public const int design_fab_background = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int design_snackbar_background = 2130837612;
+			public const int design_ic_visibility = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int dropdownbuttonimage = 2130837613;
+			public const int design_ic_visibility_off = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int IconSmartFridge = 2130837614;
+			public const int design_password_eye = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int navigation_empty_icon = 2130837615;
+			public const int design_snackbar_background = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int notification_action_background = 2130837616;
+			public const int dropdownbuttonimage = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int notification_bg = 2130837617;
+			public const int IconSmartFridge = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int notification_bg_low = 2130837618;
+			public const int login_background = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int notification_bg_low_normal = 2130837619;
+			public const int login_background_2 = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int notification_bg_low_pressed = 2130837620;
+			public const int login_button_style = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int notification_bg_normal = 2130837621;
+			public const int navigation_empty_icon = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int notification_bg_normal_pressed = 2130837622;
+			public const int notification_action_background = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int notification_icon_background = 2130837623;
-			
-			// aapt resource value: 0x7f020083
-			public const int notification_template_icon_bg = 2130837635;
-			
-			// aapt resource value: 0x7f020084
-			public const int notification_template_icon_low_bg = 2130837636;
+			public const int notification_bg = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int notification_tile_bg = 2130837624;
+			public const int notification_bg_low = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int notify_panel_notification_icon_bg = 2130837625;
+			public const int notification_bg_low_normal = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int pica_od_suvog_hleba_ = 2130837626;
+			public const int notification_bg_low_pressed = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int pita_sa_koprivom_ = 2130837627;
+			public const int notification_bg_normal = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int refrigerator = 2130837628;
+			public const int notification_bg_normal_pressed = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int refrigeratorSplash = 2130837629;
+			public const int notification_icon_background = 2130837629;
+			
+			// aapt resource value: 0x7f020089
+			public const int notification_template_icon_bg = 2130837641;
+			
+			// aapt resource value: 0x7f02008a
+			public const int notification_template_icon_low_bg = 2130837642;
 			
 			// aapt resource value: 0x7f02007e
-			public const int sfclosebutton = 2130837630;
+			public const int notification_tile_bg = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int styleinfo = 2130837631;
+			public const int notify_panel_notification_icon_bg = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int tooltip_frame_dark = 2130837632;
+			public const int pica_od_suvog_hleba_ = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int tooltip_frame_light = 2130837633;
+			public const int pita_sa_koprivom_ = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int torta_pahuljica_ = 2130837634;
+			public const int refrigerator = 2130837634;
+			
+			// aapt resource value: 0x7f020083
+			public const int refrigeratorSplash = 2130837635;
+			
+			// aapt resource value: 0x7f020084
+			public const int sfclosebutton = 2130837636;
+			
+			// aapt resource value: 0x7f020085
+			public const int styleinfo = 2130837637;
+			
+			// aapt resource value: 0x7f020086
+			public const int tooltip_frame_dark = 2130837638;
+			
+			// aapt resource value: 0x7f020087
+			public const int tooltip_frame_light = 2130837639;
+			
+			// aapt resource value: 0x7f020088
+			public const int torta_pahuljica_ = 2130837640;
 			
 			static Drawable()
 			{
@@ -2541,8 +4498,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080034
 			public const int FUNCTION = 2131230772;
 			
-			// aapt resource value: 0x7f0800a6
-			public const int Itemname = 2131230886;
+			// aapt resource value: 0x7f0800a9
+			public const int Itemname = 2131230889;
 			
 			// aapt resource value: 0x7f080035
 			public const int META = 2131230773;
@@ -2553,8 +4510,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080037
 			public const int SYM = 2131230775;
 			
-			// aapt resource value: 0x7f0800e2
-			public const int action0 = 2131230946;
+			// aapt resource value: 0x7f0800e7
+			public const int action0 = 2131230951;
 			
 			// aapt resource value: 0x7f08007c
 			public const int action_bar = 2131230844;
@@ -2577,17 +4534,17 @@ namespace SmartFridge
 			// aapt resource value: 0x7f08005a
 			public const int action_bar_title = 2131230810;
 			
-			// aapt resource value: 0x7f0800df
-			public const int action_container = 2131230943;
+			// aapt resource value: 0x7f0800e4
+			public const int action_container = 2131230948;
 			
 			// aapt resource value: 0x7f08007d
 			public const int action_context_bar = 2131230845;
 			
-			// aapt resource value: 0x7f0800e6
-			public const int action_divider = 2131230950;
+			// aapt resource value: 0x7f0800eb
+			public const int action_divider = 2131230955;
 			
-			// aapt resource value: 0x7f0800e0
-			public const int action_image = 2131230944;
+			// aapt resource value: 0x7f0800e5
+			public const int action_image = 2131230949;
 			
 			// aapt resource value: 0x7f080003
 			public const int action_menu_divider = 2131230723;
@@ -2604,11 +4561,11 @@ namespace SmartFridge
 			// aapt resource value: 0x7f08005c
 			public const int action_mode_close_button = 2131230812;
 			
-			// aapt resource value: 0x7f0800e1
-			public const int action_text = 2131230945;
+			// aapt resource value: 0x7f0800e6
+			public const int action_text = 2131230950;
 			
-			// aapt resource value: 0x7f0800ef
-			public const int actions = 2131230959;
+			// aapt resource value: 0x7f0800f4
+			public const int actions = 2131230964;
 			
 			// aapt resource value: 0x7f08005d
 			public const int activity_chooser_view_content = 2131230813;
@@ -2616,8 +4573,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080027
 			public const int add = 2131230759;
 			
-			// aapt resource value: 0x7f080110
-			public const int after_logo_tv = 2131230992;
+			// aapt resource value: 0x7f080115
+			public const int after_logo_tv = 2131230997;
 			
 			// aapt resource value: 0x7f080070
 			public const int alertTitle = 2131230832;
@@ -2628,8 +4585,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080038
 			public const int always = 2131230776;
 			
-			// aapt resource value: 0x7f080120
-			public const int ascending = 2131231008;
+			// aapt resource value: 0x7f080125
+			public const int ascending = 2131231013;
 			
 			// aapt resource value: 0x7f080056
 			public const int async = 2131230806;
@@ -2637,11 +4594,11 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080044
 			public const int auto = 2131230788;
 			
-			// aapt resource value: 0x7f0800b8
-			public const int autoCompleteGrocery = 2131230904;
+			// aapt resource value: 0x7f0800bb
+			public const int autoCompleteGrocery = 2131230907;
 			
-			// aapt resource value: 0x7f08010e
-			public const int before_logo_tv = 2131230990;
+			// aapt resource value: 0x7f080113
+			public const int before_logo_tv = 2131230995;
 			
 			// aapt resource value: 0x7f08002f
 			public const int beginning = 2131230767;
@@ -2652,53 +4609,56 @@ namespace SmartFridge
 			// aapt resource value: 0x7f08003d
 			public const int bottom = 2131230781;
 			
-			// aapt resource value: 0x7f080100
-			public const int bottomNavigationViewRecipe = 2131230976;
+			// aapt resource value: 0x7f080105
+			public const int bottomNavigationViewRecipe = 2131230981;
 			
-			// aapt resource value: 0x7f08010b
-			public const int btnAddtoGroceriesList = 2131230987;
+			// aapt resource value: 0x7f080110
+			public const int btnAddtoGroceriesList = 2131230992;
 			
-			// aapt resource value: 0x7f0800bc
-			public const int btnCancel = 2131230908;
+			// aapt resource value: 0x7f0800bf
+			public const int btnCancel = 2131230911;
 			
-			// aapt resource value: 0x7f0800a5
-			public const int btnCancelCreateAcc = 2131230885;
+			// aapt resource value: 0x7f0800a8
+			public const int btnCancelCreateAcc = 2131230888;
 			
 			// aapt resource value: 0x7f080097
 			public const int btnCancelNewPass = 2131230871;
 			
-			// aapt resource value: 0x7f0800db
-			public const int btnChangePassword = 2131230939;
+			// aapt resource value: 0x7f08009a
+			public const int btnCancelNewUsername = 2131230874;
 			
-			// aapt resource value: 0x7f0800d9
-			public const int btnChangeUsername = 2131230937;
+			// aapt resource value: 0x7f0800de
+			public const int btnChangePassword = 2131230942;
 			
-			// aapt resource value: 0x7f0800d5
-			public const int btnCreateAcc = 2131230933;
+			// aapt resource value: 0x7f0800dc
+			public const int btnChangeUsername = 2131230940;
 			
-			// aapt resource value: 0x7f0800c3
-			public const int btnEat = 2131230915;
+			// aapt resource value: 0x7f0800d8
+			public const int btnCreateAcc = 2131230936;
 			
-			// aapt resource value: 0x7f0800d4
-			public const int btnLogin = 2131230932;
+			// aapt resource value: 0x7f0800c6
+			public const int btnEat = 2131230918;
 			
-			// aapt resource value: 0x7f0800bb
-			public const int btnOK = 2131230907;
+			// aapt resource value: 0x7f0800d7
+			public const int btnLogin = 2131230935;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int btnOkCreateAcc = 2131230884;
+			// aapt resource value: 0x7f0800be
+			public const int btnOK = 2131230910;
 			
-			// aapt resource value: 0x7f0800c2
-			public const int btnSearchRecipe = 2131230914;
+			// aapt resource value: 0x7f0800a7
+			public const int btnOkCreateAcc = 2131230887;
+			
+			// aapt resource value: 0x7f0800c5
+			public const int btnSearchRecipe = 2131230917;
 			
 			// aapt resource value: 0x7f080063
 			public const int buttonPanel = 2131230819;
 			
-			// aapt resource value: 0x7f0800e3
-			public const int cancel_action = 2131230947;
+			// aapt resource value: 0x7f0800e8
+			public const int cancel_action = 2131230952;
 			
-			// aapt resource value: 0x7f080117
-			public const int cartMain = 2131230999;
+			// aapt resource value: 0x7f08011c
+			public const int cartMain = 2131231004;
 			
 			// aapt resource value: 0x7f080045
 			public const int center = 2131230789;
@@ -2712,23 +4672,26 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080096
 			public const int changePassButton = 2131230870;
 			
-			// aapt resource value: 0x7f080106
-			public const int checkBoxBought = 2131230982;
+			// aapt resource value: 0x7f080099
+			public const int changeToNewUserNameButton = 2131230873;
 			
-			// aapt resource value: 0x7f0800c7
-			public const int checkBoxGrocery = 2131230919;
+			// aapt resource value: 0x7f08010b
+			public const int checkBoxBought = 2131230987;
 			
-			// aapt resource value: 0x7f08009e
-			public const int checkBoxGroup = 2131230878;
+			// aapt resource value: 0x7f0800ca
+			public const int checkBoxGrocery = 2131230922;
 			
-			// aapt resource value: 0x7f0800f8
-			public const int checkBoxNotifications = 2131230968;
+			// aapt resource value: 0x7f0800a1
+			public const int checkBoxGroup = 2131230881;
+			
+			// aapt resource value: 0x7f0800fd
+			public const int checkBoxNotifications = 2131230973;
 			
 			// aapt resource value: 0x7f080073
 			public const int checkbox = 2131230835;
 			
-			// aapt resource value: 0x7f0800eb
-			public const int chronometer = 2131230955;
+			// aapt resource value: 0x7f0800f0
+			public const int chronometer = 2131230960;
 			
 			// aapt resource value: 0x7f08004e
 			public const int clip_horizontal = 2131230798;
@@ -2736,14 +4699,14 @@ namespace SmartFridge
 			// aapt resource value: 0x7f08004f
 			public const int clip_vertical = 2131230799;
 			
-			// aapt resource value: 0x7f0800b7
-			public const int cmboBoxCategories = 2131230903;
+			// aapt resource value: 0x7f0800ba
+			public const int cmboBoxCategories = 2131230906;
 			
 			// aapt resource value: 0x7f080039
 			public const int collapseActionView = 2131230777;
 			
-			// aapt resource value: 0x7f0800a9
-			public const int container = 2131230889;
+			// aapt resource value: 0x7f0800ac
+			public const int container = 2131230892;
 			
 			// aapt resource value: 0x7f08008e
 			public const int contentFrameMain = 2131230862;
@@ -2751,8 +4714,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080066
 			public const int contentPanel = 2131230822;
 			
-			// aapt resource value: 0x7f0800aa
-			public const int coordinator = 2131230890;
+			// aapt resource value: 0x7f0800ad
+			public const int coordinator = 2131230893;
 			
 			// aapt resource value: 0x7f08006d
 			public const int custom = 2131230829;
@@ -2766,23 +4729,23 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080060
 			public const int default_activity_button = 2131230816;
 			
-			// aapt resource value: 0x7f080121
-			public const int descending = 2131231009;
+			// aapt resource value: 0x7f080126
+			public const int descending = 2131231014;
 			
-			// aapt resource value: 0x7f0800ac
-			public const int design_bottom_sheet = 2131230892;
+			// aapt resource value: 0x7f0800af
+			public const int design_bottom_sheet = 2131230895;
+			
+			// aapt resource value: 0x7f0800b6
+			public const int design_menu_item_action_area = 2131230902;
+			
+			// aapt resource value: 0x7f0800b5
+			public const int design_menu_item_action_area_stub = 2131230901;
+			
+			// aapt resource value: 0x7f0800b4
+			public const int design_menu_item_text = 2131230900;
 			
 			// aapt resource value: 0x7f0800b3
-			public const int design_menu_item_action_area = 2131230899;
-			
-			// aapt resource value: 0x7f0800b2
-			public const int design_menu_item_action_area_stub = 2131230898;
-			
-			// aapt resource value: 0x7f0800b1
-			public const int design_menu_item_text = 2131230897;
-			
-			// aapt resource value: 0x7f0800b0
-			public const int design_navigation_view = 2131230896;
+			public const int design_navigation_view = 2131230899;
 			
 			// aapt resource value: 0x7f080020
 			public const int disableHome = 2131230752;
@@ -2790,38 +4753,44 @@ namespace SmartFridge
 			// aapt resource value: 0x7f08008b
 			public const int drawerMain = 2131230859;
 			
-			// aapt resource value: 0x7f0800b9
-			public const int editTxtAmountGrocery = 2131230905;
+			// aapt resource value: 0x7f0800bc
+			public const int editTxtAmountGrocery = 2131230908;
 			
-			// aapt resource value: 0x7f080105
-			public const int editTxtBought = 2131230981;
+			// aapt resource value: 0x7f08010a
+			public const int editTxtBought = 2131230986;
 			
-			// aapt resource value: 0x7f08009a
-			public const int editTxtEmailCreateAcc = 2131230874;
+			// aapt resource value: 0x7f08009d
+			public const int editTxtEmailCreateAcc = 2131230877;
 			
-			// aapt resource value: 0x7f08009f
-			public const int editTxtGroupID = 2131230879;
+			// aapt resource value: 0x7f0800a2
+			public const int editTxtGroupID = 2131230882;
 			
-			// aapt resource value: 0x7f08009b
-			public const int editTxtNameCreateAcc = 2131230875;
+			// aapt resource value: 0x7f08009e
+			public const int editTxtNameCreateAcc = 2131230878;
+			
+			// aapt resource value: 0x7f0800e2
+			public const int editTxtNewGroupId = 2131230946;
 			
 			// aapt resource value: 0x7f080095
 			public const int editTxtNewPass = 2131230869;
 			
-			// aapt resource value: 0x7f0800d3
-			public const int editTxtPassword = 2131230931;
+			// aapt resource value: 0x7f080098
+			public const int editTxtNewUserName = 2131230872;
 			
-			// aapt resource value: 0x7f080099
-			public const int editTxtPasswordCreateAcc = 2131230873;
+			// aapt resource value: 0x7f0800d6
+			public const int editTxtPassword = 2131230934;
 			
 			// aapt resource value: 0x7f08009c
-			public const int editTxtSurNameCreateAcc = 2131230876;
+			public const int editTxtPasswordCreateAcc = 2131230876;
 			
-			// aapt resource value: 0x7f080098
-			public const int editTxtUserNameCreateAcc = 2131230872;
+			// aapt resource value: 0x7f08009f
+			public const int editTxtSurNameCreateAcc = 2131230879;
 			
-			// aapt resource value: 0x7f0800d2
-			public const int editTxtUsername = 2131230930;
+			// aapt resource value: 0x7f08009b
+			public const int editTxtUserNameCreateAcc = 2131230875;
+			
+			// aapt resource value: 0x7f0800d5
+			public const int editTxtUsername = 2131230933;
 			
 			// aapt resource value: 0x7f08007e
 			public const int edit_query = 2131230846;
@@ -2829,8 +4798,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080030
 			public const int end = 2131230768;
 			
-			// aapt resource value: 0x7f0800f1
-			public const int end_padder = 2131230961;
+			// aapt resource value: 0x7f0800f6
+			public const int end_padder = 2131230966;
 			
 			// aapt resource value: 0x7f08003f
 			public const int enterAlways = 2131230783;
@@ -2847,14 +4816,14 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080072
 			public const int expanded_menu = 2131230834;
 			
-			// aapt resource value: 0x7f0800bf
-			public const int fABgroceries = 2131230911;
+			// aapt resource value: 0x7f0800c2
+			public const int fABgroceries = 2131230914;
 			
-			// aapt resource value: 0x7f08010a
-			public const int fABshoppingCart = 2131230986;
+			// aapt resource value: 0x7f08010f
+			public const int fABshoppingCart = 2131230991;
 			
-			// aapt resource value: 0x7f08011b
-			public const int feedbackMain = 2131231003;
+			// aapt resource value: 0x7f080120
+			public const int feedbackMain = 2131231008;
 			
 			// aapt resource value: 0x7f080050
 			public const int fill = 2131230800;
@@ -2868,8 +4837,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080054
 			public const int @fixed = 2131230804;
 			
-			// aapt resource value: 0x7f080111
-			public const int footer_tv = 2131230993;
+			// aapt resource value: 0x7f080116
+			public const int footer_tv = 2131230998;
 			
 			// aapt resource value: 0x7f080058
 			public const int forever = 2131230808;
@@ -2877,8 +4846,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f08000a
 			public const int ghost_view = 2131230730;
 			
-			// aapt resource value: 0x7f08010d
-			public const int header_tv = 2131230989;
+			// aapt resource value: 0x7f080112
+			public const int header_tv = 2131230994;
 			
 			// aapt resource value: 0x7f080005
 			public const int home = 2131230725;
@@ -2886,17 +4855,17 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080021
 			public const int homeAsUp = 2131230753;
 			
-			// aapt resource value: 0x7f0800a3
-			public const int horizontalLayoutButtonsCreateAcc = 2131230883;
+			// aapt resource value: 0x7f0800a6
+			public const int horizontalLayoutButtonsCreateAcc = 2131230886;
 			
-			// aapt resource value: 0x7f0800a0
-			public const int horizontalLayoutChoosePicCreateAcc = 2131230880;
+			// aapt resource value: 0x7f0800a3
+			public const int horizontalLayoutChoosePicCreateAcc = 2131230883;
 			
 			// aapt resource value: 0x7f080062
 			public const int icon = 2131230818;
 			
-			// aapt resource value: 0x7f0800f0
-			public const int icon_group = 2131230960;
+			// aapt resource value: 0x7f0800f5
+			public const int icon_group = 2131230965;
 			
 			// aapt resource value: 0x7f08003a
 			public const int ifRoom = 2131230778;
@@ -2904,26 +4873,26 @@ namespace SmartFridge
 			// aapt resource value: 0x7f08005f
 			public const int image = 2131230815;
 			
-			// aapt resource value: 0x7f0800de
-			public const int imageBtnPictureMyProfile = 2131230942;
+			// aapt resource value: 0x7f0800e1
+			public const int imageBtnPictureMyProfile = 2131230945;
 			
-			// aapt resource value: 0x7f0800d0
-			public const int imageBtnRemove = 2131230928;
+			// aapt resource value: 0x7f0800d3
+			public const int imageBtnRemove = 2131230931;
 			
-			// aapt resource value: 0x7f080107
-			public const int imageButton1 = 2131230983;
+			// aapt resource value: 0x7f08010c
+			public const int imageButton1 = 2131230988;
 			
 			// aapt resource value: 0x7f080091
 			public const int imageRecipe = 2131230865;
 			
-			// aapt resource value: 0x7f0800fa
-			public const int imageViewRecipe = 2131230970;
+			// aapt resource value: 0x7f0800ff
+			public const int imageViewRecipe = 2131230975;
 			
-			// aapt resource value: 0x7f0800a1
-			public const int imagebtnPictureCreateAcc = 2131230881;
+			// aapt resource value: 0x7f0800a4
+			public const int imagebtnPictureCreateAcc = 2131230884;
 			
-			// aapt resource value: 0x7f0800ec
-			public const int info = 2131230956;
+			// aapt resource value: 0x7f0800f1
+			public const int info = 2131230961;
 			
 			// aapt resource value: 0x7f080059
 			public const int italic = 2131230809;
@@ -2931,11 +4900,11 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
 			
-			// aapt resource value: 0x7f0800a8
-			public const int largeLabel = 2131230888;
+			// aapt resource value: 0x7f0800ab
+			public const int largeLabel = 2131230891;
 			
-			// aapt resource value: 0x7f0800d1
-			public const int layoutVerticalLogin = 2131230929;
+			// aapt resource value: 0x7f0800d4
+			public const int layoutVerticalLogin = 2131230932;
 			
 			// aapt resource value: 0x7f08008c
 			public const int layoutVerticalMain = 2131230860;
@@ -2949,62 +4918,62 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080018
 			public const int line3 = 2131230744;
 			
-			// aapt resource value: 0x7f08009d
-			public const int linearLayout1 = 2131230877;
+			// aapt resource value: 0x7f0800a0
+			public const int linearLayout1 = 2131230880;
 			
-			// aapt resource value: 0x7f0800c1
-			public const int linearLayout2 = 2131230913;
+			// aapt resource value: 0x7f0800c4
+			public const int linearLayout2 = 2131230916;
 			
-			// aapt resource value: 0x7f0800b6
-			public const int linearLayout3 = 2131230902;
+			// aapt resource value: 0x7f0800b9
+			public const int linearLayout3 = 2131230905;
 			
-			// aapt resource value: 0x7f0800c0
-			public const int listGroceries = 2131230912;
+			// aapt resource value: 0x7f0800c3
+			public const int listGroceries = 2131230915;
 			
 			// aapt resource value: 0x7f08001d
 			public const int listMode = 2131230749;
 			
-			// aapt resource value: 0x7f0800fc
-			public const int listViewGroceriesRecipe = 2131230972;
+			// aapt resource value: 0x7f080101
+			public const int listViewGroceriesRecipe = 2131230977;
 			
-			// aapt resource value: 0x7f0800cd
-			public const int listViewGroupMembers = 2131230925;
+			// aapt resource value: 0x7f0800d0
+			public const int listViewGroupMembers = 2131230928;
 			
-			// aapt resource value: 0x7f080109
-			public const int listViewShoppingCart = 2131230985;
+			// aapt resource value: 0x7f08010e
+			public const int listViewShoppingCart = 2131230990;
 			
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f08010f
-			public const int logo = 2131230991;
-			
-			// aapt resource value: 0x7f08011c
-			public const int logoutMain = 2131231004;
-			
 			// aapt resource value: 0x7f080114
-			public const int masked = 2131230996;
+			public const int logo = 2131230996;
 			
-			// aapt resource value: 0x7f0800e5
-			public const int media_actions = 2131230949;
+			// aapt resource value: 0x7f080121
+			public const int logoutMain = 2131231009;
 			
-			// aapt resource value: 0x7f08011f
-			public const int menu_addToCart = 2131231007;
+			// aapt resource value: 0x7f080119
+			public const int masked = 2131231001;
 			
-			// aapt resource value: 0x7f08011d
-			public const int menu_feedback = 2131231005;
+			// aapt resource value: 0x7f0800ea
+			public const int media_actions = 2131230954;
 			
-			// aapt resource value: 0x7f080115
-			public const int menu_goceries = 2131230997;
+			// aapt resource value: 0x7f080124
+			public const int menu_addToCart = 2131231012;
 			
-			// aapt resource value: 0x7f08011e
-			public const int menu_make = 2131231006;
+			// aapt resource value: 0x7f080122
+			public const int menu_feedback = 2131231010;
 			
-			// aapt resource value: 0x7f080116
-			public const int menu_recipes = 2131230998;
+			// aapt resource value: 0x7f08011a
+			public const int menu_goceries = 2131231002;
 			
-			// aapt resource value: 0x7f080112
-			public const int message = 2131230994;
+			// aapt resource value: 0x7f080123
+			public const int menu_make = 2131231011;
+			
+			// aapt resource value: 0x7f08011b
+			public const int menu_recipes = 2131231003;
+			
+			// aapt resource value: 0x7f080117
+			public const int message = 2131230999;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -3015,11 +4984,11 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080028
 			public const int multiply = 2131230760;
 			
-			// aapt resource value: 0x7f080119
-			public const int myGroupMain = 2131231001;
+			// aapt resource value: 0x7f08011e
+			public const int myGroupMain = 2131231006;
 			
-			// aapt resource value: 0x7f080118
-			public const int myProfileMain = 2131231000;
+			// aapt resource value: 0x7f08011d
+			public const int myProfileMain = 2131231005;
 			
 			// aapt resource value: 0x7f080093
 			public const int navViewDrawerMain = 2131230867;
@@ -3027,8 +4996,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f08008f
 			public const int navigationViewMain = 2131230863;
 			
-			// aapt resource value: 0x7f0800af
-			public const int navigation_header_container = 2131230895;
+			// aapt resource value: 0x7f0800b2
+			public const int navigation_header_container = 2131230898;
 			
 			// aapt resource value: 0x7f08003b
 			public const int never = 2131230779;
@@ -3039,14 +5008,17 @@ namespace SmartFridge
 			// aapt resource value: 0x7f08001e
 			public const int normal = 2131230750;
 			
-			// aapt resource value: 0x7f0800ee
-			public const int notification_background = 2131230958;
+			// aapt resource value: 0x7f0800f3
+			public const int notification_background = 2131230963;
 			
-			// aapt resource value: 0x7f0800e8
-			public const int notification_main_column = 2131230952;
+			// aapt resource value: 0x7f0800ed
+			public const int notification_main_column = 2131230957;
 			
-			// aapt resource value: 0x7f0800e7
-			public const int notification_main_column_container = 2131230951;
+			// aapt resource value: 0x7f0800ec
+			public const int notification_main_column_container = 2131230956;
+			
+			// aapt resource value: 0x7f0800e3
+			public const int okButtonIDGroup = 2131230947;
 			
 			// aapt resource value: 0x7f08004c
 			public const int parallax = 2131230796;
@@ -3060,8 +5032,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f08004d
 			public const int pin = 2131230797;
 			
-			// aapt resource value: 0x7f0800d6
-			public const int progressBar1 = 2131230934;
+			// aapt resource value: 0x7f0800d9
+			public const int progressBar1 = 2131230937;
 			
 			// aapt resource value: 0x7f080006
 			public const int progress_circular = 2131230726;
@@ -3072,20 +5044,20 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080075
 			public const int radio = 2131230837;
 			
-			// aapt resource value: 0x7f080102
-			public const int recyclerViewRecipeList = 2131230978;
+			// aapt resource value: 0x7f080107
+			public const int recyclerViewRecipeList = 2131230983;
 			
-			// aapt resource value: 0x7f0800ff
-			public const int relativeLayout1 = 2131230975;
+			// aapt resource value: 0x7f080104
+			public const int relativeLayout1 = 2131230980;
 			
 			// aapt resource value: 0x7f08004a
 			public const int right = 2131230794;
 			
-			// aapt resource value: 0x7f0800ed
-			public const int right_icon = 2131230957;
+			// aapt resource value: 0x7f0800f2
+			public const int right_icon = 2131230962;
 			
-			// aapt resource value: 0x7f0800e9
-			public const int right_side = 2131230953;
+			// aapt resource value: 0x7f0800ee
+			public const int right_side = 2131230958;
 			
 			// aapt resource value: 0x7f08000c
 			public const int save_image_matrix = 2131230732;
@@ -3114,8 +5086,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080055
 			public const int scrollable = 2131230805;
 			
-			// aapt resource value: 0x7f0800be
-			public const int searchGroceries = 2131230910;
+			// aapt resource value: 0x7f0800c1
+			public const int searchGroceries = 2131230913;
 			
 			// aapt resource value: 0x7f080080
 			public const int search_badge = 2131230848;
@@ -3150,8 +5122,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f08008a
 			public const int select_dialog_listview = 2131230858;
 			
-			// aapt resource value: 0x7f08011a
-			public const int settingsMain = 2131231002;
+			// aapt resource value: 0x7f08011f
+			public const int settingsMain = 2131231007;
 			
 			// aapt resource value: 0x7f080074
 			public const int shortcut = 2131230836;
@@ -3165,38 +5137,38 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080025
 			public const int showTitle = 2131230757;
 			
-			// aapt resource value: 0x7f0800a7
-			public const int smallLabel = 2131230887;
+			// aapt resource value: 0x7f0800aa
+			public const int smallLabel = 2131230890;
 			
-			// aapt resource value: 0x7f0800ae
-			public const int snackbar_action = 2131230894;
+			// aapt resource value: 0x7f0800b1
+			public const int snackbar_action = 2131230897;
 			
-			// aapt resource value: 0x7f0800ad
-			public const int snackbar_text = 2131230893;
+			// aapt resource value: 0x7f0800b0
+			public const int snackbar_text = 2131230896;
 			
 			// aapt resource value: 0x7f080043
 			public const int snap = 2131230787;
 			
-			// aapt resource value: 0x7f0800ba
-			public const int space1 = 2131230906;
+			// aapt resource value: 0x7f0800bd
+			public const int space1 = 2131230909;
 			
 			// aapt resource value: 0x7f080064
 			public const int spacer = 2131230820;
 			
-			// aapt resource value: 0x7f0800cf
-			public const int spinner1 = 2131230927;
+			// aapt resource value: 0x7f0800d2
+			public const int spinner1 = 2131230930;
 			
-			// aapt resource value: 0x7f0800f4
-			public const int spinnerFont = 2131230964;
+			// aapt resource value: 0x7f0800f9
+			public const int spinnerFont = 2131230969;
 			
-			// aapt resource value: 0x7f08010c
-			public const int splash_wrapper_rl = 2131230988;
+			// aapt resource value: 0x7f080111
+			public const int splash_wrapper_rl = 2131230993;
 			
 			// aapt resource value: 0x7f080008
 			public const int split_action_bar = 2131230728;
 			
-			// aapt resource value: 0x7f0800f6
-			public const int spnnerTheme = 2131230966;
+			// aapt resource value: 0x7f0800fb
+			public const int spnnerTheme = 2131230971;
 			
 			// aapt resource value: 0x7f08002a
 			public const int src_atop = 2131230762;
@@ -3210,8 +5182,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f08004b
 			public const int start = 2131230795;
 			
-			// aapt resource value: 0x7f0800e4
-			public const int status_bar_latest_event_content = 2131230948;
+			// aapt resource value: 0x7f0800e9
+			public const int status_bar_latest_event_content = 2131230953;
 			
 			// aapt resource value: 0x7f080076
 			public const int submenuarrow = 2131230838;
@@ -3240,32 +5212,32 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080094
 			public const int textView1 = 2131230868;
 			
-			// aapt resource value: 0x7f0800fd
-			public const int textView2 = 2131230973;
+			// aapt resource value: 0x7f080102
+			public const int textView2 = 2131230978;
 			
-			// aapt resource value: 0x7f0800c9
-			public const int textViewAmount = 2131230921;
+			// aapt resource value: 0x7f0800cc
+			public const int textViewAmount = 2131230924;
+			
+			// aapt resource value: 0x7f0800e0
+			public const int textViewEmail = 2131230944;
+			
+			// aapt resource value: 0x7f0800cb
+			public const int textViewName = 2131230923;
 			
 			// aapt resource value: 0x7f0800dd
-			public const int textViewEmail = 2131230941;
+			public const int textViewPassword = 2131230941;
 			
-			// aapt resource value: 0x7f0800c8
-			public const int textViewName = 2131230920;
+			// aapt resource value: 0x7f0800df
+			public const int textViewSurName = 2131230943;
 			
-			// aapt resource value: 0x7f0800da
-			public const int textViewPassword = 2131230938;
+			// aapt resource value: 0x7f0800cd
+			public const int textViewUnit = 2131230925;
 			
-			// aapt resource value: 0x7f0800dc
-			public const int textViewSurName = 2131230940;
+			// aapt resource value: 0x7f0800db
+			public const int textViewUsername = 2131230939;
 			
-			// aapt resource value: 0x7f0800ca
-			public const int textViewUnit = 2131230922;
-			
-			// aapt resource value: 0x7f0800d8
-			public const int textViewUsername = 2131230936;
-			
-			// aapt resource value: 0x7f0800b4
-			public const int text_input_password_toggle = 2131230900;
+			// aapt resource value: 0x7f0800b7
+			public const int text_input_password_toggle = 2131230903;
 			
 			// aapt resource value: 0x7f080014
 			public const int textinput_counter = 2131230740;
@@ -3273,8 +5245,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080015
 			public const int textinput_error = 2131230741;
 			
-			// aapt resource value: 0x7f0800ea
-			public const int time = 2131230954;
+			// aapt resource value: 0x7f0800ef
+			public const int time = 2131230959;
 			
 			// aapt resource value: 0x7f08001c
 			public const int title = 2131230748;
@@ -3285,26 +5257,26 @@ namespace SmartFridge
 			// aapt resource value: 0x7f08006f
 			public const int title_template = 2131230831;
 			
-			// aapt resource value: 0x7f0800bd
-			public const int toolbar = 2131230909;
+			// aapt resource value: 0x7f0800c0
+			public const int toolbar = 2131230912;
 			
 			// aapt resource value: 0x7f08008d
 			public const int toolbarMain = 2131230861;
 			
-			// aapt resource value: 0x7f0800cb
-			public const int toolbarMyGroup = 2131230923;
+			// aapt resource value: 0x7f0800ce
+			public const int toolbarMyGroup = 2131230926;
 			
-			// aapt resource value: 0x7f0800d7
-			public const int toolbarMyProfile = 2131230935;
+			// aapt resource value: 0x7f0800da
+			public const int toolbarMyProfile = 2131230938;
 			
-			// aapt resource value: 0x7f0800f9
-			public const int toolbarRecipe = 2131230969;
+			// aapt resource value: 0x7f0800fe
+			public const int toolbarRecipe = 2131230974;
 			
-			// aapt resource value: 0x7f0800b5
-			public const int toolbarTopGroceriesList = 2131230901;
+			// aapt resource value: 0x7f0800b8
+			public const int toolbarTopGroceriesList = 2131230904;
 			
-			// aapt resource value: 0x7f0800f2
-			public const int toolbarTopOptions = 2131230962;
+			// aapt resource value: 0x7f0800f7
+			public const int toolbarTopOptions = 2131230967;
 			
 			// aapt resource value: 0x7f08003e
 			public const int top = 2131230782;
@@ -3312,14 +5284,14 @@ namespace SmartFridge
 			// aapt resource value: 0x7f08006e
 			public const int topPanel = 2131230830;
 			
-			// aapt resource value: 0x7f080108
-			public const int topToolbarCart = 2131230984;
+			// aapt resource value: 0x7f08010d
+			public const int topToolbarCart = 2131230989;
 			
-			// aapt resource value: 0x7f080101
-			public const int topToolbarRecipeList = 2131230977;
+			// aapt resource value: 0x7f080106
+			public const int topToolbarRecipeList = 2131230982;
 			
-			// aapt resource value: 0x7f0800ab
-			public const int touch_outside = 2131230891;
+			// aapt resource value: 0x7f0800ae
+			public const int touch_outside = 2131230894;
 			
 			// aapt resource value: 0x7f08000f
 			public const int transition_current_scene = 2131230735;
@@ -3336,14 +5308,14 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080013
 			public const int transition_transform = 2131230739;
 			
-			// aapt resource value: 0x7f0800c5
-			public const int txtAmountGrocery = 2131230917;
+			// aapt resource value: 0x7f0800c8
+			public const int txtAmountGrocery = 2131230920;
 			
-			// aapt resource value: 0x7f0800a2
-			public const int txtChoosePicCreateAcc = 2131230882;
+			// aapt resource value: 0x7f0800a5
+			public const int txtChoosePicCreateAcc = 2131230885;
 			
-			// aapt resource value: 0x7f0800c4
-			public const int txtNameGrocery = 2131230916;
+			// aapt resource value: 0x7f0800c7
+			public const int txtNameGrocery = 2131230919;
 			
 			// aapt resource value: 0x7f080092
 			public const int txtRecipeDescription = 2131230866;
@@ -3351,35 +5323,35 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080090
 			public const int txtRecipeName = 2131230864;
 			
+			// aapt resource value: 0x7f080108
+			public const int txtRecipeTitle = 2131230984;
+			
+			// aapt resource value: 0x7f080109
+			public const int txtShortDesc = 2131230985;
+			
+			// aapt resource value: 0x7f0800c9
+			public const int txtUnitGrocery = 2131230921;
+			
+			// aapt resource value: 0x7f0800f8
+			public const int txtViewFontOptions = 2131230968;
+			
+			// aapt resource value: 0x7f0800cf
+			public const int txtViewGroupId = 2131230927;
+			
+			// aapt resource value: 0x7f0800d1
+			public const int txtViewGroupMember = 2131230929;
+			
+			// aapt resource value: 0x7f0800fc
+			public const int txtViewNotificationsOptions = 2131230972;
+			
 			// aapt resource value: 0x7f080103
-			public const int txtRecipeTitle = 2131230979;
+			public const int txtViewRecipeDescription = 2131230979;
 			
-			// aapt resource value: 0x7f080104
-			public const int txtShortDesc = 2131230980;
+			// aapt resource value: 0x7f080100
+			public const int txtViewRecipeName = 2131230976;
 			
-			// aapt resource value: 0x7f0800c6
-			public const int txtUnitGrocery = 2131230918;
-			
-			// aapt resource value: 0x7f0800f3
-			public const int txtViewFontOptions = 2131230963;
-			
-			// aapt resource value: 0x7f0800cc
-			public const int txtViewGroupId = 2131230924;
-			
-			// aapt resource value: 0x7f0800ce
-			public const int txtViewGroupMember = 2131230926;
-			
-			// aapt resource value: 0x7f0800f7
-			public const int txtViewNotificationsOptions = 2131230967;
-			
-			// aapt resource value: 0x7f0800fe
-			public const int txtViewRecipeDescription = 2131230974;
-			
-			// aapt resource value: 0x7f0800fb
-			public const int txtViewRecipeName = 2131230971;
-			
-			// aapt resource value: 0x7f0800f5
-			public const int txtViewThemeOptions = 2131230965;
+			// aapt resource value: 0x7f0800fa
+			public const int txtViewThemeOptions = 2131230970;
 			
 			// aapt resource value: 0x7f08002d
 			public const int uniform = 2131230765;
@@ -3393,8 +5365,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f080113
-			public const int visible = 2131230995;
+			// aapt resource value: 0x7f080118
+			public const int visible = 2131231000;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -3543,169 +5515,175 @@ namespace SmartFridge
 			public const int change_password_dialog_layout = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
-			public const int create_account_layout = 2130968604;
+			public const int change_username_dialog = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
-			public const int CustomizedImageView = 2130968605;
+			public const int create_account_layout = 2130968605;
 			
 			// aapt resource value: 0x7f04001e
-			public const int CustomizedView = 2130968606;
+			public const int CustomizedImageView = 2130968606;
 			
 			// aapt resource value: 0x7f04001f
-			public const int CustomizedView1 = 2130968607;
+			public const int CustomizedView = 2130968607;
 			
 			// aapt resource value: 0x7f040020
-			public const int design_bottom_navigation_item = 2130968608;
+			public const int CustomizedView1 = 2130968608;
 			
 			// aapt resource value: 0x7f040021
-			public const int design_bottom_sheet_dialog = 2130968609;
+			public const int design_bottom_navigation_item = 2130968609;
 			
 			// aapt resource value: 0x7f040022
-			public const int design_layout_snackbar = 2130968610;
+			public const int design_bottom_sheet_dialog = 2130968610;
 			
 			// aapt resource value: 0x7f040023
-			public const int design_layout_snackbar_include = 2130968611;
+			public const int design_layout_snackbar = 2130968611;
 			
 			// aapt resource value: 0x7f040024
-			public const int design_layout_tab_icon = 2130968612;
+			public const int design_layout_snackbar_include = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int design_layout_tab_text = 2130968613;
+			public const int design_layout_tab_icon = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int design_menu_item_action_area = 2130968614;
+			public const int design_layout_tab_text = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int design_navigation_item = 2130968615;
+			public const int design_menu_item_action_area = 2130968615;
 			
 			// aapt resource value: 0x7f040028
-			public const int design_navigation_item_header = 2130968616;
+			public const int design_navigation_item = 2130968616;
 			
 			// aapt resource value: 0x7f040029
-			public const int design_navigation_item_separator = 2130968617;
+			public const int design_navigation_item_header = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
-			public const int design_navigation_item_subheader = 2130968618;
+			public const int design_navigation_item_separator = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int design_navigation_menu = 2130968619;
+			public const int design_navigation_item_subheader = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int design_navigation_menu_item = 2130968620;
+			public const int design_navigation_menu = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int design_text_input_password_icon = 2130968621;
+			public const int design_navigation_menu_item = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int dialog_new_grocery_layout = 2130968622;
+			public const int design_text_input_password_icon = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int gorceries_list_layout = 2130968623;
+			public const int dialog_new_grocery_layout = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int groceies_list_item_layout = 2130968624;
+			public const int gorceries_list_layout = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int groceries_recipe_item_layout = 2130968625;
+			public const int groceies_list_item_layout = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int group_layout = 2130968626;
+			public const int groceries_recipe_item_layout = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int group_member = 2130968627;
+			public const int group_layout = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int login_layout = 2130968628;
+			public const int group_member = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int my_profile_layout = 2130968629;
+			public const int login_layout = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_action = 2130968630;
+			public const int my_profile_layout = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int notification_action_tombstone = 2130968631;
+			public const int no_group_dialog = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int notification_media_action = 2130968632;
+			public const int notification_action = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int notification_media_cancel_action = 2130968633;
+			public const int notification_action_tombstone = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int notification_template_big_media = 2130968634;
+			public const int notification_media_action = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int notification_template_big_media_custom = 2130968635;
+			public const int notification_media_cancel_action = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int notification_template_big_media_narrow = 2130968636;
+			public const int notification_template_big_media = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int notification_template_big_media_narrow_custom = 2130968637;
+			public const int notification_template_big_media_custom = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int notification_template_custom_big = 2130968638;
+			public const int notification_template_big_media_narrow = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int notification_template_icon_group = 2130968639;
+			public const int notification_template_big_media_narrow_custom = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int notification_template_lines_media = 2130968640;
+			public const int notification_template_custom_big = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int notification_template_media = 2130968641;
+			public const int notification_template_icon_group = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int notification_template_media_custom = 2130968642;
+			public const int notification_template_lines_media = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int notification_template_part_chronometer = 2130968643;
+			public const int notification_template_media = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int notification_template_part_time = 2130968644;
+			public const int notification_template_media_custom = 2130968644;
 			
 			// aapt resource value: 0x7f040045
-			public const int options_menu_layout = 2130968645;
+			public const int notification_template_part_chronometer = 2130968645;
 			
 			// aapt resource value: 0x7f040046
-			public const int recipe_layout = 2130968646;
+			public const int notification_template_part_time = 2130968646;
 			
 			// aapt resource value: 0x7f040047
-			public const int recipe_list_layout = 2130968647;
+			public const int options_menu_layout = 2130968647;
 			
 			// aapt resource value: 0x7f040048
-			public const int recipes_Item_layout = 2130968648;
+			public const int recipe_layout = 2130968648;
 			
 			// aapt resource value: 0x7f040049
-			public const int select_dialog_item_material = 2130968649;
+			public const int recipe_list_layout = 2130968649;
 			
 			// aapt resource value: 0x7f04004a
-			public const int select_dialog_multichoice_material = 2130968650;
+			public const int recipes_Item_layout = 2130968650;
 			
 			// aapt resource value: 0x7f04004b
-			public const int select_dialog_singlechoice_material = 2130968651;
+			public const int select_dialog_item_material = 2130968651;
 			
 			// aapt resource value: 0x7f04004c
-			public const int sfautocomplete_layout = 2130968652;
+			public const int select_dialog_multichoice_material = 2130968652;
 			
 			// aapt resource value: 0x7f04004d
-			public const int sfcomboBox_layout = 2130968653;
+			public const int select_dialog_singlechoice_material = 2130968653;
 			
 			// aapt resource value: 0x7f04004e
-			public const int shopping_cart_item_layout = 2130968654;
+			public const int sfautocomplete_layout = 2130968654;
 			
 			// aapt resource value: 0x7f04004f
-			public const int shopping_cart_layout = 2130968655;
+			public const int sfcomboBox_layout = 2130968655;
 			
 			// aapt resource value: 0x7f040050
-			public const int splash = 2130968656;
+			public const int shopping_cart_item_layout = 2130968656;
 			
 			// aapt resource value: 0x7f040051
-			public const int support_simple_spinner_dropdown_item = 2130968657;
+			public const int shopping_cart_layout = 2130968657;
 			
 			// aapt resource value: 0x7f040052
-			public const int tooltip = 2130968658;
+			public const int splash = 2130968658;
+			
+			// aapt resource value: 0x7f040053
+			public const int support_simple_spinner_dropdown_item = 2130968659;
+			
+			// aapt resource value: 0x7f040054
+			public const int tooltip = 2130968660;
 			
 			static Layout()
 			{
@@ -3769,6 +5747,12 @@ namespace SmartFridge
 		
 		public partial class String
 		{
+			
+			// aapt resource value: 0x7f090029
+			public const int ApplicationName = 2131296297;
+			
+			// aapt resource value: 0x7f090028
+			public const int Hello = 2131296296;
 			
 			// aapt resource value: 0x7f090000
 			public const int abc_action_bar_home_description = 2131296256;
@@ -3857,17 +5841,17 @@ namespace SmartFridge
 			// aapt resource value: 0x7f090010
 			public const int abc_toolbar_collapse_description = 2131296272;
 			
-			// aapt resource value: 0x7f09002a
-			public const int action_settings = 2131296298;
+			// aapt resource value: 0x7f09002c
+			public const int action_settings = 2131296300;
 			
-			// aapt resource value: 0x7f090028
-			public const int app_name = 2131296296;
+			// aapt resource value: 0x7f09002a
+			public const int app_name = 2131296298;
 			
 			// aapt resource value: 0x7f09001e
 			public const int appbar_scrolling_view_behavior = 2131296286;
 			
-			// aapt resource value: 0x7f090029
-			public const int application_name = 2131296297;
+			// aapt resource value: 0x7f09002b
+			public const int application_name = 2131296299;
 			
 			// aapt resource value: 0x7f09001f
 			public const int bottom_sheet_behavior = 2131296287;
@@ -3875,26 +5859,26 @@ namespace SmartFridge
 			// aapt resource value: 0x7f090020
 			public const int character_counter_pattern = 2131296288;
 			
-			// aapt resource value: 0x7f09002d
-			public const int create_acc = 2131296301;
+			// aapt resource value: 0x7f09002f
+			public const int create_acc = 2131296303;
 			
-			// aapt resource value: 0x7f090032
-			public const int grocery_list = 2131296306;
+			// aapt resource value: 0x7f090034
+			public const int grocery_list = 2131296308;
 			
 			// aapt resource value: 0x7f090027
 			public const int library_name = 2131296295;
 			
-			// aapt resource value: 0x7f09002e
-			public const int login = 2131296302;
-			
-			// aapt resource value: 0x7f09002c
-			public const int my_group = 2131296300;
-			
-			// aapt resource value: 0x7f090031
-			public const int my_profile = 2131296305;
-			
 			// aapt resource value: 0x7f090030
-			public const int options = 2131296304;
+			public const int login = 2131296304;
+			
+			// aapt resource value: 0x7f09002e
+			public const int my_group = 2131296302;
+			
+			// aapt resource value: 0x7f090033
+			public const int my_profile = 2131296307;
+			
+			// aapt resource value: 0x7f090032
+			public const int options = 2131296306;
 			
 			// aapt resource value: 0x7f090021
 			public const int password_toggle_content_description = 2131296289;
@@ -3911,17 +5895,17 @@ namespace SmartFridge
 			// aapt resource value: 0x7f090025
 			public const int path_password_strike_through = 2131296293;
 			
-			// aapt resource value: 0x7f09002b
-			public const int receipt = 2131296299;
+			// aapt resource value: 0x7f09002d
+			public const int receipt = 2131296301;
 			
-			// aapt resource value: 0x7f090033
-			public const int recipe_list = 2131296307;
+			// aapt resource value: 0x7f090035
+			public const int recipe_list = 2131296309;
 			
 			// aapt resource value: 0x7f090011
 			public const int search_menu_title = 2131296273;
 			
-			// aapt resource value: 0x7f09002f
-			public const int shopping_cart = 2131296303;
+			// aapt resource value: 0x7f090031
+			public const int shopping_cart = 2131296305;
 			
 			// aapt resource value: 0x7f090026
 			public const int status_bar_notification_info_overflow = 2131296294;

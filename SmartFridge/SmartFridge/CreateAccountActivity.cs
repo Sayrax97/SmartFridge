@@ -119,7 +119,7 @@ namespace SmartFridge
             else
             {
                 ChamberOfSecrets.Instance.LoggedUser = new User(nameEditText.Text, surnameEditText.Text, usernameEditText.Text,
-                passwordEditText.Text, emailEditText.Text, "")
+                passwordEditText.Text, emailEditText.Text, new byte[1])
                 {
                     MyOptions = new Option()
                 };

@@ -1,37 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 	<LinearLayout
 		android:orientation="vertical"
+		android:background="@drawable/login_background_2"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:id="@+id/layoutVerticalLogin">
 		<EditText
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:hint="Korisnicko ime/e-mail"
+			android:layout_marginLeft="50dp"
+			android:layout_marginRight="50dp"
+			android:textColorHint="@color/material_grey_800"
+			android:layout_marginTop="100dp"
+			android:hint="Korisničko ime"
 			android:id="@+id/editTxtUsername" />
 		<EditText
 			android:layout_width="match_parent"
-			android:hint="Sifra"
+			android:hint="Šifra"
+			android:layout_marginLeft="50dp"
+			android:layout_marginTop="30dp"
+			android:textColorHint="@color/material_grey_800"
+			android:layout_marginRight="50dp"
 			android:inputType="textPassword"
 			android:layout_height="wrap_content"
 			android:id="@+id/editTxtPassword" />
+		<Space
+			android:layout_width="match_parent"
+			android:layout_height="70dp"
+			android:id="@+id/space1" />
 		<Button
 			android:text="Uloguj se"
+			android:layout_marginLeft="50dp"
+			android:layout_marginRight="50dp"
+			android:textSize="15sp" 
+			android:background="@drawable/login_button_style"
+			android:shadowColor="#363031"
+			android:shadowDx="-6"
+			android:shadowDy="6"
+			android:shadowRadius="10" 
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:id="@+id/btnLogin" />
 		<Button
 			android:text="napravi nalog"
+			android:layout_marginLeft="50dp"
+			android:layout_marginTop="15dp"
+			android:textSize="15sp" 
+			android:background="@drawable/login_button_style"
+			android:shadowColor="#363031"
+			android:shadowDx="-6"
+			android:shadowDy="6"
+			android:shadowRadius="10" 
+			android:layout_marginRight="50dp"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:id="@+id/btnCreateAcc" />
 		<ProgressBar
 			android:layout_width="match_parent"
-			android:layout_height="200dp"
+			android:layout_margin="20dp"
+			android:layout_height="120dp"
 			android:indeterminate="true"
 			android:id="@+id/progressBar1" />
 	</LinearLayout>

@@ -13,6 +13,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
+using SmartFridge.Dialogs;
 using SmartFridge.Model;
 using SmartFridge.WebReference;
 
@@ -34,7 +35,9 @@ namespace SmartFridge
             this.RequestedOrientation = ScreenOrientation.Portrait;
             loginButton.Click += LoginButton_ClickAsync;
             createAccountButton.Click += CreateAccountButton_Click;
-
+            ChamberOfSecrets.Instance.group = new Group();
+            ChamberOfSecrets.Instance.LoggedUser = new User();
+            ChamberOfSecrets.Instance.AllGroceries = new AvailableGroceries();
         }
 
 
@@ -68,13 +71,13 @@ namespace SmartFridge
 
         private async void LoginButton_ClickAsync(object sender, EventArgs e)
         {
+            loadingProgressBar.Visibility = ViewStates.Visible;
             await Task.Delay(500);
             if (!IsOnline())
             {
                 Toast.MakeText(this, "Niste povezani na internet!!!", ToastLength.Short).Show();
                 return;
             }
-            loadingProgressBar.Visibility = ViewStates.Visible;
             User user= new User();
             if (string.IsNullOrEmpty(passwordEditText.Text))
             {
@@ -102,6 +105,20 @@ namespace SmartFridge
             }
             else
             {
+                //if(string.IsNullOrEmpty(user.MyGroup))
+                //{ 
+                //    FragmentTransaction ft = FragmentManager.BeginTransaction();
+                //    Fragment prev = FragmentManager.FindFragmentByTag("Id grupa");
+                //    if (prev != null)
+                //    {
+                //        ft.Remove(prev);
+                //    }
+                //    ft.AddToBackStack(null);
+                //    NewGroupIdDialog newFragment = new NewGroupIdDialog();
+                //    newFragment.Show(ft, "Id grupa");
+                //    loadingProgressBar.Visibility = ViewStates.Invisible;
+                //    return;
+                //}
                 user.Password = passwordEditText.Text;
                 var intent =new Intent(this,typeof(MainActivity));
                 ChamberOfSecrets.Instance.LoggedUser = user;

@@ -16,6 +16,7 @@
 		android:orientation="horizontal"
 		android:layout_width="match_parent"
 		android:weightSum="100"
+		android:layout_margin="10dp"
 		android:layout_height="wrap_content"
 		android:id="@+id/linearLayout1">
 		<TextView
@@ -37,6 +38,7 @@
 		android:orientation="horizontal"
 		android:layout_width="match_parent"
 		android:weightSum="100"
+		android:layout_margin="10dp"
 		android:layout_height="wrap_content"
 		android:id="@+id/linearLayout2">
 		<TextView
@@ -58,6 +60,7 @@
 		android:orientation="horizontal"
 		android:layout_width="match_parent"
 		android:weightSum="100"
+		android:layout_margin="5dp"
 		android:layout_height="wrap_content"
 		android:id="@+id/linearLayout2">
 	<TextView
@@ -84,8 +87,9 @@
 	</LinearLayout>
 	<ImageButton
 		android:src="@android:drawable/ic_menu_gallery"
-		android:layout_width="400px"
-		android:layout_height="400px"
+		android:layout_width="500px"
+		android:layout_margin="20dp"
+		android:layout_height="500px"
 		android:layout_gravity="center"
 		android:id="@+id/imageBtnPictureMyProfile" />
 	

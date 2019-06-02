@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
+using Android.Graphics;
 using Android.OS;
 using Android.Provider;
 using Android.Runtime;
@@ -52,7 +53,7 @@ namespace SmartFridge
                 ChamberOfSecrets.Instance.group.Recipes[random.Next(0, ChamberOfSecrets.Instance.group.Recipes.Count)];
             recipeNameTextView.Text = recipeOfTheDay.Name ;
             recipeDescriptionTextView.Text = recipeOfTheDay.Description.Substring
-                       (0, recipeOfTheDay.Description.Length < 80 ? recipeOfTheDay.Description.Length : 80) + "...";
+                       (0, recipeOfTheDay.Description.Length < 140 ? recipeOfTheDay.Description.Length : 140) + "...";
             recipeImageView.Click += RecipeImageView_Click;
         }
 
@@ -139,6 +140,8 @@ namespace SmartFridge
             recipeImageView = FindViewById<ImageView>(Resource.Id.imageRecipe);
             recipeNameTextView = FindViewById<TextView>(Resource.Id.txtRecipeName);
             recipeDescriptionTextView = FindViewById<TextView>(Resource.Id.txtRecipeDescription);
+            Bitmap bitmap = BitmapFactory.DecodeByteArray(recipeOfTheDay.Image,0,recipeOfTheDay.Image.Length);
+            recipeImageView.SetImageBitmap(bitmap);
         }
     }
 }

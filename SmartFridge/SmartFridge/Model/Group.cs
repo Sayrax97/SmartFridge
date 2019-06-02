@@ -90,7 +90,17 @@ namespace SmartFridge.Model
                         recipe.Rank++;
                     }
                 }
+
+                if (recipe.Rank == recipe.Groceries.Groceries.Count)
+                {
+                    recipe.Rank++;
+                }
             }
+        }
+
+        public void SortByRank()
+        {
+            Recipes=Recipes.OrderByDescending(x => x.Rank).ToList();
         }
 
         public void DefaultRanks(int value)

@@ -139,6 +139,31 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="dbUpdateUserStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Nickname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbUpdateUserStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbDeleteUserFromGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserNickName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbDeleteUserFromGroupResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="dbGetOptions">
     <xs:complexType>
       <xs:sequence>
@@ -390,6 +415,82 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="deleteContainsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbInsertImageUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="image" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbInsertImageUserResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbInsertImageRecipe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="image" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbInsertImageRecipeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbInsertImageGrocerieUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="image" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbInsertImageGrocerieUserResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbModifyUserImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="image" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="Nickname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbModifyUserImageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbGetUserImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Nickname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbGetUserImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dbGetUserImageResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbModifyUserNickname">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StariNickname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NoviNickname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbModifyUserNicknameResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>

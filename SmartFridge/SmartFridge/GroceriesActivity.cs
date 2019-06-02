@@ -160,6 +160,7 @@ namespace SmartFridge
                     ChamberOfSecrets.Instance.group.CheckForGrocery(grocery.Name);
                 }
             }
+            ChamberOfSecrets.Instance.group.SortByRank();
             var intent = new Intent(this, typeof(RecipeListActivity));
             intent.PutExtra("Activity", "grocery");
             StartActivity(intent);

@@ -28,7 +28,7 @@ namespace SmartFridge.Model
         public string UserName { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
-        public string Image { get; set; }
+        public byte[] Image { get; set; }
         public Status UserStatus { get; set; }
         public string MyGroup { get; set; }
         public Option MyOptions { get; set; }
@@ -40,12 +40,13 @@ namespace SmartFridge.Model
             Name = "";
             SurName = "";
             Email = "";
+            Image = new byte[2000000];
             MyOptions = new Option();
             MyGroup = "";
             UserStatus = Status.Potrosac;
         }
 
-        public User(string name, string surName, string userName, string password, string email, string image)
+        public User(string name, string surName, string userName, string password, string email, byte[] image)
         {
             Name = name;
             SurName = surName;
@@ -85,6 +86,7 @@ namespace SmartFridge.Model
                 UserStatus = Grocery.ParseEnum<Status>(user.Status);
                 MyOptions = new Option();
                 MyGroup = user.MyGroup;
+                Image = ChamberOfSecrets.Proxy.dbGetUserImage(UserName);
             }
         }
 
@@ -98,7 +100,7 @@ namespace SmartFridge.Model
                 details.Email = Email;
                 details.MyGroup = MyGroup;
                 details.Status = UserStatus.ToString();
-                details.Image = "";
+                details.Image = Image;
                 return details;
         }
     }

@@ -68,6 +68,18 @@
   <wsdl:message name="IService1_dbUpdateUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:dbUpdateUserResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_dbUpdateUserStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbUpdateUserStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbUpdateUserStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbUpdateUserStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbDeleteUserFromGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbDeleteUserFromGroup" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbDeleteUserFromGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbDeleteUserFromGroupResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_dbGetOptions_InputMessage">
     <wsdl:part name="parameters" element="tns:dbGetOptions" />
   </wsdl:message>
@@ -188,6 +200,42 @@
   <wsdl:message name="IService1_deleteContains_OutputMessage">
     <wsdl:part name="parameters" element="tns:deleteContainsResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_dbInsertImageUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbInsertImageUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbInsertImageUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbInsertImageUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbInsertImageRecipe_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbInsertImageRecipe" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbInsertImageRecipe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbInsertImageRecipeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbInsertImageGrocerieUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbInsertImageGrocerieUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbInsertImageGrocerieUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbInsertImageGrocerieUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbModifyUserImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbModifyUserImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbModifyUserImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbModifyUserImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbGetUserImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbGetUserImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbGetUserImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbGetUserImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbModifyUserNickname_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbModifyUserNickname" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbModifyUserNickname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbModifyUserNicknameResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="dbFindUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbFindUser" message="tns:IService1_dbFindUser_InputMessage" />
@@ -228,6 +276,14 @@
     <wsdl:operation name="dbUpdateUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbUpdateUser" message="tns:IService1_dbUpdateUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbUpdateUserResponse" message="tns:IService1_dbUpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbUpdateUserStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbUpdateUserStatus" message="tns:IService1_dbUpdateUserStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbUpdateUserStatusResponse" message="tns:IService1_dbUpdateUserStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbDeleteUserFromGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbDeleteUserFromGroup" message="tns:IService1_dbDeleteUserFromGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbDeleteUserFromGroupResponse" message="tns:IService1_dbDeleteUserFromGroup_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="dbGetOptions">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbGetOptions" message="tns:IService1_dbGetOptions_InputMessage" />
@@ -308,6 +364,30 @@
     <wsdl:operation name="deleteContains">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteContains" message="tns:IService1_deleteContains_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteContainsResponse" message="tns:IService1_deleteContains_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbInsertImageUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbInsertImageUser" message="tns:IService1_dbInsertImageUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbInsertImageUserResponse" message="tns:IService1_dbInsertImageUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbInsertImageRecipe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbInsertImageRecipe" message="tns:IService1_dbInsertImageRecipe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbInsertImageRecipeResponse" message="tns:IService1_dbInsertImageRecipe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbInsertImageGrocerieUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbInsertImageGrocerieUser" message="tns:IService1_dbInsertImageGrocerieUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbInsertImageGrocerieUserResponse" message="tns:IService1_dbInsertImageGrocerieUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbModifyUserImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbModifyUserImage" message="tns:IService1_dbModifyUserImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbModifyUserImageResponse" message="tns:IService1_dbModifyUserImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbGetUserImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbGetUserImage" message="tns:IService1_dbGetUserImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbGetUserImageResponse" message="tns:IService1_dbGetUserImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbModifyUserNickname">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbModifyUserNickname" message="tns:IService1_dbModifyUserNickname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbModifyUserNicknameResponse" message="tns:IService1_dbModifyUserNickname_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -395,6 +475,24 @@
     </wsdl:operation>
     <wsdl:operation name="dbUpdateUser">
       <soap:operation soapAction="http://tempuri.org/IService1/dbUpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbUpdateUserStatus">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbUpdateUserStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbDeleteUserFromGroup">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbDeleteUserFromGroup" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -575,6 +673,60 @@
     </wsdl:operation>
     <wsdl:operation name="deleteContains">
       <soap:operation soapAction="http://tempuri.org/IService1/deleteContains" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbInsertImageUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbInsertImageUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbInsertImageRecipe">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbInsertImageRecipe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbInsertImageGrocerieUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbInsertImageGrocerieUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbModifyUserImage">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbModifyUserImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbGetUserImage">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbGetUserImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbModifyUserNickname">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbModifyUserNickname" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

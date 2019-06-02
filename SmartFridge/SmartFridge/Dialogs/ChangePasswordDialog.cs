@@ -47,6 +47,7 @@ namespace SmartFridge.Dialogs
             ChamberOfSecrets.Instance.LoggedUser.Password = newPasswordEditText.Text;
             //ChamberOfSecrets.Proxy.dbUpdateUser(ChamberOfSecrets.Instance.LoggedUser.Password, 
             //    ChamberOfSecrets.Instance.LoggedUser.UserName);
+            Dismiss();
         }
     }
 }

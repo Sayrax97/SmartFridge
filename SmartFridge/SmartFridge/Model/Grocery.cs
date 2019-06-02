@@ -49,7 +49,7 @@ namespace SmartFridge.Model
         public Category Type { get; set; }
         public double Amount { get; set; }
         public double Bought { get; set; }
-        public string Image { get; set; }
+        public byte[] Image { get; set; }
         public bool Checked { get; set; }
         public bool IsInList { get; set; }
         public bool IsCategorized { get; set; }
@@ -102,7 +102,7 @@ namespace SmartFridge.Model
                 Name = Name,
                 Category = Type.ToString(),
                 Unit = MeasurementUnit.ToString(),
-                Image = Image
+                Image = null
             };
         }
     }

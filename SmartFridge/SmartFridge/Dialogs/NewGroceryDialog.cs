@@ -79,7 +79,6 @@ namespace SmartFridge.Dialogs
                 {
                     ChamberOfSecrets.Instance.group.ShoppingCart.AddToList(gr);
                 }
-
                 Dismiss();
                 Toast.MakeText(Activity, "Dodata nova namirnica:" + name+" Kategorija: "+category, ToastLength.Short)
                     .Show();

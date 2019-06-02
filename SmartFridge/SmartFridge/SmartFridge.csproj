@@ -67,7 +67,9 @@
     <Compile Include="Adapters\ShoppingCartItemAdapter.cs" />
     <Compile Include="CreateAccountActivity.cs" />
     <Compile Include="Dialogs\ChangePasswordDialog.cs" />
+    <Compile Include="Dialogs\ChangeUsernameDialog.cs" />
     <Compile Include="Dialogs\NewGroceryDialog.cs" />
+    <Compile Include="Dialogs\NewGroupIDDialog.cs" />
     <Compile Include="GroceriesActivity.cs" />
     <Compile Include="Adapters\GroceryListItemAdapter.cs" />
     <Compile Include="LoginActivity.cs" />
@@ -96,6 +98,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="app.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml">
       <SubType>Designer</SubType>
@@ -172,6 +175,9 @@
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="PCLAppConfig">
+      <Version>1.0.1</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete.Android">
       <Version>17.1.0.49</Version>
@@ -369,6 +375,34 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\change_password_dialog_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\login_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\login_background_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\custom_progressbar.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\login_button_style.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\change_username_dialog.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\no_group_dialog.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

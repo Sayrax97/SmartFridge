@@ -14,18 +14,16 @@
 	<LinearLayout
 		android:orientation="horizontal"
 		android:layout_width="match_parent"
-		android:layout_height="180dp"
+		android:layout_height="400px"
 		android:weightSum="100"
 		android:id="@+id/linearLayout1">
 		<ImageView
 			android:src="@android:drawable/ic_menu_gallery"
-			android:layout_width="match_parent"
-			android:layout_weight="50"
-			android:layout_height="match_parent"
+			android:layout_width="400px"
+			android:layout_height="400px"
 			android:id="@+id/imageViewRecipe" />
 		<TextView
-			android:text="Large Text"
-			android:layout_weight="50"
+			android:text="Ime recepta"
 			android:gravity="center"
 			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:layout_width="match_parent"
@@ -48,6 +46,8 @@
 		android:text="nacin pripreme text"
 		android:textAppearance="?android:attr/textAppearanceSmall"
 		android:layout_width="match_parent"
+		android:background="#e8e8ff"
+		android:textColor="@color/material_blue_grey_900"
 		android:layout_height="wrap_content"
 		android:id="@+id/txtViewRecipeDescription" />
 	

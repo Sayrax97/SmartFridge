@@ -58,7 +58,9 @@ namespace SmartFridge
             addToGroceriesListButton = FindViewById<Button>(Resource.Id.btnAddtoGroceriesList);
             addToGroceriesListButton.Visibility = ViewStates.Invisible;
             if (ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Nabavljac ||
-                ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Administrator)
+                ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Supervizor||
+                ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Administrator
+                )
             {
                 addToGroceriesListButton.Visibility = ViewStates.Visible;
                 addToGroceriesListButton.Click += AddToGroceriesListButton_Click;

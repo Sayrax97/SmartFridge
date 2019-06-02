@@ -6,6 +6,7 @@ using System.Text;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Internal;
@@ -86,8 +87,9 @@ namespace SmartFridge
             recipe = JsonConvert.DeserializeObject<Recipe>(Intent.GetStringExtra("recept"));
             groceryList = recipe.Groceries;
             recipe.Groceries.SetDefault();
-            //recipeImageView.SetImageDrawable(this.GetDrawable
-            //(Resources.GetIdentifier(recipe.Image, "drawable", this.PackageName)));
+            //Bitmap bitmap = BitmapFactory.DecodeByteArray(recipe.Image ,0, recipe.Image.Length);
+            //400*400
+            //recipeImageView.SetImageBitmap(bitmap);
         }
 
         private void RecipeBottomNavigationView_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
@@ -99,6 +101,9 @@ namespace SmartFridge
                     {
                         ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries.Find(x => x.Name == grocery.Name).Amount -= grocery.Amount;
                         //proxy
+                        var intent1 = new Intent(this, typeof(RecipeListActivity));
+                        intent1.PutExtra("Activity", "main");
+                        StartActivity(intent1);
                         Finish();
                     }
                     break;

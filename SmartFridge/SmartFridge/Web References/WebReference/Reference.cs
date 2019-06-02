@@ -49,6 +49,10 @@ namespace SmartFridge.WebReference {
         
         private System.Threading.SendOrPostCallback dbUpdateUserOperationCompleted;
         
+        private System.Threading.SendOrPostCallback dbUpdateUserStatusOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback dbDeleteUserFromGroupOperationCompleted;
+        
         private System.Threading.SendOrPostCallback dbGetOptionsOperationCompleted;
         
         private System.Threading.SendOrPostCallback dbModifyOptionsOperationCompleted;
@@ -88,6 +92,18 @@ namespace SmartFridge.WebReference {
         private System.Threading.SendOrPostCallback loadContainsOperationCompleted;
         
         private System.Threading.SendOrPostCallback deleteContainsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback dbInsertImageUserOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback dbInsertImageRecipeOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback dbInsertImageGrocerieUserOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback dbModifyUserImageOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback dbGetUserImageOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback dbModifyUserNicknameOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -158,6 +174,12 @@ namespace SmartFridge.WebReference {
         public event dbUpdateUserCompletedEventHandler dbUpdateUserCompleted;
         
         /// <remarks/>
+        public event dbUpdateUserStatusCompletedEventHandler dbUpdateUserStatusCompleted;
+        
+        /// <remarks/>
+        public event dbDeleteUserFromGroupCompletedEventHandler dbDeleteUserFromGroupCompleted;
+        
+        /// <remarks/>
         public event dbGetOptionsCompletedEventHandler dbGetOptionsCompleted;
         
         /// <remarks/>
@@ -216,6 +238,24 @@ namespace SmartFridge.WebReference {
         
         /// <remarks/>
         public event deleteContainsCompletedEventHandler deleteContainsCompleted;
+        
+        /// <remarks/>
+        public event dbInsertImageUserCompletedEventHandler dbInsertImageUserCompleted;
+        
+        /// <remarks/>
+        public event dbInsertImageRecipeCompletedEventHandler dbInsertImageRecipeCompleted;
+        
+        /// <remarks/>
+        public event dbInsertImageGrocerieUserCompletedEventHandler dbInsertImageGrocerieUserCompleted;
+        
+        /// <remarks/>
+        public event dbModifyUserImageCompletedEventHandler dbModifyUserImageCompleted;
+        
+        /// <remarks/>
+        public event dbGetUserImageCompletedEventHandler dbGetUserImageCompleted;
+        
+        /// <remarks/>
+        public event dbModifyUserNicknameCompletedEventHandler dbModifyUserNicknameCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbFindUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -515,6 +555,64 @@ namespace SmartFridge.WebReference {
             if ((this.dbUpdateUserCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.dbUpdateUserCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbUpdateUserStatus", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void dbUpdateUserStatus([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string status, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string Nickname) {
+            this.Invoke("dbUpdateUserStatus", new object[] {
+                        status,
+                        Nickname});
+        }
+        
+        /// <remarks/>
+        public void dbUpdateUserStatusAsync(string status, string Nickname) {
+            this.dbUpdateUserStatusAsync(status, Nickname, null);
+        }
+        
+        /// <remarks/>
+        public void dbUpdateUserStatusAsync(string status, string Nickname, object userState) {
+            if ((this.dbUpdateUserStatusOperationCompleted == null)) {
+                this.dbUpdateUserStatusOperationCompleted = new System.Threading.SendOrPostCallback(this.OndbUpdateUserStatusOperationCompleted);
+            }
+            this.InvokeAsync("dbUpdateUserStatus", new object[] {
+                        status,
+                        Nickname}, this.dbUpdateUserStatusOperationCompleted, userState);
+        }
+        
+        private void OndbUpdateUserStatusOperationCompleted(object arg) {
+            if ((this.dbUpdateUserStatusCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.dbUpdateUserStatusCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbDeleteUserFromGroup", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void dbDeleteUserFromGroup([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string UserNickName) {
+            this.Invoke("dbDeleteUserFromGroup", new object[] {
+                        UserNickName});
+        }
+        
+        /// <remarks/>
+        public void dbDeleteUserFromGroupAsync(string UserNickName) {
+            this.dbDeleteUserFromGroupAsync(UserNickName, null);
+        }
+        
+        /// <remarks/>
+        public void dbDeleteUserFromGroupAsync(string UserNickName, object userState) {
+            if ((this.dbDeleteUserFromGroupOperationCompleted == null)) {
+                this.dbDeleteUserFromGroupOperationCompleted = new System.Threading.SendOrPostCallback(this.OndbDeleteUserFromGroupOperationCompleted);
+            }
+            this.InvokeAsync("dbDeleteUserFromGroup", new object[] {
+                        UserNickName}, this.dbDeleteUserFromGroupOperationCompleted, userState);
+        }
+        
+        private void OndbDeleteUserFromGroupOperationCompleted(object arg) {
+            if ((this.dbDeleteUserFromGroupCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.dbDeleteUserFromGroupCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1116,6 +1214,180 @@ namespace SmartFridge.WebReference {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbInsertImageUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void dbInsertImageUser([System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", IsNullable=true)] byte[] image) {
+            this.Invoke("dbInsertImageUser", new object[] {
+                        image});
+        }
+        
+        /// <remarks/>
+        public void dbInsertImageUserAsync(byte[] image) {
+            this.dbInsertImageUserAsync(image, null);
+        }
+        
+        /// <remarks/>
+        public void dbInsertImageUserAsync(byte[] image, object userState) {
+            if ((this.dbInsertImageUserOperationCompleted == null)) {
+                this.dbInsertImageUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OndbInsertImageUserOperationCompleted);
+            }
+            this.InvokeAsync("dbInsertImageUser", new object[] {
+                        image}, this.dbInsertImageUserOperationCompleted, userState);
+        }
+        
+        private void OndbInsertImageUserOperationCompleted(object arg) {
+            if ((this.dbInsertImageUserCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.dbInsertImageUserCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbInsertImageRecipe", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void dbInsertImageRecipe([System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", IsNullable=true)] byte[] image) {
+            this.Invoke("dbInsertImageRecipe", new object[] {
+                        image});
+        }
+        
+        /// <remarks/>
+        public void dbInsertImageRecipeAsync(byte[] image) {
+            this.dbInsertImageRecipeAsync(image, null);
+        }
+        
+        /// <remarks/>
+        public void dbInsertImageRecipeAsync(byte[] image, object userState) {
+            if ((this.dbInsertImageRecipeOperationCompleted == null)) {
+                this.dbInsertImageRecipeOperationCompleted = new System.Threading.SendOrPostCallback(this.OndbInsertImageRecipeOperationCompleted);
+            }
+            this.InvokeAsync("dbInsertImageRecipe", new object[] {
+                        image}, this.dbInsertImageRecipeOperationCompleted, userState);
+        }
+        
+        private void OndbInsertImageRecipeOperationCompleted(object arg) {
+            if ((this.dbInsertImageRecipeCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.dbInsertImageRecipeCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbInsertImageGrocerieUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void dbInsertImageGrocerieUser([System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", IsNullable=true)] byte[] image) {
+            this.Invoke("dbInsertImageGrocerieUser", new object[] {
+                        image});
+        }
+        
+        /// <remarks/>
+        public void dbInsertImageGrocerieUserAsync(byte[] image) {
+            this.dbInsertImageGrocerieUserAsync(image, null);
+        }
+        
+        /// <remarks/>
+        public void dbInsertImageGrocerieUserAsync(byte[] image, object userState) {
+            if ((this.dbInsertImageGrocerieUserOperationCompleted == null)) {
+                this.dbInsertImageGrocerieUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OndbInsertImageGrocerieUserOperationCompleted);
+            }
+            this.InvokeAsync("dbInsertImageGrocerieUser", new object[] {
+                        image}, this.dbInsertImageGrocerieUserOperationCompleted, userState);
+        }
+        
+        private void OndbInsertImageGrocerieUserOperationCompleted(object arg) {
+            if ((this.dbInsertImageGrocerieUserCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.dbInsertImageGrocerieUserCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbModifyUserImage", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void dbModifyUserImage([System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", IsNullable=true)] byte[] image, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string Nickname) {
+            this.Invoke("dbModifyUserImage", new object[] {
+                        image,
+                        Nickname});
+        }
+        
+        /// <remarks/>
+        public void dbModifyUserImageAsync(byte[] image, string Nickname) {
+            this.dbModifyUserImageAsync(image, Nickname, null);
+        }
+        
+        /// <remarks/>
+        public void dbModifyUserImageAsync(byte[] image, string Nickname, object userState) {
+            if ((this.dbModifyUserImageOperationCompleted == null)) {
+                this.dbModifyUserImageOperationCompleted = new System.Threading.SendOrPostCallback(this.OndbModifyUserImageOperationCompleted);
+            }
+            this.InvokeAsync("dbModifyUserImage", new object[] {
+                        image,
+                        Nickname}, this.dbModifyUserImageOperationCompleted, userState);
+        }
+        
+        private void OndbModifyUserImageOperationCompleted(object arg) {
+            if ((this.dbModifyUserImageCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.dbModifyUserImageCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbGetUserImage", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", IsNullable=true)]
+        public byte[] dbGetUserImage([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string Nickname) {
+            object[] results = this.Invoke("dbGetUserImage", new object[] {
+                        Nickname});
+            return ((byte[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void dbGetUserImageAsync(string Nickname) {
+            this.dbGetUserImageAsync(Nickname, null);
+        }
+        
+        /// <remarks/>
+        public void dbGetUserImageAsync(string Nickname, object userState) {
+            if ((this.dbGetUserImageOperationCompleted == null)) {
+                this.dbGetUserImageOperationCompleted = new System.Threading.SendOrPostCallback(this.OndbGetUserImageOperationCompleted);
+            }
+            this.InvokeAsync("dbGetUserImage", new object[] {
+                        Nickname}, this.dbGetUserImageOperationCompleted, userState);
+        }
+        
+        private void OndbGetUserImageOperationCompleted(object arg) {
+            if ((this.dbGetUserImageCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.dbGetUserImageCompleted(this, new dbGetUserImageCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbModifyUserNickname", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void dbModifyUserNickname([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string StariNickname, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string NoviNickname) {
+            this.Invoke("dbModifyUserNickname", new object[] {
+                        StariNickname,
+                        NoviNickname});
+        }
+        
+        /// <remarks/>
+        public void dbModifyUserNicknameAsync(string StariNickname, string NoviNickname) {
+            this.dbModifyUserNicknameAsync(StariNickname, NoviNickname, null);
+        }
+        
+        /// <remarks/>
+        public void dbModifyUserNicknameAsync(string StariNickname, string NoviNickname, object userState) {
+            if ((this.dbModifyUserNicknameOperationCompleted == null)) {
+                this.dbModifyUserNicknameOperationCompleted = new System.Threading.SendOrPostCallback(this.OndbModifyUserNicknameOperationCompleted);
+            }
+            this.InvokeAsync("dbModifyUserNickname", new object[] {
+                        StariNickname,
+                        NoviNickname}, this.dbModifyUserNicknameOperationCompleted, userState);
+        }
+        
+        private void OndbModifyUserNicknameOperationCompleted(object arg) {
+            if ((this.dbModifyUserNicknameCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.dbModifyUserNicknameCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -1144,7 +1416,7 @@ namespace SmartFridge.WebReference {
         
         private string emailField;
         
-        private string imageField;
+        private byte[] imageField;
         
         private string myGroupField;
         
@@ -1170,8 +1442,8 @@ namespace SmartFridge.WebReference {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Image {
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", IsNullable=true)]
+        public byte[] Image {
             get {
                 return this.imageField;
             }
@@ -1329,7 +1601,7 @@ namespace SmartFridge.WebReference {
         
         private string categoryField;
         
-        private string imageField;
+        private byte[] imageField;
         
         private string nameField;
         
@@ -1347,8 +1619,8 @@ namespace SmartFridge.WebReference {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Image {
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", IsNullable=true)]
+        public byte[] Image {
             get {
                 return this.imageField;
             }
@@ -1394,7 +1666,7 @@ namespace SmartFridge.WebReference {
         
         private bool idFieldSpecified;
         
-        private string imageField;
+        private byte[] imageField;
         
         private string nameField;
         
@@ -1431,8 +1703,8 @@ namespace SmartFridge.WebReference {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Image {
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", IsNullable=true)]
+        public byte[] Image {
             get {
                 return this.imageField;
             }
@@ -1904,6 +2176,14 @@ namespace SmartFridge.WebReference {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    public delegate void dbUpdateUserStatusCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    public delegate void dbDeleteUserFromGroupCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
     public delegate void dbGetOptionsCompletedEventHandler(object sender, dbGetOptionsCompletedEventArgs e);
     
     /// <remarks/>
@@ -2113,6 +2393,52 @@ namespace SmartFridge.WebReference {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
     public delegate void deleteContainsCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    public delegate void dbInsertImageUserCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    public delegate void dbInsertImageRecipeCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    public delegate void dbInsertImageGrocerieUserCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    public delegate void dbModifyUserImageCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    public delegate void dbGetUserImageCompletedEventHandler(object sender, dbGetUserImageCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class dbGetUserImageCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal dbGetUserImageCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public byte[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((byte[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    public delegate void dbModifyUserNicknameCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591

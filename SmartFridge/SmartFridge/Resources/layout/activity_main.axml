@@ -35,6 +35,8 @@
 				android:textAppearance="?android:attr/textAppearanceLarge"
 				android:layout_width="match_parent"
 				android:gravity="center"
+				android:textSize="42sp"
+				android:textColor="#090851"
 				android:layout_height="wrap_content"
 				android:id="@+id/txtRecipeName" />
 			<ImageView
@@ -45,9 +47,10 @@
 				android:layout_height="500px"
 				android:id="@+id/imageRecipe" />
 			<TextView
-				android:text="Lorem ipsum dolor sit amet, consectetuer adipiscin"
+				android:text="Lorem ipsum dolor sit amet, consectetuer adipiscine"
 				android:layout_below="@id/imageRecipe"
 				android:layout_margin="10dp"
+					android:background="@android:color/holo_blue_bright"
 				android:textAppearance="?android:attr/textAppearanceSmall"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"

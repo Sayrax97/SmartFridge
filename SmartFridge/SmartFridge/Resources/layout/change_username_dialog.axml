@@ -6,7 +6,7 @@
     android:minWidth="500px"
     android:minHeight="700px">
 	<TextView
-		android:text="Nova Sifra"
+		android:text="Novo korisničko ime"
 		android:gravity="center"
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
@@ -15,20 +15,20 @@
 	<EditText
 		android:layout_margin="25dp"
 		android:layout_width="match_parent"
-		android:hint="Unesite novu šifru"
+		android:hint="Unesite korisničko ime"
 		android:layout_height="wrap_content"
-		android:id="@+id/editTxtNewPass" />
+		android:id="@+id/editTxtNewUserName" />
 	<Button
-		android:text="Promeni Šifru"
+		android:text="Promeni Korisničko ime"
 		android:layout_margin="10dp"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/changePassButton" />
+		android:id="@+id/changeToNewUserNameButton" />
 	<Button
 		android:text="Otkaži"
 		android:layout_margin="10dp"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/btnCancelNewPass" />
+		android:id="@+id/btnCancelNewUsername" />
 
 </LinearLayout>

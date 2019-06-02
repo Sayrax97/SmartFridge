@@ -41,24 +41,25 @@ namespace SmartFridge.Adapters
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
+            void ItemViewClick(object sender, EventArgs e)
+            {
+                Recipe recipeClicked = recipes[position];
+                intent = new Intent(context, typeof(RecipeActivity));
+                intent.PutExtra("recept", JsonConvert.SerializeObject(recipeClicked));
+                context.StartActivity(intent);
+            }
             MyViewHolder vh = holder as MyViewHolder;
             vh.TitleTextView.Text = recipes[position].Name;
             vh.ShortDescTextView.Text = recipes[position].Description;
             vh.ShortDescTextView.Text = recipes[position].Description.Substring
               (0, recipes[position].Description.Length < 80 ? recipes[position].Description.Length : 80) + "...";
-            //vh.RecipeImage.SetImageDrawable(context.GetDrawable
-                //(context.Resources.GetIdentifier(recipes[position].Image,"drawable",context.PackageName)));
-            vh.ItemView.Click += ItemView_Click;
+            //Bitmap bitmap = BitmapFactory.DecodeByteArray(ChamberOfSecrets.Instance.group.Recipes[position].Image,
+            //    0, ChamberOfSecrets.Instance.group.Recipes[position].Image.Length);
+            //vh.RecipeImage.SetImageBitmap(bitmap);
+            vh.ItemView.Click += ItemViewClick;
         }
 
-        private void ItemView_Click(object sender, EventArgs e)
-        {
-            int position = this.recyclerView.GetChildAdapterPosition((View) sender);
-            Recipe recipeClicked = recipes[position];
-            intent= new Intent(context,typeof(RecipeActivity));
-            intent.PutExtra("recept", JsonConvert.SerializeObject(recipeClicked));
-            context.StartActivity(intent);
-        }
+        
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {

@@ -19,16 +19,16 @@ namespace SmartFridge
     {
         private List<Grocery> groceries;
         private Context context;
-        private bool flagReceipt;
+        private bool flagRecipe;
         public override Grocery this[int position] => groceries[position];
 
         public GroceryListItemAdapter(List<Grocery> groceries, Context context,bool flagReceipt)
         {
             this.groceries = (from grocery in groceries
-                where grocery.IsInList == true && grocery.IsCategorized==true && grocery.Amount>=0
+                where grocery.IsInList == true && grocery.IsCategorized==true && grocery.Amount>0
                 select grocery).ToList();
             this.context = context;
-            this.flagReceipt = flagReceipt;
+            this.flagRecipe = flagReceipt;
         }
 
         public override int Count => groceries.Count;
@@ -42,13 +42,13 @@ namespace SmartFridge
         {
             if (convertView == null)
             {
-                convertView = LayoutInflater.From(context).Inflate(!flagReceipt ? Resource.Layout.shopping_cart_item_layout : Resource.Layout.groceries_recipe_item_layout, null);
+                convertView = LayoutInflater.From(context).Inflate(!flagRecipe ? Resource.Layout.shopping_cart_item_layout : Resource.Layout.groceries_recipe_item_layout, null);
             }
 
             TextView name = convertView.FindViewById<TextView>(Resource.Id.textViewName);
             TextView amount = convertView.FindViewById<TextView>(Resource.Id.textViewAmount);
             TextView unit = convertView.FindViewById<TextView>(Resource.Id.textViewUnit);
-            if(!flagReceipt)
+            if(!flagRecipe)
             {
                 CheckBox checkBox = convertView.FindViewById<CheckBox>(Resource.Id.checkBoxBought);
                 EditText boughtEditText = convertView.FindViewById<EditText>(Resource.Id.editTxtBought);
@@ -95,7 +95,7 @@ namespace SmartFridge
             unit.SetTextColor(Color.Gray);
             unit.SetTypeface(null, TypefaceStyle.Normal);
 
-            if(flagReceipt && !CheckIfIsAvailable(groceries[position]))
+            if(flagRecipe && !CheckIfIsAvailable(groceries[position]))
             {
                 groceries[position].IsInList = false;
                 name.SetTextColor(Color.Red);

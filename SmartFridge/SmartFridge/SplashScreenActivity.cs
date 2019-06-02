@@ -28,7 +28,7 @@ namespace SmartFridge
                 .WithSplashTimeOut(2000)
                 .WithBackgroundColor(Color.ParseColor("#99ffcc"))
                 .WithBackgroundResource(Resource.Drawable.refrigeratorSplash)
-                .WithFooterText("©2019,4InfinityTeam");
+                .WithFooterText("©2019,4Infinity");
             SetContentView(splash.Create());
         }
     }

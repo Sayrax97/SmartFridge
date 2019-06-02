@@ -18,7 +18,7 @@ namespace SmartFridge.Model
         public string Name { get; set; }
         public int Id { get;set; }
         public string Description { get; set; }
-        public string Image { get; set; }
+        public byte[] Image { get; set; }
         public AvailableGroceries Groceries { get; set; }
         public int Rank { get; set; }
 
@@ -28,7 +28,7 @@ namespace SmartFridge.Model
             Rank = 0;
         }
 
-        public Recipe(string name, int id, string description, string image)
+        public Recipe(string name, int id, string description, byte[] image)
         {
             Groceries = new AvailableGroceries();
             Name = name;
@@ -36,7 +36,7 @@ namespace SmartFridge.Model
             Rank = 0;
             Description = description;
             Image = image;
-            AddImage();
+            //AddImage();
         }
 
 
@@ -45,24 +45,24 @@ namespace SmartFridge.Model
             Groceries.AddToList(grocery);
         }
 
-        public void AddImage()
-        {
-            var words = Name.Split(' ');
-            Image = "";
-            foreach (var word in words)
-            {
-                Image += word.ToLower() + "_";
-            }
+        //public void AddImage()
+        //{
+        //    var words = Name.Split(' ');
+        //    Image = "";
+        //    foreach (var word in words)
+        //    {
+        //        Image += word.ToLower() + "_";
+        //    }
 
-            //Image += ".jpg";
-        }
+        //    //Image += ".jpg";
+        //}
 
         public void ToRecipe(RecipeDetails details)
         {
             Name = details.Name;
             Id = details.ID;
             Description = details.Description;
-            Image = details.Image;
+            Image = null;
             var list = ChamberOfSecrets.Proxy.dbGetContains(Id,true).ToList();
             foreach (var item in list)
             {
