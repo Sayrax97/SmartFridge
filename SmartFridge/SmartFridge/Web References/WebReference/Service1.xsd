@@ -435,6 +435,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="image" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -493,6 +494,20 @@
   <xs:element name="dbModifyUserNicknameResponse">
     <xs:complexType>
       <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbFindRecepyByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbFindRecepyByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WcfSmartFridge" minOccurs="0" name="dbFindRecepyByIDResult" nillable="true" type="q18:RecipeDetails" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
 </xs:schema>

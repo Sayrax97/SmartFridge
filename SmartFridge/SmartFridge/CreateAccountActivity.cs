@@ -24,7 +24,7 @@ using Option = SmartFridge.Model.Option;
 
 namespace SmartFridge
 {
-    [Activity(Label = "@string/create_acc", NoHistory = true)]
+    [Activity(Label = "@string/create_acc")]
     public class CreateAccountActivity : Activity
     {
         private EditText usernameEditText;
@@ -82,13 +82,13 @@ namespace SmartFridge
             Intent intent = new Intent();
             intent.SetType("image/*");
             intent.SetAction(Intent.ActionGetContent);
-            StartActivityForResult(Intent.CreateChooser(intent, "Izabrite sliku"), 0);
+            StartActivityForResult(Intent.CreateChooser(intent, "Izaberite sliku"), 2);
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
-            if (resultCode == Result.Ok)
+            if (resultCode == Result.Ok && requestCode==2)
             {
                 Stream stream = ContentResolver.OpenInputStream(data.Data);
                 var bitmap = BitmapFactory.DecodeStream(stream);

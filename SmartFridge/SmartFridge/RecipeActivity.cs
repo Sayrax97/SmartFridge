@@ -20,7 +20,7 @@ using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace SmartFridge
 {
-    [Activity(Label = "@string/receipt",Theme = "@style/AppThemeNoActionBar")]
+    [Activity(Label = "@string/receipt",Theme = "@style/AppThemeNoActionBar",LaunchMode = LaunchMode.SingleTask)]
     public class RecipeActivity : AppCompatActivity
     {
         private ImageView recipeImageView;
@@ -88,8 +88,8 @@ namespace SmartFridge
             groceryList = recipe.Groceries;
             recipe.Groceries.SetDefault();
             Bitmap bitmap = BitmapFactory.DecodeByteArray(recipe.Image, 0, recipe.Image.Length);
-            var bitmapdScaled = Bitmap.CreateScaledBitmap(bitmap, 400, 400, false);
-            recipeImageView.SetImageBitmap(bitmapdScaled);
+            var bitmapScaled = Bitmap.CreateScaledBitmap(bitmap, 400, 400, false);
+            recipeImageView.SetImageBitmap(bitmapScaled);
         }
 
         private void RecipeBottomNavigationView_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
@@ -99,12 +99,12 @@ namespace SmartFridge
                 case Resource.Id.menu_make:
                     foreach (var grocery in groceryList.Groceries)
                     {
-                        ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries.Find(x => x.Name == grocery.Name).Amount -= grocery.Amount;
+                        if ((ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries
+                                .Find(x => x.Name == grocery.Name).Amount -= grocery.Amount) <= 0)
+                        {
+                            ChamberOfSecrets.Instance.group.AvailableGroceries.RemoveFromList(grocery.Name);
+                        }
                         //proxy
-                        var intent1 = new Intent(this, typeof(RecipeListActivity));
-                        intent1.PutExtra("Activity", "main");
-                        StartActivity(intent1);
-                        Finish();
                     }
                     break;
                 case Resource.Id.menu_addToCart:
@@ -112,11 +112,13 @@ namespace SmartFridge
                     {
                         if (!CheckIfIsAvailable(grocery))
                         {
-                            ChamberOfSecrets.Instance.group.ShoppingCart.AddToList(grocery);
+                            var grocery1 = grocery;
+                            if(ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries.Exists(x=>x.Name==grocery.Name))
+                                grocery1.Amount -= ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries.Find(x => x.Name == grocery.Name).Amount;
+                            ChamberOfSecrets.Instance.group.ShoppingCart.AddToList(grocery1);
                             //proxy
                         }
                     }
-                    Finish();
                     break;
                 case Resource.Id.menu_feedback:
                     //Ovo ce da se odradi kad se rade notifikacije

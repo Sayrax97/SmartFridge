@@ -31,6 +31,7 @@ namespace SmartFridge.Dialogs
         private Button okButton;
         private Button cancelButton;
         private View view;
+        private TextView unitTextView;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -38,12 +39,23 @@ namespace SmartFridge.Dialogs
             groceriesAutoComplete = view.FindViewById<SfAutoComplete>(Resource.Id.autoCompleteGrocery);
             categoriesComboBox = view.FindViewById<SfComboBox>(Resource.Id.cmboBoxCategories);
             AutoCompleteInit(view);
+            unitTextView = view.FindViewById<TextView>(Resource.Id.txtUnitNewGroceryDialog);
             amountEditText = view.FindViewById<EditText>(Resource.Id.editTxtAmountGrocery);
             okButton = view.FindViewById<Button>(Resource.Id.btnOK);
             cancelButton = view.FindViewById<Button>(Resource.Id.btnCancel);
             okButton.Click += OkButton_Click;
             cancelButton.Click += CancelButton_Click;
+            groceriesAutoComplete.TextChanged += GroceriesAutoComplete_TextChanged;
             return view;
+        }
+
+        private void GroceriesAutoComplete_TextChanged(object sender, Com.Syncfusion.Autocomplete.TextChangedEventArgs e)
+        {
+            if (ChamberOfSecrets.Instance.AllGroceries.Groceries.Exists(x => x.Name == groceriesAutoComplete.Text))
+            {
+                unitTextView.Text = ChamberOfSecrets.Instance.AllGroceries.Groceries
+                    .Find(x => x.Name == groceriesAutoComplete.Text).MeasurementUnit.ToString();
+            }
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -74,10 +86,12 @@ namespace SmartFridge.Dialogs
                 if (this.Activity.GetType() == typeof(GroceriesActivity))
                 {
                     ChamberOfSecrets.Instance.group.AvailableGroceries.AddToList(gr);
+                    //proxy
                 }
                 else if (this.Activity.GetType() == typeof(ShoppingCartActivity))
                 {
                     ChamberOfSecrets.Instance.group.ShoppingCart.AddToList(gr);
+                    //proxy
                 }
                 Dismiss();
                 Toast.MakeText(Activity, "Dodata nova namirnica:" + name+" Kategorija: "+category, ToastLength.Short)

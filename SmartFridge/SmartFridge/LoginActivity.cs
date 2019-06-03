@@ -49,9 +49,8 @@ namespace SmartFridge
                 Toast.MakeText(this, "Niste povezani na internet!!!", ToastLength.Short).Show();
                 await Task.Delay(5000);
             }
-
-            await Task.Run(()=>ChamberOfSecrets.Instance.AllGroceries.ToAllGroceries(ChamberOfSecrets.Proxy.dbGetgroceriesName().ToList()));
-            await Task.Run(()=>ChamberOfSecrets.Instance.@group.ToRecipes(ChamberOfSecrets.Proxy.dbLoadRecipe().ToList()));
+            await Task.Run(() => ChamberOfSecrets.Instance.AllGroceries.ToAllGroceries(ChamberOfSecrets.Proxy.dbGetgroceriesName().ToList()));
+            await Task.Run(() => ChamberOfSecrets.Instance.@group.ToRecipes(ChamberOfSecrets.Proxy.dbLoadRecipe().ToList()));
         }
 
         private void Init()
@@ -66,19 +65,25 @@ namespace SmartFridge
 
         private void CreateAccountButton_Click(object sender, EventArgs e)
         {
-            StartActivity(typeof(CreateAccountActivity));
+            Intent creteAccIntent = new Intent(this, typeof(CreateAccountActivity));
+            StartActivity(creteAccIntent);
         }
 
         private async void LoginButton_ClickAsync(object sender, EventArgs e)
         {
             loadingProgressBar.Visibility = ViewStates.Visible;
-            await Task.Delay(500);
             if (!IsOnline())
             {
                 Toast.MakeText(this, "Niste povezani na internet!!!", ToastLength.Short).Show();
                 return;
             }
-            User user= new User();
+            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+            while (ChamberOfSecrets.Instance.group.Recipes.Count < 40)
+            {
+            }
+            stopwatch.Stop();
+            Toast.MakeText(this, $"Vreme:{stopwatch.ElapsedMilliseconds}", ToastLength.Long).Show();
+            User user = new User();
             if (string.IsNullOrEmpty(passwordEditText.Text))
             {
                 Toast.MakeText(this, "Unesite sifru", ToastLength.Long).Show();
@@ -103,43 +108,41 @@ namespace SmartFridge
                 loadingProgressBar.Visibility = ViewStates.Invisible;
                 return;
             }
-            else
-            {
-                //if(string.IsNullOrEmpty(user.MyGroup))
-                //{ 
-                //    FragmentTransaction ft = FragmentManager.BeginTransaction();
-                //    Fragment prev = FragmentManager.FindFragmentByTag("Id grupa");
-                //    if (prev != null)
-                //    {
-                //        ft.Remove(prev);
-                //    }
-                //    ft.AddToBackStack(null);
-                //    NewGroupIdDialog newFragment = new NewGroupIdDialog();
-                //    newFragment.Show(ft, "Id grupa");
-                //    loadingProgressBar.Visibility = ViewStates.Invisible;
-                //    return;
-                //}
-                user.Password = passwordEditText.Text;
-                var intent =new Intent(this,typeof(MainActivity));
-                ChamberOfSecrets.Instance.LoggedUser = user;
 
-                ChamberOfSecrets.Instance.LoggedUser.MyOptions.ToOption(await Task.Run(() =>
-                    ChamberOfSecrets.Proxy.dbGetOptions(user.UserName)));
+            //if(string.IsNullOrEmpty(user.MyGroup))
+            //{ 
+            //    FragmentTransaction ft = FragmentManager.BeginTransaction();
+            //    Fragment prev = FragmentManager.FindFragmentByTag("Id grupa");
+            //    if (prev != null)
+            //    {
+            //        ft.Remove(prev);
+            //    }
+            //    ft.AddToBackStack(null);
+            //    NewGroupIdDialog newFragment = new NewGroupIdDialog();
+            //    newFragment.Show(ft, "Id grupa");
+            //    loadingProgressBar.Visibility = ViewStates.Invisible;
+            //    return;
+            //}
+            user.Password = passwordEditText.Text;
+            var intent =new Intent(this,typeof(MainActivity));
+            ChamberOfSecrets.Instance.LoggedUser = user;
 
-                ChamberOfSecrets.Instance.@group.Id = user.MyGroup;
-                ChamberOfSecrets.Instance.@group.MyGroupMembers= await Task.Run(() =>
-                    ChamberOfSecrets.Proxy.dbInMyGroup(user.MyGroup).ToList());
+            ChamberOfSecrets.Instance.LoggedUser.MyOptions.ToOption(await Task.Run(() =>
+                ChamberOfSecrets.Proxy.dbGetOptions(user.UserName)));
 
-                ChamberOfSecrets.Instance.@group.AvailableGroceries.ToAvailableGroceries(await Task.Run(() =>
-                    ChamberOfSecrets.Proxy.dbGetAvailableGroceries(user.MyGroup).ToList()));
+            ChamberOfSecrets.Instance.@group.Id = user.MyGroup;
+            ChamberOfSecrets.Instance.@group.MyGroupMembers= await Task.Run(() =>
+                ChamberOfSecrets.Proxy.dbInMyGroup(user.MyGroup).ToList());
 
-                ChamberOfSecrets.Instance.@group.ShoppingCart.ToShoppingCart( await Task.Run(() => 
-                    ChamberOfSecrets.Proxy.dbGetShoppingCart(user.MyGroup).ToList()));
+            ChamberOfSecrets.Instance.@group.AvailableGroceries.ToAvailableGroceries(await Task.Run(() =>
+                ChamberOfSecrets.Proxy.dbGetAvailableGroceries(user.MyGroup).ToList()));
+
+            ChamberOfSecrets.Instance.@group.ShoppingCart.ToShoppingCart( await Task.Run(() => 
+                ChamberOfSecrets.Proxy.dbGetShoppingCart(user.MyGroup).ToList()));
                 
-                StartActivity(intent);
-                loadingProgressBar.Visibility = ViewStates.Invisible;
-                Finish();
-            }
+            StartActivity(intent);
+            loadingProgressBar.Visibility = ViewStates.Invisible;
+            Finish();
         }
         public bool IsOnline()
         {

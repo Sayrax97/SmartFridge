@@ -53,19 +53,8 @@ namespace SmartFridge
                 CheckBox checkBox = convertView.FindViewById<CheckBox>(Resource.Id.checkBoxBought);
                 EditText boughtEditText = convertView.FindViewById<EditText>(Resource.Id.editTxtBought);
                 ImageButton xButton = convertView.FindViewById<ImageButton>(Resource.Id.imageButton1);
-                xButton.Visibility = ViewStates.Invisible;
-
-                void XButtonClick(object sender, EventArgs e)
-                {
-                    groceries.RemoveAt(position);
-                    ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries.RemoveAt(position);
-                }
-                if (ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Supervizor ||
-                    ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Administrator)
-                {
-                    xButton.Visibility = ViewStates.Visible;
-                    xButton.Click += XButtonClick;
-                }
+                xButton.Visibility = ViewStates.Gone;
+                
                 boughtEditText.TextChanged += (sender, args) =>
                 {
                     if (!string.IsNullOrEmpty(boughtEditText.Text))
@@ -77,8 +66,7 @@ namespace SmartFridge
                 
                 void OnChange(object sender, CompoundButton.CheckedChangeEventArgs args)
                 {
-                    groceries[position].Checked = !groceries[position].Checked;
-                    groceries[position].Bought = 1;
+                    groceries[position].Checked = checkBox.Checked;
                     ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries[position].Checked = groceries[position].Checked;
                 }
 
@@ -110,7 +98,7 @@ namespace SmartFridge
 
         private bool CheckIfIsAvailable(Grocery grocery)
         {
-            return ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries.Exists(x=>x.Name==grocery.Name);
+            return ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries.Exists(x=>x.Name==grocery.Name&&x.Amount>=grocery.Amount);
         }
     }
 }

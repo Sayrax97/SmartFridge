@@ -51,10 +51,12 @@ namespace SmartFridge
             var random = new Random();
             recipeOfTheDay =
                 ChamberOfSecrets.Instance.group.Recipes[random.Next(0, ChamberOfSecrets.Instance.group.Recipes.Count)];
-            recipeNameTextView.Text = recipeOfTheDay.Name ;
+            recipeNameTextView.Text = recipeOfTheDay.Name;
             recipeDescriptionTextView.Text = recipeOfTheDay.Description.Substring
                        (0, recipeOfTheDay.Description.Length < 140 ? recipeOfTheDay.Description.Length : 140) + "...";
             recipeImageView.Click += RecipeImageView_Click;
+            Bitmap bitmap = BitmapFactory.DecodeByteArray(recipeOfTheDay.Image, 0, recipeOfTheDay.Image.Length);
+            recipeImageView.SetImageBitmap(bitmap);
         }
 
         private void RecipeImageView_Click(object sender, EventArgs e)
@@ -140,8 +142,6 @@ namespace SmartFridge
             recipeImageView = FindViewById<ImageView>(Resource.Id.imageRecipe);
             recipeNameTextView = FindViewById<TextView>(Resource.Id.txtRecipeName);
             recipeDescriptionTextView = FindViewById<TextView>(Resource.Id.txtRecipeDescription);
-            Bitmap bitmap = BitmapFactory.DecodeByteArray(recipeOfTheDay.Image,0,recipeOfTheDay.Image.Length);
-            recipeImageView.SetImageBitmap(bitmap);
         }
     }
 }

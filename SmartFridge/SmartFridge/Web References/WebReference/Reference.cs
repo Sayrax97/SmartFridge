@@ -105,6 +105,8 @@ namespace SmartFridge.WebReference {
         
         private System.Threading.SendOrPostCallback dbModifyUserNicknameOperationCompleted;
         
+        private System.Threading.SendOrPostCallback dbFindRecepyByIDOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -256,6 +258,9 @@ namespace SmartFridge.WebReference {
         
         /// <remarks/>
         public event dbModifyUserNicknameCompletedEventHandler dbModifyUserNicknameCompleted;
+        
+        /// <remarks/>
+        public event dbFindRecepyByIDCompletedEventHandler dbFindRecepyByIDCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbFindUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -1243,23 +1248,27 @@ namespace SmartFridge.WebReference {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbInsertImageRecipe", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void dbInsertImageRecipe([System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", IsNullable=true)] byte[] image) {
+        public void dbInsertImageRecipe([System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", IsNullable=true)] byte[] image, int ID, [System.Xml.Serialization.XmlIgnoreAttribute()] bool IDSpecified) {
             this.Invoke("dbInsertImageRecipe", new object[] {
-                        image});
+                        image,
+                        ID,
+                        IDSpecified});
         }
         
         /// <remarks/>
-        public void dbInsertImageRecipeAsync(byte[] image) {
-            this.dbInsertImageRecipeAsync(image, null);
+        public void dbInsertImageRecipeAsync(byte[] image, int ID, bool IDSpecified) {
+            this.dbInsertImageRecipeAsync(image, ID, IDSpecified, null);
         }
         
         /// <remarks/>
-        public void dbInsertImageRecipeAsync(byte[] image, object userState) {
+        public void dbInsertImageRecipeAsync(byte[] image, int ID, bool IDSpecified, object userState) {
             if ((this.dbInsertImageRecipeOperationCompleted == null)) {
                 this.dbInsertImageRecipeOperationCompleted = new System.Threading.SendOrPostCallback(this.OndbInsertImageRecipeOperationCompleted);
             }
             this.InvokeAsync("dbInsertImageRecipe", new object[] {
-                        image}, this.dbInsertImageRecipeOperationCompleted, userState);
+                        image,
+                        ID,
+                        IDSpecified}, this.dbInsertImageRecipeOperationCompleted, userState);
         }
         
         private void OndbInsertImageRecipeOperationCompleted(object arg) {
@@ -1384,6 +1393,38 @@ namespace SmartFridge.WebReference {
             if ((this.dbModifyUserNicknameCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.dbModifyUserNicknameCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbFindRecepyByID", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public RecipeDetails dbFindRecepyByID(int ID, [System.Xml.Serialization.XmlIgnoreAttribute()] bool IDSpecified) {
+            object[] results = this.Invoke("dbFindRecepyByID", new object[] {
+                        ID,
+                        IDSpecified});
+            return ((RecipeDetails)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void dbFindRecepyByIDAsync(int ID, bool IDSpecified) {
+            this.dbFindRecepyByIDAsync(ID, IDSpecified, null);
+        }
+        
+        /// <remarks/>
+        public void dbFindRecepyByIDAsync(int ID, bool IDSpecified, object userState) {
+            if ((this.dbFindRecepyByIDOperationCompleted == null)) {
+                this.dbFindRecepyByIDOperationCompleted = new System.Threading.SendOrPostCallback(this.OndbFindRecepyByIDOperationCompleted);
+            }
+            this.InvokeAsync("dbFindRecepyByID", new object[] {
+                        ID,
+                        IDSpecified}, this.dbFindRecepyByIDOperationCompleted, userState);
+        }
+        
+        private void OndbFindRecepyByIDOperationCompleted(object arg) {
+            if ((this.dbFindRecepyByIDCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.dbFindRecepyByIDCompleted(this, new dbFindRecepyByIDCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2439,6 +2480,32 @@ namespace SmartFridge.WebReference {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
     public delegate void dbModifyUserNicknameCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    public delegate void dbFindRecepyByIDCompletedEventHandler(object sender, dbFindRecepyByIDCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class dbFindRecepyByIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal dbFindRecepyByIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public RecipeDetails Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((RecipeDetails)(this.results[0]));
+            }
+        }
+    }
 }
 
 #pragma warning restore 1591

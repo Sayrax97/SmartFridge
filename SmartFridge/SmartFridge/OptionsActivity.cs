@@ -53,9 +53,9 @@ namespace SmartFridge
             themeSpinner = FindViewById<Spinner>(Resource.Id.spnnerTheme);
             notificationBox = FindViewById<CheckBox>(Resource.Id.checkBoxNotifications);
             notificationsTextView = FindViewById<TextView>(Resource.Id.txtViewNotificationsOptions);
-            fontTextView.Text = ChamberOfSecrets.Instance.LoggedUser.MyOptions.Font;
-            themeTextView.Text = ChamberOfSecrets.Instance.LoggedUser.MyOptions.Theme;
-            notificationsTextView.Text = ChamberOfSecrets.Instance.LoggedUser.MyOptions.Notifications.ToString();
+            //Text = ChamberOfSecrets.Instance.LoggedUser.MyOptions.Font;
+            //themeTextView.Text = ChamberOfSecrets.Instance.LoggedUser.MyOptions.Theme;
+            //notificationsTextView.Text = ChamberOfSecrets.Instance.LoggedUser.MyOptions.Notifications.ToString();
             fontSpinner.Adapter = new ArrayAdapter
                 (this, Resource.Layout.support_simple_spinner_dropdown_item, Fonts);
             themeSpinner.Adapter = new ArrayAdapter

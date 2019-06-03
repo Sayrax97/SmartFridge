@@ -119,16 +119,25 @@ namespace SmartFridge
                 foreach (var grocery in ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries.ToList())
                 {
                     if (!grocery.Checked) continue;
-                    if ((ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries
-                            .Find(x => x.Name == grocery.Name).Amount -= grocery.Bought) <= 0)
+                    if (grocery.Bought == 0)
                     {
                         ChamberOfSecrets.Instance.@group.AvailableGroceries.RemoveFromList(grocery.Name);
                     }
                     else
                     {
-                        ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries
-                            .Find(x => x.Name == grocery.Name).Bought = 0;
+
+                        if ((ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries
+                                .Find(x => x.Name == grocery.Name).Amount -= grocery.Bought) <= 0)
+                        {
+                            ChamberOfSecrets.Instance.@group.AvailableGroceries.RemoveFromList(grocery.Name);
+                        }
+                        else
+                        {
+                            ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries
+                                .Find(x => x.Name == grocery.Name).Bought = 0;
+                        }
                     }
+
                 }
                 LoadGroceries();
         }
@@ -164,6 +173,7 @@ namespace SmartFridge
             var intent = new Intent(this, typeof(RecipeListActivity));
             intent.PutExtra("Activity", "grocery");
             StartActivity(intent);
+            Finish();
         }
         public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
         {

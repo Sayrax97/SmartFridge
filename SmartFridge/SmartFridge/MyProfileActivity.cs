@@ -91,7 +91,7 @@ namespace SmartFridge
             Intent intent= new Intent();
             intent.SetType("image/*");
             intent.SetAction(Intent.ActionGetContent);
-            StartActivityForResult(Intent.CreateChooser(intent,"Izabrite sliku"),0);
+            StartActivityForResult(Intent.CreateChooser(intent,"Izaberite sliku"),0);
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
@@ -143,18 +143,5 @@ namespace SmartFridge
                 p += "*";
             return p;
         }
-        //public byte[] ConvertBitMapToByteArray(Bitmap bitmap)
-        //{
-        //    byte[] result = null;
-
-        //    if (bitmap != null)
-        //    {
-        //        MemoryStream stream = new MemoryStream();
-        //        bitmap.(stream, bitmap.RawFormat);
-        //        result = stream.ToArray();
-        //    }
-
-        //    return result;
-        //}
     }
 }

@@ -236,6 +236,12 @@
   <wsdl:message name="IService1_dbModifyUserNickname_OutputMessage">
     <wsdl:part name="parameters" element="tns:dbModifyUserNicknameResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_dbFindRecepyByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbFindRecepyByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbFindRecepyByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbFindRecepyByIDResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="dbFindUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbFindUser" message="tns:IService1_dbFindUser_InputMessage" />
@@ -388,6 +394,10 @@
     <wsdl:operation name="dbModifyUserNickname">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbModifyUserNickname" message="tns:IService1_dbModifyUserNickname_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbModifyUserNicknameResponse" message="tns:IService1_dbModifyUserNickname_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbFindRecepyByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbFindRecepyByID" message="tns:IService1_dbFindRecepyByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbFindRecepyByIDResponse" message="tns:IService1_dbFindRecepyByID_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -727,6 +737,15 @@
     </wsdl:operation>
     <wsdl:operation name="dbModifyUserNickname">
       <soap:operation soapAction="http://tempuri.org/IService1/dbModifyUserNickname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbFindRecepyByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbFindRecepyByID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

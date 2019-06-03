@@ -36,7 +36,6 @@ namespace SmartFridge.Model
             Rank = 0;
             Description = description;
             Image = image;
-            //AddImage();
         }
 
 
@@ -45,24 +44,12 @@ namespace SmartFridge.Model
             Groceries.AddToList(grocery);
         }
 
-        //public void AddImage()
-        //{
-        //    var words = Name.Split(' ');
-        //    Image = "";
-        //    foreach (var word in words)
-        //    {
-        //        Image += word.ToLower() + "_";
-        //    }
-
-        //    //Image += ".jpg";
-        //}
-
         public void ToRecipe(RecipeDetails details)
         {
             Name = details.Name;
             Id = details.ID;
             Description = details.Description;
-            Image = null;
+            Image = details.Image;
             var list = ChamberOfSecrets.Proxy.dbGetContains(Id,true).ToList();
             foreach (var item in list)
             {
