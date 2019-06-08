@@ -38,9 +38,11 @@ namespace SmartFridge.Dialogs
                 return;
             }
 
-            //ChamberOfSecrets.Proxy.dbUpdateUser(ChamberOfSecrets.Instance.LoggedUser.UserName, 
-            //    ChamberOfSecrets.Instance.LoggedUser.UserName);
+            ChamberOfSecrets.Proxy.dbModifyUserNickname(ChamberOfSecrets.Instance.LoggedUser.UserName,
+                newUsernameEditText.Text);
             ChamberOfSecrets.Instance.LoggedUser.UserName = newUsernameEditText.Text;
+            this.Activity.Recreate();
+            Dismiss();
         }
 
         private void CancelButton_Click(object sender, EventArgs e)

@@ -24,9 +24,9 @@ namespace SmartFridge.Adapters
             this.shoppingCart = shoppingCart;
         }
 
-        public override Grocery this[int position] => shoppingCart.Groceries[position];
+        public override Grocery this[int position] => shoppingCart.Groceries.Groceries[position];
 
-        public override int Count => shoppingCart.Groceries.Count;
+        public override int Count => shoppingCart.Groceries.Groceries.Count;
 
         public override long GetItemId(int position)
         {
@@ -48,28 +48,29 @@ namespace SmartFridge.Adapters
             {
                 if (!string.IsNullOrEmpty(amountBought.Text))
                 {
-                    shoppingCart.Groceries[position].Bought = double.Parse(amountBought.Text);
-                    ChamberOfSecrets.Instance.group.ShoppingCart.Groceries[position].Bought = double.Parse(amountBought.Text);
+                    shoppingCart.Groceries.Groceries[position].Bought = double.Parse(amountBought.Text);
+                    ChamberOfSecrets.Instance.group.ShoppingCart.Groceries.Groceries[position].Bought = double.Parse(amountBought.Text);
                 }
             };
             CheckBox checkBox = convertView.FindViewById<CheckBox>(Resource.Id.checkBoxBought);
 
             void OnCheckBoxOnCheckedChange(object sender, CompoundButton.CheckedChangeEventArgs args)
             {
-                shoppingCart.Groceries[position].Checked = checkBox.Checked;
-                ChamberOfSecrets.Instance.@group.ShoppingCart.Groceries[position].Checked = shoppingCart.Groceries[position].Checked;
+                shoppingCart.Groceries.Groceries[position].Checked = checkBox.Checked;
+                ChamberOfSecrets.Instance.@group.ShoppingCart.Groceries.Groceries[position].Checked = shoppingCart.Groceries.Groceries[position].Checked;
             }
             checkBox.CheckedChange += OnCheckBoxOnCheckedChange;
             ImageButton xButton = convertView.FindViewById<ImageButton>(Resource.Id.imageButton1);
-            xButton.Click += XButton_Click;
-            void XButton_Click(object sender, EventArgs e)
-            {
-                shoppingCart.RemoveFromShoppingCart(shoppingCart.Groceries[position]);
-                ChamberOfSecrets.Instance.group.ShoppingCart.RemoveFromShoppingCart(shoppingCart.Groceries[position]);
-            }
-            name.Text = shoppingCart.Groceries[position].Name;
-            unit.Text = shoppingCart.Groceries[position].MeasurementUnit.ToString();
-            amount.Text = shoppingCart.Groceries[position].Amount.ToString();
+            xButton.Visibility = ViewStates.Gone;
+            //xButton.Click += XButton_Click;
+            //void XButton_Click(object sender, EventArgs e)
+            //{
+            //    ChamberOfSecrets.Instance.group.ShoppingCart.RemoveFromShoppingCart(shoppingCart.Groceries[position]);
+            //    NotifyDataSetChanged();
+            //}
+            name.Text = shoppingCart.Groceries.Groceries[position].Name;
+            unit.Text = shoppingCart.Groceries.Groceries[position].MeasurementUnit.ToString();
+            amount.Text = shoppingCart.Groceries.Groceries[position].Amount.ToString();
 
             return convertView;
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
@@ -38,14 +39,31 @@ namespace SmartFridge
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
 
         }
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            if(ChamberOfSecrets.Instance.LoggedUser.UserStatus==Status.Supervizor || ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Administrator)
+                base.MenuInflater.Inflate(Resource.Menu.shopping_cart_menu, menu);
+            return true;
+        }
 
-        public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
+        public  override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
         {
             switch (item.ItemId)
             {
 
                 case Android.Resource.Id.Home:
                     Finish();
+                    break;
+                case Resource.Id.remove:
+                    foreach (var grocery in ChamberOfSecrets.Instance.group.ShoppingCart.Groceries.Groceries.ToList())
+                    {
+                        if (grocery.Checked)
+                        {
+                            ChamberOfSecrets.Instance.group.ShoppingCart.RemoveFromShoppingCart(grocery);
+                            ChamberOfSecrets.Proxy.dbDeleteShoppingCart(grocery.Name, ChamberOfSecrets.Instance.group.Id);
+                        }
+                        LoadGroceries();
+                    }
                     break;
             }
 
@@ -90,24 +108,26 @@ namespace SmartFridge
             newFragment.Show(ft, "NovaNamirnica");
         }
 
-        private void AddToGroceriesListButton_Click(object sender, EventArgs e)
+        private async void AddToGroceriesListButton_Click(object sender, EventArgs e)
         {
-            foreach (var grocery in ChamberOfSecrets.Instance.group.ShoppingCart.Groceries.ToList())
+            foreach (var grocery in ChamberOfSecrets.Instance.group.ShoppingCart.Groceries.Groceries.ToList())
             {
                 if (grocery.Checked)
-                    ChamberOfSecrets.Instance.group.ShoppingCart.Buy(grocery);
+                    await ChamberOfSecrets.Instance.group.ShoppingCart.Buy(grocery);
 
             }
             LoadGroceries();
-            foreach (var grocery in ChamberOfSecrets.Instance.group.ShoppingCart.Groceries.ToList())
+            foreach (var grocery in ChamberOfSecrets.Instance.group.ShoppingCart.Groceries.Groceries.ToList())
             {
                 grocery.Checked = false;
 
             }
         }
+
         public void LoadGroceries()
         {
             shoppingCartListView.Adapter = new ShoppingCartItemAdapter(this, ChamberOfSecrets.Instance.group.ShoppingCart);
+            
         }
     }
 }

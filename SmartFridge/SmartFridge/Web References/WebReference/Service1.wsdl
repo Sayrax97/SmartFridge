@@ -128,11 +128,11 @@
   <wsdl:message name="IService1_dbDeleteShoppingCart_OutputMessage">
     <wsdl:part name="parameters" element="tns:dbDeleteShoppingCartResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_dbInsertAvailableGroceries_InputMessage">
-    <wsdl:part name="parameters" element="tns:dbInsertAvailableGroceries" />
+  <wsdl:message name="IService1_dbAvailableGroceriesInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbAvailableGroceriesInsert" />
   </wsdl:message>
-  <wsdl:message name="IService1_dbInsertAvailableGroceries_OutputMessage">
-    <wsdl:part name="parameters" element="tns:dbInsertAvailableGroceriesResponse" />
+  <wsdl:message name="IService1_dbAvailableGroceriesInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbAvailableGroceriesInsertResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_dbInsertShoppingCart_InputMessage">
     <wsdl:part name="parameters" element="tns:dbInsertShoppingCart" />
@@ -242,6 +242,24 @@
   <wsdl:message name="IService1_dbFindRecepyByID_OutputMessage">
     <wsdl:part name="parameters" element="tns:dbFindRecepyByIDResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_dbAvailableGroceriesExicst_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbAvailableGroceriesExicst" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbAvailableGroceriesExicst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbAvailableGroceriesExicstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbShopingCartExicst_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbShopingCartExicst" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbShopingCartExicst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbShopingCartExicstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbAvailableGroceriesExicst1_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbAvailableGroceriesExicst1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbAvailableGroceriesExicst1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbAvailableGroceriesExicst1Response" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="dbFindUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbFindUser" message="tns:IService1_dbFindUser_InputMessage" />
@@ -323,9 +341,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbDeleteShoppingCart" message="tns:IService1_dbDeleteShoppingCart_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbDeleteShoppingCartResponse" message="tns:IService1_dbDeleteShoppingCart_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="dbInsertAvailableGroceries">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbInsertAvailableGroceries" message="tns:IService1_dbInsertAvailableGroceries_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbInsertAvailableGroceriesResponse" message="tns:IService1_dbInsertAvailableGroceries_OutputMessage" />
+    <wsdl:operation name="dbAvailableGroceriesInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbAvailableGroceriesInsert" message="tns:IService1_dbAvailableGroceriesInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbAvailableGroceriesInsertResponse" message="tns:IService1_dbAvailableGroceriesInsert_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="dbInsertShoppingCart">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbInsertShoppingCart" message="tns:IService1_dbInsertShoppingCart_InputMessage" />
@@ -398,6 +416,18 @@
     <wsdl:operation name="dbFindRecepyByID">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbFindRecepyByID" message="tns:IService1_dbFindRecepyByID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbFindRecepyByIDResponse" message="tns:IService1_dbFindRecepyByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbAvailableGroceriesExicst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbAvailableGroceriesExicst" message="tns:IService1_dbAvailableGroceriesExicst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbAvailableGroceriesExicstResponse" message="tns:IService1_dbAvailableGroceriesExicst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbShopingCartExicst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbShopingCartExicst" message="tns:IService1_dbShopingCartExicst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbShopingCartExicstResponse" message="tns:IService1_dbShopingCartExicst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbAvailableGroceriesExicst1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbAvailableGroceriesExicst1" message="tns:IService1_dbAvailableGroceriesExicst1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbAvailableGroceriesExicst1Response" message="tns:IService1_dbAvailableGroceriesExicst1_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -582,8 +612,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="dbInsertAvailableGroceries">
-      <soap:operation soapAction="http://tempuri.org/IService1/dbInsertAvailableGroceries" style="document" />
+    <wsdl:operation name="dbAvailableGroceriesInsert">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbAvailableGroceriesInsert" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -746,6 +776,33 @@
     </wsdl:operation>
     <wsdl:operation name="dbFindRecepyByID">
       <soap:operation soapAction="http://tempuri.org/IService1/dbFindRecepyByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbAvailableGroceriesExicst">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbAvailableGroceriesExicst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbShopingCartExicst">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbShopingCartExicst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbAvailableGroceriesExicst1">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbAvailableGroceriesExicst1" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -272,14 +272,14 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="dbInsertAvailableGroceries">
+  <xs:element name="dbAvailableGroceriesInsert">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfSmartFridge" minOccurs="0" name="availableGroceries" nillable="true" type="q9:AvailableGroceriesDetails" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="dbInsertAvailableGroceriesResponse">
+  <xs:element name="dbAvailableGroceriesInsertResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
@@ -508,6 +508,46 @@
       <xs:sequence>
         <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WcfSmartFridge" minOccurs="0" name="dbFindRecepyByIDResult" nillable="true" type="q18:RecipeDetails" />
       </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbAvailableGroceriesExicst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WcfSmartFridge" minOccurs="0" name="availableGroceries" nillable="true" type="q19:AvailableGroceriesDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbAvailableGroceriesExicstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dbAvailableGroceriesExicstResult" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbShopingCartExicst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/WcfSmartFridge" minOccurs="0" name="shoppingCart" nillable="true" type="q20:ShoppingCartDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbShopingCartExicstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dbShopingCartExicstResult" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbAvailableGroceriesExicst1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/WcfSmartFridge" minOccurs="0" name="availableGroceries" nillable="true" type="q21:AvailableGroceriesDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dbAvailableGroceriesExicst1Response">
+    <xs:complexType>
+      <xs:sequence />
     </xs:complexType>
   </xs:element>
 </xs:schema>

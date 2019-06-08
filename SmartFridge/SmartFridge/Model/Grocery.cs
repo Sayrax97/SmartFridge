@@ -105,5 +105,29 @@ namespace SmartFridge.Model
                 Image = null
             };
         }
+
+        public AvailableGroceriesDetails ToAvaliableAvailableGroceriesDetails()
+        {
+            var details = new AvailableGroceriesDetails()
+            {
+                Grocery = GetGroceryDetails(),
+                Amount = (float)Amount,
+                GroupID = ChamberOfSecrets.Instance.group.Id,
+                AmountSpecified = true
+            };
+            return details;
+        }
+
+        public ShoppingCartDetails ToCartDetails()
+        {
+            var details = new ShoppingCartDetails()
+            {
+                Grocery = GetGroceryDetails(),
+                Amount = (float)Amount,
+                GroupID = ChamberOfSecrets.Instance.group.Id,
+                AmountSpecified = true
+            };
+            return details;
+        }
     }
 }

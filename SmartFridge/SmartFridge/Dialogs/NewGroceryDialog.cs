@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.Graphics;
@@ -38,7 +38,7 @@ namespace SmartFridge.Dialogs
             view = inflater.Inflate(Resource.Layout.dialog_new_grocery_layout, container, false);
             groceriesAutoComplete = view.FindViewById<SfAutoComplete>(Resource.Id.autoCompleteGrocery);
             categoriesComboBox = view.FindViewById<SfComboBox>(Resource.Id.cmboBoxCategories);
-            AutoCompleteInit(view);
+            AutoCompleteInit();
             unitTextView = view.FindViewById<TextView>(Resource.Id.txtUnitNewGroceryDialog);
             amountEditText = view.FindViewById<EditText>(Resource.Id.editTxtAmountGrocery);
             okButton = view.FindViewById<Button>(Resource.Id.btnOK);
@@ -64,7 +64,7 @@ namespace SmartFridge.Dialogs
             Toast.MakeText(Activity, "Dodavanje otkazano!!!", ToastLength.Short).Show();
         }
 
-        private void OkButton_Click(object sender, EventArgs e)
+        private async void OkButton_Click(object sender, EventArgs e)
         {
             Category category;
             string name;
@@ -76,22 +76,24 @@ namespace SmartFridge.Dialogs
                 category = Grocery.ParseEnum<Category>(categoriesComboBox.Text);
                 name = groceriesAutoComplete.Text;
                 amount = double.Parse(amountEditText.Text);
-                unit = GetUnit(name, category);
                 if (category == Category.None)
                 {
                     category = ChamberOfSecrets.Instance.AllGroceries.Groceries.Find(x => x.Name == name).Type;
                 }
+                unit = GetUnit(name, category);
                 Grocery gr = new Grocery(name, unit, category, amount);
                 gr.Default();
                 if (this.Activity.GetType() == typeof(GroceriesActivity))
                 {
                     ChamberOfSecrets.Instance.group.AvailableGroceries.AddToList(gr);
-                    //proxy
+                    await Task.Run(() =>
+                        ChamberOfSecrets.Proxy.dbAvailableGroceriesInsert(gr.ToAvaliableAvailableGroceriesDetails()));
                 }
                 else if (this.Activity.GetType() == typeof(ShoppingCartActivity))
                 {
                     ChamberOfSecrets.Instance.group.ShoppingCart.AddToList(gr);
-                    //proxy
+                   await Task.Run(()=>
+                       ChamberOfSecrets.Proxy.dbInsertShoppingCart(gr.ToCartDetails()));
                 }
                 Dismiss();
                 Toast.MakeText(Activity, "Dodata nova namirnica:" + name+" Kategorija: "+category, ToastLength.Short)
@@ -110,7 +112,7 @@ namespace SmartFridge.Dialogs
                 Toast.MakeText(Activity, "Morate uneti podatke u prazna polja", ToastLength.Short).Show();
             }
         }
-        private void AutoCompleteInit(View view)
+        private void AutoCompleteInit()
         {
             groceriesAutoComplete.AutoCompleteMode = AutoCompleteMode.Suggest;
             groceriesAutoComplete.SuggestionMode = SuggestionMode.Contains;

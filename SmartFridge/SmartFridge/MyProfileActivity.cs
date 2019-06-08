@@ -103,7 +103,6 @@ namespace SmartFridge
                 var bitmap = BitmapFactory.DecodeStream(stream);
                 var bitmapScaled = Bitmap.CreateScaledBitmap(bitmap, 500, 500, false);
                 profilePictureImageButton.SetImageBitmap(bitmapScaled);
-                byte[] bitmapData;
                 var memStream = new MemoryStream();
                 bitmapScaled.Compress(Bitmap.CompressFormat.Png, 0, memStream);
                 ChamberOfSecrets.Instance.LoggedUser.Image = memStream.ToArray();

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
@@ -50,7 +51,10 @@ namespace SmartFridge
                 await Task.Delay(5000);
             }
             await Task.Run(() => ChamberOfSecrets.Instance.AllGroceries.ToAllGroceries(ChamberOfSecrets.Proxy.dbGetgroceriesName().ToList()));
+            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
             await Task.Run(() => ChamberOfSecrets.Instance.@group.ToRecipes(ChamberOfSecrets.Proxy.dbLoadRecipe().ToList()));
+            stopwatch.Stop();
+            Toast.MakeText(this, $"Vreme:{stopwatch.ElapsedMilliseconds}", ToastLength.Long).Show();
         }
 
         private void Init()
@@ -74,6 +78,7 @@ namespace SmartFridge
             loadingProgressBar.Visibility = ViewStates.Visible;
             if (!IsOnline())
             {
+                loadingProgressBar.Visibility = ViewStates.Invisible;
                 Toast.MakeText(this, "Niste povezani na internet!!!", ToastLength.Short).Show();
                 return;
             }
@@ -82,7 +87,7 @@ namespace SmartFridge
             {
             }
             stopwatch.Stop();
-            Toast.MakeText(this, $"Vreme:{stopwatch.ElapsedMilliseconds}", ToastLength.Long).Show();
+            //Toast.MakeText(this, $"Vreme:{stopwatch.ElapsedMilliseconds}", ToastLength.Long).Show();
             User user = new User();
             if (string.IsNullOrEmpty(passwordEditText.Text))
             {
@@ -141,7 +146,6 @@ namespace SmartFridge
                 ChamberOfSecrets.Proxy.dbGetShoppingCart(user.MyGroup).ToList()));
                 
             StartActivity(intent);
-            loadingProgressBar.Visibility = ViewStates.Invisible;
             Finish();
         }
         public bool IsOnline()

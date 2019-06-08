@@ -26,7 +26,6 @@
 		<ImageButton
 			android:src="@drawable/baseline_clear_black_18dp"
 			android:layout_width="match_parent"
-			android:background="@android:color/white"
 			android:layout_height="match_parent"
 			android:id="@+id/imageBtnRemove" />
 

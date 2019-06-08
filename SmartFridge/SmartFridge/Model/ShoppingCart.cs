@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -15,14 +15,14 @@ namespace SmartFridge.Model
 {
     public class ShoppingCart
     {
-        public  List<Grocery> Groceries { get; set; }
+        public  AvailableGroceries Groceries { get; set; }
 
         public ShoppingCart()
         {
-            Groceries = new List<Grocery>();
+            Groceries = new AvailableGroceries();
         }
 
-        public ShoppingCart(List<Grocery> groceries)
+        public ShoppingCart(AvailableGroceries groceries)
         {
             Groceries = groceries;
         }
@@ -31,42 +31,61 @@ namespace SmartFridge.Model
         {
             //proxy
 
-            if (Groceries.Exists(x => x.Name==grocery.Name))
+            if (Groceries.Groceries.Exists(x => x.Name==grocery.Name))
             {
 
-                    Groceries.Find(x => x.Name == grocery.Name).Amount += grocery.Amount;
+                    Groceries.Groceries.Find(x => x.Name == grocery.Name).Amount += grocery.Amount;
             }
             else
             {
-                Groceries.Add(grocery);
+                Groceries.AddToList(grocery);
 
             }
         }
 
-        public void Buy(Grocery grocery)
+        public async Task Buy(Grocery grocery)
         {
-            //proxy
             if (grocery.Bought!=0)
             {
                 ChamberOfSecrets.Instance.group.AvailableGroceries.AddToList(grocery, grocery.Bought);
-                if ((Groceries.Find(x => x.Name == grocery.Name).Amount -= grocery.Bought) <= 0)
+                Grocery g = new Grocery()
                 {
+                    Name = grocery.Name,
+                    Amount = grocery.Bought,
+                    Bought = 0,
+                    Type = grocery.Type,
+                    MeasurementUnit = grocery.MeasurementUnit
+                };
+                await Task.Run(() =>
+                    ChamberOfSecrets.Proxy.dbAvailableGroceriesInsert(g.ToAvaliableAvailableGroceriesDetails()));
+
+                Groceries.Groceries.Find(x => x.Name == grocery.Name).Amount-=grocery.Bought;
+                await Task.Run(() =>
+                    ChamberOfSecrets.Proxy.dbUpdateShoppingCart((float)Groceries.Groceries.Find(x => x.Name == grocery.Name).Amount
+                        , true,grocery.Name, ChamberOfSecrets.Instance.group.Id));
+
+                if ((Groceries.Groceries.Find(x => x.Name == grocery.Name).Amount) <= 0)
+                {
+                    await Task.Run(() => ChamberOfSecrets.Proxy.dbDeleteShoppingCart(grocery.Name, ChamberOfSecrets.Instance.group.Id));
                     RemoveFromShoppingCart(grocery);
                 }
                 else
-                    Groceries.Find(x => x.Name == grocery.Name).Bought = 0;
+                    Groceries.Groceries.Find(x => x.Name == grocery.Name).Bought = 0;
             }
             else if(grocery.Bought == 0)
             {
                 ChamberOfSecrets.Instance.group.AvailableGroceries.AddToList(grocery, grocery.Amount);
-                    RemoveFromShoppingCart(grocery);
+                await Task.Run(() =>
+                    ChamberOfSecrets.Proxy.dbAvailableGroceriesInsert(grocery.ToAvaliableAvailableGroceriesDetails()));
+                await Task.Run(() => 
+                    ChamberOfSecrets.Proxy.dbDeleteShoppingCart(grocery.Name, ChamberOfSecrets.Instance.group.Id));
+                RemoveFromShoppingCart(grocery);
             }
         }
 
         public void RemoveFromShoppingCart(Grocery grocery)
         {
-            //proxy
-            Groceries.Remove(grocery);
+            Groceries.Groceries.Remove(grocery);
         }
 
         public void ToShoppingCart(List<ShoppingCartDetails> details)
@@ -76,13 +95,14 @@ namespace SmartFridge.Model
                 foreach (var grocery in details)
                 {
                     Grocery newGrocery= new Grocery(grocery.Grocery.Name,Grocery.ParseEnum<Unit>(grocery.Grocery.Unit),Grocery.ParseEnum<Category>(grocery.Grocery.Category),grocery.Amount);
-                    Groceries.Add(newGrocery);
+                    Groceries.AddToList(newGrocery);
                 }
             }
             else
             {
-                Groceries=new List<Grocery>();
+                Groceries=new AvailableGroceries();
             }
         }
+
     }
 }

@@ -19,18 +19,18 @@ namespace SmartFridge.Model
         public int Id { get;set; }
         public string Description { get; set; }
         public byte[] Image { get; set; }
-        public AvailableGroceries Groceries { get; set; }
+        public List<Grocery> Groceries { get; set; }
         public int Rank { get; set; }
 
         public Recipe()
         {
-            Groceries= new AvailableGroceries();
+            Groceries= new List<Grocery>();
             Rank = 0;
         }
 
         public Recipe(string name, int id, string description, byte[] image)
         {
-            Groceries = new AvailableGroceries();
+            Groceries = new List<Grocery>();
             Name = name;
             Id = id;
             Rank = 0;
@@ -41,7 +41,7 @@ namespace SmartFridge.Model
 
         public void AddToList(Grocery grocery)
         {
-            Groceries.AddToList(grocery);
+            Groceries.Add(grocery);
         }
 
         public void ToRecipe(RecipeDetails details)
@@ -54,7 +54,7 @@ namespace SmartFridge.Model
             foreach (var item in list)
             {
                 var grocery= new Grocery(item.Grocery.Name,Grocery.ParseEnum<Unit>(item.Grocery.Unit),Grocery.ParseEnum<Category>(item.Grocery.Category),item.Amount);
-                Groceries.AddToList(grocery);
+                Groceries.Add(grocery);
             }
         }
     }

@@ -15,6 +15,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:layout_below="@id/topToolbarCart"
+		android:layout_above="@+id/btnAddtoGroceriesList"
 		android:id="@+id/listViewShoppingCart" />
 	
 	<android.support.design.widget.FloatingActionButton
@@ -28,10 +29,9 @@
 		android:src="@drawable/baseline_add_black_24dp"
 		android:layout_marginRight="16dp"
 		app:elevation="12dp"
-		android:layout_above="@+id/btnAddtoGroceriesList"
-		app:fabSize="normal"
-		/>
-		<Button
+		app:fabSize="normal"/>
+	
+	<Button
 		android:text="Ubaci u frižider"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"

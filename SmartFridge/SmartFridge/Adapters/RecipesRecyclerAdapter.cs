@@ -26,7 +26,6 @@ namespace SmartFridge.Adapters
         private Context context;
         private List<Recipe> recipes;
         private RecyclerView recyclerView;
-        private Intent intent;
 
         public RecipesRecyclerAdapter(Context context, List<Recipe> recipes, RecyclerView recyclerView)
         {
@@ -41,13 +40,6 @@ namespace SmartFridge.Adapters
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-            void ItemViewClick(object sender, EventArgs e)
-            {
-                Recipe recipeClicked = recipes[position];
-                intent = new Intent(context, typeof(RecipeActivity));
-                intent.PutExtra("recept", JsonConvert.SerializeObject(recipeClicked));
-                context.StartActivity(intent);
-            }
             MyViewHolder vh = holder as MyViewHolder;
             vh.TitleTextView.Text = recipes[position].Name;
             vh.ShortDescTextView.Text = recipes[position].Description;
@@ -57,10 +49,17 @@ namespace SmartFridge.Adapters
                 0, ChamberOfSecrets.Instance.group.Recipes[position].Image.Length);
             var bitmapScaled = Bitmap.CreateScaledBitmap(bitmap, 200, 200, false);
             vh.RecipeImage.SetImageBitmap(bitmapScaled);
-            vh.ItemView.Click += ItemViewClick;
+            vh.ItemView.Click += ItemView_Click;
         }
 
-        
+        private void ItemView_Click(object sender, EventArgs e)
+        {
+            int position = recyclerView.GetChildAdapterPosition((View) sender);
+            Recipe recipeClicked = recipes[position];
+            var intent = new Intent(context, typeof(RecipeActivity));
+            intent.PutExtra("recept", JsonConvert.SerializeObject(recipeClicked));
+            context.StartActivity(intent);
+        }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {

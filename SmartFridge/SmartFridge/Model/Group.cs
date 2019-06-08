@@ -83,7 +83,7 @@ namespace SmartFridge.Model
         {
             foreach (var recipe in Recipes)
             {
-                foreach (var grocery in recipe.Groceries.Groceries)
+                foreach (var grocery in recipe.Groceries)
                 {
                     if (grocery.Name == name)
                     {
@@ -91,7 +91,7 @@ namespace SmartFridge.Model
                     }
                 }
 
-                if (recipe.Rank == recipe.Groceries.Groceries.Count)
+                if (recipe.Rank == recipe.Groceries.Count)
                 {
                     recipe.Rank++;
                 }

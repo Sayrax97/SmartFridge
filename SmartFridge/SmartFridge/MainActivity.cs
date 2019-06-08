@@ -54,7 +54,6 @@ namespace SmartFridge
             recipeNameTextView.Text = recipeOfTheDay.Name;
             recipeDescriptionTextView.Text = recipeOfTheDay.Description.Substring
                        (0, recipeOfTheDay.Description.Length < 140 ? recipeOfTheDay.Description.Length : 140) + "...";
-            recipeImageView.Click += RecipeImageView_Click;
             Bitmap bitmap = BitmapFactory.DecodeByteArray(recipeOfTheDay.Image, 0, recipeOfTheDay.Image.Length);
             recipeImageView.SetImageBitmap(bitmap);
         }
@@ -70,7 +69,10 @@ namespace SmartFridge
         {
             switch (e.Item.ItemId)
             {
-                case Resource.Id.menu_goceries: StartActivity(typeof(GroceriesActivity)); break;
+                case Resource.Id.menu_goceries:
+                    StartActivity(typeof(GroceriesActivity));
+                    //proxy
+                    break;
                 case Resource.Id.menu_recipes:
                     var intent= new Intent(this, typeof(RecipeListActivity));
                     intent.PutExtra("Activity", "main");
@@ -142,6 +144,7 @@ namespace SmartFridge
             recipeImageView = FindViewById<ImageView>(Resource.Id.imageRecipe);
             recipeNameTextView = FindViewById<TextView>(Resource.Id.txtRecipeName);
             recipeDescriptionTextView = FindViewById<TextView>(Resource.Id.txtRecipeDescription);
+            recipeImageView.Click += RecipeImageView_Click;
         }
     }
 }

@@ -75,6 +75,13 @@ namespace SmartFridge
             {
                 groupIdEditText.Visibility = ViewStates.Gone;
             }
+            var memStream = new MemoryStream();
+            Bitmap defaultUserBitmap = BitmapFactory.DecodeResource(Resources,
+                Resource.Drawable.blank_user);
+            defaultUserBitmap.Compress(Bitmap.CompressFormat.Png, 0, memStream);
+            var scaled = Bitmap.CreateScaledBitmap(defaultUserBitmap, 250, 250, false);
+            pictureImageButton.SetImageBitmap(scaled);
+            bitData = memStream.ToArray();
         }
 
         private void PictureImageButton_Click(object sender, EventArgs e)
@@ -111,7 +118,7 @@ namespace SmartFridge
         {
             if (!IsOnline())
             {
-                Toast.MakeText(this, "Nemožete napraviti nalog ako niste poveyani na internet.Pokusajte ponovo!!!", ToastLength.Short).Show();
+                Toast.MakeText(this, "Ne možete napraviti nalog ako niste povezani na internet. Pokušajte ponovo!!!", ToastLength.Short).Show();
                 return;
             }
 
@@ -142,7 +149,7 @@ namespace SmartFridge
             }
             else if (groupIdEditText.Visibility == ViewStates.Visible && string.IsNullOrEmpty(groupIdEditText.Text))
             {
-                    Toast.MakeText(this, "Polje za grupu nesme biti prazno", ToastLength.Short).Show();
+                    Toast.MakeText(this, "Polje za grupu ne sme biti prazno", ToastLength.Short).Show();
                     return;
             }
             else
@@ -168,12 +175,18 @@ namespace SmartFridge
                         return;
                     }
 
+                    ChamberOfSecrets.Instance.group.Id = groupIdEditText.Text;
+
+                    ChamberOfSecrets.Instance.@group.MyGroupMembers = await Task.Run(() =>
+                        ChamberOfSecrets.Proxy.dbInMyGroup(ChamberOfSecrets.Instance.group.Id).ToList());
+
                     ChamberOfSecrets.Instance.LoggedUser.AddToGroup(groupIdEditText.Text);
                     var x = 0;
                     var y = true;
                     ChamberOfSecrets.Proxy.dbInsertUser(ChamberOfSecrets.Instance.LoggedUser.ToUserDetails(), out x, out y);
+                    ChamberOfSecrets.Instance.group.AddMember(ChamberOfSecrets.Instance.LoggedUser.UserName);
                     ChamberOfSecrets.Proxy.dbInsertOptions(ChamberOfSecrets.Instance.LoggedUser.MyOptions.ToOptionDetails());
-
+                    ChamberOfSecrets.Proxy.dbModifyUserImage(bitData,ChamberOfSecrets.Instance.LoggedUser.UserName);
                 }
                 else
                 {
@@ -193,6 +206,7 @@ namespace SmartFridge
                     ChamberOfSecrets.Proxy.dbAddGroup(ChamberOfSecrets.Instance.group.ToGroupDetails(),out x,out y);
                     ChamberOfSecrets.Proxy.dbInsertUser(ChamberOfSecrets.Instance.LoggedUser.ToUserDetails(), out x, out y);
                     ChamberOfSecrets.Proxy.dbInsertOptions(ChamberOfSecrets.Instance.LoggedUser.MyOptions.ToOptionDetails());
+                    ChamberOfSecrets.Proxy.dbModifyUserImage(bitData, ChamberOfSecrets.Instance.LoggedUser.UserName);
                 }
 
                 ChamberOfSecrets.Instance.@group.AvailableGroceries.ToAvailableGroceries(await Task.Run(() =>

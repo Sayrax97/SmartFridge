@@ -67,12 +67,12 @@ namespace SmartFridge
             searchButton = FindViewById<Button>(Resource.Id.btnSearchRecipe);
             searchButton.Click += SearchButton_Click;
             eatButton = FindViewById<Button>(Resource.Id.btnEat);
-            eatButton.Click += EatButton_Click;
+            eatButton.Click += EatButton_ClickAsync;
             searchView = FindViewById<SearchView>(Resource.Id.searchGroceries);
             groceriesFAB = FindViewById<FloatingActionButton>(Resource.Id.fABgroceries);
             groceriesFAB.Visibility = ViewStates.Invisible;
             if (ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Nabavljac ||
-                ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Administrator)
+                ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Administrator || ChamberOfSecrets.Instance.LoggedUser.UserStatus==Status.Supervizor)
             {
                 groceriesFAB.Visibility = ViewStates.Visible;
                 groceriesFAB.Click += GroceriesFAB_Click;
@@ -109,7 +109,7 @@ namespace SmartFridge
             Toast.MakeText(this, "Vreme:" + watch.ElapsedMilliseconds, ToastLength.Short).Show();
         }
 
-        private void EatButton_Click(object sender, EventArgs e)
+        private async void EatButton_ClickAsync(object sender, EventArgs e)
         {
                 //ToList because:
                 //The issue is that availableGroceries.Groceries is being modified inside the foreach loop.
@@ -122,14 +122,21 @@ namespace SmartFridge
                     if (grocery.Bought == 0)
                     {
                         ChamberOfSecrets.Instance.@group.AvailableGroceries.RemoveFromList(grocery.Name);
+                        await Task.Run(() =>
+                            ChamberOfSecrets.Proxy.dbDeleteAvailableGroceries(grocery.Name,ChamberOfSecrets.Instance.group.Id));
                     }
                     else
                     {
-
-                        if ((ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries
-                                .Find(x => x.Name == grocery.Name).Amount -= grocery.Bought) <= 0)
+                       ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries
+                            .Find(x => x.Name == grocery.Name).Amount -= grocery.Bought;
+                        await Task.Run(()=> ChamberOfSecrets.Proxy.dbUpdateAvailableGroceries((float)ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries
+                            .Find(x => x.Name == grocery.Name).Amount, true, grocery.Name, ChamberOfSecrets.Instance.group.Id));
+                        if (ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries
+                                .Find(x => x.Name == grocery.Name).Amount <= 0)
                         {
                             ChamberOfSecrets.Instance.@group.AvailableGroceries.RemoveFromList(grocery.Name);
+                            await Task.Run(() =>
+                                ChamberOfSecrets.Proxy.dbDeleteAvailableGroceries(grocery.Name, ChamberOfSecrets.Instance.group.Id));
                         }
                         else
                         {

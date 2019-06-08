@@ -20,7 +20,7 @@ using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace SmartFridge
 {
-    [Activity(Label = "@string/receipt",Theme = "@style/AppThemeNoActionBar",LaunchMode = LaunchMode.SingleTask)]
+    [Activity(Label = "@string/receipt",Theme = "@style/AppThemeNoActionBar")]
     public class RecipeActivity : AppCompatActivity
     {
         private ImageView recipeImageView;
@@ -30,7 +30,7 @@ namespace SmartFridge
         private Toolbar topToolbar;
         private BottomNavigationView recipeBottomNavigationView;
         private Recipe recipe;
-        private AvailableGroceries groceryList;
+        private List<Grocery> groceryList;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -41,14 +41,14 @@ namespace SmartFridge
             SetSupportActionBar(topToolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
-            groceriesListView.Adapter = new GroceryListItemAdapter(groceryList.Groceries, this, true);
+            groceriesListView.Adapter = new GroceryListItemAdapter(groceryList, this, true);
             PutOnScreen();
         }
 
         protected override void OnResume()
         {
             base.OnResume();
-            foreach (var grocery in recipe.Groceries.Groceries)
+            foreach (var grocery in recipe.Groceries)
             {
                 if (!CheckIfIsAvailable(grocery))
                 {
@@ -86,7 +86,10 @@ namespace SmartFridge
 
             recipe = JsonConvert.DeserializeObject<Recipe>(Intent.GetStringExtra("recept"));
             groceryList = recipe.Groceries;
-            recipe.Groceries.SetDefault();
+            foreach (var grocery in groceryList)
+            {
+                grocery.Default();
+            }
             Bitmap bitmap = BitmapFactory.DecodeByteArray(recipe.Image, 0, recipe.Image.Length);
             var bitmapScaled = Bitmap.CreateScaledBitmap(bitmap, 400, 400, false);
             recipeImageView.SetImageBitmap(bitmapScaled);
@@ -97,18 +100,24 @@ namespace SmartFridge
             switch (e.Item.ItemId)
             {
                 case Resource.Id.menu_make:
-                    foreach (var grocery in groceryList.Groceries)
+                    foreach (var grocery in groceryList)
                     {
-                        if ((ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries
-                                .Find(x => x.Name == grocery.Name).Amount -= grocery.Amount) <= 0)
+                        ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries
+                            .Find(x => x.Name == grocery.Name).Amount -= grocery.Amount;
+
+                        ChamberOfSecrets.Proxy.dbUpdateAvailableGroceries((float)ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries
+                            .Find(x => x.Name == grocery.Name).Amount,
+                            true,grocery.Name, ChamberOfSecrets.Instance.group.Id);
+
+                        if (ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries.Find(x => x.Name == grocery.Name).Amount <= 0)
                         {
                             ChamberOfSecrets.Instance.group.AvailableGroceries.RemoveFromList(grocery.Name);
+                            ChamberOfSecrets.Proxy.dbDeleteAvailableGroceries(grocery.Name,ChamberOfSecrets.Instance.group.Id);
                         }
-                        //proxy
                     }
                     break;
                 case Resource.Id.menu_addToCart:
-                    foreach (var grocery in groceryList.Groceries)
+                    foreach (var grocery in groceryList)
                     {
                         if (!CheckIfIsAvailable(grocery))
                         {
@@ -116,7 +125,7 @@ namespace SmartFridge
                             if(ChamberOfSecrets.Instance.group.AvailableGroceries.Groceries.Exists(x=>x.Name==grocery.Name))
                                 grocery1.Amount -= ChamberOfSecrets.Instance.@group.AvailableGroceries.Groceries.Find(x => x.Name == grocery.Name).Amount;
                             ChamberOfSecrets.Instance.group.ShoppingCart.AddToList(grocery1);
-                            //proxy
+                            ChamberOfSecrets.Proxy.dbInsertShoppingCart(grocery1.ToCartDetails());
                         }
                     }
                     break;

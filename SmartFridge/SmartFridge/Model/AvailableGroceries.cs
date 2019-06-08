@@ -29,7 +29,6 @@ namespace SmartFridge.Model
 
         public void AddToList(Grocery grocery)
         {
-            //proxy
             if (Groceries.Exists(x => x.Name==grocery.Name))
             {
                Groceries.Find(x => x.Name==grocery.Name).Amount += grocery.Amount;
@@ -38,13 +37,11 @@ namespace SmartFridge.Model
             {
                 grocery.IsInList = true;
                 Groceries.Add(grocery);
-
             }
         }
 
         public void AddToList(Grocery grocery,double amount)
         {
-            //proxy
             if (Groceries.Exists(x => x.Name==grocery.Name))
             {
                 Groceries.Find(x => x.Name==grocery.Name).Amount += amount;
@@ -64,7 +61,6 @@ namespace SmartFridge.Model
                     Name = grocery.Name
                 };
                 Groceries.Add(gr);
-
             }
         }
 
@@ -126,7 +122,7 @@ namespace SmartFridge.Model
             foreach (var grocery in details)
             {
                 Grocery newGrocery = new Grocery(grocery.Name, Grocery.ParseEnum<Unit>(grocery.Unit), Grocery.ParseEnum<Category>(grocery.Category),0);
-                this.AddToList(newGrocery);
+                Groceries.Add(newGrocery);
             }
         }
 

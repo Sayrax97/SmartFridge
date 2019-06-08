@@ -4,8 +4,8 @@
       android:checkableBehavior="single">
 
   <item android:id="@+id/ascending"
-          android:title="Ascending"/>
+          android:title="Rastuće"/>
   <item android:id="@+id/descending"
-          android:title="Descending"/>
+          android:title="Opadajuće"/>
 
 </menu>

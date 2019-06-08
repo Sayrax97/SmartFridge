@@ -52,16 +52,11 @@ namespace SmartFridge.Adapters
             void RemoveClick(object sender, EventArgs e)
             {
                 ChamberOfSecrets.Instance.group.MyGroupMembers.RemoveAt(position);
-                //proxy
+                ChamberOfSecrets.Proxy.dbDeleteUserFromGroup(ChamberOfSecrets.Instance.group.MyGroupMembers[position]);
                 if (context is MyGroupActivity activity)
                 {
                     activity.Update();
                 }
-            }
-
-            void SpinnerItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
-            {
-                //proxy
             }
 
             if (ChamberOfSecrets.Instance.LoggedUser.UserStatus == Status.Supervizor ||
@@ -75,6 +70,14 @@ namespace SmartFridge.Adapters
             }
 
             return convertView;
+        }
+
+
+        public void SpinnerItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            Spinner spin = (Spinner)sender;
+            string toast = string.Format($"Selected {spin.GetItemAtPosition(e.Position)}");
+            Toast.MakeText(context, toast, ToastLength.Long).Show();
         }
 
         public override int Count => myGroup.MyGroupMembers.Count;

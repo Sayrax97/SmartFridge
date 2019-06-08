@@ -69,7 +69,7 @@ namespace SmartFridge.WebReference {
         
         private System.Threading.SendOrPostCallback dbDeleteShoppingCartOperationCompleted;
         
-        private System.Threading.SendOrPostCallback dbInsertAvailableGroceriesOperationCompleted;
+        private System.Threading.SendOrPostCallback dbAvailableGroceriesInsertOperationCompleted;
         
         private System.Threading.SendOrPostCallback dbInsertShoppingCartOperationCompleted;
         
@@ -106,6 +106,12 @@ namespace SmartFridge.WebReference {
         private System.Threading.SendOrPostCallback dbModifyUserNicknameOperationCompleted;
         
         private System.Threading.SendOrPostCallback dbFindRecepyByIDOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback dbAvailableGroceriesExicstOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback dbShopingCartExicstOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback dbAvailableGroceriesExicst1OperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -206,7 +212,7 @@ namespace SmartFridge.WebReference {
         public event dbDeleteShoppingCartCompletedEventHandler dbDeleteShoppingCartCompleted;
         
         /// <remarks/>
-        public event dbInsertAvailableGroceriesCompletedEventHandler dbInsertAvailableGroceriesCompleted;
+        public event dbAvailableGroceriesInsertCompletedEventHandler dbAvailableGroceriesInsertCompleted;
         
         /// <remarks/>
         public event dbInsertShoppingCartCompletedEventHandler dbInsertShoppingCartCompleted;
@@ -261,6 +267,15 @@ namespace SmartFridge.WebReference {
         
         /// <remarks/>
         public event dbFindRecepyByIDCompletedEventHandler dbFindRecepyByIDCompleted;
+        
+        /// <remarks/>
+        public event dbAvailableGroceriesExicstCompletedEventHandler dbAvailableGroceriesExicstCompleted;
+        
+        /// <remarks/>
+        public event dbShopingCartExicstCompletedEventHandler dbShopingCartExicstCompleted;
+        
+        /// <remarks/>
+        public event dbAvailableGroceriesExicst1CompletedEventHandler dbAvailableGroceriesExicst1Completed;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbFindUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -870,30 +885,30 @@ namespace SmartFridge.WebReference {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbInsertAvailableGroceries", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void dbInsertAvailableGroceries([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] AvailableGroceriesDetails availableGroceries) {
-            this.Invoke("dbInsertAvailableGroceries", new object[] {
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbAvailableGroceriesInsert", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void dbAvailableGroceriesInsert([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] AvailableGroceriesDetails availableGroceries) {
+            this.Invoke("dbAvailableGroceriesInsert", new object[] {
                         availableGroceries});
         }
         
         /// <remarks/>
-        public void dbInsertAvailableGroceriesAsync(AvailableGroceriesDetails availableGroceries) {
-            this.dbInsertAvailableGroceriesAsync(availableGroceries, null);
+        public void dbAvailableGroceriesInsertAsync(AvailableGroceriesDetails availableGroceries) {
+            this.dbAvailableGroceriesInsertAsync(availableGroceries, null);
         }
         
         /// <remarks/>
-        public void dbInsertAvailableGroceriesAsync(AvailableGroceriesDetails availableGroceries, object userState) {
-            if ((this.dbInsertAvailableGroceriesOperationCompleted == null)) {
-                this.dbInsertAvailableGroceriesOperationCompleted = new System.Threading.SendOrPostCallback(this.OndbInsertAvailableGroceriesOperationCompleted);
+        public void dbAvailableGroceriesInsertAsync(AvailableGroceriesDetails availableGroceries, object userState) {
+            if ((this.dbAvailableGroceriesInsertOperationCompleted == null)) {
+                this.dbAvailableGroceriesInsertOperationCompleted = new System.Threading.SendOrPostCallback(this.OndbAvailableGroceriesInsertOperationCompleted);
             }
-            this.InvokeAsync("dbInsertAvailableGroceries", new object[] {
-                        availableGroceries}, this.dbInsertAvailableGroceriesOperationCompleted, userState);
+            this.InvokeAsync("dbAvailableGroceriesInsert", new object[] {
+                        availableGroceries}, this.dbAvailableGroceriesInsertOperationCompleted, userState);
         }
         
-        private void OndbInsertAvailableGroceriesOperationCompleted(object arg) {
-            if ((this.dbInsertAvailableGroceriesCompleted != null)) {
+        private void OndbAvailableGroceriesInsertOperationCompleted(object arg) {
+            if ((this.dbAvailableGroceriesInsertCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.dbInsertAvailableGroceriesCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.dbAvailableGroceriesInsertCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1425,6 +1440,94 @@ namespace SmartFridge.WebReference {
             if ((this.dbFindRecepyByIDCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.dbFindRecepyByIDCompleted(this, new dbFindRecepyByIDCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbAvailableGroceriesExicst", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void dbAvailableGroceriesExicst([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] AvailableGroceriesDetails availableGroceries, out float dbAvailableGroceriesExicstResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool dbAvailableGroceriesExicstResultSpecified) {
+            object[] results = this.Invoke("dbAvailableGroceriesExicst", new object[] {
+                        availableGroceries});
+            dbAvailableGroceriesExicstResult = ((float)(results[0]));
+            dbAvailableGroceriesExicstResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void dbAvailableGroceriesExicstAsync(AvailableGroceriesDetails availableGroceries) {
+            this.dbAvailableGroceriesExicstAsync(availableGroceries, null);
+        }
+        
+        /// <remarks/>
+        public void dbAvailableGroceriesExicstAsync(AvailableGroceriesDetails availableGroceries, object userState) {
+            if ((this.dbAvailableGroceriesExicstOperationCompleted == null)) {
+                this.dbAvailableGroceriesExicstOperationCompleted = new System.Threading.SendOrPostCallback(this.OndbAvailableGroceriesExicstOperationCompleted);
+            }
+            this.InvokeAsync("dbAvailableGroceriesExicst", new object[] {
+                        availableGroceries}, this.dbAvailableGroceriesExicstOperationCompleted, userState);
+        }
+        
+        private void OndbAvailableGroceriesExicstOperationCompleted(object arg) {
+            if ((this.dbAvailableGroceriesExicstCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.dbAvailableGroceriesExicstCompleted(this, new dbAvailableGroceriesExicstCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbShopingCartExicst", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void dbShopingCartExicst([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] ShoppingCartDetails shoppingCart, out float dbShopingCartExicstResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool dbShopingCartExicstResultSpecified) {
+            object[] results = this.Invoke("dbShopingCartExicst", new object[] {
+                        shoppingCart});
+            dbShopingCartExicstResult = ((float)(results[0]));
+            dbShopingCartExicstResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void dbShopingCartExicstAsync(ShoppingCartDetails shoppingCart) {
+            this.dbShopingCartExicstAsync(shoppingCart, null);
+        }
+        
+        /// <remarks/>
+        public void dbShopingCartExicstAsync(ShoppingCartDetails shoppingCart, object userState) {
+            if ((this.dbShopingCartExicstOperationCompleted == null)) {
+                this.dbShopingCartExicstOperationCompleted = new System.Threading.SendOrPostCallback(this.OndbShopingCartExicstOperationCompleted);
+            }
+            this.InvokeAsync("dbShopingCartExicst", new object[] {
+                        shoppingCart}, this.dbShopingCartExicstOperationCompleted, userState);
+        }
+        
+        private void OndbShopingCartExicstOperationCompleted(object arg) {
+            if ((this.dbShopingCartExicstCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.dbShopingCartExicstCompleted(this, new dbShopingCartExicstCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbAvailableGroceriesExicst1", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void dbAvailableGroceriesExicst1([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] AvailableGroceriesDetails availableGroceries) {
+            this.Invoke("dbAvailableGroceriesExicst1", new object[] {
+                        availableGroceries});
+        }
+        
+        /// <remarks/>
+        public void dbAvailableGroceriesExicst1Async(AvailableGroceriesDetails availableGroceries) {
+            this.dbAvailableGroceriesExicst1Async(availableGroceries, null);
+        }
+        
+        /// <remarks/>
+        public void dbAvailableGroceriesExicst1Async(AvailableGroceriesDetails availableGroceries, object userState) {
+            if ((this.dbAvailableGroceriesExicst1OperationCompleted == null)) {
+                this.dbAvailableGroceriesExicst1OperationCompleted = new System.Threading.SendOrPostCallback(this.OndbAvailableGroceriesExicst1OperationCompleted);
+            }
+            this.InvokeAsync("dbAvailableGroceriesExicst1", new object[] {
+                        availableGroceries}, this.dbAvailableGroceriesExicst1OperationCompleted, userState);
+        }
+        
+        private void OndbAvailableGroceriesExicst1OperationCompleted(object arg) {
+            if ((this.dbAvailableGroceriesExicst1Completed != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.dbAvailableGroceriesExicst1Completed(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2323,7 +2426,7 @@ namespace SmartFridge.WebReference {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
-    public delegate void dbInsertAvailableGroceriesCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    public delegate void dbAvailableGroceriesInsertCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
@@ -2506,6 +2609,78 @@ namespace SmartFridge.WebReference {
             }
         }
     }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    public delegate void dbAvailableGroceriesExicstCompletedEventHandler(object sender, dbAvailableGroceriesExicstCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class dbAvailableGroceriesExicstCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal dbAvailableGroceriesExicstCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public float dbAvailableGroceriesExicstResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((float)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool dbAvailableGroceriesExicstResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    public delegate void dbShopingCartExicstCompletedEventHandler(object sender, dbShopingCartExicstCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class dbShopingCartExicstCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal dbShopingCartExicstCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public float dbShopingCartExicstResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((float)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool dbShopingCartExicstResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    public delegate void dbAvailableGroceriesExicst1CompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591
