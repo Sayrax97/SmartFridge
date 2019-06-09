@@ -19,5 +19,5 @@
     <item
       android:id="@+id/logoutMain"
       android:icon="@drawable/baseline_exit_to_app_black_24dp"
-      android:title="Izloguj se"/>
+      android:title="Odjavi se"/>
 </menu>

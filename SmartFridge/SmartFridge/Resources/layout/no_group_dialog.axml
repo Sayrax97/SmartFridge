@@ -3,7 +3,7 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical"
 	android:layout_width="500px"
-	android:layout_height="500px"
+	android:layout_height="600px"
 	android:minWidth="500px"
 	android:minHeight="500px">
 	<TextView
@@ -15,9 +15,10 @@
 		android:layout_height="wrap_content"
 		android:id="@+id/textView1" />
 	<EditText
-		android:layout_margin="25dp"
 		android:layout_width="match_parent"
 		android:hint="ID"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
 		android:layout_height="wrap_content"
 		android:id="@+id/editTxtNewGroupId" />
 	<Button
@@ -26,4 +27,19 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:id="@+id/okButtonIDGroup" />
+	<TextView
+		android:text="Napravi novu grupu"
+		android:gravity="center"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/textView2" />
+	<Button
+		android:text="Nova grupa"
+		android:layout_marginTop="10dp"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/newGroupButtonIDGroup" />
 </LinearLayout>

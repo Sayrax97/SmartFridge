@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -18,6 +18,8 @@ namespace SmartFridge.Adapters
         private Group myGroup;
         private Context context;
         private List<string> status;
+        private TextView name;
+        private bool picked;
 
         public GroupMemberAdapter(Group myGroup, Context context)
         {
@@ -26,7 +28,9 @@ namespace SmartFridge.Adapters
             status = new List<string>
             {
                 Status.Potrosac.ToString(),
-                Status.Nabavljac.ToString()
+                Status.Nabavljac.ToString(),
+                Status.Supervizor.ToString(),
+                Status.Administrator.ToString()
             };
         }
 
@@ -41,18 +45,18 @@ namespace SmartFridge.Adapters
             {
                 convertView = LayoutInflater.From(context).Inflate(Resource.Layout.group_member, null);
             }
-
-            TextView name = convertView.FindViewById<TextView>(Resource.Id.txtViewGroupMember);
+            name = convertView.FindViewById<TextView>(Resource.Id.txtViewGroupMember);
+            picked = false;
             ImageButton remove = convertView.FindViewById<ImageButton>(Resource.Id.imageBtnRemove);
             remove.Visibility = ViewStates.Invisible;
+            name.Text = myGroup.MyGroupMembers[position];
             Spinner spinner = convertView.FindViewById<Spinner>(Resource.Id.spinner1);
             spinner.Visibility = ViewStates.Invisible;
-            name.Text = myGroup.MyGroupMembers[position];
 
             void RemoveClick(object sender, EventArgs e)
             {
-                ChamberOfSecrets.Instance.group.MyGroupMembers.RemoveAt(position);
                 ChamberOfSecrets.Proxy.dbDeleteUserFromGroup(ChamberOfSecrets.Instance.group.MyGroupMembers[position]);
+                ChamberOfSecrets.Instance.group.MyGroupMembers.RemoveAt(position);
                 if (context is MyGroupActivity activity)
                 {
                     activity.Update();
@@ -64,20 +68,41 @@ namespace SmartFridge.Adapters
             {
                 remove.Visibility = ViewStates.Visible;
                 spinner.Visibility = ViewStates.Visible;
+                spinner.ItemSelected += SpinnerItemSelected;
                 remove.Click += RemoveClick;
                 spinner.Adapter= new ArrayAdapter(context,Resource.Layout.support_simple_spinner_dropdown_item,status);
-                spinner.ItemSelected += SpinnerItemSelected;
+                string userStatus = ChamberOfSecrets.Proxy.dbGetUserStatus(name.Text);
+                switch (userStatus)
+                {
+                    case "Potrosac":
+                        spinner.SetSelection(0);
+                        break;
+                    case "Nabavljac":
+                        spinner.SetSelection(1);
+                        break;
+                    case "Supervizor":
+                        spinner.SetSelection(2);
+                        break;
+                    case "Administrator":
+                        spinner.SetSelection(3);
+                        break;
+                }
+                void SpinnerItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+                {
+                    Spinner spin = (Spinner)sender;
+                    if (picked)
+                    {
+                        ChamberOfSecrets.Proxy.dbUpdateUserStatus(spin.GetItemAtPosition(e.Position).ToString(),
+                            ChamberOfSecrets.Instance.group.MyGroupMembers[position]);
+                    }
+                    else
+                    {
+                        picked = true;
+                    }
+                }
             }
 
             return convertView;
-        }
-
-
-        public void SpinnerItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
-        {
-            Spinner spin = (Spinner)sender;
-            string toast = string.Format($"Selected {spin.GetItemAtPosition(e.Position)}");
-            Toast.MakeText(context, toast, ToastLength.Long).Show();
         }
 
         public override int Count => myGroup.MyGroupMembers.Count;

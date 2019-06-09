@@ -37,9 +37,14 @@ namespace SmartFridge.Dialogs
 
             int x = 0;
             bool y = true;
-            ChamberOfSecrets.Instance.group.Id = newIdEditText.Text;
-            //ChamberOfSecrets.Proxy.dbAddToGroup(ChamberOfSecrets.Instance.LoggedUser.UserName, ChamberOfSecrets.Instance.group.Id,out x,out y);
+            ChamberOfSecrets.Proxy.dbAddToGroup(ChamberOfSecrets.Instance.LoggedUser.UserName, newIdEditText.Text, out x,out y);
+            if (x == -1)
+            {
+
+            }
+
             Dismiss();
+            Toast.MakeText(Activity, "", ToastLength.Short).Show();
         }
     }
 }

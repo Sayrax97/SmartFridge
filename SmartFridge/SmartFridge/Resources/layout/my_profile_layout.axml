@@ -28,7 +28,7 @@
 			android:layout_height="match_parent"
 			android:id="@+id/textViewUsername" />
 		<Button
-			android:text="Change username"
+			android:text="Promeni korisničko ime"
 			android:layout_weight="50"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
@@ -50,7 +50,7 @@
 			android:layout_height="match_parent"
 			android:id="@+id/textViewPassword" />
 		<Button
-			android:text="Change password"
+			android:text="Promeni šifru"
 			android:layout_weight="50"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"

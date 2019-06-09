@@ -260,6 +260,12 @@
   <wsdl:message name="IService1_dbAvailableGroceriesExicst1_OutputMessage">
     <wsdl:part name="parameters" element="tns:dbAvailableGroceriesExicst1Response" />
   </wsdl:message>
+  <wsdl:message name="IService1_dbGetUserStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:dbGetUserStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dbGetUserStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dbGetUserStatusResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="dbFindUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbFindUser" message="tns:IService1_dbFindUser_InputMessage" />
@@ -428,6 +434,10 @@
     <wsdl:operation name="dbAvailableGroceriesExicst1">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbAvailableGroceriesExicst1" message="tns:IService1_dbAvailableGroceriesExicst1_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbAvailableGroceriesExicst1Response" message="tns:IService1_dbAvailableGroceriesExicst1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dbGetUserStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dbGetUserStatus" message="tns:IService1_dbGetUserStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dbGetUserStatusResponse" message="tns:IService1_dbGetUserStatus_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -803,6 +813,15 @@
     </wsdl:operation>
     <wsdl:operation name="dbAvailableGroceriesExicst1">
       <soap:operation soapAction="http://tempuri.org/IService1/dbAvailableGroceriesExicst1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbGetUserStatus">
+      <soap:operation soapAction="http://tempuri.org/IService1/dbGetUserStatus" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

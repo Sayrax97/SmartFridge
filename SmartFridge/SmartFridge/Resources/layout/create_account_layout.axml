@@ -89,7 +89,7 @@
 			android:layout_height="match_parent"
 			android:id="@+id/btnOkCreateAcc" />
 		<Button
-			android:text="Otkazi"
+			android:text="Otkaži"
 			android:layout_width="wrap_content"
 			android:layout_height="match_parent"
 			android:id="@+id/btnCancelCreateAcc" />

@@ -113,6 +113,8 @@ namespace SmartFridge.WebReference {
         
         private System.Threading.SendOrPostCallback dbAvailableGroceriesExicst1OperationCompleted;
         
+        private System.Threading.SendOrPostCallback dbGetUserStatusOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -276,6 +278,9 @@ namespace SmartFridge.WebReference {
         
         /// <remarks/>
         public event dbAvailableGroceriesExicst1CompletedEventHandler dbAvailableGroceriesExicst1Completed;
+        
+        /// <remarks/>
+        public event dbGetUserStatusCompletedEventHandler dbGetUserStatusCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbFindUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -1532,6 +1537,36 @@ namespace SmartFridge.WebReference {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/dbGetUserStatus", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string dbGetUserStatus([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string Nickname) {
+            object[] results = this.Invoke("dbGetUserStatus", new object[] {
+                        Nickname});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void dbGetUserStatusAsync(string Nickname) {
+            this.dbGetUserStatusAsync(Nickname, null);
+        }
+        
+        /// <remarks/>
+        public void dbGetUserStatusAsync(string Nickname, object userState) {
+            if ((this.dbGetUserStatusOperationCompleted == null)) {
+                this.dbGetUserStatusOperationCompleted = new System.Threading.SendOrPostCallback(this.OndbGetUserStatusOperationCompleted);
+            }
+            this.InvokeAsync("dbGetUserStatus", new object[] {
+                        Nickname}, this.dbGetUserStatusOperationCompleted, userState);
+        }
+        
+        private void OndbGetUserStatusOperationCompleted(object arg) {
+            if ((this.dbGetUserStatusCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.dbGetUserStatusCompleted(this, new dbGetUserStatusCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -2681,6 +2716,32 @@ namespace SmartFridge.WebReference {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
     public delegate void dbAvailableGroceriesExicst1CompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    public delegate void dbGetUserStatusCompletedEventHandler(object sender, dbGetUserStatusCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class dbGetUserStatusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal dbGetUserStatusCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
 }
 
 #pragma warning restore 1591

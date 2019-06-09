@@ -113,30 +113,29 @@ namespace SmartFridge
                 loadingProgressBar.Visibility = ViewStates.Invisible;
                 return;
             }
-
-            //if(string.IsNullOrEmpty(user.MyGroup))
-            //{ 
-            //    FragmentTransaction ft = FragmentManager.BeginTransaction();
-            //    Fragment prev = FragmentManager.FindFragmentByTag("Id grupa");
-            //    if (prev != null)
-            //    {
-            //        ft.Remove(prev);
-            //    }
-            //    ft.AddToBackStack(null);
-            //    NewGroupIdDialog newFragment = new NewGroupIdDialog();
-            //    newFragment.Show(ft, "Id grupa");
-            //    loadingProgressBar.Visibility = ViewStates.Invisible;
-            //    return;
-            //}
             user.Password = passwordEditText.Text;
             var intent =new Intent(this,typeof(MainActivity));
             ChamberOfSecrets.Instance.LoggedUser = user;
 
+            if (string.IsNullOrEmpty(user.MyGroup))
+            {
+                FragmentTransaction ft = FragmentManager.BeginTransaction();
+                Fragment prev = FragmentManager.FindFragmentByTag("Id grupa");
+                if (prev != null)
+                {
+                    ft.Remove(prev);
+                }
+                ft.AddToBackStack(null);
+                NewGroupIdDialog newFragment = new NewGroupIdDialog();
+                newFragment.Show(ft, "Id grupa");
+                loadingProgressBar.Visibility = ViewStates.Invisible;
+                return;
+            }
             ChamberOfSecrets.Instance.LoggedUser.MyOptions.ToOption(await Task.Run(() =>
                 ChamberOfSecrets.Proxy.dbGetOptions(user.UserName)));
 
             ChamberOfSecrets.Instance.@group.Id = user.MyGroup;
-            ChamberOfSecrets.Instance.@group.MyGroupMembers= await Task.Run(() =>
+            ChamberOfSecrets.Instance.@group.MyGroupMembers = await Task.Run(() =>
                 ChamberOfSecrets.Proxy.dbInMyGroup(user.MyGroup).ToList());
 
             ChamberOfSecrets.Instance.@group.AvailableGroceries.ToAvailableGroceries(await Task.Run(() =>

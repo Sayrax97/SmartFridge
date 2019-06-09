@@ -47,7 +47,7 @@
 		android:layout_height="wrap_content"
 		android:id="@+id/editTxtAmountGrocery" />
 	<TextView
-		android:text="Unit"
+		android:text="Merna jedinica"
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:gravity="left"
