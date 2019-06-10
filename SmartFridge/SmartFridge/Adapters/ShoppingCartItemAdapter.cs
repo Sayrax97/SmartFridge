@@ -60,14 +60,6 @@ namespace SmartFridge.Adapters
                 ChamberOfSecrets.Instance.@group.ShoppingCart.Groceries.Groceries[position].Checked = shoppingCart.Groceries.Groceries[position].Checked;
             }
             checkBox.CheckedChange += OnCheckBoxOnCheckedChange;
-            ImageButton xButton = convertView.FindViewById<ImageButton>(Resource.Id.imageButton1);
-            xButton.Visibility = ViewStates.Gone;
-            //xButton.Click += XButton_Click;
-            //void XButton_Click(object sender, EventArgs e)
-            //{
-            //    ChamberOfSecrets.Instance.group.ShoppingCart.RemoveFromShoppingCart(shoppingCart.Groceries[position]);
-            //    NotifyDataSetChanged();
-            //}
             name.Text = shoppingCart.Groceries.Groceries[position].Name;
             unit.Text = shoppingCart.Groceries.Groceries[position].MeasurementUnit.ToString();
             amount.Text = shoppingCart.Groceries.Groceries[position].Amount.ToString();

@@ -52,8 +52,6 @@ namespace SmartFridge
             {
                 CheckBox checkBox = convertView.FindViewById<CheckBox>(Resource.Id.checkBoxBought);
                 EditText boughtEditText = convertView.FindViewById<EditText>(Resource.Id.editTxtBought);
-                ImageButton xButton = convertView.FindViewById<ImageButton>(Resource.Id.imageButton1);
-                xButton.Visibility = ViewStates.Gone;
                 
                 boughtEditText.TextChanged += (sender, args) =>
                 {

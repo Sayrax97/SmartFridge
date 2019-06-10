@@ -2,7 +2,7 @@
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="horizontal"
-	android:layout_width="fill_parent"
+	android:layout_width="match_parent"
 	android:weightSum="100"
 	android:layout_height="40dp">
 	<LinearLayout
@@ -48,24 +48,15 @@
 		<EditText
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:layout_weight="25"
+			android:layout_weight="50"
 			android:inputType="numberDecimal"
 			android:layout_gravity="left"
 			android:id="@+id/editTxtBought" />
 		<CheckBox
 			android:text=""
 			android:layout_width="match_parent"
-			android:layout_weight="40"
 			android:layout_height="match_parent"
 			android:id="@+id/checkBoxBought" />
-		<ImageButton
-			android:src="@drawable/baseline_clear_black_18dp"
-			android:layout_width="match_parent"
-			android:background="@android:color/white"
-			android:layout_weight="40"
-			android:gravity="left"
-			android:layout_height="match_parent"
-			android:id="@+id/imageButton1" />
 	</LinearLayout>
 
 </LinearLayout>

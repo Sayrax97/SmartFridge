@@ -4585,8 +4585,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080027
 			public const int add = 2131230759;
 			
-			// aapt resource value: 0x7f080118
-			public const int after_logo_tv = 2131231000;
+			// aapt resource value: 0x7f080117
+			public const int after_logo_tv = 2131230999;
 			
 			// aapt resource value: 0x7f080070
 			public const int alertTitle = 2131230832;
@@ -4597,8 +4597,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080038
 			public const int always = 2131230776;
 			
-			// aapt resource value: 0x7f080128
-			public const int ascending = 2131231016;
+			// aapt resource value: 0x7f080127
+			public const int ascending = 2131231015;
 			
 			// aapt resource value: 0x7f080056
 			public const int async = 2131230806;
@@ -4609,8 +4609,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f0800bb
 			public const int autoCompleteGrocery = 2131230907;
 			
-			// aapt resource value: 0x7f080116
-			public const int before_logo_tv = 2131230998;
+			// aapt resource value: 0x7f080115
+			public const int before_logo_tv = 2131230997;
 			
 			// aapt resource value: 0x7f08002f
 			public const int beginning = 2131230767;
@@ -4624,8 +4624,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080108
 			public const int bottomNavigationViewRecipe = 2131230984;
 			
-			// aapt resource value: 0x7f080111
-			public const int btnAddtoGroceriesList = 2131230993;
+			// aapt resource value: 0x7f080110
+			public const int btnAddtoGroceriesList = 2131230992;
 			
 			// aapt resource value: 0x7f0800bf
 			public const int btnCancel = 2131230911;
@@ -4669,8 +4669,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f0800ec
 			public const int cancel_action = 2131230956;
 			
-			// aapt resource value: 0x7f08011f
-			public const int cartMain = 2131231007;
+			// aapt resource value: 0x7f08011e
+			public const int cartMain = 2131231006;
 			
 			// aapt resource value: 0x7f080045
 			public const int center = 2131230789;
@@ -4741,8 +4741,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080060
 			public const int default_activity_button = 2131230816;
 			
-			// aapt resource value: 0x7f080129
-			public const int descending = 2131231017;
+			// aapt resource value: 0x7f080128
+			public const int descending = 2131231016;
 			
 			// aapt resource value: 0x7f0800af
 			public const int design_bottom_sheet = 2131230895;
@@ -4831,11 +4831,11 @@ namespace SmartFridge
 			// aapt resource value: 0x7f0800c2
 			public const int fABgroceries = 2131230914;
 			
-			// aapt resource value: 0x7f080113
-			public const int fABshoppingCart = 2131230995;
+			// aapt resource value: 0x7f080112
+			public const int fABshoppingCart = 2131230994;
 			
-			// aapt resource value: 0x7f080123
-			public const int feedbackMain = 2131231011;
+			// aapt resource value: 0x7f080122
+			public const int feedbackMain = 2131231010;
 			
 			// aapt resource value: 0x7f080050
 			public const int fill = 2131230800;
@@ -4849,8 +4849,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080054
 			public const int @fixed = 2131230804;
 			
-			// aapt resource value: 0x7f080119
-			public const int footer_tv = 2131231001;
+			// aapt resource value: 0x7f080118
+			public const int footer_tv = 2131231000;
 			
 			// aapt resource value: 0x7f080058
 			public const int forever = 2131230808;
@@ -4858,8 +4858,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f08000a
 			public const int ghost_view = 2131230730;
 			
-			// aapt resource value: 0x7f080115
-			public const int header_tv = 2131230997;
+			// aapt resource value: 0x7f080114
+			public const int header_tv = 2131230996;
 			
 			// aapt resource value: 0x7f080005
 			public const int home = 2131230725;
@@ -4890,9 +4890,6 @@ namespace SmartFridge
 			
 			// aapt resource value: 0x7f0800d4
 			public const int imageBtnRemove = 2131230932;
-			
-			// aapt resource value: 0x7f08010f
-			public const int imageButton1 = 2131230991;
 			
 			// aapt resource value: 0x7f080091
 			public const int imageRecipe = 2131230865;
@@ -4954,41 +4951,41 @@ namespace SmartFridge
 			// aapt resource value: 0x7f0800d0
 			public const int listViewGroupMembers = 2131230928;
 			
-			// aapt resource value: 0x7f080112
-			public const int listViewShoppingCart = 2131230994;
+			// aapt resource value: 0x7f080111
+			public const int listViewShoppingCart = 2131230993;
 			
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f080117
-			public const int logo = 2131230999;
+			// aapt resource value: 0x7f080116
+			public const int logo = 2131230998;
 			
-			// aapt resource value: 0x7f080124
-			public const int logoutMain = 2131231012;
+			// aapt resource value: 0x7f080123
+			public const int logoutMain = 2131231011;
 			
-			// aapt resource value: 0x7f08011c
-			public const int masked = 2131231004;
+			// aapt resource value: 0x7f08011b
+			public const int masked = 2131231003;
 			
 			// aapt resource value: 0x7f0800ee
 			public const int media_actions = 2131230958;
 			
-			// aapt resource value: 0x7f080127
-			public const int menu_addToCart = 2131231015;
+			// aapt resource value: 0x7f080126
+			public const int menu_addToCart = 2131231014;
+			
+			// aapt resource value: 0x7f080124
+			public const int menu_feedback = 2131231012;
+			
+			// aapt resource value: 0x7f08011c
+			public const int menu_goceries = 2131231004;
 			
 			// aapt resource value: 0x7f080125
-			public const int menu_feedback = 2131231013;
+			public const int menu_make = 2131231013;
 			
 			// aapt resource value: 0x7f08011d
-			public const int menu_goceries = 2131231005;
+			public const int menu_recipes = 2131231005;
 			
-			// aapt resource value: 0x7f080126
-			public const int menu_make = 2131231014;
-			
-			// aapt resource value: 0x7f08011e
-			public const int menu_recipes = 2131231006;
-			
-			// aapt resource value: 0x7f08011a
-			public const int message = 2131231002;
+			// aapt resource value: 0x7f080119
+			public const int message = 2131231001;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -4999,11 +4996,11 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080028
 			public const int multiply = 2131230760;
 			
-			// aapt resource value: 0x7f080121
-			public const int myGroupMain = 2131231009;
-			
 			// aapt resource value: 0x7f080120
-			public const int myProfileMain = 2131231008;
+			public const int myGroupMain = 2131231008;
+			
+			// aapt resource value: 0x7f08011f
+			public const int myProfileMain = 2131231007;
 			
 			// aapt resource value: 0x7f080093
 			public const int navViewDrawerMain = 2131230867;
@@ -5068,8 +5065,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080107
 			public const int relativeLayout1 = 2131230983;
 			
-			// aapt resource value: 0x7f08012a
-			public const int remove = 2131231018;
+			// aapt resource value: 0x7f080129
+			public const int remove = 2131231017;
 			
 			// aapt resource value: 0x7f08004a
 			public const int right = 2131230794;
@@ -5143,8 +5140,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f08008a
 			public const int select_dialog_listview = 2131230858;
 			
-			// aapt resource value: 0x7f080122
-			public const int settingsMain = 2131231010;
+			// aapt resource value: 0x7f080121
+			public const int settingsMain = 2131231009;
 			
 			// aapt resource value: 0x7f080074
 			public const int shortcut = 2131230836;
@@ -5182,8 +5179,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f0800fd
 			public const int spinnerFont = 2131230973;
 			
-			// aapt resource value: 0x7f080114
-			public const int splash_wrapper_rl = 2131230996;
+			// aapt resource value: 0x7f080113
+			public const int splash_wrapper_rl = 2131230995;
 			
 			// aapt resource value: 0x7f080008
 			public const int split_action_bar = 2131230728;
@@ -5305,8 +5302,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f08006e
 			public const int topPanel = 2131230830;
 			
-			// aapt resource value: 0x7f080110
-			public const int topToolbarCart = 2131230992;
+			// aapt resource value: 0x7f08010f
+			public const int topToolbarCart = 2131230991;
 			
 			// aapt resource value: 0x7f080109
 			public const int topToolbarRecipeList = 2131230985;
@@ -5389,8 +5386,8 @@ namespace SmartFridge
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f08011b
-			public const int visible = 2131231003;
+			// aapt resource value: 0x7f08011a
+			public const int visible = 2131231002;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
