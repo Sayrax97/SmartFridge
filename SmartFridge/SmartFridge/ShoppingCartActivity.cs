@@ -38,6 +38,10 @@ namespace SmartFridge
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
 
+
+            ChamberOfSecrets.Instance.@group.ShoppingCart.Groceries = new AvailableGroceries();
+            ChamberOfSecrets.Instance.@group.ShoppingCart.ToShoppingCart(
+                ChamberOfSecrets.Proxy.dbGetShoppingCart(ChamberOfSecrets.Instance.LoggedUser.MyGroup).ToList());
         }
         public override bool OnCreateOptionsMenu(IMenu menu)
         {

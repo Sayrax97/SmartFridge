@@ -51,10 +51,10 @@ namespace SmartFridge
                 await Task.Delay(5000);
             }
             await Task.Run(() => ChamberOfSecrets.Instance.AllGroceries.ToAllGroceries(ChamberOfSecrets.Proxy.dbGetgroceriesName().ToList()));
-            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+           // var stopwatch = System.Diagnostics.Stopwatch.StartNew();
             await Task.Run(() => ChamberOfSecrets.Instance.@group.ToRecipes(ChamberOfSecrets.Proxy.dbLoadRecipe().ToList()));
-            stopwatch.Stop();
-            Toast.MakeText(this, $"Vreme:{stopwatch.ElapsedMilliseconds}", ToastLength.Long).Show();
+            //stopwatch.Stop();
+            //Toast.MakeText(this, $"Vreme:{stopwatch.ElapsedMilliseconds}", ToastLength.Long).Show();
         }
 
         private void Init()
@@ -82,11 +82,11 @@ namespace SmartFridge
                 Toast.MakeText(this, "Niste povezani na internet!!!", ToastLength.Short).Show();
                 return;
             }
-            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+            //var stopwatch = System.Diagnostics.Stopwatch.StartNew();
             while (ChamberOfSecrets.Instance.group.Recipes.Count < 40)
             {
             }
-            stopwatch.Stop();
+            //stopwatch.Stop();
             //Toast.MakeText(this, $"Vreme:{stopwatch.ElapsedMilliseconds}", ToastLength.Long).Show();
             User user = new User();
             if (string.IsNullOrEmpty(passwordEditText.Text))

@@ -48,15 +48,20 @@ namespace SmartFridge
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
             LoadGroceries();
             searchView.QueryTextChange += SearchView_QueryTextChange;
+
+            ChamberOfSecrets.Instance.@group.AvailableGroceries = new AvailableGroceries();
+            ChamberOfSecrets.Instance.@group.AvailableGroceries.ToAvailableGroceries(
+                ChamberOfSecrets.Proxy.dbGetAvailableGroceries(ChamberOfSecrets.Instance.LoggedUser.MyGroup).ToList());
+
         }
 
         private void SearchView_QueryTextChange(object sender, SearchView.QueryTextChangeEventArgs e)
         {
-            var watch=System.Diagnostics.Stopwatch.StartNew();
+            //var watch=System.Diagnostics.Stopwatch.StartNew();
             ChamberOfSecrets.Instance.group.AvailableGroceries.FilterByName(searchView.Query);
             LoadGroceries();
-            watch.Stop();
-            Toast.MakeText(this,"Vreme:"+watch.ElapsedMilliseconds,ToastLength.Short).Show();
+            //watch.Stop();
+            //Toast.MakeText(this,"Vreme:"+watch.ElapsedMilliseconds,ToastLength.Short).Show();
         }
 
         private void Init()
@@ -102,11 +107,11 @@ namespace SmartFridge
 
         private void CategoriesComboBox_TextChanged(object sender, Syncfusion.Android.ComboBox.TextChangedEventArgs e)
         {
-            var watch = System.Diagnostics.Stopwatch.StartNew();
+            //var watch = System.Diagnostics.Stopwatch.StartNew();
             ChamberOfSecrets.Instance.group.AvailableGroceries.FilterByType(Grocery.ParseEnum<Category>(categoriesComboBox.Text));
             LoadGroceries();
-            watch.Stop();
-            Toast.MakeText(this, "Vreme:" + watch.ElapsedMilliseconds, ToastLength.Short).Show();
+            //watch.Stop();
+            //Toast.MakeText(this, "Vreme:" + watch.ElapsedMilliseconds, ToastLength.Short).Show();
         }
 
         private async void EatButton_ClickAsync(object sender, EventArgs e)

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
@@ -45,7 +47,7 @@ namespace SmartFridge
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_menu_black_24dp);
         }
 
-        protected override void OnResume()
+        protected override async void OnResume()
         {
             base.OnResume();
             var random = new Random();
@@ -56,6 +58,22 @@ namespace SmartFridge
                        (0, recipeOfTheDay.Description.Length < 140 ? recipeOfTheDay.Description.Length : 140) + "...";
             Bitmap bitmap = BitmapFactory.DecodeByteArray(recipeOfTheDay.Image, 0, recipeOfTheDay.Image.Length);
             recipeImageView.SetImageBitmap(bitmap);
+
+            ChamberOfSecrets.Instance.LoggedUser.UserStatus = Grocery.ParseEnum<Status>(
+                ChamberOfSecrets.Proxy.dbGetUserStatus(ChamberOfSecrets.Instance.LoggedUser.UserName));
+
+            ChamberOfSecrets.Instance.group.MyGroupMembers = new List<string>();
+            ChamberOfSecrets.Instance.@group.MyGroupMembers = await Task.Run(() =>
+                ChamberOfSecrets.Proxy.dbInMyGroup(ChamberOfSecrets.Instance.LoggedUser.MyGroup).ToList());
+
+
+            ChamberOfSecrets.Instance.@group.ShoppingCart.Groceries = new AvailableGroceries();
+            ChamberOfSecrets.Instance.@group.ShoppingCart.ToShoppingCart(await Task.Run(() =>
+                ChamberOfSecrets.Proxy.dbGetShoppingCart(ChamberOfSecrets.Instance.LoggedUser.MyGroup).ToList()));
+
+            ChamberOfSecrets.Instance.@group.AvailableGroceries = new AvailableGroceries();
+            ChamberOfSecrets.Instance.@group.AvailableGroceries.ToAvailableGroceries(await Task.Run(() =>
+                ChamberOfSecrets.Proxy.dbGetAvailableGroceries(ChamberOfSecrets.Instance.LoggedUser.MyGroup).ToList()));
         }
 
         private void RecipeImageView_Click(object sender, EventArgs e)
@@ -71,7 +89,6 @@ namespace SmartFridge
             {
                 case Resource.Id.menu_goceries:
                     StartActivity(typeof(GroceriesActivity));
-                    //proxy
                     break;
                 case Resource.Id.menu_recipes:
                     var intent= new Intent(this, typeof(RecipeListActivity));

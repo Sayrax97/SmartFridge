@@ -16,6 +16,7 @@ using SmartFridge.Adapters;
 using SmartFridge.Model;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Content.PM;
+using System.Threading.Tasks;
 
 namespace SmartFridge
 {
@@ -35,6 +36,9 @@ namespace SmartFridge
             base.SetSupportActionBar(myGroupToolbar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.baseline_arrow_back_white_18dp);
+            ChamberOfSecrets.Instance.group.MyGroupMembers = new List<string>();
+            ChamberOfSecrets.Instance.@group.MyGroupMembers =
+                ChamberOfSecrets.Proxy.dbInMyGroup(ChamberOfSecrets.Instance.LoggedUser.MyGroup).ToList();
         }
         public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
         {
